@@ -1,9 +1,11 @@
+/* eslint-disable react/react-in-jsx-scope */
 import './App.css';
+import NavBar from './components/NavBar';
 function App() {
   return (
-    // eslint-disable-next-line react/react-in-jsx-scope
     <div className="App">
       hi
+      <NavBar />
     </div>
   );
 }
