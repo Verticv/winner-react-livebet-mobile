@@ -64,24 +64,12 @@ const MainLive = () => {
           />
         </div>
 
-        <div className='first-con'>
-          <div className='main-live'>
-            <CardHeader flag={flag} name='예상배' />
-            <LiveCard firstScore={4} secondScore={5} firstName='예상배예' secondName='예상배예예상' />
-          </div>
-          <AddButton />
-        </div>
-
-        <div className='first-con'>
-          <div className='main-live'>
-            <CardHeader flag={flag} name='예상배' />
-            <LiveCard firstScore={9} secondScore={2} firstName='예상배예예상' secondName='예상배예예상' />
-          </div>
-          <AddButton />
-        </div>
-        <br />
-        <NonLiveCard />
-        <NonLiveCard />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
 
       </div>
 
