@@ -5,6 +5,17 @@
 height: 100px;;  background-color:tomato;
 }
 
+.first-con{
+  display: flex;
+}
+
+.main-live{
+  display: flex;
+  flex-direction: column;
+  width:100%
+
+}
+
 .left {
   display: flex;
   flex-direction: column;
@@ -29,7 +40,7 @@ height: 100px;;  background-color:tomato;
   align-items: center;
   background-color:#9B2F30;
   border: 1px solid #BA867E;
-  /* color: #fff; */
+  
   
 }
 

@@ -1,26 +1,30 @@
-/* eslint-disable react/react-in-jsx-scope */
+import { Switch, Route } from 'react-router';
+import React from 'react';
+import Cart from './pages/Cart';
+import MainLive from './pages/MainLive';
+import LiveBet from './pages/MainLiveBet';
+import NonLiveBet from './pages/NonLiveBet';
+
 import './App.css';
-import LiveCard from './components/LiveCard';
-import NavBar from './components/NavBar';
+
 function App() {
   return (
-    <div>
-      <NavBar />
-      <div>Header</div>
-      <div>
-        <div>Second Header</div>
-        <LiveCard/>
-        <LiveCard/>
-        <LiveCard/>
-      </div>
-      <div>
-        <div>Third Header</div>
-        <LiveCard/>
-        <LiveCard/>
-        <LiveCard/>
-      </div>
-      <div>Footer</div>
-    </div>
+    <>
+      <Switch>
+        <Route path='/' exact>
+          <MainLive />
+        </Route>
+        <Route path='/cart' exact>
+          <Cart />
+        </Route>
+        <Route path='/liveBet' exact>
+          <LiveBet />
+        </Route>
+        <Route path='/nonLiveBet' exact>
+          <NonLiveBet />
+        </Route>
+      </Switch>
+    </>
   );
 }
 

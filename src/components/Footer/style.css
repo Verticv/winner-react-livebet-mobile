@@ -1,0 +1,48 @@
+footer {
+  background-image: linear-gradient(#e0ba73, #a88d58);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+span {
+  color: #a33434;
+}
+
+.vl {
+  border-left: 1px solid #9b824f;
+  height: 40px;
+  position: absolute;
+  left: 45%;
+  top: 17px;
+}
+
+.main-p {
+  margin-left: 1rem;
+  font-size: 19px;
+}
+
+.sub-p {
+  margin-left: 1.5rem;
+}
+
+.sub-container1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sub-container2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+}
