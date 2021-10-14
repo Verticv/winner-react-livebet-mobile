@@ -5,12 +5,12 @@ import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
 import Footer from '../../components/Footer';
 import photo from '../../assets/img.png';
-import image from '../../assets/image1.png';
-import background from '../../assets/line_22.png';
+
 import CardHeader from '../../components/LiveCard/CardHeader';
 import flag from '../../assets/flag1.png';
 import AddButton from '../../components/LiveCard/AddButton';
 import NonLiveCard from '../../components/NonLiveCard';
+import LiveHeader from '../../components/LiveHeader';
 
 import './style.css';
 
@@ -44,26 +44,7 @@ const MainLive = () => {
       <Modal visible={visible} toggle={toggle} />
 
       <div className='back'>
-        <div className='second-con'>
-          <p className='live'>
-            Live
-          </p>
-          <p className='live-p'>
-            실시간 라이브경기
-          </p>
-          <p className='live'>
-            80
-          </p>
-          <img
-            style={{
-              backgroundImage: { background },
-              backgroundRepeat: 'repeat',
-            }}
-            src={image}
-            alt='dropdown'
-          />
-        </div>
-
+        <LiveHeader />
         <div className='first-con'>
           <div className='main-live'>
             <CardHeader flag={flag} name='예상배' />
