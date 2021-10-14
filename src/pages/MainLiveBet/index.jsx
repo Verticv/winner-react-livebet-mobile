@@ -13,6 +13,7 @@ function LiveBet() {
       <div>
         <img src={group} alt='group' style={{ width: '100%', height: 'auto' }} />
       </div>
+      <div />
       <Footer />
     </div>
   );
