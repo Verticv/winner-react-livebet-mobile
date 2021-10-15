@@ -7,9 +7,7 @@ import Footer from '../../components/Footer';
 import photo from '../../assets/img.png';
 import image from '../../assets/image1.png';
 import background from '../../assets/line_22.png';
-import CardHeader from '../../components/LiveCard/CardHeader';
 import flag from '../../assets/flag1.png';
-import AddButton from '../../components/LiveCard/AddButton';
 import NonLiveCard from '../../components/NonLiveCard';
 
 import './style.css';
@@ -65,12 +63,11 @@ const MainLive = () => {
         </div>
 
         <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
-        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
-        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
-        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
-        <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
+        <LiveCard name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
         <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstName='라이브경' secondName='라이브' />
 
+        <NonLiveCard />
+        <NonLiveCard />
       </div>
 
       <Footer />

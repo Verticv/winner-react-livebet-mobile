@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AddButton = () => (
-  <Link className='section-num' to='/nonLiveBet'>
+  <Link className='nLive-btn' to='/nonLiveBet'>
     <button type='button'>
       정보
     </button>

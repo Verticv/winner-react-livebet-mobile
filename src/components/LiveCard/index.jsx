@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-unused-expressions */
+import React, { useState, useEffect } from 'react';
 import playButton from '../../assets/play_button.png';
 import star from '../../assets/image_63.png';
 import redShirt from '../../assets/image_42.png';
@@ -10,12 +11,18 @@ import CardHeader from './CardHeader';
 import './style.css';
 
 function LiveCard({
-  firstScore, secondScore, firstName, secondName, flag, name,
+  firstScore, secondScore, firstName, secondName, flag,
 }) {
+  const [showHeader, setShowHeader] = useState(false);
+
+  useEffect(() => {
+    flag ? setShowHeader(true) : setShowHeader(false);
+  }, []);
+
   return (
     <div className='first-con'>
       <div className='main-live'>
-        <CardHeader flag={flag} name={name} />
+        <CardHeader show={showHeader} flag={flag} name='예상배' />
         <div className='card'>
           <div className='left'>
 
