@@ -14,6 +14,7 @@ const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
         <img
           className='exit-img'
           src={exit}
+          // eslint-disable-next-line no-console
           onKeyDown={() => { console.log('Key down'); }}
           role='presentation'
           alt='exit'
