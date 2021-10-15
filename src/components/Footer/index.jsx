@@ -11,8 +11,6 @@ const Footer = () => {
   };
 
   const handleKeyDown = () => {
-    // eslint-disable-next-line no-console
-    console.log('KEy Down');
   };
 
   return (
