@@ -12,7 +12,7 @@ const CardHeader = ({ flag, name, show }) => {
     <div className='main-con'>
 
       <div className='sub-con'>
-        <img src={ball} alt='ball' className='live-header-ball' />
+        <img src={ball} alt='ball' />
         <img src={flag} alt='flag' className='live-header-flag' />
         <p>{name}</p>
       </div>

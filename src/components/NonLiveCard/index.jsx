@@ -1,19 +1,26 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
-import star from '../../assets/image_63.png';
+import star from '../../assets/image_96.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
 import a from '../../assets/a.png';
-import flag from '../../assets/flag1.png';
+// import flag from '../../assets/flag1.png';
 import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
-function NonLiveCard() {
+function NonLiveCard({
+  name, flag, firstTeam, secondTeam,
+}) {
+  const [showHeader, setShowHeader] = useState(false);
+
+  useEffect(() => {
+    flag ? setShowHeader(true) : setShowHeader(false);
+  }, []);
   return (
 
     <div className='nLive-first-con'>
       <div className='nLive-main-live'>
-        <CardHeader flag={flag} name='예상배' />
+        <CardHeader show={showHeader} flag={flag} name={name} />
         <div className='nLive-card'>
           <div className='nLive-left'>
 
@@ -28,13 +35,13 @@ function NonLiveCard() {
                     <div className='nLive-shirt'>
                       <img src={redShirt} alt='nLive-shirt' />
                       <img src={a} alt='H' />
-                      <p>cccc</p>
+                      <p>{firstTeam}</p>
                     </div>
 
                     <div className='nLive-shirt'>
                       <img src={blueShirt} alt='shirt' />
                       <img src={a} alt='A' />
-                      <p>aaa</p>
+                      <p>{secondTeam}</p>
                     </div>
 
                   </div>

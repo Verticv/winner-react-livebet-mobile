@@ -24,10 +24,11 @@
 
 
 .button-container{
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 210px;
+    color: #fff
 }
 
 .btn{
@@ -35,7 +36,8 @@
     height: 35px;
     border-radius: 13px;
     border: 1px solid #b89c5e;
-    background-color:#242424
+    background-color:#242424;
+    color: #fff;
 }
 
 
@@ -43,7 +45,10 @@
     display: flex;
     align-items: center;
     width: 80px;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 30px;
+    color: #fff
 
 }
 
@@ -101,3 +106,36 @@
 
 }
 
+
+.non-live{
+    background-color: #225F8B;
+    color: rgb(255, 255, 255);
+    width: 68px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.nonLive-p{
+    font-size: 18px;
+    color: #205880
+}
+
+
+.non-live{
+    background-color: #225F8B;
+    color: rgb(255, 255, 255);
+    width: 75px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+
+.width {
+    width: 30px
+}

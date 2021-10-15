@@ -11,7 +11,7 @@ import CardHeader from './CardHeader';
 import './style.css';
 
 function LiveCard({
-  firstScore, secondScore, firstName, secondName, flag,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name,
 }) {
   const [showHeader, setShowHeader] = useState(false);
 
@@ -22,7 +22,7 @@ function LiveCard({
   return (
     <div className='first-con'>
       <div className='main-live'>
-        <CardHeader show={showHeader} flag={flag} name='예상배' />
+        <CardHeader show={showHeader} flag={flag} name={name} />
         <div className='card'>
           <div className='left'>
 
@@ -37,13 +37,13 @@ function LiveCard({
                     <div className='shirt'>
                       <img src={redShirt} alt='shirt' />
                       <img src={a} alt='H' />
-                      <p>{firstName}</p>
+                      <p>{firstTeam}</p>
                     </div>
 
                     <div className='shirt'>
                       <img src={blueShirt} alt='shirt' />
                       <img src={a} alt='A' />
-                      <p>{secondName}</p>
+                      <p>{secondTeam}</p>
                     </div>
 
                   </div>
