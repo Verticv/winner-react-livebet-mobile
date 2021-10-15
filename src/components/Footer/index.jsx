@@ -11,7 +11,6 @@ const Footer = () => {
   };
 
   const handleKeyDown = () => {
-    console.log('KEy Down');
   };
 
   return (

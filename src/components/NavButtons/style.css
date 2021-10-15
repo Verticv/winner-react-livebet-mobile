@@ -1,5 +1,7 @@
-button {
-  display: flex;
+
+.btnClass {
+  background-color: #23232a;
+    display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -9,10 +11,6 @@ button {
   height: 70px;
   padding: 6px;
   border: 0.5px solid #5a5a5a;
-}
-
-.btnClass {
-  background-color: #23232a;
 }
 
 .btnClass.clicked {

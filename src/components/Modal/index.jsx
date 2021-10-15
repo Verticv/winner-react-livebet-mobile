@@ -14,7 +14,7 @@ const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
         <img
           className='exit-img'
           src={exit}
-          onKeyDown={() => { console.log('Key down'); }}
+          // onKeyDown={() => { console.log('Key down') }}
           role='presentation'
           alt='exit'
           onClick={toggle}
