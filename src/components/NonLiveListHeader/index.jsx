@@ -1,6 +1,5 @@
 import React from 'react';
 import image from '../../assets/image1.png';
-import background from '../../assets/line_22.png';
 import './style.css';
 
 const NonLiveListHeader = () => (
