@@ -1,0 +1,41 @@
+.live-header-wrapper{
+    width: 100%;
+    background-color:#1B1C20;
+
+}
+
+.live-Head-container{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 300px;
+    margin: 0 !important;
+    height: 50px;
+}
+
+.live-header{
+    background-color: rgb(155, 47, 48);
+    color: rgb(255, 255, 255);
+    width: 47px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+
+.live-header-para{
+    font-size: 18px;
+    color: #9B2F30;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.width {
+    width: 30px
+}
+
+.live-header-img{
+  padding-left:10px
+}

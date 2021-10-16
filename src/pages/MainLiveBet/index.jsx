@@ -1,5 +1,5 @@
 import React from 'react';
-import LiveHeader from '../../components/LiveHeader';
+import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 import MiddleNav from './MiddleNav';
@@ -10,7 +10,7 @@ import group from '../../assets/group.png';
 function LiveBet() {
   return (
     <div>
-      <LiveHeader />
+      <LiveListHeader />
       <NonLiveCard />
       <div>
         <img src={group} alt='group' style={{ width: '100%', height: 'auto' }} />

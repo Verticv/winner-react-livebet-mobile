@@ -14,9 +14,11 @@ function LiveCard({
   firstScore, secondScore, firstTeam, secondTeam, flag, name,
 }) {
   const [showHeader, setShowHeader] = useState(false);
+  const [value, setValue] = useState('23');
 
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
+    flag ? setValue(23) : setValue('15');
   }, []);
 
   return (
@@ -81,7 +83,7 @@ function LiveCard({
 
         </div>
       </div>
-      <AddButton />
+      <AddButton value={value} />
     </div>
   );
 }
