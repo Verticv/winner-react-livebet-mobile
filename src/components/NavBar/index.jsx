@@ -14,7 +14,7 @@ const number = 80;
 function NavBar() {
   return (
     <div className='nav'>
-      <NavButtons icon={star} text='안녕하' number={number} />
+      <NavButtons icon={star} text='안녕하' number={number} link='/favourite' />
       <NavButtons icon={basketBall} text='안녕하' number={number} />
       <NavButtons icon={footBall} text='안녕하' number={number} />
       <NavButtons icon={ball} text='안녕하' number={number} />
