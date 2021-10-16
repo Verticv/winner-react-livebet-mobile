@@ -5,6 +5,7 @@ import MainLive from './pages/MainLive';
 import LiveBet from './pages/MainLiveBet';
 import NonLiveBet from './pages/NonLiveBet';
 import MainLiveList from './pages/MainLiveList';
+import MainNonLiveList from './pages/MainNonLiveList';
 
 import './App.css';
 
@@ -27,6 +28,10 @@ function App() {
 
         <Route path='/mainLiveList' exact>
           <MainLiveList />
+        </Route>
+
+        <Route path='/mainNonLiveList' exact>
+          <MainNonLiveList />
         </Route>
       </Switch>
     </>

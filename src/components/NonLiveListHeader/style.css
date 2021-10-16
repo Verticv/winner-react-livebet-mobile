@@ -3,17 +3,22 @@
     align-items: center;
     padding-left: 10px;
     width: 300px;
-    justify-content:space-between;
     margin: 0 !important;
-        height: 50px;
+    height: 50px;
+
 }
 
 
+.nonLive-header-img{
+    padding-left: 10px;
+}
 
 
 .nonLive-header-para{
     font-size: 18px;
-    color: #205880
+    color: #205880;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -32,3 +37,8 @@
  .width {
     width: 30px
 } 
+
+
+.nonLive-header-wrapper{
+    background-color:#1B1C20;
+}
