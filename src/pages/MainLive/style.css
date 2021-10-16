@@ -63,7 +63,7 @@
         
 }
 
-.second-con{
+/* .second-con{
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -71,9 +71,9 @@
     justify-content:space-between;
     margin: 0 !important;
         height: 50px;
-}
+} */
 
-
+/* 
 .live{
     background-color: rgb(155, 47, 48);
     color: rgb(255, 255, 255);
@@ -89,7 +89,7 @@
 .live-p{
         font-size: 18px;
     color: #9B2F30;
-}
+} */
 
 .back{
     background-color:#1D1E22;
@@ -106,7 +106,7 @@
 
 }
 
-
+/* 
 .non-live{
     background-color: #225F8B;
     color: rgb(255, 255, 255);
@@ -116,9 +116,9 @@
     border-radius: 5px;
     font-size: 16px;
     padding: 3px;
-}
+} */
 
-.nonLive-p{
+/* .nonLive-p{
     font-size: 18px;
     color: #205880
 }
@@ -134,8 +134,8 @@
     font-size: 17px;
     padding: 3px;
     text-transform: uppercase;
-}
+} */
 
-.width {
+/* .width {
     width: 30px
-}
+} */

@@ -5,12 +5,12 @@ import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
 import Footer from '../../components/Footer';
 import photo from '../../assets/img.png';
-import image from '../../assets/image1.png';
-import background from '../../assets/line_22.png';
 import flag from '../../assets/flag1.png';
 import NonLiveCard from '../../components/NonLiveCard';
 
 import './style.css';
+import LiveListHeader from '../../components/LiveListHeader';
+import NonLiveListHeader from '../../components/NonLiveListHeader';
 
 const MainLive = () => {
   const { toggle, visible } = useModal();
@@ -42,49 +42,14 @@ const MainLive = () => {
       <Modal visible={visible} toggle={toggle} />
 
       <div className='back'>
-        <div className='second-con'>
-          <p className='live'>
-            Live
-          </p>
-          <p className='live-p'>
-            실시간 라이브경기
-          </p>
-          <p className='live width'>
-            80
-          </p>
-          <img
-            style={{
-              backgroundImage: { background },
-              backgroundRepeat: 'repeat',
-            }}
-            src={image}
-            alt='dropdown'
-          />
-        </div>
+
+        <LiveListHeader />
 
         <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
         <LiveCard name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
         <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
 
-        <div className='second-con'>
-          <p className='non-live'>
-            NONLIVE
-          </p>
-          <p className='nonLive-p'>
-            실시이브경기
-          </p>
-          <p className='non-live width'>
-            80
-          </p>
-          <img
-            style={{
-              backgroundImage: { background },
-              backgroundRepeat: 'repeat',
-            }}
-            src={image}
-            alt='dropdown'
-          />
-        </div>
+        <NonLiveListHeader />
 
         <NonLiveCard flag={flag} name='라이브경기' firstTeam='라이브경' secondTeam='라브경브경이브' />
         <NonLiveCard flag={flag} name='라이브경기' firstTeam='라이브경브경' secondTeam='라이브' />
