@@ -1,17 +1,18 @@
 import React from 'react';
 import image from '../../assets/image1.png';
 import background from '../../assets/line_22.png';
+import './style.css';
 
-function LiveHeader() {
-  return (
-    <div className='second-con'>
-      <p className='live'>
-        Live
+const NonLiveListHeader = () => (
+  <>
+    <div className='nonLive-head-container'>
+      <p className='nonLive-header'>
+        NONLIVE
       </p>
-      <p className='live-p'>
-        실시간 라이브경기
+      <p className='nonLive-header-para'>
+        실시이브경기
       </p>
-      <p className='live'>
+      <p className='nonLive-header width'>
         80
       </p>
       <img
@@ -23,7 +24,8 @@ function LiveHeader() {
         alt='dropdown'
       />
     </div>
-  );
-}
+  </>
 
-export default LiveHeader;
+);
+
+export default NonLiveListHeader;

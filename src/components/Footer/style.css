@@ -11,6 +11,7 @@ footer {
 .flex {
   display: flex;
   justify-content: space-around;
+  height: 50px;
 }
 
 span {
