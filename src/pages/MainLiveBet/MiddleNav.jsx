@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 function MiddleNav() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+    <div className='middle-nav'>
       <button type='button'>전체</button>
       <button type='button'>승무패핸디캡</button>
       <button type='button'>오버언더</button>
