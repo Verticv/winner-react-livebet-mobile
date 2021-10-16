@@ -1,0 +1,34 @@
+.nonLive-head-container{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 300px;
+    justify-content:space-between;
+    margin: 0 !important;
+        height: 50px;
+}
+
+
+
+
+.nonLive-header-para{
+    font-size: 18px;
+    color: #205880
+}
+
+
+.nonLive-header{
+    background-color: #225F8B;
+    color: rgb(255, 255, 255);
+    width: 75px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 3px;
+}
+
+
+ .width {
+    width: 30px
+} 

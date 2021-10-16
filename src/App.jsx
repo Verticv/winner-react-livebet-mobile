@@ -4,6 +4,7 @@ import Cart from './pages/Cart';
 import MainLive from './pages/MainLive';
 import LiveBet from './pages/MainLiveBet';
 import NonLiveBet from './pages/NonLiveBet';
+import MainLiveList from './pages/MainLiveList';
 
 import './App.css';
 
@@ -22,6 +23,10 @@ function App() {
         </Route>
         <Route path='/nonLiveBet' exact>
           <NonLiveBet />
+        </Route>
+
+        <Route path='/mainLiveList' exact>
+          <MainLiveList />
         </Route>
       </Switch>
     </>
