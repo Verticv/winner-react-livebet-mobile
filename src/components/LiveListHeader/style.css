@@ -1,11 +1,16 @@
+.live-header-wrapper{
+    width: 100%;
+    background-color:#1B1C20;
+
+}
+
 .live-Head-container{
     display: flex;
     align-items: center;
     padding-left: 10px;
     width: 300px;
-    justify-content:space-between;
     margin: 0 !important;
-        height: 50px;
+    height: 50px;
 }
 
 .live-header{
@@ -21,10 +26,16 @@
 }
 
 .live-header-para{
-        font-size: 18px;
+    font-size: 18px;
     color: #9B2F30;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .width {
     width: 30px
+}
+
+.live-header-img{
+  padding-left:10px
 }
