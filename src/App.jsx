@@ -3,7 +3,7 @@ import React from 'react';
 import Cart from './pages/Cart';
 import MainLive from './pages/MainLive';
 import LiveBet from './pages/MainLiveBet';
-import NonLiveBet from './pages/NonLiveBet';
+import MainNonLiveBet from './pages/MainNonLiveBet';
 import MainLiveList from './pages/MainLiveList';
 import MainNonLiveList from './pages/MainNonLiveList';
 
@@ -23,7 +23,7 @@ function App() {
           <LiveBet />
         </Route>
         <Route path='/nonLiveBet' exact>
-          <NonLiveBet />
+          <MainNonLiveBet />
         </Route>
 
         <Route path='/mainLiveList' exact>
