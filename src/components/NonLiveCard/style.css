@@ -75,7 +75,8 @@
   display: flex;
   justify-content: space-between;
   width:100%;
-  background-color:#1A2D43
+  background-color:#1A2D43;
+  border-bottom: 1px solid;
 }
 
 .nLive-row{
