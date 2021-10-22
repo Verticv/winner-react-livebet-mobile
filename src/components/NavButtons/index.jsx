@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 
 import './style.css';
 
-function NavButtons({ icon, text, number }) {
+function NavButtons({
+  icon, text, number,
+}) {
   const [btnClass, setBtnClass] = useState(false);
+
+  const handelClick = () => {
+    setBtnClass(!btnClass);
+  };
 
   return (
     <button
       type='submit'
-      onClick={() => {
-        if (btnClass) {
-          setBtnClass(false);
-        } else {
-          setBtnClass(true);
-        }
-      }}
+      onClick={handelClick}
       className={btnClass ? 'btnClass clicked' : 'btnClass'}
     >
       <img style={{ margin: '0' }} src={icon} alt='icon' />
