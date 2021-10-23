@@ -1,8 +1,7 @@
 import React from 'react';
-import line from '../../assets/line_22.png';
 
 function MidSecBtn({
-  number1, number2, number3, rightText, leftText,
+  number1, number2, number3, rightText, leftText, add,
 }) {
   return (
     <>
@@ -10,11 +9,9 @@ function MidSecBtn({
         <p>{rightText}</p>
         <button type='button' className='bet-btn-numbers blur '>
 
-          <p>{number1}</p>
-          <img src={line} alt='line' />
-          <p>{number2}</p>
-          <img src={line} alt='line' />
-          <p>{number3}</p>
+          <button className='add-button' type='button' onClick={add}>{number1}</button>
+          <button className='add-button' type='button' onClick={add}>{number2}</button>
+          <button className='add-button' type='button' onClick={add}>{number3}</button>
 
         </button>
         <p>{leftText}</p>

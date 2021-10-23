@@ -8,7 +8,7 @@ import LiveCard from '../../components/LiveCard';
 
 import group from '../../assets/group.png';
 
-function LiveBet() {
+function LiveBet({ handleClick }) {
   return (
     <div>
       <LiveListHeader />
@@ -18,9 +18,10 @@ function LiveBet() {
 
       <div>
         <MiddleNav />
-        <DropDown text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
-        <DropDown text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
-        <DropDown text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
+        <DropDown add={handleClick} text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
+
+        <DropDown add={handleClick} text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
+        <DropDown add={handleClick} text='라이브경기' btnText='라이' number1='1.2' number2='4.8' number3='3.3' rightText='라이' leftText='브경' />
 
       </div>
 
