@@ -15,7 +15,11 @@ function LiveCard({
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
+  const [isClicked, setIsClicked] = useState(false);
 
+  const click = () => {
+    console.log('hi');
+  };
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
     flag ? setValue(23) : setValue('15');

@@ -31,7 +31,6 @@ const MainLive = ({ addToCart, handleClick }) => (
 
     <Footer />
   </>
-
 );
 
 export default MainLive;
