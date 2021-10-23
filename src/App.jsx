@@ -1,9 +1,9 @@
 import { Switch, Route } from 'react-router';
-import React from 'react';
+import React, { useState } from 'react';
 import Cart from './pages/Cart';
 import MainLive from './pages/MainLive';
 import LiveBet from './pages/MainLiveBet';
-import NonLiveBet from './pages/NonLiveBet';
+import MainNonLiveBet from './pages/MainNonLiveBet';
 import MainLiveList from './pages/MainLiveList';
 import MainNonLiveList from './pages/MainNonLiveList';
 import Favourite from './pages/Favourite';
@@ -11,20 +11,35 @@ import Favourite from './pages/Favourite';
 import './App.css';
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+
+  const handleClick = () => {
+    addToCart();
+  };
+
+  const removeCard = () => {
+    const newArr = cart.splice(0, cart.length - 1);
+    setCart(newArr);
+  };
+
   return (
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive />
+          <MainLive addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
-          <Cart />
+          <Cart cart={cart} removeCard={removeCard} />
         </Route>
         <Route path='/liveBet' exact>
-          <LiveBet />
+          <LiveBet addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/nonLiveBet' exact>
-          <NonLiveBet />
+          <MainNonLiveBet />
         </Route>
 
         <Route path='/mainLiveList' exact>
@@ -35,7 +50,7 @@ function App() {
           <MainNonLiveList />
         </Route>
         <Route path='/favourite' exact>
-          <Favourite />
+          <Favourite cart={cart} />
         </Route>
       </Switch>
     </>

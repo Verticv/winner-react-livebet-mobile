@@ -5,15 +5,19 @@ import NonLiveListHeader from '../../components/NonLiveListHeader';
 import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
+import flag from '../../assets/flag1.png';
 
-function Favourite() {
+function Favourite({ cart }) {
+  const favv = cart.map((index) => (<LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
+
+  ));
   return (
     <div>
       <NavBar />
       <LiveListHeader />
-      <LiveCard />
+      {favv}
       <NonLiveListHeader />
-      <NonLiveCard />
+      {favv}
       <Footer />
     </div>
   );

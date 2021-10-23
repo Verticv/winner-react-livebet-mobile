@@ -11,7 +11,7 @@ import CardHeader from './CardHeader';
 import './style.css';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, addToCart, handleClick,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
@@ -31,9 +31,9 @@ function LiveCard({
             <div className='down-sec'>
 
               <div className='row'>
-                <div>
+                <button type='button' onClick={handleClick}>
                   <img className='star' src={star} alt='star' />
-                </div>
+                </button>
                 <div className='col'>
                   <div>
                     <div className='shirt'>

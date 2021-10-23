@@ -10,8 +10,7 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = () => (
-
+const MainLive = ({ addToCart, handleClick }) => (
   <>
     <NavBar />
 
@@ -20,7 +19,7 @@ const MainLive = () => (
 
       <LiveListHeader />
 
-      <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
+      <LiveCard addToCart={addToCart} handleClick={handleClick} flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
       <LiveCard name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
       <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
 

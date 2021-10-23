@@ -8,16 +8,14 @@ function NavButtons({
 }) {
   const [btnClass, setBtnClass] = useState(false);
 
+  const handelClick = () => {
+    setBtnClass(!btnClass);
+  };
+
   return (
     <button
       type='submit'
-      onClick={() => {
-        if (btnClass) {
-          setBtnClass(false);
-        } else {
-          setBtnClass(true);
-        }
-      }}
+      onClick={handelClick}
       className={btnClass ? 'btnClass clicked' : 'btnClass'}
     >
       <Link to={link}>
