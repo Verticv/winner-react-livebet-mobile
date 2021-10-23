@@ -4,7 +4,7 @@ import arrow from '../../assets/image1.png';
 import MidSecBtn from './MidSecBtn';
 
 function DropDown({
-  text, number1, rightText, leftText, number2, number3,
+  text, number1, rightText, leftText, number2, number3, add,
 }) {
   const [isClicked, setIsClicked] = useState(true);
 
@@ -24,11 +24,11 @@ function DropDown({
       {isClicked ? (
         <>
           <div className='bet-button-container'>
-            <MidSecBtn number1={number1} number2={number2} number3={number3} rightText={rightText} leftText={leftText} />
+            <MidSecBtn add={add} number1={number1} number2={number2} number3={number3} rightText={rightText} leftText={leftText} />
           </div>
 
           <div className='bet-button-container'>
-            <MidSecBtn number1={number1} number2={number2} number3={number3} rightText={rightText} leftText={leftText} />
+            <MidSecBtn add={add} number1={number1} number2={number2} number3={number3} rightText={rightText} leftText={leftText} />
           </div>
 
         </>
