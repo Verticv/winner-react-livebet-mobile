@@ -12,6 +12,7 @@ import './App.css';
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [fav, setFav] = useState([]);
 
   const addToCart = (item) => {
     setCart([...cart, item]);
@@ -26,11 +27,24 @@ function App() {
     setCart(newArr);
   };
 
+  const addToFav = (item) => {
+    setCart([...fav, item]);
+  };
+
+  const handleFav = () => {
+    addToFav();
+  };
+
+  const removeFav = () => {
+    const newArr = cart.splice(0, cart.length - 1);
+    setFav(newArr);
+  };
+
   return (
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive />
+          <MainLive fav={fav} setFav={setFav} handleFav={handleFav} addToFav={addToFav} />
         </Route>
         <Route path='/cart' exact>
           <Cart cart={cart} removeCard={removeCard} />
@@ -50,7 +64,7 @@ function App() {
           <MainNonLiveList />
         </Route>
         <Route path='/favourite' exact>
-          <Favourite />
+          <Favourite fav={fav} />
         </Route>
       </Switch>
     </>

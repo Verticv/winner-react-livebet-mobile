@@ -6,14 +6,14 @@ import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 
-function Favourite() {
+function Favourite({
+  fav,
+}) {
   return (
     <div>
       <NavBar />
       <LiveListHeader />
-      <LiveCard />
-      <NonLiveListHeader />
-      <NonLiveCard />
+      {fav.map(() => <LiveCard />)}
       <Footer />
     </div>
   );

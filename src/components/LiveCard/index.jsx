@@ -11,11 +11,15 @@ import CardHeader from './CardHeader';
 import './style.css';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, handleFav,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
+  const [isClicked, setIsClicked] = useState(false);
 
+  const click = () => {
+    console.log('hi');
+  };
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
     flag ? setValue(23) : setValue('15');
@@ -32,7 +36,10 @@ function LiveCard({
 
               <div className='row'>
                 <div>
-                  <img className='star' src={star} alt='star' />
+                  <button type='button' onClick={handleFav}>
+
+                    <img className='star' src={star} alt='star' />
+                  </button>
                 </div>
                 <div className='col'>
                   <div>
