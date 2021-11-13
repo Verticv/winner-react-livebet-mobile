@@ -30,7 +30,7 @@ const MainLive = () => (
       <NonLiveCard firstTeam='맨체스터유나이티드' secondTeam='리버풀' />
     </div>
 
-    {/* <Footer /> */}
+    <Footer />
   </>
 
 );
