@@ -1,3 +1,4 @@
+import './assets/sass/global.scss';
 import { Switch, Route } from 'react-router';
 import React, { useState } from 'react';
 import Cart from './pages/Cart';

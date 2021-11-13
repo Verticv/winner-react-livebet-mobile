@@ -5,6 +5,7 @@
 
 .first-con{
     display: flex;
+    border-bottom: 1px solid #000000;
 }
 
 .main-live{

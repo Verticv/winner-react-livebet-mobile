@@ -1,0 +1,183 @@
+// Blues
+$blue-100: #eff7fb;
+$blue-150:#c2ddf1;
+$blue-200:#64c8ff;
+$blue-500: #3071a9;
+$blue-600: #0060a9;
+$blue-700: #2a6293;
+$blue-800: #0060a8;
+
+// Greens
+$green-100: #dff0d8;
+$green-200: #85c66a;
+$green-500: #008000;
+$green-700: #0b6e22;
+
+
+// Yellows
+$yellow-100: #fff8d2;
+$yellow-200: #ffcc00;
+
+//orange
+$orange-200:#FBB868;
+$orange-300:#ef820d;
+
+//brown
+$brown-300:#a24c2f;
+
+// Reds
+$red-100: #fdd6d6;
+$red-500: #D32029;
+$red-600:#aa0001;
+// Brand colors
+$brand-primary-blue-color: #005dab !default;
+$brand-primary-red-color: #e51937 !default;
+
+
+$brand-default-color: #333333 !default;
+$brand-medium-color: #5F5F5F !default;
+$brand-light-color: #707070 !default;
+$brand-success-color: $green-500 !default;
+$brand-error-color: $red-500 !default;
+$brand-link-color: $blue-600 !default;
+
+// Grays 
+$gray-100: #fafafa;
+$gray-200: #eeeeee;
+$gray-300: #eaeaea;
+$gray-400: #d9d9d9;
+$gray-500: #cccccc;
+$gray-550:#dedede;
+$gray-551:#9c9c9c;
+$gray-600: #909090;
+$gray-700: $brand-light-color;
+$gray-800: $brand-medium-color;
+$gray-900: $brand-default-color;
+$light-gray: #F1F1F1;
+$very-light-gray: #cacaca;
+
+// Brand Units
+$sub-unit: 4px  !default;
+$unit: 8px  !default;
+$unit-md: $unit * 1.5  !default;  //12px
+$unit-lg: $unit * 2  !default; //16px
+$unit-xlg: $unit * 3  !default; // 24px
+
+// breakpoints for mobile first approach we will add style as it for mobile then we will add bp if neded to style tablet then desktop?
+$bp-extra-small: 1px;
+$bp-small: 376px;
+$bp-special-small: 480px !default;
+$bp-special-medium: 668px;
+$bp-medium: 769px;
+$bp-special-large:800px;
+$bp-extra-medium:960px;
+$bp-large: 1024px;
+$bp-extra-large: 1200px;
+
+// will be used as @media(min-width:$bp-medium) { ... }
+
+// Typography
+$font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif !default;
+$helvetica-roman-font-family: "HelveticaNeueRoman","Helvetica Neue",Helvetica,Arial,sans-serif;
+$helvetica-Neue-Bold:"HelveticaNeueBold"; 
+// $footer-font-family: $font-family !default;
+// $header-font-family: $font-family !default;
+// $avnir-font-family: 'Avenir LT Std', 'Avenir', sans-serif !default;
+// $didot-font-family: "Default Serif", "Didot", "Didot LT STD", "Bodoni MT", "Times New Roman", "Baskerville", serif !default;
+
+// $loaded-header-font-family: $font-family,
+// $header-font-family !default;
+
+
+
+// Line height
+$xhuge-line-height:36px  !default;
+$huge-line-height: 32px !default;
+$bigger-line-height: 28px !default;
+$big-line-height: 24px !default;
+$medium-line-height:22px !default;
+$line-height: 20px !default;
+$line-height2: 19px !default;
+$small-line-height: 16px !default;
+$small-line-height2: 15px !default;
+$smaller-line-height: 12px !default;
+$tiny-line-height: 8px !default;
+
+// Font sizes
+$xhuge2-font-size:38px  !default;
+$xhuge-font-size: 32px !default;
+$huge-font-size: 28px !default;
+$huge1-font-size: 26px !default;
+$huge-font-size2:30px !default;
+$bigger-font-size: 24px !default;
+$big-font-size2: 22px !default;
+$big-font-size: 20px !default;
+$normal-font-size:18px !default;
+$medium-font-size: 16px !default;
+$font-size: 14px !default;
+$small-font-size: 12px !default;
+$small-font-size2: 13px !default;
+$smaller-font-size: 8px !default;
+
+// Font weight
+$thin-font-weight: 100 !default;
+$extra-light-font-weight: 200 !default;
+$light-font-weight: 300 !default;
+$regular-font-weight: 400 !default;
+$medium-font-weight: 500 !default;
+$semi-bold-font-weight: 600 !default;
+$bold-font-weight: 700 !default;
+
+// Border Radius
+$border-radius-4: 4px !default;
+$border-radius-3: 3px !default;
+$border-radius: 2px !default;
+
+// Color Palette
+// Neutrals
+$neutral-00: #fff !default;
+$neutral-04: #f7f7f7 !default;
+$neutral-05: #f6f6f6 !default;
+$neutral-10: #f2f2f2 !default;
+$neutral-15: #eee !default;
+$neutral-20: #ddd !default;
+$neutral-24: #dcdcdc !default;
+$neutral-25: #d0d0d0 !default;
+$neutral-26: #cbc5c0 !default;
+$neutral-27: #ccc !default;
+$neutral-30: #bbb !default;
+$neutral-35: #b2b2b2 !default;
+$neutral-40: #888 !default;
+$neutral-45: #7f7773 !default;
+$neutral-50: #666 !default;
+$neutral-55: #555 !default;
+$neutral-60: #404040 !default;
+$neutral-65: #444 !default;
+$neutral-37: #a6a6a6 !default;
+$neutral-33: #333 !default;
+$neutral-70: #000 !default;
+$neutral-110: #4a4a4a !default;
+$neutral-160: #4186b1 !default;
+$neutral-170: #337ab7 !default;
+$light-blue: #005fa8;
+$dusty-gray: #999 !default;
+$light-grey: #5e5e5e;
+$cornflower-blue: #00acc8 !default;
+$cornflower-blue-dark: #0f888b !default;
+$dark-orange: #9d0404 !default;
+$medium-red: #B92B2B !default;
+$apple-blossom: #a94442 !default;
+$abbey: #c40 !default;
+$tamarillo: #b01419 !default;
+$alto: #cfcfcf !default;
+$thunder: #231f20 !default;
+$light-orange: #f5f1e9 !default;
+$black-rock-color: #2d2e3c !default;
+$bright-grey-color: #505154;
+$cream-can: #f3db50;
+
+// Borders
+$border: 1px solid $gray-600 !default;
+$light-border: 1px solid $neutral-15 !default;
+$border-no-color: 1px solid !default;
+$border-thick-no-color: 2px solid !default;

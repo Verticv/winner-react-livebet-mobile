@@ -1,0 +1,45 @@
+.btnClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
+  // background-size: contain;
+  background-repeat: round;
+  color: #8a8a8d;
+  width: 17%;
+  height: 70px;
+  padding: 6px;
+  border: 0.5px solid #000000;
+
+  p,
+  img {
+    margin: 0;
+  }
+
+  img {
+    width: 22px;
+  }
+
+  .text {
+    font-family: NotoSansCJKkrRegular;
+  }
+
+  .num {
+    font-family: RobotoRegular;
+  }
+
+  &.clicked {
+    // background: linear-gradient(#c2ae83, #ac9261, #f1d583);
+    background-image: url("../../assets/images/other/headerButtonBackground-active.png");
+    // background-size: contain;
+    background-repeat: round;
+    color: #222226;
+    .num {
+      background-color: #222226;
+      border-radius: 2px;
+      padding: 2px;
+      color: #9c8c5e;
+    }
+  }
+}

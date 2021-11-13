@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
-import playButton from '../../assets/play_button.png';
+import playGold from '../../assets/images/play/play-gold.png';
+import playTransparent from '../../assets/images/play/play-transperent.png';
 import star from '../../assets/image_63.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
@@ -8,10 +9,8 @@ import a from '../../assets/a.png';
 import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 
-import './style.css';
-
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, isActive,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
@@ -24,11 +23,11 @@ function LiveCard({
   return (
     <div className='first-con'>
       <div className='main-live'>
-        <CardHeader show={showHeader} flag={flag} name={name} />
+        <CardHeader isActive={isActive} show={showHeader} flag={flag} name={name} />
         <div className='card'>
           <div className='left'>
 
-            <div className='down-sec'>
+            <div className={`down-sec ${isActive ? 'active' : 'inactive'}`}>
 
               <div className='row'>
                 <div>
@@ -38,26 +37,26 @@ function LiveCard({
                   <div>
                     <div className='shirt'>
                       <img src={redShirt} alt='shirt' />
-                      <img src={a} alt='H' />
+                      <span className='character'>H</span>
                       <p>{firstTeam}</p>
                     </div>
 
                     <div className='shirt'>
                       <img src={blueShirt} alt='shirt' />
-                      <img src={a} alt='A' />
+                      <span className='character'>A</span>
                       <p>{secondTeam}</p>
                     </div>
 
                   </div>
                   <div className='play-video'>
                     <p className='livee'>live</p>
-                    <p>
+                    <p className='score'>
                       {firstScore}
                       -
                       {secondScore}
                     </p>
-                    <p>예상배예</p>
-                    <img src={playButton} alt='play' />
+                    <p className='glowering'>후반전35</p>
+                    <img src={isActive ? playGold : playTransparent} alt='play' />
                   </div>
 
                 </div>
@@ -66,13 +65,18 @@ function LiveCard({
 
               <div className='num-container'>
                 <div className='num-num'>
-                  <p>5 0 0 0 </p>
+                  <span>5</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
                   <p className='score'>{firstScore}</p>
-
                 </div>
 
                 <div className='num-num'>
-                  <p>5 0 0 0 </p>
+                  <span>5</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
                   <p className='score'>{secondScore}</p>
 
                 </div>
@@ -83,7 +87,7 @@ function LiveCard({
 
         </div>
       </div>
-      <AddButton value={value} />
+      <AddButton isActive={isActive} value={value} />
     </div>
   );
 }

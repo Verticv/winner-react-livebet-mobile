@@ -14,6 +14,7 @@ function NonLiveCard({
   const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
+    console.log('flag', flag);
     flag ? setShowHeader(true) : setShowHeader(false);
   }, []);
   return (
@@ -34,19 +35,18 @@ function NonLiveCard({
                   <div>
                     <div className='nLive-shirt'>
                       <img src={redShirt} alt='nLive-shirt' />
-                      <img src={a} alt='H' />
+                      <span className='character'>H</span>
                       <p>{firstTeam}</p>
                     </div>
 
                     <div className='nLive-shirt'>
                       <img src={blueShirt} alt='shirt' />
-                      <img src={a} alt='A' />
+                      <span className='character'>A</span>
                       <p>{secondTeam}</p>
                     </div>
 
                   </div>
                   <div className='nLive-play-video'>
-
                     <p>02-13 21:00</p>
                   </div>
 

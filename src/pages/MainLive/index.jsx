@@ -20,17 +20,17 @@ const MainLive = () => (
 
       <LiveListHeader />
 
-      <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
-      <LiveCard name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
-      <LiveCard flag={flag} name='라이브경기' firstScore='9' secondScore='1' firstTeam='라이브경' secondTeam='라이브' />
+      <LiveCard flag={flag} name='라리가' isActive firstScore='1' secondScore='0' firstTeam='FC바르셀로나' secondTeam='레알마드리드' />
+      <LiveCard firstScore='2' secondScore='0' firstTeam='맨체스터유나이티드' secondTeam='리버풀' />
+      <LiveCard flag={flag} name='분데스리가' firstScore='2' secondScore='0' firstTeam='바이헤른뮌헨' secondTeam='프랑크푸르트' />
 
       <NonLiveListHeader />
 
-      <NonLiveCard flag={flag} name='라이브경기' firstTeam='라이브경' secondTeam='라브경브경이브' />
-      <NonLiveCard flag={flag} name='라이브경기' firstTeam='라이브경브경' secondTeam='라이브' />
+      <NonLiveCard flag={flag} name='라리가' firstTeam='FC바르셀로나' secondTeam='레알마드리드' />
+      <NonLiveCard firstTeam='맨체스터유나이티드' secondTeam='리버풀' />
     </div>
 
-    <Footer />
+    {/* <Footer /> */}
   </>
 
 );

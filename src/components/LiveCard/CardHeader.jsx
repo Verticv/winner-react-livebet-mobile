@@ -1,18 +1,20 @@
 import React from 'react';
-import './style.css';
 import c from '../../assets/c.png';
 import p from '../../assets/p.png';
-import ball from '../../assets/football.png';
+// import ball from '../../assets/football.png';
+import footBallWhite from '../../assets/images/football/football-white.png';
 
-const CardHeader = ({ flag, name, show }) => {
+const CardHeader = ({
+  flag, name, show, isActive,
+}) => {
   if (!show) {
     return null;
   }
   return (
-    <div className='main-con'>
+    <div className={`main-con ${isActive ? 'active' : ''}`}>
 
       <div className='sub-con'>
-        <img src={ball} alt='ball' />
+        <img className='ball' src={footBallWhite} alt='ball' />
         <img src={flag} alt='flag' className='live-header-flag' />
         <p>{name}</p>
       </div>
@@ -22,7 +24,7 @@ const CardHeader = ({ flag, name, show }) => {
         <div className='square sq1' />
         <div className='square sq2' />
         <img src={p} alt='' />
-        <img src={ball} alt='' />
+        <img className='ball' src={footBallWhite} alt='' />
       </div>
 
     </div>
