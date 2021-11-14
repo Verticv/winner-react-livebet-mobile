@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import star from '../../assets/image_96.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
-import a from '../../assets/a.png';
 // import flag from '../../assets/flag1.png';
 import CardHeader from './CardHeader';
 import AddButton from './AddButton';
@@ -14,7 +13,6 @@ function NonLiveCard({
   const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
-    console.log('flag', flag);
     flag ? setShowHeader(true) : setShowHeader(false);
   }, []);
   return (

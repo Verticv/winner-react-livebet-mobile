@@ -5,7 +5,6 @@ import playTransparent from '../../assets/images/play/play-transperent.png';
 import star from '../../assets/image_63.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
-import a from '../../assets/a.png';
 import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 

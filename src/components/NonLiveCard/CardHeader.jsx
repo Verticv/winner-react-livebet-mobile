@@ -2,7 +2,6 @@ import React from 'react';
 import ball from '../../assets/football.png';
 
 const CardHeader = ({ flag, name, show }) => {
-  console.log('show', show);
   if (!show) {
     return null;
   }
