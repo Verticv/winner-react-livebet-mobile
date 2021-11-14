@@ -22,6 +22,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1200px;
+  margin: auto;
+  background: #000000;
 }
 
 body p, button, span, div {
