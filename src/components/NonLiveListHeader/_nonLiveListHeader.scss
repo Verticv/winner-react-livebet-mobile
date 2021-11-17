@@ -1,0 +1,51 @@
+.nonLive-header-wrapper {
+  background-image: url('../../assets/images/other/liveCardBackground.png');
+  background-repeat: round;
+
+  .nonLive-head-container {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 300px;
+    margin: 0 !important;
+    height: 50px;
+
+    .arrow-wrapper {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+      text-align: center;
+      background-color: #2a2a2a;
+      .nonLive-header-img {
+        width: 13px;
+      }
+    }
+
+    // .nonLive-header-img {
+    //   padding-left: 10px;
+    // }
+
+    .nonLive-header-para {
+      font-size: 18px;
+      color: #205880;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .nonLive-header {
+      background-color: #225F8B;
+      color: rgb(255, 255, 255);
+      width: 75px;
+      height: 23px;
+      text-align: center;
+      border-radius: 5px;
+      font-size: 17px;
+      padding: 3px;
+      font-family: RobotoRegular;
+    }
+
+    .width {
+      width: 30px
+    }
+  }
+}

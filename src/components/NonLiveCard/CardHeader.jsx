@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import ball from '../../assets/football.png';
 
 const CardHeader = ({ flag, name, show }) => {

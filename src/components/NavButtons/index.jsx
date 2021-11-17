@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 
-import './style.css';
+// import './style.css';
 
 function NavButtons({
-  icon, text, number,
+  icon, clickedIcon, text, number,
 }) {
   const [btnClass, setBtnClass] = useState(false);
+  const [iconToggle, setIconToggle] = useState(false);
 
   const handelClick = () => {
     setBtnClass(!btnClass);
+    setIconToggle(!iconToggle);
   };
 
   return (
@@ -17,10 +19,9 @@ function NavButtons({
       onClick={handelClick}
       className={btnClass ? 'btnClass clicked' : 'btnClass'}
     >
-      <img style={{ margin: '0' }} src={icon} alt='icon' />
-      <p style={{ margin: '0' }}>{text}</p>
-      <p className='num' style={{ margin: '0' }}>
-        {' '}
+      <img src={iconToggle ? clickedIcon : icon} alt='icon' />
+      <p className='text'>{text}</p>
+      <p className='num'>
         {number}
       </p>
     </button>
