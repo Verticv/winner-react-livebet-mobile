@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 
 function Slide({ name, number }) {
   return (
