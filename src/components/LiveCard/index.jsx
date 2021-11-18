@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import playGold from '../../assets/images/play/play-gold.png';
 import playTransparent from '../../assets/images/play/play-transperent.png';
-import star from '../../assets/image_63.png';
-import redShirt from '../../assets/image_42.png';
-import blueShirt from '../../assets/image_40.png';
+import star from '../../assets/images/emptyStar/star-filled-gold.png';
+import redShirt from '../../assets/images/shirt/red.png';
+import blueShirt from '../../assets/images/shirt/blue.png';
 import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 

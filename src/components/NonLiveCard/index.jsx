@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
-import star from '../../assets/image_96.png';
+import star from '../../assets/images/emptyStar/star-filled-whitepng.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
-// import flag from '../../assets/flag1.png';
 import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
