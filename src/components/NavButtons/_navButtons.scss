@@ -1,15 +1,37 @@
+html {
+  font-size: 14px;
+  @media(max-width:$bp-large) {
+    font-size: 14px;
+  }
+  @media(max-width:$bp-extra-medium) {
+    font-size: 13px;
+  }
+  @media(max-width:$bp-medium) {
+    font-size: 7.5px;
+  }
+  @media(max-width:$bp-special-small) {
+    font-size: 5.5px;
+  }
+  @media(max-width:$bp-small) {
+    font-size: 5px;
+  }
+  
+  @media(max-width:$bp-extra-small) {
+    font-size: 4.5px;
+  }
+}
+
 .btnClass {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
-  // background-size: contain;
   background-repeat: round;
   color: #8a8a8d;
   width: 17%;
-  height: 70px;
-  padding: 6px;
+  height: 11.875rem;
+  padding: 0.375rem;
   border: 0.5px solid #000000;
 
   p,
@@ -18,27 +40,30 @@
   }
 
   img {
-    width: 22px;
+    width: 3.625rem;
+    height: 3.625rem;
   }
 
   .text {
     font-family: NotoSansCJKkrRegular;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
 
   .num {
     font-family: RobotoRegular;
+    font-size: 1.75rem;
+    background-color: #222226;
+    padding: 0 0.375rem;
+    border-radius: 0.5rem;
   }
 
   &.clicked {
-    // background: linear-gradient(#c2ae83, #ac9261, #f1d583);
     background-image: url("../../assets/images/other/headerButtonBackground-active.png");
-    // background-size: contain;
     background-repeat: round;
     color: #222226;
     .num {
       background-color: #222226;
-      border-radius: 2px;
-      padding: 2px;
       color: #9c8c5e;
     }
   }

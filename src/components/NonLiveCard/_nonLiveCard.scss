@@ -4,13 +4,14 @@
   .nLive-main-live{
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: calc(100% - 7.7rem);
     .nLive-left {
       display: flex;
       flex-direction: column;
       width: 100%;
       .nLive-down-sec{
-        height: 100px;
+        height: 15rem;
+        min-height: 110px;
         display: flex;
         justify-content: space-between;
         width:100%;
@@ -20,11 +21,11 @@
         .nLive-row{
           display: flex;
           align-items: center;
-          height: 100px;
           color: #D1CECF;
           .nLive-star{
             padding-left: 10px;
             padding-right: 10px;
+            width: 4.2rem;
           }
           .nLive-col{
             display: flex;
@@ -32,31 +33,42 @@
             .nLive-shirt{
               display: flex;
               align-items: center;
-              height:25px;
+              height: 2.125rem;
+              margin-bottom: 1.69rem;
+              p {
+                font-size: 2.625rem;
+                margin: 0;
+              }
+
+              img {
+                width: 2.4375rem;
+              }
               .character {
                 display: flex;
                 background-color: #ffffff;
                 opacity: 0.2;
                 color: #000000;
-                width: 16px;
-                height: 18px;
+                width: 2.1875rem;
+                height: 2.1875rem;
                 justify-content: center;
                 align-items: center;
                 border-radius: 3px;
                 margin: 0 10px;
+                font-size: 1.875rem;
               }
             }
             .nLive-play-video{
               display: flex;
               align-items: center;
               height: 25px;
-              width: 180px;
               margin-top: 10px;
               margin-left: 4px;
               font-size: 17px;
               color: #71ADD9;
               p {
                 font-family: RobotoRegular;
+                font-size: 2.625rem;
+                margin: 0 2rem;
               }
             }
           }
@@ -65,40 +77,54 @@
       
     }
   }
-  
+  &:last-child {
+    margin-bottom: 18px;
+    @media(max-width:$bp-medium) {
+      margin-bottom: 35px;
+    }
+  }
 }
 
 .nLive-main-con{
     background-color: white;
     width: 100%;    
-    height: 50px;
+    height: 7.7rem;
     background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
     background-repeat: round;
     display: flex;
     justify-content: space-between;
     .nLive-sub-con{
       display: flex;
-      width: 230px;
       justify-content: flex-start;
       align-items: center;
       padding-left: 10px;
       color: #fff;
+
+      p {
+        color: #d8b948;
+        font-size: 3rem;
+      }
+
+
       .nLive-header-flag {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 1rem;
+        width: 6.375rem;
+      }
+
+      .ball {
+        width: 4rem;
       }
       
     }
+
 }
 
 .nLive-btn{
-  width: 66px;
+  width: 7.7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color:#225F8B;
-  // border: 1px solid #BA867E;
   background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
   background-repeat: round;
   text-decoration: none;
@@ -108,7 +134,8 @@
     border: none;
     font-size: 17px;
     width: 100%;
-    background-color:#225F8B
+    background-color:#225F8B;
+    font-size: 2.875rem;
   }
 }
 

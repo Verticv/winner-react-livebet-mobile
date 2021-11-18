@@ -1,5 +1,5 @@
 import React from 'react';
-import ball from '../../assets/football.png';
+import ball from '../../assets/images/football/football-white.png';
 
 const CardHeader = ({ flag, name, show }) => {
   if (!show) {
@@ -10,7 +10,7 @@ const CardHeader = ({ flag, name, show }) => {
     <div className='nLive-main-con'>
 
       <div className='nLive-sub-con'>
-        <img src={ball} alt='ball' />
+        <img className='ball' src={ball} alt='ball' />
         <img src={flag} alt='flag' className='nLive-header-flag' />
         <p>{name}</p>
       </div>

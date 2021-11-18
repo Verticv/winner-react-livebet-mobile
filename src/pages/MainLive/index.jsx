@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
 import Footer from '../../components/Footer';
-import flag from '../../assets/flag1.png';
+import flag from '../../assets/images/flags/spain.png';
+
 import NonLiveCard from '../../components/NonLiveCard';
 
 import LiveListHeader from '../../components/LiveListHeader';
