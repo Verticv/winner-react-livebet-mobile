@@ -1,0 +1,99 @@
+.middle-nav{
+  display:flex;
+  background-color: #000000;
+  padding-top: 10px;
+  margin-top: -4px;
+  width:100%
+}
+
+
+.middle-nav button{
+  background-color: #222228;
+  color: #98989A;
+  border: none;
+  border-left: 1px solid black;
+  width:15%
+}
+
+.bet-btn-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #D1CECF;
+  margin: 5px;
+}
+
+
+.bet-dropdown{
+  background-color:#27181E
+}
+
+.bet-arrow-img{
+  border: none;
+  background-color: #332c2f;
+  width: 30px;
+  height: 27px;
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+}
+
+.add-button{
+  border: none;
+  background-color: #332c2f;
+  color: #fff;
+}
+
+.bet-dropdown-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff
+}
+
+
+.bet-dot{
+height: 5px;
+width: 5px;
+background-color: #bbb;
+display: inline-block;
+}
+
+
+.bet-dropdown-para{
+  display: flex;
+  align-items: center;
+  width: 88px;
+  justify-content: space-between;
+}
+
+
+.bet-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-color: #27181E;
+}
+
+
+.bet-btn-numbers{
+  display: flex;
+  width: 150px;
+  align-items: center;
+  justify-content:space-around;
+  border: none;
+  color: #D1CECF;
+}
+
+
+.blur {
+  backdrop-filter: blur(60px);
+  background-color: #332c2f;
+}
+
+

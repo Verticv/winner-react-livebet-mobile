@@ -1,4 +1,5 @@
 @import "./variables";
+@import '../../components/Modal/modal';
 @import '../../components/NavButtons/_navButtons';
 @import '../../components/NavBar/_navBar';
 @import '../../components/MainHeader/_mainHeader';
@@ -6,3 +7,10 @@
 @import '../../components/LiveCard/_liveCard';
 @import '../../components/NonLiveListHeader/_nonLiveListHeader';
 @import '../../components/NonLiveCard/_nonLiveCard';
+@import '../../components/Footer/footer';
+
+@import '../../pages/Cart/cart';
+@import '../../pages/MainLive/mainLive';
+@import '../../pages/MainLiveBet/mainLiveBet';
+
+

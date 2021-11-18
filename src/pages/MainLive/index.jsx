@@ -5,7 +5,6 @@ import Footer from '../../components/Footer';
 import flag from '../../assets/flag1.png';
 import NonLiveCard from '../../components/NonLiveCard';
 
-import './style.css';
 import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';

@@ -5,8 +5,6 @@ import flag2 from '../../assets/flag2.png';
 import flag3 from '../../assets/flag3.png';
 // import white from '../../assets/white.png';
 
-import './style.css';
-
 const CheckBoxes = [
   {
     id: '01',

@@ -7,7 +7,6 @@ import repeat from '../../assets/ico_5.png';
 import mark from '../../assets/ico_6.png';
 import exit from '../../assets/exit.png';
 import chart from '../../assets/ico_2.png';
-import './style.css';
 
 const Cart = ({ cart, removeCard }) => {
   const CartItem = cart.map((index) => (
