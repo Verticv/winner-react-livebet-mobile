@@ -8,9 +8,9 @@ const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
   <div className='modal'>
     <div className='modal-pop' role='dialog' aria-modal='true'>
       <div
-        className='sub-container'
+        className='modal-header'
       >
-        <p style={{ flexGrow: 2, textAlign: 'center' }}>예상배예상</p>
+        <p style={{ flexGrow: 2, textAlign: 'center' }}>리그선택</p>
         <img
           className='exit-img'
           src={exit}
@@ -20,14 +20,13 @@ const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
           onClick={toggle}
         />
       </div>
-      <div>
+      <div className='modal-body'>
         <CheckBoxesContainer />
-        <div className='buttons-container'>
-          <button className='button' type='button' onClick={toggle}>예상배</button>
-          <button className='button' type='button' onClick={toggle}>예상배</button>
-        </div>
       </div>
-
+      <div className='buttons-container modal-footer'>
+        <button type='button' onClick={toggle}>취소</button>
+        <button type='button' onClick={toggle}>확인</button>
+      </div>
     </div>
     <div className='modal-overlay' />
   </div>, document.body,

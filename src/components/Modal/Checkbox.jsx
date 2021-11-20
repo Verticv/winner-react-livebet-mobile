@@ -6,15 +6,20 @@ const Checkbox = ({
 }) => (
   <div className='checkbox'>
     <label htmlFor={id}>
-      <input
-        id={id}
-        name={name}
-        type={type}
-        onChange={handleClick}
-        checked={isChecked}
-      />
-      <img src={icon} className='icon' />
-      {name}
+      <div className='input-wrapper'>
+        <input
+          id={id}
+          name={name}
+          type={type}
+          onChange={handleClick}
+          checked={isChecked}
+        />
+      </div>
+
+      <div className='image-wrapper'>
+        <img src={icon} className='icon' />
+        <span className='checkbox-text'>{name}</span>
+      </div>
 
     </label>
   </div>

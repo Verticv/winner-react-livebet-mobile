@@ -1,50 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import Checkbox from './Checkbox';
-import flag1 from '../../assets/flag1.png';
-import flag2 from '../../assets/flag2.png';
-import flag3 from '../../assets/flag3.png';
-// import white from '../../assets/white.png';
+import spain from '../../assets/images/flags/spain.png';
+import germany from '../../assets/images/flags/germany.png';
+import flag3 from '../../assets/images/flags/england.png';
 
 const CheckBoxes = [
   {
     id: '01',
-    name: ' 예상배당',
-    icon: flag1,
+    name: '라리가',
+    icon: spain,
   },
   {
     id: '02',
-    name: ' 예상배당',
-    icon: flag2,
+    name: '프리미어리그',
+    icon: flag3,
   },
   {
     id: '03',
-    name: ' 예상배당',
-    icon: flag3,
+    name: '분데스리가',
+    icon: germany,
   },
   {
     id: '04',
-    name: ' 예상배당',
-    icon: flag1,
+    name: '라리가',
+    icon: spain,
   },
   {
     id: '05',
-    name: ' 예상배당',
-    icon: flag2,
-  },
-  {
-    id: '06',
-    name: ' 예상배당',
+    name: '프리미어리그',
     icon: flag3,
   },
   {
+    id: '06',
+    name: '분데스리가',
+    icon: germany,
+  },
+  {
     id: '07',
-    name: ' 예상배당',
-    icon: flag1,
+    name: '라리가',
+    icon: spain,
   },
   {
     id: '08',
-    name: ' 예상배당',
-    icon: flag2,
+    name: '프리미어리그',
+    icon: flag3,
   },
 ];
 
@@ -91,7 +90,7 @@ const CheckBoxesContainer = () => {
     <div className='container' style={{}}>
       <Checkbox
         type='checkbox'
-        name='selectAll'
+        name='모든 리그 선택'
         id='selectAll'
         handleClick={handleSelectAll}
         isChecked={isCheckAll}
