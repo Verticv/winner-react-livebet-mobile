@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import cart from '../../assets/cart.png';
+import cart from '../../assets/images/other/cart.png';
 
 const Footer = () => {
   const history = useHistory();
@@ -14,8 +14,8 @@ const Footer = () => {
 
   return (
     <>
-      <div onClick={handleClick} className='container' type='button' onKeyDown={handleKeyDown} role='button' tabIndex={0}>
-        <footer className='footer flex'>
+      <div onClick={handleClick} className='footer-container' type='button' onKeyDown={handleKeyDown} role='button' tabIndex={0}>
+        <footer className='flex'>
           <div className='sub-container1'>
             <img src={cart} alt='cart' />
             <p className='main-p'>베팅카드 열기</p>

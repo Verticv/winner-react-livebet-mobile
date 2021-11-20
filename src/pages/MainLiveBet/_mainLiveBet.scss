@@ -1,3 +1,9 @@
+.live-bet-page {
+  .first-con, .card {
+    border: 0;
+  }
+}
+
 .dropdown-wrapper {
   background-image: url("../../assets/images/other/liveBitBackground.png");
   background-repeat: round;
@@ -84,7 +90,8 @@
   }
 
   &:last-child {
-    margin-bottom: 1rem;
+    margin-bottom: 9.1875rem;
+    padding-bottom: 0.1rem;
   }
 
   .bet-button-container {

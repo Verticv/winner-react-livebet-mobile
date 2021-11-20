@@ -9,7 +9,7 @@ import LiveCard from '../../components/LiveCard';
 
 function LiveBet({ handleClick }) {
   return (
-    <div>
+    <div className='live-bet-page'>
       <LiveListHeader />
       <LiveCard flag={flag} name='라리가' isActive firstScore='1' secondScore='0' firstTeam='FC바르셀로나' secondTeam='레알마드리드' />
 
