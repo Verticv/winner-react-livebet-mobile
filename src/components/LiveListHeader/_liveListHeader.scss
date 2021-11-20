@@ -33,9 +33,10 @@
     }
     .arrow-wrapper {
       margin-left: 1.25rem;
-      text-align: center;
-      background-color: #2a2a2a;
-      border-radius: 5px;
+      background-image: url("../../assets/images/arrow/arrow-button.png");
+      background-repeat: round;
+      width: 3.5rem;
+      height: 3.5rem;
       .live-header-img {
         width: 1.5rem;
         padding: 1.1rem 0.8rem;

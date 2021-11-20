@@ -1,5 +1,4 @@
 import React from 'react';
-import image from '../../assets/image1.png';
 
 const LiveListHeader = () => (
   <>
@@ -14,13 +13,7 @@ const LiveListHeader = () => (
         <p className='live-header width'>
           80
         </p>
-        <div className='arrow-wrapper'>
-          <img
-            className='live-header-img'
-            src={image}
-            alt='dropdown'
-          />
-        </div>
+        <div className='arrow-wrapper' />
       </div>
 
     </div>
