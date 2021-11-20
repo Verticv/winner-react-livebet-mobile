@@ -1,5 +1,4 @@
 import React from 'react';
-import image from '../../assets/image1.png';
 
 const NonLiveListHeader = () => (
   <>
@@ -9,18 +8,12 @@ const NonLiveListHeader = () => (
           NONLIVE
         </p>
         <p className='nonLive-header-para'>
-          실시이브경기
+          예정경기
         </p>
         <p className='nonLive-header width'>
           80
         </p>
-        <div className='arrow-wrapper'>
-          <img
-            className='nonLive-header-img'
-            src={image}
-            alt='dropdown'
-          />
-        </div>
+        <div className='arrow-wrapper' />
 
       </div>
     </div>

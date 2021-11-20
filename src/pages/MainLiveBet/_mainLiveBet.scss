@@ -1,99 +1,187 @@
-.middle-nav{
-  display:flex;
+.dropdown-wrapper {
+  background-image: url("../../assets/images/other/liveBitBackground.png");
+  background-repeat: round;
+}
+
+.middle-nav {
+  display: flex;
   background-color: #000000;
-  padding-top: 10px;
+  padding-top: 2rem;
   margin-top: -4px;
-  width:100%
-}
-
-
-.middle-nav button{
-  background-color: #222228;
-  color: #98989A;
-  border: none;
-  border-left: 1px solid black;
-  width:15%
-}
-
-.bet-btn-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #D1CECF;
-  margin: 5px;
+
+  button {
+    color: #98989A;
+    border: none;
+    border-left: 1px solid black;
+    height: 6rem;
+    font-size: 2.625rem;
+    padding: 0 1.875rem;
+    background-image: url("../../assets/images/other/liveBitButton-black.png");
+    background-repeat: round;
+
+    &.active {
+      background-image: url("../../assets/images/other/liveBitButton-gold.png");
+      background-repeat: round;
+      color: #000000;
+    }
+  }
 }
 
 
-.bet-dropdown{
-  background-color:#27181E
+.bet-dropdown {
+  .bet-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    height: 7.125rem;
+
+    .bet-dropdown-para {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 2.625rem;
+      color: #d1cecf;
+
+      .bet-dot {
+        height: 0.625rem;
+        width: 0.625rem;
+        background-color: #afb3be;
+        display: inline-block;
+      }
+
+      p {
+        margin-left: 1.25rem;
+      }
+    }
+
+    .bet-arrow-button {
+      border: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 4.25rem;
+      height: 4.25rem;
+      border-radius: 4px;
+
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 2.43rem;
+        height: 1.437rem;
+      }
+    }
+  }
+
+  &:first-child {
+    .bet-dropdown-header {
+      height: 8.125rem;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+
+  .bet-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 6.25rem;
+    background: url("../../assets/images/other/skew-container.png"), rgba(255, 255, 255, 0.102);
+    background-repeat: round;
+
+
+    .bet-btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+
+      .bet-btn-skew {
+        display: flex;
+        justify-content: space-between;
+        width: 49.5%;
+        align-items: center;
+
+        p {
+          color: #d1cecf;
+          font-size: 2.125rem;
+        }
+
+        .add-button {
+          border: none;
+          background: none;
+          color: #fff;
+          width: 9.8rem;
+          height: 9.2rem;
+          font-family: RobotoRegular;
+          font-size: 2.125rem;
+
+          &.red-button {
+            background: url("../../assets/images/arrow/arrowWithButton-red.png");
+            background-repeat: round;
+          }
+
+          &.blue-button {
+            background: url("../../assets/images/arrow/arrowWithButton-blue.png");
+            background-repeat: round;
+          }
+        }
+
+        &:nth-child(2) {
+          justify-content: center;
+          width: 13.7%;
+
+          .add-button {
+            width: auto;
+          }
+        }
+
+        &:nth-child(3) {
+          width: 47%;
+
+          .add-button {
+            color: #d1cecf;
+          }
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+          width: 50%;
+        }
+
+
+
+        &.bet-btn-numbers {
+          .add-button {
+            color: #d1cecf;
+          }
+        }
+
+      }
+    }
+  }
+
+  .bet-button-container.first-section-red {
+    background: url("../../assets/images/other/skew-container-red.png"), rgba(255, 255, 255, 0.102);
+    background-repeat: round;
+
+    .bet-btn-skew {
+      &:first-child {
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
-
-.bet-arrow-img{
-  border: none;
-  background-color: #332c2f;
-  width: 30px;
-  height: 27px;
-  border-radius: 4px;
-  backdrop-filter: blur(5px);
-}
-
-.add-button{
-  border: none;
-  background-color: #332c2f;
-  color: #fff;
-}
-
-.bet-dropdown-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #fff
-}
-
-
-.bet-dot{
-height: 5px;
-width: 5px;
-background-color: #bbb;
-display: inline-block;
-}
-
-
-.bet-dropdown-para{
-  display: flex;
-  align-items: center;
-  width: 88px;
-  justify-content: space-between;
-}
-
-
-.bet-button-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  background-color: #27181E;
-}
-
-
-.bet-btn-numbers{
-  display: flex;
-  width: 150px;
-  align-items: center;
-  justify-content:space-around;
-  border: none;
-  color: #D1CECF;
-}
-
-
-.blur {
-  backdrop-filter: blur(60px);
-  background-color: #332c2f;
-}
-
-
