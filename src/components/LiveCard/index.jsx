@@ -9,15 +9,21 @@ import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name, isActive,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, isActive, addToCart, handleClick,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
+  // const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
     flag ? setValue(23) : setValue('15');
   }, []);
+
+  const addToCartHandler = () => {
+    addToCart();
+    handleClick();
+  };
 
   return (
     <div className='first-con'>
@@ -29,9 +35,9 @@ function LiveCard({
             <div className={`down-sec ${isActive ? 'active' : 'inactive'}`}>
 
               <div className='row'>
-                <div>
+                <button style={{ background: 'transparent', border: 'none' }} type='button' onClick={addToCartHandler}>
                   <img className='star' src={star} alt='star' />
-                </div>
+                </button>
                 <div className='col'>
                   <div>
                     <div className='shirt'>

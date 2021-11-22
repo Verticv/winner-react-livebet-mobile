@@ -7,6 +7,7 @@ import LiveBet from './pages/MainLiveBet';
 import MainNonLiveBet from './pages/MainNonLiveBet';
 import MainLiveList from './pages/MainLiveList';
 import MainNonLiveList from './pages/MainNonLiveList';
+import Favorite from './pages/Favorite';
 
 import './App.css';
 
@@ -30,7 +31,7 @@ function App() {
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive />
+          <MainLive addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
           <Cart cart={cart} removeCard={removeCard} />
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path='/mainNonLiveList' exact>
           <MainNonLiveList />
+        </Route>
+        <Route path='/favorite' exact>
+          <Favorite cart={cart} />
         </Route>
       </Switch>
     </>

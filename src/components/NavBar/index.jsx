@@ -18,7 +18,7 @@ const number = 80;
 function NavBar({ isActive }) {
   return (
     <div className='nav'>
-      <NavButtons icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} />
+      <NavButtons icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} link='/favorite' />
       <NavButtons icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} />
       <NavButtons isActive={isActive} icon={footBallWhite} clickedIcon={footBallBlack} text='축구' number={number} />
       <NavButtons icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} />
