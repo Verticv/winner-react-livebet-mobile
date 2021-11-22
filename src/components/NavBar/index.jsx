@@ -19,11 +19,11 @@ function NavBar({ isActive }) {
   return (
     <div className='nav'>
       <NavButtons icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} link='/favorite' />
-      <NavButtons icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} />
-      <NavButtons isActive={isActive} icon={footBallWhite} clickedIcon={footBallBlack} text='축구' number={number} />
-      <NavButtons icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} />
-      <NavButtons icon={valBallWhite} clickedIcon={valBallBlack} text='농구' number={number} />
-      <NavButtons icon={ballyWhite} clickedIcon={ballyBlack} text='배구' number={number} />
+      <NavButtons icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} link='/1' />
+      <NavButtons isActive={isActive} icon={footBallWhite} clickedIcon={footBallBlack} text='축구' number={number} link='/2' />
+      <NavButtons icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} link='/3' />
+      <NavButtons icon={valBallWhite} clickedIcon={valBallBlack} text='농구' number={number} link='/4' />
+      <NavButtons icon={ballyWhite} clickedIcon={ballyBlack} text='배구' number={number} link='/5' />
     </div>
   );
 }
