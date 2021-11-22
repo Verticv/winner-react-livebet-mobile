@@ -1,6 +1,9 @@
 
 .back{
   background-color:#1D1E22;
+  &:nth-last-child(1) {
+    margin-bottom: 9.1875rem;
+  }
 }
 
 .first-con{

@@ -1,13 +1,15 @@
 import React from 'react';
 import ball from '../../assets/images/football/football-white.png';
 
-const CardHeader = ({ flag, name, show }) => {
+const CardHeader = ({
+  flag, name, show, isActive,
+}) => {
   if (!show) {
     return null;
   }
   return (
 
-    <div className='nLive-main-con'>
+    <div className={`nLive-main-con ${isActive ? 'active' : ''}`}>
 
       <div className='nLive-sub-con'>
         <img className='ball' src={ball} alt='ball' />

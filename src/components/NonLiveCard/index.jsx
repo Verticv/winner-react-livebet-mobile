@@ -7,7 +7,7 @@ import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
 function NonLiveCard({
-  name, flag, firstTeam, secondTeam,
+  name, flag, firstTeam, secondTeam, isActive,
 }) {
   const [showHeader, setShowHeader] = useState(false);
 
@@ -18,11 +18,11 @@ function NonLiveCard({
 
     <div className='nLive-first-con'>
       <div className='nLive-main-live'>
-        <CardHeader show={showHeader} flag={flag} name={name} />
+        <CardHeader isActive={isActive} show={showHeader} flag={flag} name={name} />
         <div className='nLive-card'>
           <div className='nLive-left'>
 
-            <div className='nLive-down-sec'>
+            <div className={`nLive-down-sec ${isActive ? 'active' : 'inactive'}`}>
 
               <div className='nLive-row'>
                 <div>
@@ -57,7 +57,7 @@ function NonLiveCard({
 
         </div>
       </div>
-      <AddButton />
+      <AddButton isActive={isActive} />
     </div>
 
   );
