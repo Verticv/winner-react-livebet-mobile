@@ -14,8 +14,12 @@
         display: flex;
         justify-content: space-between;
         width:100%;
-        background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-active.png");
+        background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
+        &.active {
+          background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-active.png");
+          background-repeat: round;
+        }
         .nLive-row{
           display: flex;
           align-items: center;
@@ -84,9 +88,6 @@
   }
   &:last-child {
     margin-bottom: 9.1875rem;
-    @media(max-width:$bp-medium) {
-      margin-bottom: 35px;
-    }
   }
 }
 
@@ -94,7 +95,7 @@
     background-color: white;
     width: 100%;    
     height: 7.7rem;
-    background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
+    background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-inactive.png");
     background-repeat: round;
     display: flex;
     justify-content: space-between;
@@ -121,7 +122,15 @@
       }
       
     }
-
+  &.active {
+    background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
+    background-repeat: round;
+    .nLive-sub-con {
+      p {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .nLive-btn{
@@ -130,9 +139,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
+  background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
   background-repeat: round;
   text-decoration: none;
+
   .nLive-side-btn{
     background-color: #9B2F30;
     color: #fff;
@@ -141,6 +151,14 @@
     width: 100%;
     background-color:#225F8B;
     font-size: 2.875rem;
+  }
+  &.active-button {
+    background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
+    background-repeat: round;
+    .nLive-side-btn {
+      background-color: transparent;
+      text-shadow: 0 0 10px #ffffff;
+    }
   }
 }
 

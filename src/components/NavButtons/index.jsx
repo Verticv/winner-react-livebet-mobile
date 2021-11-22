@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-// import './style.css';
-
 function NavButtons({
-  icon, clickedIcon, text, number,
+  icon, clickedIcon, text, number, isActive,
 }) {
   const [btnClass, setBtnClass] = useState(false);
   const [iconToggle, setIconToggle] = useState(false);
@@ -17,9 +15,9 @@ function NavButtons({
     <button
       type='submit'
       onClick={handelClick}
-      className={btnClass ? 'btnClass clicked' : 'btnClass'}
+      className={btnClass || isActive ? 'btnClass clicked' : 'btnClass'}
     >
-      <img src={iconToggle ? clickedIcon : icon} alt='icon' />
+      <img src={iconToggle || isActive ? clickedIcon : icon} alt='icon' />
       <p className='text'>{text}</p>
       <p className='num'>
         {number}

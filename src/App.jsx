@@ -41,11 +41,9 @@ function App() {
         <Route path='/nonLiveBet' exact>
           <MainNonLiveBet />
         </Route>
-
         <Route path='/mainLiveList' exact>
           <MainLiveList />
         </Route>
-
         <Route path='/mainNonLiveList' exact>
           <MainNonLiveList />
         </Route>
