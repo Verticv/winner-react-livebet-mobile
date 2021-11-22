@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function NavButtons({
-  icon, clickedIcon, text, number, isActive, link = '',
+  icon, clickedIcon, text, number, isActive, link = '/',
 }) {
   const [iconToggle, setIconToggle] = useState(false);
 
@@ -10,7 +10,7 @@ function NavButtons({
     if (window.location.pathname === link) {
       setIconToggle(true);
     }
-  }, []);
+  }, [window.location.pathname]);
 
   return (
     <NavLink

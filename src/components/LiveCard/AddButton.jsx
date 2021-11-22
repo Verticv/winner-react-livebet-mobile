@@ -10,6 +10,8 @@ const AddButton = ({ value, isActive, withPlus }) => {
     buttonClass = 'active-button active-with-plus';
   } else if (!isActive && withPlus) {
     buttonClass = 'inactive-button inactive-with-plus';
+  } else if (isActive) {
+    buttonClass = 'active-button';
   }
   return (
     <Link to='/liveBet' className='section-num'>

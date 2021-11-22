@@ -6,6 +6,8 @@ const AddButton = ({ isActive, withPlus }) => {
 
   if (isActive && withPlus) {
     buttonClass = 'active-button active-with-plus';
+  } else if (isActive) {
+    buttonClass = 'active-button';
   }
 
   return (
