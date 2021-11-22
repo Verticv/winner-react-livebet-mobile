@@ -7,7 +7,7 @@ import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
 function NonLiveCard({
-  name, flag, firstTeam, secondTeam, isActive,
+  name, flag, firstTeam, secondTeam, isActive, withPlus,
 }) {
   const [showHeader, setShowHeader] = useState(false);
 
@@ -57,7 +57,7 @@ function NonLiveCard({
 
         </div>
       </div>
-      <AddButton isActive={isActive} />
+      <AddButton isActive={isActive} withPlus={withPlus} />
     </div>
 
   );

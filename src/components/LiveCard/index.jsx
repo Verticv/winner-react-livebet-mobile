@@ -9,7 +9,8 @@ import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name, isActive, addToCart, handleClick,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name,
+  isActive, withPlus, addToCart, handleClick,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
@@ -92,7 +93,7 @@ function LiveCard({
 
         </div>
       </div>
-      <AddButton isActive={isActive} value={value} />
+      <AddButton isActive={isActive} withPlus={withPlus} value={value} />
     </div>
   );
 }
