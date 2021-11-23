@@ -160,6 +160,11 @@
       text-shadow: 0 0 10px #ffffff;
     }
   }
+  &.active-with-plus {
+    background-image: url("../../assets/images/cards/blueSideWithPlus-active.png");
+    background-repeat: round;
+    padding-top: 9rem;
+  }
 }
 
 .nLive-sub2{

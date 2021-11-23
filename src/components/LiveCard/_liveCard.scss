@@ -15,15 +15,14 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      &.active {
-        background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-active.png");
-        background-repeat: round;
-      }
       &.inactive {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
       }
-
+      &.active {
+        background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-active.png");
+        background-repeat: round;
+      }
       .row {
         display: flex;
         align-items: center;
@@ -100,6 +99,7 @@
             }
 
             .glowering {
+              color: white;
               text-shadow: 0 0 10px #ff242c;
               font-family: NotoSansCJKkrRegular;
               margin-right: 1.312rem;
@@ -302,6 +302,16 @@
       img {
         width: 2.9rem;
       }
+    }
+    &.active-with-plus {
+      background-image: url("../../assets/images/cards/redSideWithPlus-active.png");
+      background-repeat: round;
+      padding-top: 9rem;
+    }
+    &.inactive-with-plus {
+      background-image: url("../../assets/images/cards/redSideWithPlus-inactive.png");
+      background-repeat: round;
+      padding-top: 9rem;
     }
     p {
       margin-top: 0;

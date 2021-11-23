@@ -1,28 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function NavButtons({
-  icon, clickedIcon, text, number, isActive,
+  icon, clickedIcon, text, number, isActive, link = '/',
 }) {
-  const [btnClass, setBtnClass] = useState(false);
   const [iconToggle, setIconToggle] = useState(false);
 
-  const handelClick = () => {
-    setBtnClass(!btnClass);
-    setIconToggle(!iconToggle);
-  };
+  useEffect(() => {
+    if (window.location.pathname === link) {
+      setIconToggle(true);
+    }
+  }, [window.location.pathname]);
 
   return (
-    <button
-      type='submit'
-      onClick={handelClick}
-      className={btnClass || isActive ? 'btnClass clicked' : 'btnClass'}
+    <NavLink
+      to={link}
+      exact
+      className={isActive ? 'btnClass clicked' : 'btnClass'}
+      activeClassName='clicked'
     >
       <img src={iconToggle || isActive ? clickedIcon : icon} alt='icon' />
       <p className='text'>{text}</p>
       <p className='num'>
         {number}
       </p>
-    </button>
+    </NavLink>
   );
 }
 
