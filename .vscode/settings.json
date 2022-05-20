@@ -6,6 +6,9 @@
   },
   "eslint.autoFixOnSave" : true,
 
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 
 }

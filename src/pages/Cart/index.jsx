@@ -2,7 +2,8 @@ import React from 'react';
 import cartIcon from '../../assets/cart.png';
 import Slide from './Slide';
 import { Button1, Button2 } from './Button';
-import arrow from '../../assets/ico_23.png';
+import arrow from '../../assets/images/imgs/icon-3.png';
+import buttonIcon from '../../assets/images/imgs/button-icon.png';
 import repeat from '../../assets/ico_5.png';
 import mark from '../../assets/ico_6.png';
 import exit from '../../assets/exit.png';
@@ -26,17 +27,19 @@ const Cart = ({ cart, removeCard }) => {
   ));
   return (
     <div>
-
+      <div className='line' />
       <div className='cart-header'>
         <div className='cart-right-header'>
-          <img src={cartIcon} alt='cart' />
-          <p style={{ marginLeft: '.5rem' }}> BETSLIP</p>
-          <div style={{ marginLeft: '.5rem' }} className='cart-num'>
-            2
+          <div>
+            <img src={cartIcon} alt='cart' className='cart-icon' />
+            <p style={{ marginLeft: '2rem', marginRight: '1rem' }}>BETSLIP</p>
+            <div style={{ marginLeft: '.5rem' }} className='cart-num'>
+              2
+            </div>
           </div>
         </div>
         <button type='button' className='cart-arrow' onClick={removeCard}>
-          <img src={arrow} alt='' />
+          <img src={arrow} alt='' className='arrow' />
 
         </button>
       </div>
@@ -47,18 +50,21 @@ const Cart = ({ cart, removeCard }) => {
 
       </div>
 
-      <div>
-        <Slide className='cart-main-slide' name='실시간' number='3,000,000' />
+      <div className='card-container'>
+        <Slide className='cart-main-slide yellow' name='실시간' number='3,000,000' />
         <Slide className='cart-other-slide' name='라이브경기' number='5000' />
+        <div className='line' />
         <Slide name='라이브경기' number='1,000,000' />
+        <div className='line' />
         <Slide name='라이브경기' number='2,000,000' />
+        <div className='line' />
         <Slide name='라이브경기' number='0.00' />
-        <Slide name='라이브경기' number='0.00' />
-        <Slide name='라이브경기' number='0' />
+        <Slide className='cart-main-slide blue' name='라이브경기' number='0.00' />
+        <Slide className='cart-main-slide green' name='라이브경기' number='0' />
 
       </div>
 
-      <div className='cart-button-text'>
+      <div className='cart-button-text cart-main-slide'>
         <p className='cart-p-repeat'>이기실시간</p>
         <div className='cart-button-repeat'>
           <div className='img-cart-rep'>
@@ -75,15 +81,15 @@ const Cart = ({ cart, removeCard }) => {
           <Button1>5000</Button1>
           <Button1>5000</Button1>
           <Button1>5000</Button1>
-          <Button1>5000</Button1>
+          <Button1 className='active'>최대</Button1>
         </div>
         <div className='cart-two-btns'>
           <Button2>
-            <img src={chart} alt='' style={{ marginRight: '15px' }} />
+            <img src={exit} alt='' style={{ marginRight: '15px' }} />
             <p>이기실시간</p>
           </Button2>
-          <Button2>
-            <img src={exit} alt='' style={{ marginRight: '15px' }} />
+          <Button2 className='active'>
+            <img src={chart} alt='' style={{ marginRight: '15px' }} />
             <p>이기실시간</p>
           </Button2>
         </div>
@@ -106,6 +112,7 @@ const Cart = ({ cart, removeCard }) => {
         <button
           type='button'
         >
+          <img className='button-icon' src={buttonIcon} alt='' />
           라이브경기실시간
         </button>
       </div>
