@@ -76,11 +76,11 @@ const Cart = ({ cart, removeCard }) => {
 
       <div>
         <div className='cart-btns'>
-          <Button1>5000</Button1>
-          <Button1>5000</Button1>
-          <Button1>5000</Button1>
-          <Button1>5000</Button1>
-          <Button1>5000</Button1>
+          <Button1>5,000</Button1>
+          <Button1>10,000</Button1>
+          <Button1>50,000</Button1>
+          <Button1>100,000</Button1>
+          <Button1>1,000,000</Button1>
           <Button1 className='active'>최대</Button1>
         </div>
         <div className='cart-two-btns'>
