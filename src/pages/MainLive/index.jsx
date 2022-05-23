@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
 import Footer from '../../components/Footer';
-import flag from '../../assets/images/flags/spain.png';
 
 import NonLiveCard from '../../components/NonLiveCard';
 

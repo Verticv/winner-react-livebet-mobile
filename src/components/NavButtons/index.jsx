@@ -10,7 +10,7 @@ function NavButtons({
     if (window.location.pathname === link) {
       setIconToggle(true);
     }
-  }, [window.location.pathname]);
+  }, [link]);
 
   return (
     <NavLink

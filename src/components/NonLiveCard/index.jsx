@@ -14,7 +14,7 @@ function NonLiveCard({
 
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
-  }, []);
+  }, [flag]);
   return (
 
     <div className='nLive-first-con' id={id} 
