@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cup from '../../assets/images/cup/cup-gold.png';
 import chronology from '../../assets/images/chronology/chronology-white.png';
-import arrow from '../../assets/images/arrow/arrow-white.png';
-
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
 
 const MainHeader = () => {
   const { toggle, visible } = useModal();
-
+  const [isSelected, setIsSelected] = useState(true);
+  const changeName = () => {
+    setIsSelected((prev) => !prev);
+  };
   return (
     <>
       <div className='container-main-header'>
@@ -25,13 +26,11 @@ const MainHeader = () => {
               <img src={cup} alt='' />
               <p>리그선택</p>
             </div>
-
           </button>
-          <button type='submit' className='btn active'>
+          <button type='submit' className='btn active' onClick={changeName}>
             <div className='button-pho'>
               <img src={chronology} alt='' />
-              <p>시간순</p>
-              <img className='arrow' src={arrow} alt='' />
+              {isSelected ? <p>시간순</p> : <p>리그순보기</p>}
             </div>
           </button>
         </div>

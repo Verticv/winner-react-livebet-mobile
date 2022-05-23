@@ -7,23 +7,33 @@ import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
 function NonLiveCard({
-  name, flag, firstTeam, secondTeam, isActive, withPlus,
+  id, name, flag, firstTeam, secondTeam, withPlus,idBlueSelected, setIdBlueSelected
 }) {
   const [showHeader, setShowHeader] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
   }, []);
   return (
 
-    <div className='nLive-first-con'>
+    <div className='nLive-first-con' id={id} 
+      onClick={() => {
+        setIdBlueSelected(id);
+        setIsClicked(true);
+      }}
+    >
       <div className='nLive-main-live'>
-        <CardHeader isActive={isActive} show={showHeader} flag={flag} name={name} />
+        <CardHeader
+          id={id}
+          show={showHeader}
+          flag={flag}
+          name={name}
+          idBlueSelected={idBlueSelected}
+        />
         <div className='nLive-card'>
           <div className='nLive-left'>
-
-            <div className={`nLive-down-sec ${isActive ? 'active' : 'inactive'}`}>
-
+            <div className={`nLive-down-sec ${idBlueSelected === id ? 'active' : 'inactive'}`}>
               <div className='nLive-row'>
                 <div>
                   <img className='nLive-star' src={star} alt='star' />
@@ -35,29 +45,22 @@ function NonLiveCard({
                       <span className='character'>H</span>
                       <p>{firstTeam}</p>
                     </div>
-
                     <div className='nLive-shirt'>
                       <img src={blueShirt} alt='shirt' />
                       <span className='character'>A</span>
                       <p>{secondTeam}</p>
                     </div>
-
                   </div>
                   <div className='nLive-play-video'>
                     <p>02-13 21:00</p>
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
       </div>
-      <AddButton isActive={isActive} withPlus={withPlus} />
+      <AddButton id={id} idBlueSelected={idBlueSelected} isActive={isClicked} withPlus={withPlus} />
     </div>
 
   );

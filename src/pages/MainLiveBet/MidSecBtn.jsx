@@ -3,6 +3,9 @@ import React from 'react';
 function MidSecBtn({
   number1, number2, number3, rightText, leftText, add, isFirstItemRed,
 }) {
+  // const [leftActiveBackground, setLeftActiveBackground] = useState(false);
+  // const [middleActiveBackground, setMiddleActiveBackground] = useState(false);
+  // const [rightActiveBackground, setRightActiveBackground] = useState(false);
   return (
     <>
       <div className='bet-btn-container'>
