@@ -34,7 +34,7 @@ function App() {
           <MainLive addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
-          <Cart cart={cart} removeCard={removeCard} />
+          <Cart cart={cart} setCart={setCart} removeCard={removeCard} />
         </Route>
         <Route path='/liveBet' exact>
           <LiveBet addToCart={addToCart} handleClick={handleClick} />

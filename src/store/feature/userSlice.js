@@ -99,6 +99,17 @@ const initialState = {
         firstTeam: '맨체스터유나이티드',
         secondTeam: '리버풀',
     }],
+    buttonsValue: [{
+        content: '5,000',
+    },{
+        content: '10,000',
+    },{
+        content: '50,000',
+    },{
+        content: '100,000',
+    },{
+        content: '1,000,000',
+    }]
 };
 
 export const userSlice = createSlice({
