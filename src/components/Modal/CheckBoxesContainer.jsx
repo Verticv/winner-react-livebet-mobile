@@ -47,14 +47,21 @@ const CheckBoxes = [
   },
 ];
 
-const CheckBoxesContainer = () => {
+const CheckBoxesContainer = ({ isCheck, setIsCheck, temp, setTemp }) => {
   const [isCheckAll, setIsCheckAll] = useState(false);
-  const [isCheck, setIsCheck] = useState([]);
   const [list, setList] = useState([]);
-
   useEffect(() => {
     setList(CheckBoxes);
   }, [list]);
+  
+  useEffect(() => {
+    if (isCheck.length === 8) {
+      setIsCheckAll(true);
+    }
+    else {
+      setIsCheckAll(false);
+    }
+  }, [isCheck]);
 
   const handleSelectAll = () => {
     setIsCheckAll(!isCheckAll);
@@ -71,9 +78,8 @@ const CheckBoxesContainer = () => {
       setIsCheck(isCheck.filter((item) => item !== id));
     }
   };
-
-  const catalog = list.map(({ id, name, icon }) => (
-    <>
+  
+  const catalog = list.map(({ id, name, icon }) =>(
       <Checkbox
         key={id}
         type='checkbox'
@@ -83,7 +89,6 @@ const CheckBoxesContainer = () => {
         isChecked={isCheck.includes(id)}
         icon={icon}
       />
-    </>
   ));
   return (
 

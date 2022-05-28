@@ -7,6 +7,9 @@ import useModal from '../../hooks/useModal';
 const MainHeader = () => {
   const { toggle, visible } = useModal();
   const [isSelected, setIsSelected] = useState(true);
+  const [isCheck, setIsCheck] = useState([]);
+  const [temp, setTemp] = useState([]);
+  const [isClick, setIsClick] = useState(false);
   const changeName = () => {
     setIsSelected((prev) => !prev);
   };
@@ -21,7 +24,11 @@ const MainHeader = () => {
           </p>
         </div>
         <div className='button-container'>
-          <button type='submit' className='btn' onClick={toggle}>
+          <button type='submit' className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
+            onClick={() => {
+              toggle();
+              setIsCheck(temp);
+            }}>
             <div className='button-pho'>
               <img src={cup} alt='' />
               <p>리그선택</p>
@@ -29,13 +36,13 @@ const MainHeader = () => {
           </button>
           <button type='submit' className='btn active' onClick={changeName}>
             <div className='button-pho'>
-              <img src={chronology} alt='' />
+              <img src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p>시간순</p> : <p>리그순보기</p>}
             </div>
           </button>
         </div>
       </div>
-      <Modal visible={visible} toggle={toggle} />
+      <Modal visible={visible} toggle={toggle} isCheck={isCheck} setIsCheck={setIsCheck} isClick={isClick} setIsClick={setIsClick} temp={temp} setTemp={setTemp}/>
     </>
 
   );

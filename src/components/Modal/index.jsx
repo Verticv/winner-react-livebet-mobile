@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import CheckBoxesContainer from './CheckBoxesContainer';
 import exit from '../../assets/exit.png';
 
-const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
-
+const Modal = ({ visible, toggle, isCheck, setIsCheck, isClick, setIsClick, temp, setTemp }) => {
+return (visible ? ReactDOM.createPortal(
   <div className='modal'>
     <div className='modal-pop' role='dialog' aria-modal='true'>
       <div
@@ -21,15 +21,23 @@ const Modal = ({ visible, toggle }) => (visible ? ReactDOM.createPortal(
         />
       </div>
       <div className='modal-body'>
-        <CheckBoxesContainer />
+        <CheckBoxesContainer isCheck={isCheck} setIsCheck={setIsCheck} temp={temp} setTemp={setTemp} />
       </div>
       <div className='buttons-container modal-footer'>
-        <button type='button' onClick={toggle}>취소</button>
-        <button type='button' onClick={toggle}>확인</button>
+        <button type='button' onClick={() => {
+          toggle();
+          setIsClick(true);
+          setTemp(temp);
+        }}>취소</button>
+        <button type='button' onClick={() => {
+          toggle();
+          setIsClick(true);
+          setTemp(isCheck);
+          }}>확인</button>
       </div>
     </div>
     <div className='modal-overlay' />
   </div>, document.body,
 ) : null);
-
+}
 export default Modal;
