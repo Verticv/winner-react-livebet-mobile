@@ -131,6 +131,10 @@
       }
     }
   }
+  &.card-button-blue {
+    background: url('../../assets/images/imgs/arrow-blue-active.png');
+    background-repeat: round;
+  }
 }
 
 .nLive-btn{
@@ -151,6 +155,7 @@
     width: 100%;
     background-color:#225F8B;
     font-size: 2.875rem;
+    height: 15rem;
   }
   &.active-button {
     background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
@@ -158,12 +163,15 @@
     .nLive-side-btn {
       background-color: transparent;
       text-shadow: 0 0 10px #ffffff;
+      height: 15rem;
+    }
+    &.card-button-blue {
+      background: url('../../assets/images/imgs/arrow-blue-active.png');
+      background-repeat: round;
     }
   }
   &.active-with-plus {
-    background-image: url("../../assets/images/cards/blueSideWithPlus-active.png");
     background-repeat: round;
-    padding-top: 9rem;
   }
 }
 
@@ -172,4 +180,19 @@
   align-items: center;
   justify-content: space-evenly;
   width: 115px;
+}
+.card-button-blue {
+  background: url('../../assets/images/imgs/arrow-blue.png');
+  background-repeat: round;
+  height: 7.9rem;
+  width: 7.7rem;
+  border: 0;
+}
+.card-button-blue:active {
+  background: url('../../assets/images/imgs/arrow-blue-active.png');
+  background-repeat: round;
+}
+.card-button-blue-active {
+  background: url('../../assets/images/imgs/arrow-blue-active.png');
+  background-repeat: round;
 }

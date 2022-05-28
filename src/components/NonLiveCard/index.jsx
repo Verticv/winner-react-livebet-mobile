@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
-import star from '../../assets/images/emptyStar/star-filled-whitepng.png';
+import star from '../../assets/images/emptyStar/star-filled-gold.png';
 import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
 import CardHeader from './CardHeader';
 import AddButton from './AddButton';
 
 function NonLiveCard({
-  id, name, flag, firstTeam, secondTeam, withPlus,idBlueSelected, setIdBlueSelected
+  id, name, flag, firstTeam, secondTeam, withPlus,idBlueSelected, setIdBlueSelected, index, nonLiveData, setNonLiveData
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -15,15 +15,19 @@ function NonLiveCard({
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
   }, [flag]);
+  const removeFromFavorite = ({ target }) => {
+    const filteredData = nonLiveData.filter((el) => el.id !== +target.id)
+    setNonLiveData(filteredData);
+  }
   return (
 
     <div className='nLive-first-con' id={id} 
-      onClick={() => {
-        setIdBlueSelected(id);
-        setIsClicked(true);
-      }}
     >
-      <div className='nLive-main-live'>
+      <div className='nLive-main-live'
+        onClick={() => {
+          setIdBlueSelected(id);
+          setIsClicked(true);
+      }}>
         <CardHeader
           id={id}
           show={showHeader}
@@ -35,8 +39,8 @@ function NonLiveCard({
           <div className='nLive-left'>
             <div className={`nLive-down-sec ${idBlueSelected === id ? 'active' : 'inactive'}`}>
               <div className='nLive-row'>
-                <div>
-                  <img className='nLive-star' src={star} alt='star' />
+                <div style={{ background: 'transparent', border: 'none' }}  onClick={removeFromFavorite}>
+                  <img className='nLive-star' id={id} src={star} alt='star' />
                 </div>
                 <div className='nLive-col'>
                   <div>
@@ -60,7 +64,7 @@ function NonLiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} idBlueSelected={idBlueSelected} isActive={isClicked} withPlus={withPlus} />
+      <AddButton id={id} index={index} idBlueSelected={idBlueSelected} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} isActive={isClicked} withPlus={withPlus} />
     </div>
 
   );

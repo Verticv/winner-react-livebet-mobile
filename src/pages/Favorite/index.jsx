@@ -8,17 +8,19 @@ import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 
-function Favorite() {
+function Favorite({ removeCard }) {
   const { favoriteCards, nonLiveCard } = useSelector((state) => state.cards);
   const [idSelect, isIdSelected] = useState(0);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
+  const [data, setData] = useState(favoriteCards);
+  const [nonLiveData, setNonLiveData] = useState(nonLiveCard)
 
   return (
     <div className='favorite'>
       <NavBar />
       <MainHeader />
       <LiveListHeader />
-      {favoriteCards.map(({ 
+      {data?.map(({ 
         id,
         flag,
         name,
@@ -28,17 +30,17 @@ function Favorite() {
         secondScore,
         firstTeam,
         secondTeam
-        }) => <LiveCard key={id} idSelect={idSelect} isIdSelected={isIdSelected} id={id} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstScore={firstScore} secondScore={secondScore} firstTeam={firstTeam} secondTeam={secondTeam} />)}
+        } , index) => <LiveCard key={id} removeCard={removeCard} idSelect={idSelect} data={data} setData={setData} isIdSelected={isIdSelected} id={id} index={index} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstScore={firstScore} secondScore={secondScore} firstTeam={firstTeam} secondTeam={secondTeam} />)}
       <NonLiveListHeader />
-      {nonLiveCard.map(({
+      {nonLiveData?.map(({
         id,
         flag,
         name,
         isActive,
         withPlus,
         firstTeam,
-        secondTeam
-      }) => <NonLiveCard key={id} id={id} idBlueSelected={idBlueSelected} setIdBlueSelected={setIdBlueSelected} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstTeam={firstTeam} secondTeam={secondTeam} />)}
+        secondTeam,
+      }, index) => <NonLiveCard key={id} id={id} index={index} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} idBlueSelected={idBlueSelected} setIdBlueSelected={setIdBlueSelected} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstTeam={firstTeam} secondTeam={secondTeam} />)}
       <Footer />
     </div>
   );

@@ -49,7 +49,7 @@ function App() {
           <MainNonLiveList />
         </Route>
         <Route path='/favorite' exact>
-          <Favorite cart={cart} />
+          <Favorite cart={cart} removeCard={removeCard} handleClick={handleClick}/>
         </Route>
       </Switch>
     </>

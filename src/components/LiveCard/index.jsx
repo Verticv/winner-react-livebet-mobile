@@ -10,13 +10,12 @@ import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name,
-  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard,
+  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
   const [isClicked, setIsClicked] = useState(false);
-  const [data, setData] = useState({});
   const { favoriteCards } = useSelector((state) => state.cards);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
@@ -27,15 +26,17 @@ function LiveCard({
     addToCart();
     handleClick();
   };
-
+  const removeFromFavorite = ({ target }) => {
+    const filteredData = data.filter((el) => el.id != target.id)
+    setData(filteredData);
+  }
   return (
-    <div className='first-con' id={id}
-      onClick={() => {
+    <div className='first-con' id={id}>
+      <div className='main-live' 
+        onClick={() => {
         isIdSelected(id);
         setIsClicked(true);
-      }}
-    >
-      <div className='main-live'>
+      }}>
         <CardHeader
           id={id}
           isActive={isClicked}
@@ -50,8 +51,8 @@ function LiveCard({
           <div className='left'>
             <div className={`down-sec ${ idSelect === id ? 'active' : 'inactive'}`}>
               <div className='row'>
-                <button style={{ background: 'transparent', border: 'none' }} type='button' onClick={addToCartHandler}>
-                  <img className='star' src={star} alt='star' />
+                <button style={{ background: 'transparent', border: 'none' }} type='button' onClick={removeFromFavorite}>
+                  <img className='star' id={id} src={star} alt='star' />
                 </button>
                 <div className='col'>
                   <div>
@@ -98,7 +99,7 @@ function LiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} idSelect={idSelect} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
+      <AddButton id={id} index={index} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
     </div>
   );
 }
