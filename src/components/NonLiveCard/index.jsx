@@ -5,13 +5,14 @@ import redShirt from '../../assets/image_42.png';
 import blueShirt from '../../assets/image_40.png';
 import CardHeader from './CardHeader';
 import AddButton from './AddButton';
+import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
 
 function NonLiveCard({
-  id, name, flag, firstTeam, secondTeam, withPlus,idBlueSelected, setIdBlueSelected, index, nonLiveData, setNonLiveData
+  id, name, flag, firstTeam, secondTeam, withPlus,idBlueSelected, setIdBlueSelected, index, nonLiveData, setNonLiveData, isFavorite
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
-
+  const [isStar, setIsStar] = useState(true);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
   }, [flag]);
@@ -19,6 +20,7 @@ function NonLiveCard({
     const filteredData = nonLiveData.filter((el) => el.id !== +target.id)
     setNonLiveData(filteredData);
   }
+  const toggleStar = () => setIsStar((prev) => !prev);
   return (
 
     <div className='nLive-first-con' id={id} 
@@ -39,8 +41,9 @@ function NonLiveCard({
           <div className='nLive-left'>
             <div className={`nLive-down-sec ${idBlueSelected === id ? 'active' : 'inactive'}`}>
               <div className='nLive-row'>
-                <div style={{ background: 'transparent', border: 'none' }}  onClick={removeFromFavorite}>
-                  <img className='nLive-star' id={id} src={star} alt='star' />
+                <div style={{ background: 'transparent', border: 'none' }}
+                  onClick={isFavorite ? removeFromFavorite : toggleStar}>
+                  <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
                 </div>
                 <div className='nLive-col'>
                   <div>
@@ -64,7 +67,7 @@ function NonLiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} index={index} idBlueSelected={idBlueSelected} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} isActive={isClicked} withPlus={withPlus} />
+      <AddButton id={id} index={index} flag={flag} isFavorite={isFavorite} idBlueSelected={idBlueSelected} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} isActive={isClicked} withPlus={withPlus} />
     </div>
 
   );

@@ -8,20 +8,22 @@ import redShirt from '../../assets/images/shirt/red.png';
 import blueShirt from '../../assets/images/shirt/blue.png';
 import AddButton from './AddButton';
 import CardHeader from './CardHeader';
+import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
 
 function LiveCard({
   firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard,
-  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index
+  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
   const [isClicked, setIsClicked] = useState(false);
+  const [isStar, setIsStar] = useState(true);
   const { favoriteCards } = useSelector((state) => state.cards);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
     flag ? setValue(23) : setValue('15');
   }, []);
-
+  const toggleStar = () => setIsStar((prev) => !prev);
   const addToCartHandler = () => {
     addToCart();
     handleClick();
@@ -51,8 +53,10 @@ function LiveCard({
           <div className='left'>
             <div className={`down-sec ${ idSelect === id ? 'active' : 'inactive'}`}>
               <div className='row'>
-                <button style={{ background: 'transparent', border: 'none' }} type='button' onClick={removeFromFavorite}>
-                  <img className='star' id={id} src={star} alt='star' />
+                <button style={{ background: 'transparent', border: 'none' }} type='button'
+                  onClick={isFavorite ? removeFromFavorite : toggleStar}
+                >
+                  <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
                 </button>
                 <div className='col'>
                   <div>
@@ -99,7 +103,7 @@ function LiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} index={index} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
+      <AddButton id={id} index={index} flag={flag} isFavorite={isFavorite} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
     </div>
   );
 }

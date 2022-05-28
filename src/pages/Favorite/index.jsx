@@ -29,8 +29,9 @@ function Favorite({ removeCard }) {
         firstScore,
         secondScore,
         firstTeam,
-        secondTeam
-        } , index) => <LiveCard key={id} removeCard={removeCard} idSelect={idSelect} data={data} setData={setData} isIdSelected={isIdSelected} id={id} index={index} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstScore={firstScore} secondScore={secondScore} firstTeam={firstTeam} secondTeam={secondTeam} />)}
+        secondTeam,
+        isFavorite,
+        } , index) => <LiveCard key={id} removeCard={removeCard} idSelect={idSelect} data={data} setData={setData} isIdSelected={isIdSelected} id={id} index={index} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstScore={firstScore} secondScore={secondScore} firstTeam={firstTeam} secondTeam={secondTeam} isFavorite={isFavorite} />)}
       <NonLiveListHeader />
       {nonLiveData?.map(({
         id,
@@ -40,7 +41,8 @@ function Favorite({ removeCard }) {
         withPlus,
         firstTeam,
         secondTeam,
-      }, index) => <NonLiveCard key={id} id={id} index={index} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} idBlueSelected={idBlueSelected} setIdBlueSelected={setIdBlueSelected} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstTeam={firstTeam} secondTeam={secondTeam} />)}
+        isFavorite
+      }, index) => <NonLiveCard key={id} id={id} index={index} nonLiveData={nonLiveData} setNonLiveData={setNonLiveData} idBlueSelected={idBlueSelected} setIdBlueSelected={setIdBlueSelected} flag={flag} name={name} isActive={isActive} withPlus={withPlus} firstTeam={firstTeam} secondTeam={secondTeam} isFavorite={isFavorite} />)}
       <Footer />
     </div>
   );

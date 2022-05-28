@@ -15,6 +15,7 @@ const initialState = {
         secondScore: 0,
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
+        isFavorite: true,
     },
     {
         id:1,
@@ -26,6 +27,7 @@ const initialState = {
         secondScore: 0,
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
+        isFavorite: true,
     },
     {
         id:2,
@@ -37,6 +39,7 @@ const initialState = {
         secondScore: 0,
         firstTeam: '바이헤른뮌헨',
         secondTeam: '프랑크푸르트',
+        isFavorite: true,
     }],
     nonLiveCard: [{
         id: 0,
@@ -46,6 +49,7 @@ const initialState = {
         withPlus: true,
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
+        isFavorite: true,
     },{
         id: 1,
         flag: germany,
@@ -54,6 +58,7 @@ const initialState = {
         withPlus: false,
         firstTeam: '맨체스터유나이티드',
         secondTeam: '리버풀',
+        isFavorite: true,
     }],
     mainHeaderLive: [{
         id: 0,

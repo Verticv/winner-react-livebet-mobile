@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData }) => {
+const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag }) => {
   let buttonClass = 'inactive-button';
   if (idBlueSelected === id) {
     if (isActive && withPlus) {
@@ -12,19 +12,22 @@ const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData,
   }
   return (
     <div>
-      <button type='button' id={index} className={`card-button-blue nLive-btn ${buttonClass}`}
-      onClick={(e) => {
-        let temp;      
-        const newCard = [...nonLiveData];
-        if(+e.target.id !== 0){
-          temp = newCard[e.target.id - 1];
-          newCard[e.target.id - 1] = newCard[e.target.id];
-          newCard[e.target.id] = temp;
-        } 
-        setNonLiveData(newCard);
-      }} />
+      {isFavorite
+        ? <button type='button' id={index} className={`card-button-blue nLive-btn ${buttonClass}`}
+        onClick={(e) => {
+          let temp;      
+          const newCard = [...nonLiveData];
+          if(+e.target.id !== 0){
+            temp = newCard[e.target.id - 1];
+            newCard[e.target.id - 1] = newCard[e.target.id];
+            newCard[e.target.id] = temp;
+          } 
+          setNonLiveData(newCard);
+        }} /> 
+        : null
+      }
       <Link className={`nLive-btn ${buttonClass}`} to='/nonLiveBet'>
-        <button type='button' className='nLive-side-btn'>
+        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.6875rem' : '15rem'}}>
           정보
         </button>
       </Link>

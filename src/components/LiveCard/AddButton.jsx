@@ -5,7 +5,7 @@ import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png'; 
 
-const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favoriteCards, setData, data, index }) => {
+const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favoriteCards, setData, data, index, isFavorite, flag }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
   if (id === idSelect) {
     if (isActive && withPlus) {
@@ -28,12 +28,15 @@ const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favo
   }
   return (
     <div>
-      <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
+      {isFavorite 
+      ? <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
       onClick={changeOrder}>
         <img style={{width:'2.625rem', height:'1.625rem' }} id={index} onClick={changeOrder} src={ isActive && idSelect === id ? redArrowActive : redArrow} alt=''/>
       </button>
+      : null}
+
       <Link to='/liveBet' className='section-num'>
-        <button type='button' className={`live-btn ${buttonClass}`}>
+        <button type='button' className={`live-btn ${buttonClass}`} style={{height: !isFavorite && flag ? '22.6875rem' : '15rem'}}>
           <img src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
           <p>{value}</p>
         </button>
