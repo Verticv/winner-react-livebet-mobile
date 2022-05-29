@@ -7,6 +7,7 @@
 .dropdown-wrapper {
   background-image: url("../../assets/images/other/liveBitBackground.png");
   background-repeat: round;
+  min-height: 65.9375rem;
 }
 
 .middle-nav {
@@ -27,7 +28,7 @@
     background-repeat: round;
 
     &.active {
-      background-image: url("../../assets/images/other/liveBitButton-gold.png");
+      background: linear-gradient(0deg,#d8bc6f,#aa8f60 50%,#d6c8a5);
       background-repeat: round;
       color: #000000;
     }
@@ -147,6 +148,7 @@
           &.red-button {
             background: url("../../assets/images/arrow/arrowWithButton-red.png");
             background-repeat: round;
+            margin: -5px;
           }
 
           &.blue-button {
@@ -157,8 +159,8 @@
 
         &:nth-child(2) {
           justify-content: center;
-          width: 13.7%;
-
+          width: 19rem;
+          height: 6.3rem;
           .add-button {
             width: auto;
           }
@@ -169,22 +171,23 @@
 
           .add-button {
             color: #d1cecf;
+            margin-left: -5px;
           }
         }
 
         &:nth-child(1),
         &:nth-child(3) {
-          width: 50%;
+          width: 70%;
+          margin-right: -2rem;
+          padding-right: 1rem;
+          margin-left: -1.4rem;
+          padding-left: 1rem;
         }
-
-
-
         &.bet-btn-numbers {
           .add-button {
             color: #d1cecf;
           }
         }
-
       }
     }
   }
@@ -192,7 +195,6 @@
   .bet-button-container.first-section-red {
     background: url("../../assets/images/other/skew-container-red.png"), rgba(255, 255, 255, 0.102);
     background-repeat: round;
-
     .bet-btn-skew {
       &:first-child {
         p {
@@ -201,4 +203,25 @@
       }
     }
   }
+}
+.middle-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 35px;
+  padding-left: 0;
+  clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
+  font-family: RobotoMedium;
+  font-size: 14px;
+  background-color: #9b2f30;
+}
+.blue-section {
+  background: linear-gradient(270deg,#9b2f30,#9b2f30 25%,#9a2f30 50%,#872d2f 63%,#722a2e 75%,#5d282e);
+  height: 6.3rem;
+  width: 320px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  clip-path: polygon(5% 0%, 100% 0, 100% 100%, 0% 100%);
 }

@@ -2,10 +2,10 @@
   background: #fff;
   border: 1px solid #aaa;
   z-index: 999;
-  width: 340px;
+  width: 72.625rem;
   margin: auto;
   position: fixed;
-  left: calc(50% - 170px);
+  left: calc(50% - 36.4rem);
   top: 30%;
   margin-top: 2rem;
   background-color: #383843;
@@ -18,8 +18,15 @@
     background-image: url("../../assets/images/modal/header.png");
     background-repeat: round;
     font-size: 15px;
+    height: 7.5rem;
     p {
       color: #fff;
+      font-size: 4rem;
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding-right: 2.3rem;
     }
   }
 
@@ -31,14 +38,14 @@
   .modal-footer {
     background-image: url("../../assets/images/modal/footer.png");
     background-repeat: round;
-    height: 60px;
-    padding: 0 5px;
+    height: 10.1875rem;
+    padding: 0 0.3125rem;
 
     button {
       width: 50%;
-      height: 47px;
-      border-radius: 5px;
-      font-size: 16px;
+      height: 8.1875rem;
+      border-radius: 0.3125rem;
+      font-size: 4rem;
       border: none;
       color: #909090;
       box-shadow: 1px 2px 5px -3px rgba(0,0,0,0.75);
@@ -74,13 +81,14 @@
 .container {
   padding: 1rem;
   display: flex;
+  width: 72.625rem;
+  min-height: 36.5625rem;
   justify-content: space-between;
   flex-wrap: wrap;
   .checkbox {
     color: #d1cecf;
     img {
       width: 38px;
-      // height: 18px;
     }
     label {
       height: 40px;
@@ -92,9 +100,13 @@
       display: flex;
       align-items: center;
       margin-left: 3px;
+      img {
+        width: 6.3125rem;
+        height: 3.875rem;
+      }
       .checkbox-text {
-        margin-left: 4px;
-        font-size: 14px;
+        font-size: 3.75rem;
+        margin-left: 1rem;
       }
     }
     &:first-child {
@@ -142,8 +154,8 @@
 }
 
 .icon {
-  padding-left: 5px;
-  padding-right: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 INPUT[type=checkbox]:focus {
@@ -155,8 +167,8 @@ INPUT[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 2.6875rem;
+  height: 2.0625rem;
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -164,8 +176,8 @@ INPUT[type=checkbox] {
 
 .input-wrapper {
   background: #000;
-  width: 17px;
-  height: 17px;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,4 +186,5 @@ INPUT[type=checkbox] {
 INPUT[type=checkbox]:checked {
   background: url("../../assets/images/other/check.png");
   background-repeat: round;
+  width: 2.6875rem;
 }
