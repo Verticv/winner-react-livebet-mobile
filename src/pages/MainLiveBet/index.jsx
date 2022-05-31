@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import LiveListHeader from '../../components/LiveListHeader';
 import Footer from '../../components/Footer';
 import MiddleNav from './MiddleNav';
 import DropDown from './DropDown';
 import group from '../../assets/images/other/group.png';
-import flag from '../../assets/images/flags/spain.png';
 import LiveCard from '../../components/LiveCard';
 
-function LiveBet({ handleClick }) {
+function LiveBet({ handleClick, cardId }) {
   const [idActive, setIdActive] = useState(0);
+  const { mainHeaderLive } = useSelector((state) => state.cards);
   return (
     <div className='live-bet-page'>
       <LiveListHeader />
-      <LiveCard flag={flag} name='라리가' isActive firstScore='1' secondScore='0' firstTeam='FC바르셀로나' secondTeam='레알마드리드' />
-
+      <LiveCard
+          flag={mainHeaderLive[cardId]?.flag}
+          name={mainHeaderLive[cardId]?.name}
+          isActive={mainHeaderLive[cardId]?.isActive}
+          firstScore={mainHeaderLive[cardId]?.firstScore}
+          secondScore={mainHeaderLive[cardId]?.secondScore}
+          firstTeam={mainHeaderLive[cardId]?.firstTeam}
+          secondTeam={mainHeaderLive[cardId]?.secondTeam} 
+        /> 
       <img src={group} alt='group' style={{ width: '100%', height: 'auto' }} />
       <div>
         <MiddleNav idActive={idActive} setIdActive={setIdActive} />

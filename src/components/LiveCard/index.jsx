@@ -11,7 +11,7 @@ import CardHeader from './CardHeader';
 import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard,
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard, setCardId,
   isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite
 }) {
   const [showHeader, setShowHeader] = useState(false);
@@ -103,7 +103,7 @@ function LiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} index={index} flag={flag} isFavorite={isFavorite} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
+      <AddButton id={id} setCardId={setCardId} index={index} flag={flag} isFavorite={isFavorite} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
     </div>
   );
 }
