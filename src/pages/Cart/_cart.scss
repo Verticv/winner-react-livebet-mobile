@@ -7,9 +7,9 @@
   outline: none;
   border: 0;
   height: 6.5rem;
-  width: 23.75rem;
   font-size: 4rem;
   margin: 1rem 1.125rem;
+  font-family: RobotoRegular;
 }
 
 .cart-btn:focus {
@@ -28,6 +28,7 @@
   width: 35.3125rem;
   height: 7.8125rem;
   font-size: 4rem;
+  margin: 1rem;
   margin-top: 2.25rem;
   img {
     margin-right: 1rem;
@@ -40,8 +41,27 @@
   color: #000;
 }
 .line {
-  height: 0.0625rem;
-  background: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.28) 49.87793%,hsla(0,0%,100%,.28) 50%,hsla(0,0%,100%,0)),rgba(44,44,52,.4);
+  margin: 0 2.125rem 0 2.125rem;
+  height: 0.1875rem;
+  width: calc(100% - 9rem);
+  background: linear-gradient(90deg,#35353a,#1d1d1d);
+  margin-left: 4rem;
+}
+.card-content {
+  background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
+  .blue {
+    border: 0;
+  }
+  .green {
+    border: 0;
+  }
+  .line {
+    margin: 0 2.125rem 0 2.125rem;
+    height: 0.1875rem;
+    width: calc(100% - 6rem);
+    background: linear-gradient(90deg,#35353a,#1d1d1d);
+    margin-left: 3rem;
+  }
 }
 .cart-slide{
   display: flex;
@@ -51,17 +71,21 @@
   color: #888889;
   background: linear-gradient(90deg,#1a1a20,#18181b 50%,#161616);
   height: 7.5625rem;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+.id-section {
+  background: url('../../assets/images/imgs/id-background.png');
+  border-bottom: 0.1875rem solid #000;
 }
 .card-container {
   background: linear-gradient(90deg,#1a1a20,#18181b 50%,#161616);
   margin-top: 0.1875rem;
   .line {
-    margin: 0 0.625rem 0 0.5rem;
-    height: 0.0625rem;
-    width: calc(100% - 9rem);
+    margin: 0 2.125rem 0 2.125rem;
+    height: 0.1875rem;
+    width: calc(100% - 6rem);
     background: linear-gradient(90deg,#35353a,#1d1d1d);
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
 }
 .cart-main-slide {
@@ -69,19 +93,20 @@
   color: #fff
 }
 .yellow {
-  border-bottom:  0.0625rem solid #222222;
+  border-bottom: 0.1875rem solid #000;
+  border-top: 0.1875rem solid #000;
   .slide-num {
     color: #e9ca4e;
   }
 }
 .blue {
-  border-bottom:  0.0625rem solid #222222;
+  border-bottom:  0.1875rem solid #000;
   .slide-num {
     color: #4195c1;
   }
 }
 .green {
-  border-bottom:  0.0625rem solid #222222;
+  border-bottom:  0.1875rem solid #000;
   .slide-num {
     color: #00ff05;
   }
@@ -96,28 +121,26 @@
   display: flex;
   justify-content:space-between;
   border-bottom:  0.0625rem solid #222222;
-
 }
 
 .cart-button-repeat{
   display: flex;
-  width: 47.8125rem;
   justify-content: space-between;
   background-color: #000000;
   align-items: center;
-  padding-left: 9px;
   height: 6.625rem;
   margin-top: 4px;
   border-radius: 6px;
   color:#D7BA47;
+  width: 60%;
   .number {
-    width: 39.8125rem;
     height: 5.625rem;
     padding-right: 21px;
     font-size: 4rem;
     border: 0;
     text-align: right;
     outline: none;
+    width: 82%;
   }
 }
 
@@ -127,7 +150,7 @@
   background-repeat: round;
   height: 6.25rem;
   width: 6.25rem;
-  margin-left: -8px;
+  margin-left: 2px;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -138,17 +161,15 @@
 }
 
 .cart-p-repeat{
-  padding-left: 1rem ;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 12px;
-  color: #fff
+  color: #fff;
+  flex-basis: 40%;
 
 }
 
 .id-wrapper {
-  border-top: 0.5rem solid #000;
-  border-bottom: 0.5rem solid #000;
   .cart-other-slide{
     font-size: 3rem;
     border-bottom: 1rem solid #000;
@@ -165,7 +186,7 @@
   justify-content: space-between;
   background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
   color: #fff;
-  border-bottom: 1px solid #1e1e1e;
+  border-bottom: 0.1875rem solid #000000;
   height: 8.4375rem;
 }
 
@@ -174,9 +195,10 @@
   align-items: center;
   width: 100%;
   padding-left: 2.1875rem;
-  border-right: 1px solid #4d4d5c;
-  height: 8.4375rem;
+  border-right: 0.1875rem solid #000000;
+  height: 8.5375rem;
   margin-right: 1px;
+  background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
 
   div {
     display: flex;
@@ -193,7 +215,15 @@
     }
   }
 }
+.cartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8.4375rem;
+  width: 8.4375rem;
+  border-left: 0.1875rem solid #585867;
 
+}
 .cart-arrow{
   width: 8.625rem;
   display: flex;
@@ -211,13 +241,14 @@
 .cart-num{
   width: 4.0625rem;
   height: 4.0625rem;
-  background-color: #9A2B2C;
+  background-color: #9b2f30;
   color: #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.4rem;
+  padding-bottom: 1px;
 }
 
 
@@ -234,15 +265,15 @@
 }
 
 .cart-items{
-  height: 102px;
   width: 100%;
   background-color: #000;
-  height: 17.9375rem;
+  height: 17.5rem;
   background: url('../../assets/images/imgs/card-cart-bg.png');
   position: relative;
-  font-size: 2rem;
-  line-height: 2;
+  font-size: 4rem;
   background-repeat: round;
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid black;
 }
 
 .cart-items-team{
@@ -250,15 +281,18 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
+
   p {
     color: white;
+    margin-top: 0.625rem;
+    margin-bottom: 0rem;
   }
   
   .close {
     position: absolute;
     right: 1.5625rem;
     top: 1.5625rem;
-    background: #2c2c36;
+    background: bottom;
     border: 0;
     &:hover {
       filter: brightness(130%);
@@ -275,7 +309,7 @@
 }
 
 .margin{
-  margin:0
+  margin-top: -4px;
 }
 
 
@@ -284,7 +318,8 @@
   background-color:#19191e;
   border-top: 1px solid;
   height: 19.625rem;
-  padding-left: 4rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 .cart-two-btns{
@@ -303,9 +338,9 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
-  border-top: 10px solid;
+  border-top: 1.9375rem solid;
   height: 8.625rem;    
-  border-bottom: 1px solid;
+  border-bottom: 0.1875rem solid;
   padding-right: 2.25rem;
 }
 
@@ -319,7 +354,8 @@
   color:#fff;
   font-size: 4rem;
   img {
-    width: 3rem;
+    width: 5.125rem;
+    height: 3rem;
     padding: 0 2.1875rem;
   }
 }
@@ -360,7 +396,7 @@
 }
 
 .cart-button-container{
-  background-color: #1A1A20;
+  background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
   display: flex;
   padding: 10px;
   align-content: center;
@@ -378,11 +414,11 @@
   background: url('../../assets/images/imgs/bg.png');
   background-repeat: round;
   border: 0;
-  color:#000000;
+  color: #222222;
   padding-bottom: 6px;
   font-size: 4rem;
   .button-icon {
-    margin-right: 1rem;
+    margin-right: 2.5rem;
     width: 3rem;
   }
 }

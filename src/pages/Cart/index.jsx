@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import cartIcon from '../../assets/cart.png';
+import cartIcon from '../../assets/images/imgs/cart.png'
 import Slide from './Slide';
 import { Button1, Button2 } from './Button';
 import arrow from '../../assets/images/imgs/icon-3.png';
 import buttonIcon from '../../assets/images/imgs/button-icon.png';
 import repeat from '../../assets/ico_5.png';
-import mark from '../../assets/ico_6.png';
+import mark from '../../assets/images/imgs/mark.png';
 import exit from '../../assets/images/imgs/x.png';
 import exitBtn from '../../assets/exit.png'
 import chart from '../../assets/ico_2.png';
@@ -36,8 +36,8 @@ const Cart = ({ cart, setCart, removeCard }) => {
       <p className='margin' style={{ paddingLeft: '2rem' }}>
         <del style={{ marginRight: '2rem' }}>6.11</del>
         {num % 2 === 0
-        ? <span style={{ color: '#4195c1' }}>  5.01 <img style={{ marginLeft: '2rem', width: '2.25rem', height: '1.3125rem' }} src={blueArrow} alt='blue arrow' /></span>
-        : <span style={{ color: '#4195c1' }}>  3.75 <img style={{ marginLeft: '2rem', width: '2.25rem', height: '1.3125rem' }} src={redArrow} alt='red arrow' /></span> }
+          ? <span style={{ color: '#4195c1' }}>  5.01 <img style={{ marginLeft: '2rem', width: '2.25rem', height: '1.3125rem' }} src={blueArrow} alt='blue arrow' /></span>
+          : <span style={{ color: '#4195c1' }}>  3.75 <img style={{ marginLeft: '2rem', width: '2.25rem', height: '1.3125rem' }} src={redArrow} alt='red arrow' /></span>}
       </p>
     </div>
   ));
@@ -54,10 +54,11 @@ const Cart = ({ cart, setCart, removeCard }) => {
             </div>
           </div>
         </div>
-        <button type='button' className='cart-arrow' onClick={removeCard}>
-          <img src={arrow} alt='' className='arrow' />
-
-        </button>
+        <div className='cartBtn'>
+          <button type='button' className='cart-arrow' onClick={removeCard}>
+            <img src={arrow} alt='' className='arrow' />
+          </button>
+        </div>
       </div>
 
       <div className='cart-name'>
@@ -114,7 +115,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
       <div className='cart-bottom-container'>
         <div className='cart-mark'>
           <img src={mark} alt='' />
-          <p>이기실</p>
+          <p>나의 베팅내역</p>
         </div>
         <div className='cart-repeat'>
           <p>10</p>
@@ -122,31 +123,35 @@ const Cart = ({ cart, setCart, removeCard }) => {
         </div>
       </div>
       <div className='id-wrapper'>
-        <Slide className='cart-other-slide' name='186123533' number='2020-05-16 03:45:11
+        <Slide className='id-section' name='186123533' number='2020-05-16 03:45:11
 ' />
-        <div className='cart-items' style={{ height: '12.5rem', lineHeight: '1.5' }}>
+        <div className='cart-items' style={{ height: '12.9rem', lineHeight: '1.5' }}>
           <div className='cart-items-team'>
             <p>FC바로셀로나  <span style={{ color: '#c49f58' }}>VS</span>  레알마드리드 </p>
           </div>
           <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '2rem' }}>승무패(홈) - FC바로셀로나 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>5.01</span></p>
         </div>
-        <div className='cart-items' style={{ height: '12.5rem', lineHeight: '1.5' }}>
+        <div className='cart-items' style={{ height: '12.9rem', lineHeight: '1.5' }}>
           <div className='cart-items-team'>
             <p>맨체스터유나이티드  <span style={{ color: '#c49f58' }}>VS</span>  리버풀</p>
           </div>
           <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '2rem' }}>승무패(원정) - 리버풀 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>3.75</span></p>
         </div>
       </div>
-      <Slide className='cart-other-slide blue' name='배당률' number='6.10' />
-      <Slide className='cart-other-slide' name='베팅금액' number='30,000' />
-      <Slide className='cart-other-slide green' name='적중금액' number='183,000' />
-
+      <div className='card-content'>
+        <Slide className='cart-other-slide blue' name='배당률' number='6.10' />
+        <div className="line"></div>
+        <Slide className='cart-other-slide' name='베팅금액' number='30,000' />
+        <div className="line"></div>
+        <Slide className='cart-other-slide green' name='적중금액' number='183,000' />
+        <div className="line"></div>
+      </div>
       <div className='cart-button-container'>
         <button
           type='button'
         >
           <img className='button-icon' src={buttonIcon} alt='' />
-          라이브경기실시간
+          전체보기
         </button>
       </div>
     </div>
