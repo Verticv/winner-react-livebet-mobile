@@ -36,7 +36,7 @@ const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favo
       : null}
 
       <Link to='/liveBet' className='section-num' id={id}>
-        <button type='button' id={id} onClick={() => setCardId(id)} className={`live-btn ${buttonClass}`} style={{height: !isFavorite && flag ? '22.6875rem' : '15rem'}}>
+        <button type='button' id={id} onClick={() => setCardId(id)} className={`live-btn ${buttonClass}`} style={{height: !isFavorite && flag ? '22.2rem' : '14.9rem'}}>
           <img  id={id} src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
           <p>{value}</p>
         </button>

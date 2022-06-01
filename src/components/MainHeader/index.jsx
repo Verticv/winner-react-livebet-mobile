@@ -18,7 +18,8 @@ const MainHeader = () => {
       <div className='container-main-header'>
         <div className='right'>
           <span className='dot' />
-          <p>축구</p>
+          {window.location.pathname === '/favorite' ? <p>즐겨찾기</p> : null}
+          {window.location.pathname === '/' ? <p>축구</p> : null}        
           <p className='head-p'>
             80
           </p>

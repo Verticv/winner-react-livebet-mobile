@@ -18,10 +18,12 @@
       &.inactive {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
+        height: 14.9375rem;
       }
       &.active {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-active.png");
         background-repeat: round;
+        height: 14.9375rem;
       }
       .row {
         display: flex;
@@ -72,7 +74,7 @@
               justify-content: center;
               align-items: center;
               border-radius: 3px;
-              margin: 0 10px;
+              margin: 0 1.9375rem;
               font-size: 1.875rem;
             }
           }
@@ -201,7 +203,7 @@
 .main-con {
   background-color: white;
   width: 100%;
-  height: 7.7rem;
+  height: 7.3rem;
   background-image: url("../../assets/images/cards/redCardBackgrounds/headerGradient-inactive.png");
   background-repeat: round;
   display: flex;
@@ -220,7 +222,7 @@
     color: #fff;
 
     p {
-      color: #d8b948;
+      color: #c8b273;
       font-size: 3rem;
     }
 
@@ -244,11 +246,11 @@
     }
 
     .sq1 {
-      background-color: yellow;
+      background-color: #fff30b;
     }
 
     .sq2 {
-      background-color: red
+      background-color: #b92025
     }
 
     .square {
@@ -313,8 +315,8 @@
     }
     &.inactive-with-plus {
       background-repeat: round;
-      width: 7.5rem;
-      height: 15rem;
+      width: 7.625rem;
+      height: 14.9rem;
     }
     &.card-button-arrow {
       background: url('../../assets/images/imgs/arrow-active.png');
@@ -330,7 +332,7 @@
 .card-button-arrow {
   background: url('../../assets/images/imgs/red-red.png');
   background-repeat: round;
-  height: 7.5rem;
+  height: 7.3rem;
   width: 7.6rem;
   border: 0;
 }

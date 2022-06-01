@@ -75,7 +75,7 @@ function LiveCard({
                     <p className='livee'>live</p>
                     <p className='score'>
                       {firstScore}
-                      -
+                      <span style={{color: '#858585'}}>-</span>
                       {secondScore}
                     </p>
                     <p className='glowering'>후반전35</p>
