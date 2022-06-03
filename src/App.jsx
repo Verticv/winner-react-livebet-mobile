@@ -14,6 +14,7 @@ import './App.css';
 function App() {
   const [cart, setCart] = useState([]);
   const [cardId, setCardId] = useState();
+  const [cardData, setCardData] = useState([]);
   const addToCart = (item) => {
     setCart([...cart, item]);
   };
@@ -31,13 +32,13 @@ function App() {
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive setCardId={setCardId} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive setCardId={setCardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
           <Cart cart={cart} setCart={setCart} removeCard={removeCard} />
         </Route>
         <Route path='/liveBet' exact>
-          <LiveBet cardId={cardId} addToCart={addToCart} handleClick={handleClick} />
+          <LiveBet cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/nonLiveBet' exact>
           <MainNonLiveBet />
@@ -49,7 +50,7 @@ function App() {
           <MainNonLiveList />
         </Route>
         <Route path='/favorite' exact>
-          <Favorite cart={cart} removeCard={removeCard} handleClick={handleClick}/>
+          <Favorite cart={cart} cardData={cardData} setCardData={setCardData} setCardId={setCardId} removeCard={removeCard} handleClick={handleClick}/>
         </Route>
       </Switch>
     </>

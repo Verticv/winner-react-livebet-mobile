@@ -10,7 +10,7 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = ({ addToCart, handleClick, setCardId }) => {
+const MainLive = ({ addToCart, handleClick, setCardId, cardData, setCardData }) => {
   const { mainHeaderLive, mainHeaderNonLive } = useSelector((state) => state.cards);
   const [idSelect, isIdSelected] = useState(0)
   const [idBlueSelected, setIdBlueSelected] = useState(0);
@@ -39,6 +39,8 @@ return (
           isIdSelected={isIdSelected}
           withPlus={withPlus}
           setCardId={setCardId}
+          cardData={cardData}
+          setCardData={setCardData}
         />
       ))}
       <NonLiveListHeader />

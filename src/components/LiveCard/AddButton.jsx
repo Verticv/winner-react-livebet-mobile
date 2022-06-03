@@ -5,7 +5,7 @@ import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png'; 
 
-const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favoriteCards, setData, data, index, isFavorite, flag, setCardId }) => {
+const AddButton = ({ value, isActive, withPlus, idSelect, mainHeaderLive, setIsClicked, id, favoriteCards, setData, data, index, isFavorite, flag, setCardId, cardData, setCardData }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
   if (id === idSelect) {
     if (isActive && withPlus) {
@@ -31,13 +31,20 @@ const AddButton = ({ value, isActive, withPlus, idSelect, setIsClicked, id, favo
       {isFavorite 
       ? <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
       onClick={changeOrder}>
-        <img style={{width:'2.625rem', height:'1.625rem' }} id={index} onClick={changeOrder} src={ isActive && idSelect === id ? redArrowActive : redArrow} alt=''/>
+        <img style={{width:'2.625rem', height:'1.625rem' }} id={index} onClick={changeOrder} src={isActive && idSelect === id ? redArrowActive : redArrow} alt=''/>
       </button>
       : null}
 
       <Link to='/liveBet' className='section-num' id={id}>
-        <button type='button' id={id} onClick={() => setCardId(id)} className={`live-btn ${buttonClass}`} style={{height: !isFavorite && flag ? '22.2rem' : '14.9rem'}}>
-          <img  id={id} src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
+        <button type='button' id={id} onClick={() => {
+          setCardId(id);
+          if (isFavorite) {
+            setCardData(favoriteCards[id]);
+          }else {
+            setCardData(mainHeaderLive[id]);
+          }
+          }} className={`live-btn ${buttonClass}`} style={{height: !isFavorite && flag ? '22.2rem' : '14.9rem'}}>
+          <img id={id} src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
           <p>{value}</p>
         </button>
       </Link>

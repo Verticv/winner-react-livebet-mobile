@@ -291,10 +291,10 @@
       border: 0;
       img {
         width: 5.43rem;
-        
+        margin-top: 1.4rem;
       }
       p {
-        margin-top: -20px;
+        margin-top: -1.0625rem;
       }
     }
     &.inactive-button {
@@ -306,6 +306,7 @@
       }
       img {
         width: 2.9rem;
+        margin-bottom: 1.5rem;
       }
     }
     &.active-with-plus {
@@ -323,7 +324,7 @@
       background-repeat: round;
     }
     p {
-      margin-top: 0;
+      margin-top: -1.1rem;
       text-shadow: 2px 2px 20px #f8c488;
       font-size: 2.875rem;
     }
@@ -337,8 +338,20 @@
   border: 0;
 }
 .card-button-arrow:active {
-  background: url('../../assets/images/imgs/arrow-active.png');
+  background: url('../../assets/images/imgs/red-red-active.png');
   background-repeat: round;
+  // img {
+  //   background: url('../../assets/images/imgs/ico-red-active.png');
+  //   background-repeat: round;
+  //   width: 2.625rem;
+  //   height: 1.625rem;
+  // }
+}
+.card-button-arrow:active img {
+  background: url('../../assets/images/imgs/ico-red-active.png');
+  background-repeat: round;
+  width: 2.625rem;
+  height: 1.625rem;
 }
 .card-button-arrow-active {
   background: url('../../assets/images/imgs/red-red-active.png');
