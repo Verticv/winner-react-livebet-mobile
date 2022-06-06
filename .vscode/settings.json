@@ -9,6 +9,9 @@
   "prettier.singleQuote": true,
   "[javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   }
 
 }

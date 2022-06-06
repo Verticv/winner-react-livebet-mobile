@@ -59,7 +59,7 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 3px;
-                margin: 0 10px;
+                margin: 0 1.9375rem;
                 font-size: 1.875rem;
               }
             }
@@ -123,13 +123,18 @@
       
     }
   &.active {
-    background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
+    // background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
+    background: url('../../assets/images/imgs/background.png');
     background-repeat: round;
     .nLive-sub-con {
       p {
         color: #fff;
       }
     }
+  }
+  &.card-button-blue {
+    background: url('../../assets/images/imgs/arrow-blue-active.png');
+    background-repeat: round;
   }
 }
 
@@ -151,6 +156,7 @@
     width: 100%;
     background-color:#225F8B;
     font-size: 2.875rem;
+    height: 15rem;
   }
   &.active-button {
     background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
@@ -158,12 +164,15 @@
     .nLive-side-btn {
       background-color: transparent;
       text-shadow: 0 0 10px #ffffff;
+      height: 15rem;
+    }
+    &.card-button-blue {
+      background: url('../../assets/images/imgs/arrow-blue-active.png');
+      background-repeat: round;
     }
   }
   &.active-with-plus {
-    background-image: url("../../assets/images/cards/blueSideWithPlus-active.png");
     background-repeat: round;
-    padding-top: 9rem;
   }
 }
 
@@ -172,4 +181,20 @@
   align-items: center;
   justify-content: space-evenly;
   width: 115px;
+}
+.card-button-blue {
+  background: url('../../assets/images/imgs/arrow-blue.png');
+  background-repeat: round;
+  height: 7.9rem;
+  width: 7.7rem;
+  border: 0;
+  // border-bottom: 1px solid #457f96;
+}
+.card-button-blue:active {
+  background: url('../../assets/images/imgs/arrow-blue-active.png');
+  background-repeat: round;
+}
+.card-button-blue-active {
+  background: url('../../assets/images/imgs/arrow-blue-active.png');
+  background-repeat: round;
 }

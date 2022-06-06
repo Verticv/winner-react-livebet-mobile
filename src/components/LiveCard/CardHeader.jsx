@@ -4,14 +4,13 @@ import p from '../../assets/images/other/plenty.png';
 import footBallWhite from '../../assets/images/football/football-white.png';
 
 const CardHeader = ({
-  flag, name, show, isActive,
+  id, flag, name, show, isActive, setIsClicked, idSelect, isIdSelected
 }) => {
   if (!show) {
     return null;
   }
   return (
-    <div className={`main-con ${isActive ? 'active' : ''}`}>
-
+    <div className={`main-con ${id === idSelect ? 'active' : ''}`}>
       <div className='sub-con'>
         <img className='ball' src={footBallWhite} alt='ball' />
         <img src={flag} alt='flag' className='live-header-flag' />

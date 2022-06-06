@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NonLiveListHeader = () => (
+const NonLiveListHeader = ({ setIsChangeBlueOrder }) => (
   <>
     <div className='nonLive-header-wrapper'>
       <div className='nonLive-head-container'>
@@ -13,7 +13,7 @@ const NonLiveListHeader = () => (
         <p className='nonLive-header width'>
           80
         </p>
-        <div className='arrow-wrapper' />
+        <div className='arrow-wrapper' onClick={() => setIsChangeBlueOrder((prev) => !prev)}/>
 
       </div>
     </div>
