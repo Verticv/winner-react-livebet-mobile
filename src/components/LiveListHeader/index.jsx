@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LiveListHeader = () => (
+const LiveListHeader = ({ setIsChangeRedOrder }) => (
   <>
     <div className='live-header-wrapper'>
       <div className='live-Head-container'>
@@ -13,7 +13,9 @@ const LiveListHeader = () => (
         <p className='live-header width'>
           80
         </p>
-        <div className='arrow-wrapper' />
+        <div className='arrow-wrapper' onClick={() => {
+          setIsChangeRedOrder((prev) => !prev);
+        }}/>
       </div>
 
     </div>

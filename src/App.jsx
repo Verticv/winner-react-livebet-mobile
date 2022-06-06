@@ -3,8 +3,6 @@ import { Switch, Route } from 'react-router';
 import React, { useState } from 'react';
 import Cart from './pages/Cart';
 import MainLive from './pages/MainLive';
-import LiveBet from './pages/MainLiveBet';
-import MainNonLiveBet from './pages/MainNonLiveBet';
 import MainLiveList from './pages/MainLiveList';
 import MainNonLiveList from './pages/MainNonLiveList';
 import Favorite from './pages/Favorite';
@@ -32,16 +30,10 @@ function App() {
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive setCardId={setCardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
           <Cart cart={cart} setCart={setCart} removeCard={removeCard} />
-        </Route>
-        <Route path='/liveBet' exact>
-          <LiveBet cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
-        </Route>
-        <Route path='/nonLiveBet' exact>
-          <MainNonLiveBet />
         </Route>
         <Route path='/mainLiveList' exact>
           <MainLiveList />
@@ -50,7 +42,7 @@ function App() {
           <MainNonLiveList />
         </Route>
         <Route path='/favorite' exact>
-          <Favorite cart={cart} cardData={cardData} setCardData={setCardData} setCardId={setCardId} removeCard={removeCard} handleClick={handleClick}/>
+          <Favorite cardId={cardId} setCardId={setCardId} cart={cart} addToCart={addToCart} cardData={cardData} setCardData={setCardData} removeCard={removeCard} handleClick={handleClick} />
         </Route>
       </Switch>
     </>

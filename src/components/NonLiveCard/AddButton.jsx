@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag }) => {
+const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId }) => {
   let buttonClass = 'inactive-button';
   if (idBlueSelected === id) {
     if (isActive && withPlus) {
@@ -26,11 +25,14 @@ const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData,
         }} /> 
         : null
       }
-      <Link className={`nLive-btn ${buttonClass}`} to='/nonLiveBet'>
-        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.6875rem' : '15rem'}}>
+      <div className={`nLive-btn ${buttonClass}`} >
+        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.6875rem' : '15rem'}} onClick={() => {
+          setIsBlueDisplay((prev) => !prev);
+          setCardId(id);
+        }}>
           정보
         </button>
-      </Link>
+      </div>
     </div>
   );
 };

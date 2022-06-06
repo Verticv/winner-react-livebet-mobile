@@ -9,15 +9,17 @@ import blueShirt from '../../assets/images/shirt/blue.png';
 import AddButton from './AddButton';
 import CardHeader from './CardHeader';
 import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
+import LiveBet from '../../pages/MainLiveBet';
 
 function LiveCard({
-  firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard, setCardId, cardData, setCardData,
-  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite
+  firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard, cardId, setCardId, cardData, setCardData,
+  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite,
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
   const [isClicked, setIsClicked] = useState(false);
   const [isStar, setIsStar] = useState(true);
+  const [isDisplay, setIsDisplay] = useState(false);
   const { favoriteCards, mainHeaderLive } = useSelector((state) => state.cards);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
@@ -33,12 +35,13 @@ function LiveCard({
     setData(filteredData);
   }
   return (
+    <>
     <div className='first-con' id={id}>
-      <div className='main-live' 
+      <div className='main-live'
         onClick={() => {
-        isIdSelected(id);
-        setIsClicked(true);
-      }}>
+          isIdSelected(id);
+          setIsClicked(true);
+        }}>
         <CardHeader
           id={id}
           isActive={isClicked}
@@ -51,7 +54,7 @@ function LiveCard({
         />
         <div className='card'>
           <div className='left'>
-            <div className={`down-sec ${ idSelect === id ? 'active' : 'inactive'}`}>
+            <div className={`down-sec ${idSelect === id ? 'active' : 'inactive'}`}>
               <div className='row'>
                 <button style={{ background: 'transparent', border: 'none' }} type='button'
                   onClick={isFavorite ? removeFromFavorite : toggleStar}
@@ -75,7 +78,7 @@ function LiveCard({
                     <p className='livee'>live</p>
                     <p className='score'>
                       {firstScore}
-                      <span style={{color: '#858585'}}>-</span>
+                      <span style={{ color: '#858585' }}>-</span>
                       {secondScore}
                     </p>
                     <p className='glowering'>후반전35</p>
@@ -103,8 +106,36 @@ function LiveCard({
           </div>
         </div>
       </div>
-      <AddButton id={id} setCardId={setCardId} mainHeaderLive={mainHeaderLive} cardData={cardData} setCardData={setCardData} index={index} flag={flag} isFavorite={isFavorite} idSelect={idSelect} removeCard={removeCard} data={data} setData={setData} favoriteCards={favoriteCards} setIsClicked={setIsClicked} isActive={isClicked} withPlus={withPlus} value={value} />
+      <AddButton
+        id={id}
+        addToCart={addToCart}
+        handleClick={handleClick}
+        setCardId={setCardId}
+        mainHeaderLive={mainHeaderLive}
+        cardData={cardData}
+        setCardData={setCardData}
+        index={index}
+        flag={flag}
+        isFavorite={isFavorite}
+        idSelect={idSelect}
+        removeCard={removeCard}
+        data={data}
+        setData={setData}
+        favoriteCards={favoriteCards}
+        setIsClicked={setIsClicked}
+        isActive={isClicked}
+        withPlus={withPlus}
+        value={value}
+        cardId={cardId}
+        setIsDisplay={setIsDisplay}
+        isDisplay={isDisplay}
+      />
     </div>
+      {(cardId == id) && isDisplay
+        ? <LiveBet cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+        : null
+      }
+    </>
   );
 }
 
