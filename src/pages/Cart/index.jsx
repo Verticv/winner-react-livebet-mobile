@@ -25,11 +25,11 @@ const Cart = ({ cart, setCart, removeCard }) => {
   };
 
   const CartItem = cart.map((index, num) => (
-    <div key={index} className='cart-items'>
+    <div key={num} className='cart-items'>
       <div className='cart-items-team'>
         <p>FC바로셀로나  <span style={{ color: '#c49f58' }}>VS</span>  레알마드리드 </p>
-        <button type='button' className='close' onClick={removeCard}>
-          <img src={exit} alt={exit} />
+        <button type='button' id={num} className='close' onClick={(e) => removeCard(e)}>
+          <img id={num} src={exit} alt={exit} />
         </button>
       </div>
       <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '2rem' }}>승무패(홈) - FC바로셀로나</p>

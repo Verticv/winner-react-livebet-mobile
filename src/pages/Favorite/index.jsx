@@ -8,7 +8,7 @@ import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 
-function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToCart }) {
+function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToCart, handleClick }) {
   const { favoriteCards, nonLiveCard } = useSelector((state) => state.cards);
   const [idSelect, isIdSelected] = useState(0);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
@@ -82,6 +82,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           setIsDisplay={setIsDisplay}
           isDisplay={isDisplay}
           addToCart={addToCart}
+          handleClick={handleClick}
         />)}
       <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
       {nonLiveData?.map(({

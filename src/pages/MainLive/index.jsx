@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
 import Footer from '../../components/Footer';
@@ -8,8 +7,7 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData }) => {
-  const { mainHeaderLive, mainHeaderNonLive } = useSelector((state) => state.cards);
+const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData }) => {
   const [idSelect, isIdSelected] = useState(0)
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
@@ -19,23 +17,23 @@ const MainLive = ({ addToCart, handleClick, cardId, setCardId, cardData, setCard
 
   useEffect(() => {
     if (!isChangeRedOrder) {
-      setData(mainHeaderLive);
+      setData(redCardArray);
     } else {
-      const newArr = [...mainHeaderLive]
+      const newArr = [...redCardArray]
       const sortedArr = newArr.reverse();
       setData(sortedArr)
     }
-  }, [isChangeRedOrder, mainHeaderLive]);
+  }, [isChangeRedOrder, redCardArray]);
 
   useEffect(() => {
     if (!isChangeBlueOrder) {
-      setDataBlue(mainHeaderNonLive);
+      setDataBlue(blueCardArray);
     } else {
-      const newArr = [...mainHeaderNonLive]
+      const newArr = [...blueCardArray]
       const sortedArr = newArr.reverse();
       setDataBlue(sortedArr)
     }
-  }, [isChangeBlueOrder, mainHeaderNonLive]);
+  }, [isChangeBlueOrder, blueCardArray]);
 
 return (
   <>
@@ -45,7 +43,7 @@ return (
       <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
       {data.map(({
         id, flag, name, isActive, firstScore, secondScore, firstTeam, secondTeam, withPlus
-      }) => ( 
+      }) => (
         <LiveCard
           key={id}
           id={id}

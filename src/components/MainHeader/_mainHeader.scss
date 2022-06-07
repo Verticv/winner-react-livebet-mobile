@@ -53,8 +53,15 @@
 
     @media(max-width:$bp-medium) {
       border: 2px solid #b89c5e;
+      
     }
 
+    @media(min-width: 768px) and (max-width: 854px) {
+      width: 19.375rem;
+    }
+    @media(min-width: 733px) and (max-width: 807px) {
+      width: 18.375rem;
+    }
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
       background-repeat: round;
