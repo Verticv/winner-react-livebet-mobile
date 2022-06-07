@@ -31,8 +31,8 @@
         color: #D1CECF;
 
         .star {
-          padding-left: 10px;
-          padding-right: 10px;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
           width: 4.2rem;
         }
 
@@ -59,7 +59,11 @@
               font-size: 2.625rem;
               margin: 0;
             }
-
+            @media (max-width: 285px) {
+              p {
+                font-size: 1.625rem;
+              }
+            }
             img {
               width: 2.4375rem;
             }
@@ -94,6 +98,11 @@
               font-family: RobotoRegular;
               font-size: 2.625rem;
               margin: 0 2rem;
+            }
+            @media (min-width: 280px) and (max-width: 653px) {
+              p {
+                margin: 0 0.5rem;
+              }
             }
 
             .score {
@@ -318,6 +327,11 @@
       background-repeat: round;
       width: 7.625rem;
       height: 14.9rem;
+    }
+    @media(mix-width: 377px) and (max-width: 477px) {
+      &.inactive-with-plus {
+        width: 7.3rem;
+      }
     }
     &.card-button-arrow {
       background: url('../../assets/images/imgs/arrow-active.png');
