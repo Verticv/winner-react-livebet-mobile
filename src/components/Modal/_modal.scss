@@ -1,23 +1,69 @@
 .modal-pop {
-  background: #fff;
-  border: 1px solid #aaa;
-  z-index: 999;
-  width: 72.625rem;
-  margin: auto;
-  position: fixed;
-  left: calc(50% - 36.4rem);
-  top: 30%;
-  margin-top: 2rem;
-  background-color: #383843;
-  color: #C0BDBF;
+    background: #fff;
+    border: 0.0625rem solid #aaa;
+    z-index: 999;
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    top: 30%;
+    margin-top: 2rem;
+    background-color: #383843;
+    color: #C0BDBF;
+    margin-left: 5%;
 
+    .right-header{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding-left: 2.1875rem;
+      border-right: 0.1875rem solid #000000;
+      height: 7.5375rem;
+      margin-right: 1px;
+      background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
+      justify-content: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          margin: 0;
+          margin-right: 1px;
+          &.cart-icon {
+            margin-bottom: 1px;
+            margin-right: 0;
+            height: 5rem;
+            width: 5.1875rem;
+          }
+        }
+      }
+    }
+    .left-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7.4375rem;
+      width: 8.4375rem;
+      border-left: 0.1875rem solid #585867;
+    }
+    .exit-header {
+      width: 8.625rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: initial;
+      border: none;
+    }
+    .exit-img {
+      width: 3rem;
+      height: 1.875rem;
+    }
   .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url("../../assets/images/modal/header.png");
-    background-repeat: round;
-    font-size: 15px;
+    background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%) ;
+    border-bottom: 0.1875rem solid #000000;
+    font-size: 0.9375rem;
     height: 7.5rem;
     p {
       color: #fff;
@@ -26,7 +72,6 @@
     img {
       width: 2.5rem;
       height: 2.5rem;
-      padding-right: 2.3rem;
     }
   }
 
@@ -48,12 +93,12 @@
       font-size: 4rem;
       border: none;
       color: #909090;
-      box-shadow: 1px 2px 5px -3px rgba(0,0,0,0.75);
+      box-shadow: 0.0625rem 0.125rem 0.3125rem -0.1875rem rgba(0,0,0,0.75);
       background-image: url("../../assets/images/modal/button-gray.png");
       background-repeat: round;
       &:last-child {
         color: #000;
-        margin-left: 5px;
+        margin-left: 0.3125rem;
         background-image: url("../../assets/images/modal/button-gold.png");
         background-repeat: round;
       }
@@ -77,36 +122,43 @@
   opacity: 0.75;
 }
 
-
 .container {
-  padding: 1rem;
+  padding: 2rem 0 1rem 1rem;
   display: flex;
   width: 72.625rem;
   min-height: 36.5625rem;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
   .checkbox {
     color: #d1cecf;
     img {
-      width: 38px;
+      width: 2.375rem;
     }
     label {
-      height: 40px;
+      height: 2.5rem;
       display: flex;
       align-items: center;
+      width: 97%;
     }
     .image-wrapper {
       height: 100%;
       display: flex;
       align-items: center;
-      margin-left: 3px;
+      margin-left: 0.1875rem;
       img {
         width: 6.3125rem;
         height: 3.875rem;
       }
       .checkbox-text {
-        font-size: 3.75rem;
+        font-size: 3rem;
         margin-left: 1rem;
+        @media (min-width: 280px) and (max-width: 315px) {
+          font-size: 2.4rem;
+        }
+        @media (min-width: 481px) and (max-width: 523px) {
+          font-size: 2.4rem;
+        }
       }
     }
     &:first-child {
@@ -126,23 +178,25 @@
 .checkbox {
   display: inline-block;
   width: 50%;
+  width: 48%;
+  margin-right: 0.4375rem;
 }
 
 .checkbox:first-child {
-  width: 100%;
+  width: 98%;
 }
 
 .all {
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   color: #fff;
 }
 
 
 .exit-img {
-  padding: 10px;
-  width: 15px;
-  height: 17px;
+  padding: 0.625rem;
+  width: 0.9375rem;
+  height: 1.0625rem;
 }
 
 
@@ -159,7 +213,7 @@
 }
 
 INPUT[type=checkbox]:focus {
-  outline: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0.0625rem solid rgba(0, 0, 0, 0.2);
 }
 
 INPUT[type=checkbox] {

@@ -96,8 +96,8 @@
   }
 
   &:last-child {
-    margin-bottom: 9.1875rem;
-    padding-bottom: 0.1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1875rem solid;
   }
 
   .bet-button-container {
@@ -159,13 +159,18 @@
 
         &:nth-child(2) {
           justify-content: center;
-          width: 19rem;
+          width: 17rem;
           height: 6.3rem;
+          @media (min-width: 1280px) {
+            width: 19rem;
+          }
+          @media (min-width: 579px) and (max-width: 768px) {
+            width: 22rem;
+          }
           .add-button {
             width: auto;
           }
-        }
-
+      }
         &:nth-child(3) {
           width: 47%;
 
@@ -182,6 +187,7 @@
           padding-right: 1rem;
           margin-left: -1.4rem;
           padding-left: 1rem;
+          // z-index: 1;
         }
         &.bet-btn-numbers {
           .add-button {
@@ -224,4 +230,5 @@
   justify-content: flex-end;
   align-items: center;
   clip-path: polygon(5% 0%, 100% 0, 100% 100%, 0% 100%);
+  // z-index: 3;
 }

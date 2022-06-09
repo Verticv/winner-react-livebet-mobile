@@ -25,12 +25,12 @@ function NonLiveCard({
   return (
     <>
       <div className='nLive-first-con' id={id}
+        onClick={() => {
+          setIdBlueSelected(id);
+          setIsClicked(true);
+      }}
       >
-        <div className='nLive-main-live'
-          onClick={() => {
-            setIdBlueSelected(id);
-            setIsClicked(true);
-          }}>
+        <div className='nLive-main-live'>
           <CardHeader
             id={id}
             show={showHeader}

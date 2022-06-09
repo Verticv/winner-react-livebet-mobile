@@ -36,12 +36,12 @@ function LiveCard({
   }
   return (
     <>
-    <div className='first-con' id={id}>
-      <div className='main-live'
-        onClick={() => {
-          isIdSelected(id);
-          setIsClicked(true);
-        }}>
+    <div className='first-con' id={id}
+    onClick={() => {
+      isIdSelected(id);
+      setIsClicked(true);
+    }}>
+      <div className='main-live'>
         <CardHeader
           id={id}
           isActive={isClicked}

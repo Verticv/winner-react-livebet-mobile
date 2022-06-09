@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Footer from '../../components/Footer';
 import MiddleNav from './MiddleNav';
 import DropDown from './DropDown';
 import group from '../../assets/images/other/group.png';
@@ -33,8 +32,6 @@ function LiveBet({ handleClick, cardId, cardData }) {
           }
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
