@@ -41,11 +41,11 @@
   color: #000;
 }
 .line {
-  margin: 0 2.125rem 0 2.125rem;
+  // margin: 0 2.125rem 0 2.125rem;
   height: 0.1875rem;
-  width: calc(100% - 9rem);
+  // width: calc(100% - 9rem);
   background: linear-gradient(90deg,#35353a,#1d1d1d);
-  margin-left: 4rem;
+  // margin-left: 4rem;
 }
 .card-content {
   background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
@@ -79,10 +79,10 @@
 }
 .card-container {
   background: linear-gradient(90deg,#1a1a20,#18181b 50%,#161616);
-  margin-top: 0.1875rem;
+  // margin-top: 0.1875rem;
   .line {
-    margin: 0 2.125rem 0 2.125rem;
-    height: 0.1875rem;
+    margin: 0 2.1875rem 0 2.1875rem;
+    height: 0.18rem;
     width: calc(100% - 6rem);
     background: linear-gradient(90deg,#35353a,#1d1d1d);
     margin-left: 3rem;
@@ -97,6 +97,7 @@
   border-top: 0.1875rem solid #000;
   .slide-num {
     color: #e9ca4e;
+    font-size: 3.4375rem;
   }
 }
 .blue {
@@ -187,7 +188,7 @@
   background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
   color: #fff;
   border-bottom: 0.1875rem solid #000000;
-  height: 8.4375rem;
+  height: 8.5375rem;
 }
 
 .cart-right-header{
@@ -197,7 +198,7 @@
   padding-left: 2.1875rem;
   border-right: 0.1875rem solid #000000;
   height: 8.5375rem;
-  margin-right: 1px;
+  // margin-right: 1px;
   background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
 
   div {
@@ -219,7 +220,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8.4375rem;
+  height: 8.5375rem;
   width: 8.4375rem;
   border-left: 0.1875rem solid #585867;
 
@@ -270,28 +271,28 @@
   height: 17.5rem;
   background: url('../../assets/images/imgs/card-cart-bg.png');
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   background-repeat: round;
   padding-bottom: 1rem;
-  border-bottom: 0.3rem solid black;
+  border-bottom: 0.1875rem solid black;
 }
 
 .cart-items-team{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2rem;
+  padding-left: 2.75rem;
 
   p {
     color: white;
-    margin-top: 0.625rem;
-    margin-bottom: 0rem;
+    margin-top: 2.125rem;
+    margin-bottom: 1rem;
   }
   
   .close {
     position: absolute;
-    right: 1.5625rem;
-    top: 1.5625rem;
+    right: 2.25rem;
+    top: 3rem;
     background: bottom;
     border: 0;
     &:hover {
@@ -327,7 +328,7 @@
   justify-content: space-evenly;
   padding-top: 0.625rem;
   background-color: #1A1A20;
-  border-top: 1px solid;
+  border-top: 0.1875rem solid;
   padding-bottom: 2.7rem;
   height: 12.9375rem;
 } 
@@ -392,7 +393,11 @@
 
 
 .margin-bottom{
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
+}
+.arrow-card {
+  margin: 0.8rem;
+  margin-left: 2rem;
 }
 
 .cart-button-container{
