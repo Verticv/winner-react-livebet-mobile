@@ -5,13 +5,31 @@
     width: 90%;
     margin: auto;
     position: fixed;
-    top: 30%;
-    margin-top: 2rem;
+    top: 47%;
     background-color: #383843;
     color: #C0BDBF;
-    margin-left: 5%;
-    // width: 72.625rem;
-
+    right: 5%;
+    left: 5%;
+    width: 72.5625rem;
+  @media (min-width: 280px) and (max-width: 352px) {
+    width: 60.5625rem;
+    left: 1%;
+  }
+  @media (min-width: 357px) and (max-width: 442px) {
+    width: 66.5625rem;
+    left: 3%;
+  }
+  @media (min-width: 481px) and (max-width: 620px) {
+    width: 66.5625rem;
+    left: 3%;
+  }
+  @media (min-width: 770px) and (max-width: 961px) {
+    width: 58.5625rem;  
+    left: 3%;
+  }
+  @media (min-width: 959px) and (max-width: 1058px) {
+    width: 66.5625rem;
+  }
     .right-header{
       display: flex;
       align-items: center;
@@ -61,7 +79,6 @@
   .modal-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%) ;
     border-bottom: 0.1875rem solid #000000;
     font-size: 0.9375rem;
@@ -88,7 +105,7 @@
     padding: 0 0.3125rem;
 
     button {
-      width: 50%;
+      width: 49%;
       height: 8.1875rem;
       border-radius: 0.3125rem;
       font-size: 4rem;
@@ -124,13 +141,16 @@
 }
 
 .container {
-  padding: 2rem 0 1rem 1rem;
+  padding: 3.4375rem 0 1rem 3.75rem;
   display: flex;
   width: 72.625rem;
   min-height: 36.5625rem;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
+  @media (min-width: 770px) and (max-width: 961px) {
+    width: 92%;
+  }
   .checkbox {
     color: #d1cecf;
     img {
@@ -154,10 +174,20 @@
       .checkbox-text {
         font-size: 3rem;
         margin-left: 1rem;
-        @media (min-width: 280px) and (max-width: 315px) {
+        @media (min-width: 280px) and (max-width: 352px) {
+          font-size: 2.3rem;
+        }
+        @media (min-width: 357px) and (max-width: 442px) {
           font-size: 2.4rem;
         }
-        @media (min-width: 481px) and (max-width: 523px) {
+        @media (min-width: 481px) and (max-width: 620px) {
+          font-size: 2.4rem;
+        }
+        @media (min-width: 770px) and (max-width: 961px) {
+          font-size: 2.4rem;
+          margin-left: 0.3rem;
+        }
+        @media (min-width: 959px) and (max-width: 1058px) {
           font-size: 2.4rem;
         }
       }
