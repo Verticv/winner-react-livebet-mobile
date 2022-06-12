@@ -151,6 +151,9 @@
   @media (min-width: 770px) and (max-width: 961px) {
     width: 92%;
   }
+  @media (min-width: 959px) and (max-width: 1058px) {
+    width: 94%;
+  }
   .checkbox {
     color: #d1cecf;
     img {
@@ -188,7 +191,7 @@
           margin-left: 0.3rem;
         }
         @media (min-width: 959px) and (max-width: 1058px) {
-          font-size: 2.4rem;
+          font-size: 3rem;
         }
       }
     }

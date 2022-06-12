@@ -98,17 +98,19 @@ const Cart = ({ cart, setCart, removeCard }) => {
 
       <div>
         <div className='cart-btns'>
-          {buttonsValue.map(({ content }) => <Button1 key={content} setValue={setValue}>{content}</Button1>)}
-          <Button1 className='active'>최대</Button1>
+          {/* <div className='padding'> */}
+            {buttonsValue.map(({ content }) => <Button1 key={content} setValue={setValue}>{content}</Button1>)}
+            <Button1 className='active'>최대</Button1>
+
         </div>
         <div className='cart-two-btns'>
           <Button2 setCart={setCart}>
             <img src={exitBtn} alt='' style={{ marginRight: '15px' }} />
-            <p>이기실시간</p>
+            <p>전체취소</p>
           </Button2>
           <Button2 className='active'>
             <img src={chart} alt='' style={{ marginRight: '15px' }} />
-            <p>이기실시간</p>
+            <p>베팅하기</p>
           </Button2>
         </div>
       </div>

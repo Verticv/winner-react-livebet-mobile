@@ -8,8 +8,43 @@
   border: 0;
   height: 6.5rem;
   font-size: 4rem;
+  margin: 1rem 0.5rem;
   margin: 1rem 1.125rem;
   font-family: RobotoRegular;
+  // width: 25.75rem;
+  // @media (min-width: 280px) and (max-width: 376px) {
+  //   width: 17.75rem;
+  //   font-size: 3rem;
+  // }
+  // @media (min-width: 377px) and (max-width: 469px) {
+  //   width: 19.75rem;
+  // }
+  // @media (min-width: 481px) and (max-width: 499px) {
+  //   width: 18.5rem;
+  //   font-size: 3.7rem; 
+  // }
+  // @media (min-width: 500px) and (max-width: 562px) {
+  //   width: 19.5rem; 
+  // }
+  // @media (min-width: 563px) and (max-width: 620px) {
+  //   width: 22.5rem; 
+  // }
+  // @media (min-width: 621px) and (max-width: 640px) {
+  //   width: 24.5rem;
+  // }
+  // @media (min-width: 770px) and (max-width: 960px) {
+  //   width: 17.5rem;
+  //   font-size: 3.5rem;
+  // }
+  // @media (min-width: 961px) and (max-width: 1108px) {
+  //   width: 19.5rem; 
+  // }
+  // @media (min-width: 980px) and (max-width: 1072px) {
+  //   width: 19.5rem;
+  // }
+  // @media (min-width: 1109px) and (max-width: 1195px) {
+  //   width: 23.75rem;
+  // }
 }
 
 .cart-btn:focus {
@@ -27,9 +62,10 @@
   border: 0;
   width: 35.3125rem;
   height: 7.8125rem;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 1rem;
   margin-top: 2.25rem;
+  font-size: 4rem;
   img {
     margin-right: 1rem;
     width: 3rem;
@@ -41,11 +77,8 @@
   color: #000;
 }
 .line {
-  // margin: 0 2.125rem 0 2.125rem;
   height: 0.1875rem;
-  // width: calc(100% - 9rem);
   background: linear-gradient(90deg,#35353a,#1d1d1d);
-  // margin-left: 4rem;
 }
 .card-content {
   background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
@@ -79,7 +112,6 @@
 }
 .card-container {
   background: linear-gradient(90deg,#1a1a20,#18181b 50%,#161616);
-  // margin-top: 0.1875rem;
   .line {
     margin: 0 2.1875rem 0 2.1875rem;
     height: 0.18rem;
@@ -133,7 +165,6 @@
   margin-top: 4px;
   border-radius: 6px;
   color:#D7BA47;
-  // width: 60%;
   .number {
     height: 5.625rem;
     padding-right: 1.625rem;
@@ -198,7 +229,6 @@
   padding-left: 2.1875rem;
   border-right: 0.1875rem solid #000000;
   height: 8.5375rem;
-  // margin-right: 1px;
   background: linear-gradient(180deg, #4d4d5c 0, #3c3c47 50%, #2d2d35 100%);
 
   div {
@@ -321,6 +351,43 @@
   height: 19.625rem;
   display: grid;
   grid-template-columns: auto auto auto;
+  // .padding {
+  //   width: 94%;
+  //   margin: auto;
+  //   // @media (min-width: 961px) and (max-width: 1108px) {
+  //   //   width: 92%;
+  //   // }
+
+
+  //   // @media (min-width: 377px) and (max-width: 469px) {
+  //   //   width: 75%;
+  //   // }
+  //   // @media (min-width: 481px) and (max-width: 499px) {
+  //   //   width: 92%;
+  //   // }
+  //   // @media (min-width: 500px) and (max-width: 562px) {
+  //   //   width: 19.5rem; 
+  //   // }
+  //   // @media (min-width: 563px) and (max-width: 620px) {
+  //   //   width: 22.5rem; 
+  //   // }
+  //   // @media (min-width: 621px) and (max-width: 640px) {
+  //   //   width: 24.5rem;
+  //   // }
+  //   // @media (min-width: 756px) and (max-width: 960px) {
+  //     // width: 94%;
+  //   // }
+  //   // @media (min-width: 961px) and (max-width: 1108px) {
+  //   //   width: 80%; 
+  //   //   // left: 3%;
+  //   // }
+  //   // @media (min-width: 980px) and (max-width: 1072px) {
+  //   //   width: 19.5rem;
+  //   // }
+  //   // @media (min-width: 1109px) and (max-width: 1195px) {
+  //   //   width: 23.75rem;
+  //   // }
+  // }
 }
 
 .cart-two-btns{
@@ -403,14 +470,14 @@
 .cart-button-container{
   background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
   display: flex;
-  padding: 10px;
+  padding: 3.3125rem;
   align-content: center;
   justify-content: center;
   align-items: center;
 }
 
 .cart-button-container button{
-  width: 73.1875rem;
+  width: 73.5625rem;
   height: 12.1875rem;
   border-radius: 5px;
   display: flex;
