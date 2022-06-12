@@ -2,14 +2,14 @@
   background-image:url('../../assets/images/imgs/button-bg.png') ;
   background-repeat: round;
   border-radius: 1rem;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
   color:#E5C284;
   outline: none;
   border: 0;
   height: 6.75rem;
-  font-size: 4rem;
-  margin: 1rem 0.5rem;
-  margin: 1rem 1.125rem;
+  font-size: 3.4rem;
+  // margin: 1rem 1.125rem;
+  margin: 0.86rem 0.5rem;
   font-family: RobotoRegular;
   // width: 25.75rem;
   // @media (min-width: 280px) and (max-width: 376px) {
@@ -56,15 +56,15 @@
   border-radius: 1rem;
   align-items:center;
   justify-content: center;
-  background-image:url('../../assets/images/imgs/button-bg.png') ;
+  background-image:url('../../assets/images/imgs/bg-buttons.png') ;
   color: #888889;
   background-repeat: round;
   border: 0;
-  width: 35.3125rem;
-  height: 7.8125rem;
+  width: 47.8rem;
+  height: 9.357rem;
   font-size: 3rem;
   margin: 1rem;
-  margin-top: 2.25rem;
+  margin-top: 2.714rem;
   font-size: 4rem;
   img {
     margin-right: 1rem;
@@ -72,7 +72,7 @@
   }
 }
 .active {
-  background: url('../../assets/images/imgs/button-active-bg.png');
+  background: url('../../assets/images/imgs/active-bg.png');
   background-repeat: round;
   color: #000;
 }
@@ -100,11 +100,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.5rem;
+  padding: 0 2.2rem;
   color: #888889;
   background: linear-gradient(90deg,#1a1a20,#18181b 50%,#161616);
   height: 7.5625rem;
-  font-size: 3rem;
+  font-size: 3.42rem;
 }
 .id-section {
   background: url('../../assets/images/imgs/id-background.png');
@@ -270,15 +270,15 @@
 }
 
 .cart-num{
-  width: 4.0625rem;
-  height: 4.0625rem;
+  width: 4.714rem;
+  height: 4.714rem;
   background-color: #9b2f30;
   color: #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 3rem;
   padding-bottom: 1px;
 }
 
@@ -301,7 +301,7 @@
   height: 17.5rem;
   background: url('../../assets/images/imgs/card-cart-bg.png');
   position: relative;
-  font-size: 3rem;
+  font-size: 3.3rem;
   background-repeat: round;
   padding-bottom: 1rem;
   border-bottom: 0.1875rem solid black;
@@ -311,7 +311,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2.75rem;
+  padding-left: 2.4rem;
 
   p {
     color: white;
@@ -346,11 +346,15 @@
 
 .cart-btns{
   padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
   background-color:#19191e;
   border-top: 1px solid;
-  height: 19.625rem;
+  height: auto;
   display: grid;
   grid-template-columns: auto auto auto;
+  row-gap: 0;
   // .padding {
   //   width: 94%;
   //   margin: auto;
@@ -392,12 +396,14 @@
 
 .cart-two-btns{
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   padding-top: 0.625rem;
   background-color: #1A1A20;
   border-top: 0.1875rem solid;
-  padding-bottom: 2.7rem;
+  padding-bottom: 2.92rem;
   height: 12.9375rem;
+  padding-left: 1rem;
+  padding-right: 1rem
 } 
 
 
@@ -433,9 +439,9 @@
   background-repeat: round;
   width: 13.625rem;
   height:5.9375rem;
-  margin-right: 1rem;
+  margin-right: 1.3rem;
   border-radius: 1rem;
-  font-size: 3rem;
+  font-size: 4rem;
   img {
     width: 3.5rem;
   }
@@ -470,15 +476,15 @@
 .cart-button-container{
   background: linear-gradient(90deg, #1a1a20, #18181b 50%, #161616);
   display: flex;
-  padding: 3.3125rem;
+  padding: 3.3125rem 2.3125rem;
   align-content: center;
   justify-content: center;
   align-items: center;
 }
 
 .cart-button-container button{
-  width: 73.5625rem;
-  height: 12.1875rem;
+  width: 86.5625rem;
+  height: 14.28rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -489,9 +495,10 @@
   color: #222222;
   padding-bottom: 6px;
   font-size: 4rem;
-  .button-icon {
-    margin-right: 2.5rem;
-    width: 3rem;
+  .button-icon {  
+    margin-right: 3.07rem;
+    width: 3.92rem;
+    height: 3.64rem;
   }
 }
 
