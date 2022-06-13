@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useHistory } from "react-router-dom";
 import cartIcon from '../../assets/images/imgs/cart.png'
 import Slide from './Slide';
 import { Button1, Button2 } from './Button';
@@ -8,12 +9,13 @@ import buttonIcon from '../../assets/images/imgs/button-icon.png';
 import repeat from '../../assets/ico_5.png';
 import mark from '../../assets/images/imgs/mark.png';
 import exit from '../../assets/images/imgs/x.png';
-import exitBtn from '../../assets/exit.png'
+import exitBtn from '../../assets/images/imgs/exit.png'
 import chart from '../../assets/images/imgs/ico.png';
 import blueArrow from '../../assets/images/imgs/blue-arrow.png'
 import redArrow from '../../assets/images/imgs/arrow-red.png'
 
 const Cart = ({ cart, setCart, removeCard }) => {
+  let { goBack } = useHistory();
   const [value, setValue] = useState('0');
   const { buttonsValue } = useSelector((state) => state.cards);
   const onChangeHandler = (e) => {
@@ -54,8 +56,8 @@ const Cart = ({ cart, setCart, removeCard }) => {
             </div>
           </div>
         </div>
-        <div className='cartBtn'>
-          <button type='button' className='cart-arrow' onClick={removeCard}>
+        <div className='cartBtn' onClick={goBack}>
+          <button type='button' className='cart-arrow' onClick={goBack}>
             <img src={arrow} alt='' className='arrow' />
           </button>
         </div>

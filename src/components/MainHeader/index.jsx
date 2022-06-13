@@ -3,6 +3,7 @@ import cup from '../../assets/images/cup/cup-gold.png';
 import chronology from '../../assets/images/chronology/chronology-white.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
+import btnArrow from '../../assets/images/imgs/btn-arrow.png'
 
 const MainHeader = () => {
   const { toggle, visible } = useModal();
@@ -43,6 +44,7 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p>시간순</p> : <p>리그순보기</p>}
+              <img style={{width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem'}} src={btnArrow} alt='' />
             </div>
           </button>
         </div>
