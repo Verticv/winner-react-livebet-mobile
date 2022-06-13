@@ -3,11 +3,11 @@
     background-image: url("../../assets/images/other/footer.png");
     background-repeat: round;
     position: fixed;
-    left: calc((100% - 1200px) / 2);
+    left: calc((100% - 1242px) / 2);
     bottom: 0;
     height: 9.1875rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1242px;
 
     @media(max-width:$bp-extra-large) {
       left: 0;
