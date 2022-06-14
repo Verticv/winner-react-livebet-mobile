@@ -20,11 +20,11 @@ const MainHeader = () => {
         <div className='right'>
           <span className='dot' />
           {window.location.pathname === '/favorite' ? <p>즐겨찾기</p> : null}
-          {window.location.pathname === '/' ? <p>전체</p> : null}  
-          {window.location.pathname === '/mainLiveList' ? <p>축구</p> : null}   
+          {window.location.pathname === '/' ? <p>전체</p> : null}
+          {window.location.pathname === '/mainLiveList' ? <p>축구</p> : null}
           {window.location.pathname === '/mainNonLiveList' ? <p>야구</p> : null}
-          {window.location.pathname === '/basketball' ? <p>농구</p> : null} 
-          {window.location.pathname === '/volleyball' ? <p>배구</p> : null}       
+          {window.location.pathname === '/basketball' ? <p>농구</p> : null}
+          {window.location.pathname === '/volleyball' ? <p>배구</p> : null}
           <p className='head-p'>
             80
           </p>
@@ -44,12 +44,19 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p>시간순</p> : <p>리그순보기</p>}
-              <img style={{width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem'}} src={btnArrow} alt='' />
+              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={btnArrow} alt='' />
+            </div>
+          </button>
+          <button type='submit' className='btn active'>
+            <div className='button-pho'>
+              <img src={chronology} alt='' />
+              <p>전체</p>
+              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={btnArrow} alt='' />
             </div>
           </button>
         </div>
       </div>
-      <Modal visible={visible} toggle={toggle} isCheck={isCheck} setIsCheck={setIsCheck} isClick={isClick} setIsClick={setIsClick} temp={temp} setTemp={setTemp}/>
+      <Modal visible={visible} toggle={toggle} isCheck={isCheck} setIsCheck={setIsCheck} isClick={isClick} setIsClick={setIsClick} temp={temp} setTemp={setTemp} />
     </>
 
   );
