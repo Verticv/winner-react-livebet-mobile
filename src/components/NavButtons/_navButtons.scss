@@ -26,7 +26,8 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
+  // background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
+  background: url('../../assets/images/imgs/navBtn.png');
   background-repeat: round;
   color: #8a8a8d;
   width: 17%;

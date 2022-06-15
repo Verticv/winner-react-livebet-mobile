@@ -149,11 +149,12 @@
   text-decoration: none;
 
   .nLive-side-btn{
-    background-color: #9B2F30;
+    // background-color: #9B2F30;
     color: #fff;
     border: none;
     font-size: 17px;
     width: 100%;
+    background: url('../../assets/images/imgs/blue-body-bg.png');
     background-color:#225F8B;
     font-size: 2.675rem;
     height: 15rem;
@@ -165,6 +166,9 @@
       background-color: transparent;
       text-shadow: 0 0 10px #ffffff;
       height: 15rem;
+      background: url('../../assets/images/imgs/blue-body-active-bg.png');
+      background-repeat: round;
+      outline: none;
     }
     &.card-button-blue {
       background: url('../../assets/images/imgs/arrow-blue-active.png');

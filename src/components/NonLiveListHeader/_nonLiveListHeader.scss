@@ -1,13 +1,14 @@
 .nonLive-header-wrapper {
-  background-image: url('../../assets/images/other/nonLiveCardBackground.png');
+  // background-image: url('../../assets/images/other/nonLiveCardBackground.png');
   background-repeat: round;
+  background: url('../../assets/images/imgs/img.png');
 
   .nonLive-head-container {
     display: flex;
     align-items: center;
     padding: 0 0.938rem;
     margin: 0 !important;
-    height: 7.2rem;
+    height: 7.4375rem;
 
     .nonLive-header {
       background-color: #225F8B;

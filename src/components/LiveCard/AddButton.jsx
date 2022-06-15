@@ -39,7 +39,7 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderL
           <button type='button' id={id} onClick={() => {
             setCardId(id);
             setIsDisplay(!isDisplay);
-          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.2rem' : '14.9rem' }}>
+          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '21.6rem' : '14.6rem' }}>
             <img id={id} src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
             <p>{value}</p>
           </button>
