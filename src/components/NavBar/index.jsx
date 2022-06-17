@@ -25,7 +25,7 @@ function NavBar({ isActive }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const { state } = useLocation();
   useLayoutEffect(() => {
-    container.current.scrollLeft = scrollPosition;
+    container.current.scrollLeft = scrollPosition || 0;
   }, [scrollPosition]);
   useLayoutEffect(()=>{
     container.current.scrollLeft=state?.scrollPosition || 0;
