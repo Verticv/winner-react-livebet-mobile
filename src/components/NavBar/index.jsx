@@ -28,10 +28,10 @@ function NavBar({ isActive }) {
     container.current.scrollLeft = scrollPosition || 0;
   }, [scrollPosition]);
   useLayoutEffect(()=>{
-    container.current.scrollLeft=state?.scrollPosition || 0;
+    container.current.scrollLeft= state?.scrollPosition || 0;
     // container.current.scrollTo({left:state.scrollPosition,  behavior: 'smooth'
 // })
-    },[state.scrollPosition]);
+    },[state?.scrollPosition]);
   
   return (
     <div className='nav' ref={container} onScroll={() => {
