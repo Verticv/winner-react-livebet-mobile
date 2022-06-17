@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavButtons from '../NavButtons';
@@ -32,7 +31,7 @@ function NavBar({ isActive }) {
     container.current.scrollLeft=state.scrollPosition;
     // container.current.scrollTo({left:state.scrollPosition,  behavior: 'smooth'
 // })
-    },[]);
+    },[state.scrollPosition]);
   
   return (
     <div className='nav' ref={container} onScroll={() => {
