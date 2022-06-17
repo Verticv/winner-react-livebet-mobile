@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function NavButtons({
-  icon, clickedIcon, text, number, isActive, link = '/',
+  icon, clickedIcon, text, number, isActive, link = '/', scrollPosition
 }) {
   const [iconToggle, setIconToggle] = useState(false);
 
@@ -14,7 +14,7 @@ function NavButtons({
 
   return (
     <NavLink
-      to={link}
+      to={{ pathname: link, state: { scrollPosition } }}
       exact
       className={isActive ? 'btnClass clicked' : 'btnClass'}
       activeClassName='clicked'

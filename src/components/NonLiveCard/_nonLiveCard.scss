@@ -4,7 +4,7 @@
   .nLive-main-live{
     display: flex;
     flex-direction: column;
-    width: calc(100% - 7.7rem);
+    width: calc(100% - 7.4rem);
     .nLive-left {
       display: flex;
       flex-direction: column;
@@ -141,13 +141,13 @@
 }
 
 .nLive-btn{
-  width: 7.7rem;
+  // width: 7.7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
-  background-repeat: round;
+  // background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
+  // background-repeat: round;
   text-decoration: none;
 
   .nLive-side-btn{
@@ -155,9 +155,10 @@
     color: #fff;
     border: none;
     font-size: 17px;
-    width: 100%;
+    width: 7.325rem;
     background: url('../../assets/images/imgs/blue-body-bg.png');
-    background-color:#225F8B;
+    // background-color:#225F8B;
+    background-repeat: round;
     font-size: 2.675rem;
     height: 15rem;
   }
@@ -191,8 +192,8 @@
 .card-button-blue {
   background: url('../../assets/images/imgs/arrow-blue.png');
   background-repeat: round;
-  height: 7.9rem;
-  width: 7.7rem;
+  height: 7.3rem;
+  width: 7.3rem;
   border: 0;
   // border-bottom: 1px solid #457f96;
 }

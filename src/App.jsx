@@ -52,6 +52,18 @@ function App() {
         <Route path='/favorite' exact>
           <Favorite cardId={cardId} setCardId={setCardId} cart={cart} addToCart={addToCart} cardData={cardData} setCardData={setCardData} removeCard={removeCard} handleClick={handleClick} />
         </Route>
+        <Route path='/iceHockey' exact>
+          <MainLive key={4} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+        </Route>
+        <Route path='/tennis' exact>
+          <MainLive key={5} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+        </Route>
+        <Route path='/handball' exact>
+          <MainLive key={6} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+        </Route>
+        <Route path='/ufc' exact>
+          <MainLive key={7} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+        </Route>
       </Switch>
     </>
   );
