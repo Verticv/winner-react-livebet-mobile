@@ -28,14 +28,14 @@ function NavBar({ isActive }) {
     container.current.scrollLeft = scrollPosition;
   }, [scrollPosition]);
   useLayoutEffect(()=>{
-    container.current.scrollLeft=state.scrollPosition;
+    container.current.scrollLeft=state?.scrollPosition || 0;
     // container.current.scrollTo({left:state.scrollPosition,  behavior: 'smooth'
 // })
     },[state.scrollPosition]);
   
   return (
     <div className='nav' ref={container} onScroll={() => {
-      setScrollPosition(container.current.scrollLeft)
+      setScrollPosition(container.current?.scrollLeft)
     }}>
       <NavButtons scrollPosition={scrollPosition} icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} link='/favorite' />
       <NavButtons scrollPosition={scrollPosition} icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} link='/' />

@@ -14,7 +14,7 @@ function NavButtons({
 
   return (
     <NavLink
-      to={{ pathname: link, state: { scrollPosition } }}
+      to={{ pathname: link, state: { scrollPosition: (scrollPosition  || 0 )}}}
       exact
       className={isActive ? 'btnClass clicked' : 'btnClass'}
       activeClassName='clicked'
