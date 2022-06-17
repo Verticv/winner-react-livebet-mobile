@@ -25,6 +25,10 @@ const MainHeader = () => {
           {window.location.pathname === '/mainNonLiveList' ? <p>야구</p> : null}
           {window.location.pathname === '/basketball' ? <p>농구</p> : null}
           {window.location.pathname === '/volleyball' ? <p>배구</p> : null}
+          {window.location.pathname === '/iceHockey' ? <p>아이스하키</p> : null}
+          {window.location.pathname === '/tennis' ? <p>테니스</p> : null}
+          {window.location.pathname === '/handball' ? <p>핸드볼</p> : null}
+          {window.location.pathname === '/ufc' ? <p>UFC</p> : null}
           <p className='head-p'>
             80
           </p>
