@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect, useLayoutEffect } from 'react';
+/* eslint-disable */
+import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavButtons from '../NavButtons';
 import footBallBlack from '../../assets/images/football/football-black.png';
