@@ -3,7 +3,10 @@ import cup from '../../assets/images/cup/cup-gold.png';
 import chronology from '../../assets/images/chronology/chronology-white.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
-import btnArrow from '../../assets/images/imgs/btn-arrow.png'
+import btnArrow from '../../assets/images/imgs/btn-arrow.png';
+import SelectBox from './DropDownItems.jsx';
+// import trueIco from '../../assets/images/imgs/true.png';
+// import arrow from '../../assets/images/imgs/aaa.png';
 
 const MainHeader = () => {
   const { toggle, visible } = useModal();
@@ -11,6 +14,7 @@ const MainHeader = () => {
   const [isCheck, setIsCheck] = useState([]);
   const [temp, setTemp] = useState([]);
   const [isClick, setIsClick] = useState(false);
+  // const [isRotate, setIsRotaxte] = useState(false);
   const changeName = () => {
     setIsSelected((prev) => !prev);
   };
@@ -51,13 +55,20 @@ const MainHeader = () => {
               <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={btnArrow} alt='' />
             </div>
           </button>
-          {/* <button type='submit' className='btn active'>
-            <div className='button-pho'>
-              <img src={chronology} alt='' />
+          {/* <button type='submit' className='btn'>
+            <div className='button-pho' onClick={() => setIsRotate((prev) => !prev)}>
+              <img src={trueIco} alt='' />
               <p>전체</p>
-              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={btnArrow} alt='' />
+              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={isRotate ? arrow : btnArrow} alt='' />
             </div>
           </button> */}
+          <SelectBox
+                items={[
+                    { value: "전체경기", id: 1 },
+                    { value: "진행중", id: 2 },
+                    { value: "예정중", id: 3 },
+                ]}
+        />
         </div>
       </div>
       <Modal visible={visible} toggle={toggle} isCheck={isCheck} setIsCheck={setIsCheck} isClick={isClick} setIsClick={setIsClick} temp={temp} setTemp={setTemp} />
