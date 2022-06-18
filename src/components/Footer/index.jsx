@@ -18,21 +18,28 @@ const Footer = () => {
         <footer className='flex'>
           <div className='sub-container1'>
             <img src={cart} alt='cart' />
-            <p className='main-p'>베팅카드 열기</p>
+            <p className='main-p' 
+            // style={{marginLeft: '3rem'}}
+            >베팅카드 열기</p>
           </div>
 
           <div className='vl' />
 
           <div className='sub-container2'>
-            <p>
+            <p 
+            // style={{marginRight: '2rem'}}
+            >
               선택경기
-              {' '}
-              <span>3 건</span>
+                <span 
+              style={{marginLeft: '1.3125rem'}}
+              >3 <span className='noto-sans'>건</span></span>
             </p>
             <p className='sub-p'>
               예상배당
               {' '}
-              <span>4.25</span>
+              <span 
+              style={{marginLeft: '1.3125rem'}}
+              >4.25</span>
             </p>
           </div>
         </footer>

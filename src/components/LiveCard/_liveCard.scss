@@ -18,12 +18,12 @@
       &.inactive {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
-        height: 14.9375rem;
+        height: 14.6375rem;
       }
       &.active {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-active.png");
         background-repeat: round;
-        height: 14.9375rem;
+        height: 14.6375rem;
       }
       .row {
         display: flex;
@@ -31,7 +31,7 @@
         color: #D1CECF;
 
         .star {
-          padding-left: 0.625rem;
+          padding-left: 0.3rem;
           padding-right: 0.625rem;
           width: 4.2rem;
         }
@@ -70,16 +70,18 @@
 
             .character {
               display: flex;
-              background-color: #ffffff;
-              opacity: 0.2;
-              color: #000000;
+              background-color: rgb(255 255 255 / 20%);;
+              // opacity: 0.2;
+              color: #212121;
               width: 2.1875rem;
               height: 2.1875rem;
               justify-content: center;
               align-items: center;
               border-radius: 3px;
-              margin: 0 1.9375rem;
+              margin: 0 1.25rem;
+              margin-right: 0.9375rem;
               font-size: 1.875rem;
+              font-family: 'RobotoRegular';
             }
           }
 
@@ -89,6 +91,7 @@
             height: 25px;
             justify-content: space-evenly;
             margin-top: 10px;
+            margin-left: 0.5rem;
 
             @media(max-width:$bp-special-small) {
               margin-top: 0;
@@ -97,7 +100,8 @@
             p {
               font-family: RobotoRegular;
               font-size: 2.625rem;
-              margin: 0 2rem;
+              margin: 0 1.875rem;
+              margin-right: 2rem;
             }
             @media (min-width: 280px) and (max-width: 653px) {
               p {
@@ -113,7 +117,7 @@
               color: white;
               text-shadow: 0 0 10px #ff242c;
               font-family: NotoSansCJKkrRegular;
-              margin-right: 1.312rem;
+              margin-right: 1.25rem;
               margin-left: 0;
             }
 
@@ -122,14 +126,16 @@
               background-color: rgb(155, 47, 48);
               color: rgb(255, 255, 255);
               text-align: center;
-              border-radius: 5px;
+              border-radius: 0.625rem;
               margin: 1.875rem 0;
+              margin-top: 2.5rem;
               font-size: 2rem;
               padding: 0.2rem 0.8rem;
               text-transform: uppercase;
             }
             img {
               width: 3rem;
+              margin-top: 0.6rem;
             }
           }
         }
@@ -195,7 +201,7 @@
         }
 
         .num-num {
-          margin-top: 2rem;
+          margin-top: 2.4rem;
           @media(max-width:$bp-special-small) {
             margin-top: 0;
             height: 22px;
@@ -212,7 +218,7 @@
 .main-con {
   background-color: white;
   width: 100%;
-  height: 7.3rem;
+  height: 7rem;
   background-image: url("../../assets/images/cards/redCardBackgrounds/headerGradient-inactive.png");
   background-repeat: round;
   display: flex;
@@ -227,31 +233,33 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 0.9375rem;
     color: #fff;
 
     p {
       color: #c8b273;
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
 
     .live-header-flag {
       padding: 0 1rem;
-      width: 6.375rem;
+      width: 5.8rem;
     }
     .ball {
-      width: 4rem;
+      width: 3.6rem;
     }
   }
 
   .sub2 {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly;    
+    margin: 1rem;
+
 
     img {
-      width: 2.2rem;
-      margin-right: 1rem;
+      width: 2.5rem;
+      margin-right: 0.7rem;
     }
 
     .sq1 {
@@ -263,12 +271,13 @@
     }
 
     .square {
-      height: 2.81rem;
-      width: 2.81rem;
+      height: 2.8rem;
+      width: 2.8rem;
       margin-right: 1rem;
+      border-radius: 4px;
     }
     .ball {
-      width: 2.625rem;
+      width: 2.5rem;
     }
   }
 }
@@ -296,7 +305,7 @@
       background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-active.png");
       background-repeat: round;
       height: 7.5rem;
-      width: 7.6rem;
+      width: 7.3rem;
       border: 0;
       img {
         width: 5.43rem;
@@ -307,7 +316,8 @@
       }
     }
     &.inactive-button {
-      background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-inactive.png");
+      // background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-inactive.png");
+      background: url('../../assets/images/imgs/red-body.png');
       background-repeat: round;
       padding-top: 25px;
       @media(max-width:$bp-special-small) {
@@ -325,7 +335,7 @@
     }
     &.inactive-with-plus {
       background-repeat: round;
-      width: 7.625rem;
+      width: 7.325rem;
       height: 14.9rem;
     }
     @media(mix-width: 377px) and (max-width: 477px) {
@@ -347,8 +357,8 @@
 .card-button-arrow {
   background: url('../../assets/images/imgs/red-red.png');
   background-repeat: round;
-  height: 7.3rem;
-  width: 7.6rem;
+  height: 7rem;
+  width: 7.3rem;
   border: 0;
 }
 .card-button-arrow:active {

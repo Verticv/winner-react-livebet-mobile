@@ -1,5 +1,7 @@
 .live-bet-page {
-  .first-con, .card {
+
+  .first-con,
+  .card {
     border: 0;
   }
 }
@@ -26,12 +28,58 @@
     padding: 0 1.875rem;
     background-image: url("../../assets/images/other/liveBitButton-black.png");
     background-repeat: round;
-
+    
+    // .active-container {
+    //   background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5);
+    // }
     &.active {
-      background: linear-gradient(0deg,#d8bc6f,#aa8f60 50%,#d6c8a5);
+      background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5) ;
+      // background-repeat: no-repeat;
+      // background: url('../../assets/images/imgs/active-active.png');
+      background: url('../../assets/images/imgs/qq.png');
+      // padding: 1rem;
+      // background: #faf8cb;
       background-repeat: round;
       color: #000000;
+      outline: none;
+      // border: 2px solid;
+      // border-top: 0;
+      // padding: 0;
+      // min-width: 10rem;
+      // height: 6rem;
+
+      // outline-color: #faf8cb;
+      // outline: 4px auto #faf8cb;
+      // outline-offset: -4px;
+      // border-bottom: 1px solid #faf8cb;
+      // border-left: 1px solid #faf8cb;
+      // border-right: 1px solid #faf8cb;
     }
+    //   .active-container {
+    //     display: flex;
+    //     width: 61%;
+    //     height: 101%;
+    //     background: #000000;
+    //     padding: 0 1.875rem;
+    //     background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5);
+    //     margin-left: -3px;
+    //     align-items: center;
+    //     padding: 0 1.875rem;
+    //     height: 6rem;
+    //     min-width: 10rem;
+    //     span {
+    //       padding: 0.9rem 2rem;
+    //       display: flex;
+    //     }
+    // }
+
+    // &.active::after {
+    //   content: "\a0";
+    //   display: block;
+    //   padding: 2px 0;
+    //   line-height: 1px;
+    //   border-bottom: 1px dashed #000;
+    // }
   }
 }
 
@@ -146,14 +194,47 @@
           font-size: 2.125rem;
 
           &.red-button {
-            background: url("../../assets/images/arrow/arrowWithButton-red.png");
+            background: url("../../assets/images/imgs/red-btn.png");
             background-repeat: round;
             margin: -5px;
+            outline: none;
+            position: relative;
+
+            .red-arrow {
+              width: 4.6875rem;
+              height: 2.0625rem;
+              position: absolute;
+              top: 1rem;
+              right: 2.5rem;
+              animation: redUpAnimation 1s infinite;
+            }
+
+            @keyframes redUpAnimation {
+              0% {
+                top: 0.7rem;
+              }
+            }
           }
 
           &.blue-button {
-            background: url("../../assets/images/arrow/arrowWithButton-blue.png");
+            background: url("../../assets/images/imgs/blue-btn.png");
             background-repeat: round;
+            position: relative;
+
+            .blue-arrow {
+              width: 4.6875rem;
+              height: 2.0625rem;
+              position: absolute;
+              bottom: 1rem;
+              right: 2.5rem;
+              animation: blueDownAnimation 1s infinite;
+            }
+
+            @keyframes blueDownAnimation {
+              0% {
+                bottom: 0.7rem;
+              }
+            }
           }
         }
 
@@ -161,22 +242,27 @@
           justify-content: center;
           width: 17rem;
           height: 6.3rem;
+
           @media (min-width: 1280px) {
             width: 19rem;
           }
+
           @media (min-width: 579px) and (max-width: 768px) {
             width: 22rem;
           }
+
           .add-button {
             width: auto;
           }
-      }
+        }
+
         &:nth-child(3) {
           width: 47%;
 
           .add-button {
             color: #d1cecf;
             margin-left: -5px;
+            outline: none;
           }
         }
 
@@ -189,9 +275,11 @@
           padding-left: 1rem;
           // z-index: 1;
         }
+
         &.bet-btn-numbers {
           .add-button {
             color: #d1cecf;
+            outline: none;
           }
         }
       }
@@ -201,6 +289,7 @@
   .bet-button-container.first-section-red {
     background: url("../../assets/images/other/skew-container-red.png"), rgba(255, 255, 255, 0.102);
     background-repeat: round;
+
     .bet-btn-skew {
       &:first-child {
         p {
@@ -210,6 +299,7 @@
     }
   }
 }
+
 .middle-content {
   display: flex;
   justify-content: center;
@@ -222,8 +312,9 @@
   font-size: 14px;
   background-color: #9b2f30;
 }
+
 .blue-section {
-  background: linear-gradient(270deg,#9b2f30,#9b2f30 25%,#9a2f30 50%,#872d2f 63%,#722a2e 75%,#5d282e);
+  background: linear-gradient(270deg, #9b2f30, #9b2f30 25%, #9a2f30 50%, #872d2f 63%, #722a2e 75%, #5d282e);
   height: 6.3rem;
   width: 320px;
   display: flex;

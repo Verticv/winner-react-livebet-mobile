@@ -1,6 +1,6 @@
 import React from 'react';
-import c from '../../assets/images/other/cornner.png';
-import p from '../../assets/images/other/plenty.png';
+import c from '../../assets/images/imgs/c.png';
+import p from '../../assets/images/imgs/p.png';
 import footBallWhite from '../../assets/images/football/football-white.png';
 
 const CardHeader = ({

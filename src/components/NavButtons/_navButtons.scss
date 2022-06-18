@@ -26,19 +26,22 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
+  // background-image: url("../../assets/images/other/headerButtonBackground-inactive.png");
+  background: url('../../assets/images/imgs/navBtn.png');
   background-repeat: round;
   color: #8a8a8d;
   width: 17%;
-  height: 11.875rem;
+  height: 10.5rem;
   padding: 0.375rem;
   border: 0;
   border-right: 1px solid #000;
   border-top: 1px solid #000;
   text-decoration: none;
+  min-width: 17%;
+  flex-shrink: 0;
   p,
   img {
-    margin: 0;
+    margin: -3px;
   }
 
   img {
@@ -55,7 +58,7 @@ html {
     font-family: RobotoRegular;
     font-size: 1.75rem;
     background-color: #222226;
-    padding: 0 0.375rem;
+    padding: 0 0.6rem;
     border-radius: 0.5rem;
   }
 

@@ -4,13 +4,13 @@
   .nLive-main-live{
     display: flex;
     flex-direction: column;
-    width: calc(100% - 7.7rem);
+    width: calc(100% - 7.4rem);
     .nLive-left {
       display: flex;
       flex-direction: column;
       width: 100%;
       .nLive-down-sec{
-        height: 15rem;
+        height: 14.6375rem;
         display: flex;
         justify-content: space-between;
         width:100%;
@@ -25,8 +25,8 @@
           align-items: center;
           color: #D1CECF;
           .nLive-star{
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 0.7rem;
+            padding-right: 1.1rem;
             width: 4.2rem;
           }
           .nLive-col{
@@ -51,16 +51,17 @@
               }
               .character {
                 display: flex;
-                background-color: #ffffff;
-                opacity: 0.2;
-                color: #000000;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: #212121;
                 width: 2.1875rem;
                 height: 2.1875rem;
                 justify-content: center;
                 align-items: center;
                 border-radius: 3px;
-                margin: 0 1.9375rem;
+                margin: 0 1.25rem;
+                margin-right: 0.9375rem;
                 font-size: 1.875rem;
+                font-family: "RobotoRegular";
               }
             }
             .nLive-play-video{
@@ -77,7 +78,7 @@
               p {
                 font-family: RobotoRegular;
                 font-size: 2.625rem;
-                margin: 0 2rem;
+                margin: 0 0.5rem;
               }
             }
           }
@@ -94,7 +95,7 @@
 .nLive-main-con{
     background-color: white;
     width: 100%;    
-    height: 7.7rem;
+    height: 7rem;
     background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-inactive.png");
     background-repeat: round;
     display: flex;
@@ -107,18 +108,18 @@
       color: #fff;
 
       p {
-        color: #d8b948;
-        font-size: 3rem;
+        // color: #d8b948;
+        font-size: 2.8rem;
       }
 
 
       .nLive-header-flag {
         padding: 0 1rem;
-        width: 6.375rem;
+        width: 5.8rem
       }
 
       .ball {
-        width: 4rem;
+        width: 3.6rem;
       }
       
     }
@@ -129,6 +130,7 @@
     .nLive-sub-con {
       p {
         color: #fff;
+        font-size: 2.8rem;
       }
     }
   }
@@ -139,22 +141,24 @@
 }
 
 .nLive-btn{
-  width: 7.7rem;
+  // width: 7.7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
-  background-repeat: round;
+  // background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
+  // background-repeat: round;
   text-decoration: none;
 
   .nLive-side-btn{
-    background-color: #9B2F30;
+    // background-color: #9B2F30;
     color: #fff;
     border: none;
     font-size: 17px;
-    width: 100%;
-    background-color:#225F8B;
+    width: 7.325rem;
+    background: url('../../assets/images/imgs/blue-body-bg.png');
+    // background-color:#225F8B;
+    background-repeat: round;
     font-size: 2.675rem;
     height: 15rem;
   }
@@ -165,6 +169,9 @@
       background-color: transparent;
       text-shadow: 0 0 10px #ffffff;
       height: 15rem;
+      background: url('../../assets/images/imgs/blue-body-active-bg.png');
+      background-repeat: round;
+      outline: none;
     }
     &.card-button-blue {
       background: url('../../assets/images/imgs/arrow-blue-active.png');
@@ -185,8 +192,8 @@
 .card-button-blue {
   background: url('../../assets/images/imgs/arrow-blue.png');
   background-repeat: round;
-  height: 7.9rem;
-  width: 7.7rem;
+  height: 7.3rem;
+  width: 7.3rem;
   border: 0;
   // border-bottom: 1px solid #457f96;
 }
