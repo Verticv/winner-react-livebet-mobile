@@ -50,7 +50,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
         <div className='cart-right-header'>
           <div>
             <img src={cartIcon} alt='cart' className='cart-icon' />
-            <p style={{ marginLeft: '2.3rem', marginRight: '2.28rem', fontSize: '3.4rem' }}>BETSLIP</p>
+            <p style={{ marginLeft: '2.3rem', marginRight: '2.28rem', fontSize: '3rem', marginTop: '2rem' }}>BETSLIP</p>
             <div className='cart-num'>
               2
             </div>
@@ -155,7 +155,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
           type='button'
         >
           <img className='button-icon' src={buttonIcon} alt='' />
-          <span style={{fontSize: '3.92rem'}}>전체보기</span>
+          <span style={{fontSize: '3.4rem'}}>전체보기</span>
         </button>
       </div>
     </div>
