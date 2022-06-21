@@ -35,7 +35,7 @@ export default function SelectBox({ items }) {
                     <img 
                     // style={{width: '4.125rem', height: '3.25rem'}} 
                     className="icon" src={checkIcon} alt="check" />
-                    <span className="text">{selectedItem.value}</span>
+                    <p className="text">{selectedItem.value}</p>
                     <img  className='white-arrow' 
                     // style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} 
                     src={showItems ? arrow : btnArrow} alt=''/>

@@ -222,7 +222,7 @@
 
 .select-box--selected-item .text {
   text-align: left;
-  margin-top: -0.1875rem;
+  // margin-top: -0.1875rem;
   // margin-right: 0.4375rem;
   // margin-left: 0.25rem;
   // font-size: 2rem;
@@ -247,7 +247,7 @@
   }
 
   @media(min-width: 480px) and (max-width: 600px) {
-    font-size: 60%;
+    // font-size: 103%;
   }
   @media(min-width: 377px) and (max-width: 433px) {
     font-size: 60%;
@@ -266,7 +266,7 @@
   // width: 2rem;
   // height: 1rem;
   @media(min-width: 910px) and (max-width: 1076px) {
-    width: 25%;
+    width: 28%;
     height: auto;
   }
 
@@ -281,7 +281,7 @@
   }
 
   @media(min-width: 480px) and (max-width: 600px) {
-    width: 27%;
+    width: 25%;
     height: auto;
   }
   @media(min-width: 377px) and (max-width: 433px) {
