@@ -189,7 +189,7 @@
   vertical-align: middle;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   // @media(min-width: 376px) and (max-width: 433px) {
   //   width: 17.375rem;
   // }
@@ -263,11 +263,11 @@
   }
 
   @media(min-width: 480px) and (max-width: 600px) {
-    width: 25%;
+    width: 20%;
     height: auto;
   }
   @media(min-width: 377px) and (max-width: 433px) {
-    width: 23%;
+    width: 18%;
     height: auto;
     // margin-left: 0;
   }
