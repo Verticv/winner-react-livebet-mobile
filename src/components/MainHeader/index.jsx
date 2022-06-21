@@ -44,27 +44,20 @@ const MainHeader = () => {
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img src={cup} alt='' />
-              <p>리그선택</p>
+              <img className='icon' src={cup} alt='' />
+              <p className='text'>리그선택</p>
             </div>
           </button>
           <button type='submit' className='btn active' onClick={changeName}>
             <div className='button-pho'>
-              <img src={isSelected ? chronology : cup} alt='' />
-              {isSelected ? <p>시간순</p> : <p>리그순보기</p>}
-              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={btnArrow} alt='' />
+              <img className='icon' src={isSelected ? chronology : cup} alt='' />
+              {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
+              <img className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
-          {/* <button type='submit' className='btn'>
-            <div className='button-pho' onClick={() => setIsRotate((prev) => !prev)}>
-              <img src={trueIco} alt='' />
-              <p>전체</p>
-              <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={isRotate ? arrow : btnArrow} alt='' />
-            </div>
-          </button> */}
           <SelectBox
                 items={[
-                    { value: "전체경기", id: 1 },
+                    { value: "전체", id: 1 },
                     { value: "진행중", id: 2 },
                     { value: "예정중", id: 3 },
                 ]}

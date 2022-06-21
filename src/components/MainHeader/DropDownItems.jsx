@@ -30,11 +30,15 @@ export default function SelectBox({ items }) {
 
     return (
         <div className="select-box--box">
-            <div className="select-box--container">
+            <div className="select-box--container btn">
                 <div onClick={dropDown} className="select-box--selected-item">
-                    <img style={{width: '4.125rem', height: '3.25rem'}} className="icon" src={checkIcon} alt="check" />
+                    <img 
+                    // style={{width: '4.125rem', height: '3.25rem'}} 
+                    className="icon" src={checkIcon} alt="check" />
                     <span className="text">{selectedItem.value}</span>
-                    <img style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} src={showItems ? arrow : btnArrow} alt=''/>
+                    <img  className='white-arrow' 
+                    // style={{ width: '2rem', height: '1rem', marginLeft: '1rem', marginTop: '1rem' }} 
+                    src={showItems ? arrow : btnArrow} alt=''/>
                     <div
                         className={`select-box--arrow ${showItems ? "select-box--arrow-up" : ""
                             }`}
