@@ -35,55 +35,55 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
     }
   }, [isChangeBlueOrder, blueCardArray]);
 
-return (
-  <>
-    <NavBar />
-    <div className='back'>
-      <MainHeader />
-      <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
-      {data.map(({
-        id, flag, name, isActive, firstScore, secondScore, firstTeam, secondTeam, withPlus
-      }) => (
-        <LiveCard
-          key={id}
-          id={id}
-          addToCart={addToCart}
-          handleClick={handleClick}
-          flag={flag}
-          name={name}
-          isActive={isActive}
-          firstScore={firstScore}
-          secondScore={secondScore}
-          firstTeam={firstTeam}
-          secondTeam={secondTeam}
-          idSelect={idSelect}
-          isIdSelected={isIdSelected}
-          withPlus={withPlus}
-          setCardId={setCardId}
-          cardData={cardData}
-          setCardData={setCardData}
-          cardId={cardId}
-        />
-      ))}
-      <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
-      {dataBlue.map(({ id, flag, name, firstTeam, secondTeam }) => (
-        <NonLiveCard
-          key={id}
-          id={id}
-          flag={flag}
-          name={name}
-          firstTeam={firstTeam}
-          secondTeam={secondTeam}
-          idBlueSelected={idBlueSelected}
-          setIdBlueSelected={setIdBlueSelected}
-          cardId={cardId}
-          setCardId={setCardId}
-        />
-      ))}
-    </div>
-    <Footer />
-  </>
-);
+  return (
+    <>
+      <NavBar />
+      <div className='back'>
+        <MainHeader />
+        <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
+        {data.map(({
+          id, flag, name, isActive, firstScore, secondScore, firstTeam, secondTeam, withPlus
+        }) => (
+          <LiveCard
+            key={id}
+            id={id}
+            addToCart={addToCart}
+            handleClick={handleClick}
+            flag={flag}
+            name={name}
+            isActive={isActive}
+            firstScore={firstScore}
+            secondScore={secondScore}
+            firstTeam={firstTeam}
+            secondTeam={secondTeam}
+            idSelect={idSelect}
+            isIdSelected={isIdSelected}
+            withPlus={withPlus}
+            setCardId={setCardId}
+            cardData={cardData}
+            setCardData={setCardData}
+            cardId={cardId}
+          />
+        ))}
+        <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
+        {dataBlue.map(({ id, flag, name, firstTeam, secondTeam }) => (
+          <NonLiveCard
+            key={id}
+            id={id}
+            flag={flag}
+            name={name}
+            firstTeam={firstTeam}
+            secondTeam={secondTeam}
+            idBlueSelected={idBlueSelected}
+            setIdBlueSelected={setIdBlueSelected}
+            cardId={cardId}
+            setCardId={setCardId}
+          />
+        ))}
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default MainLive;

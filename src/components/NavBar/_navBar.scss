@@ -15,3 +15,14 @@ html {
   width: 4px;               /* width of vertical scrollbar */
   border: 1px solid transparent;
 }
+.div-shadow {
+  position: relative;
+  .shadow {
+    height: 10.5rem;
+    width: 5px;
+    position: absolute;
+    top: 0;
+    right: 26px;
+    box-shadow: 19px 0 17px #19191c;
+  }
+}

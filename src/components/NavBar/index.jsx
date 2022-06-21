@@ -27,26 +27,29 @@ function NavBar({ isActive }) {
   useLayoutEffect(() => {
     container.current.scrollLeft = scrollPosition || 0;
   }, [scrollPosition]);
-  useLayoutEffect(()=>{
-    container.current.scrollLeft= state?.scrollPosition || 0;
+  useLayoutEffect(() => {
+    container.current.scrollLeft = state?.scrollPosition || 0;
     // container.current.scrollTo({left:state.scrollPosition,  behavior: 'smooth'
-// })
-    },[state?.scrollPosition]);
-  
+    // })
+  }, [state?.scrollPosition]);
+
   return (
-    <div className='nav' ref={container} onScroll={() => {
-      setScrollPosition(container.current?.scrollLeft)
-    }}>
-      <NavButtons scrollPosition={scrollPosition} icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} link='/favorite' />
-      <NavButtons scrollPosition={scrollPosition} icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} link='/' />
-      <NavButtons scrollPosition={scrollPosition} icon={footBallWhite} clickedIcon={footBallBlack} text='축구' number={number} link='/mainLiveList' />
-      <NavButtons scrollPosition={scrollPosition} icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} link='/mainNonLiveList' />
-      <NavButtons scrollPosition={scrollPosition} icon={valBallWhite} clickedIcon={valBallBlack} text='농구' number={number} link='/basketball' />
-      <NavButtons scrollPosition={scrollPosition} icon={ballyWhite} clickedIcon={ballyBlack} text='배구' number={number} link='/volleyball' />
-      <NavButtons scrollPosition={scrollPosition} icon={iceHockey} clickedIcon={iceHockey} text='아이스하키' number={number} link='/iceHockey' />
-      <NavButtons scrollPosition={scrollPosition} icon={tennis} clickedIcon={tennis} text='테니스' number={number} link='/tennis' />
-      <NavButtons scrollPosition={scrollPosition} icon={handball} clickedIcon={handball} text='핸드볼' number={number} link='/handball' />
-      <NavButtons scrollPosition={scrollPosition} icon={ufc} clickedIcon={ufc} text='UFC' number={number} link='/ufc' />
+    <div className='div-shadow'>
+      <div className='nav' ref={container} onScroll={() => {
+        setScrollPosition(container.current?.scrollLeft)
+      }}>
+        <NavButtons scrollPosition={scrollPosition} icon={starWhite} clickedIcon={starBlack} text='즐겨찾기' number={number} link='/favorite' />
+        <NavButtons scrollPosition={scrollPosition} icon={basketBallWhite} clickedIcon={basketBallBlack} text='전체' number={number} link='/' />
+        <NavButtons scrollPosition={scrollPosition} icon={footBallWhite} clickedIcon={footBallBlack} text='축구' number={number} link='/mainLiveList' />
+        <NavButtons scrollPosition={scrollPosition} icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} link='/mainNonLiveList' />
+        <NavButtons scrollPosition={scrollPosition} icon={valBallWhite} clickedIcon={valBallBlack} text='농구' number={number} link='/basketball' />
+        <NavButtons scrollPosition={scrollPosition} icon={ballyWhite} clickedIcon={ballyBlack} text='배구' number={number} link='/volleyball' />
+        <NavButtons scrollPosition={scrollPosition} icon={iceHockey} clickedIcon={iceHockey} text='아이스하키' number={number} link='/iceHockey' />
+        <NavButtons scrollPosition={scrollPosition} icon={tennis} clickedIcon={tennis} text='테니스' number={number} link='/tennis' />
+        <NavButtons scrollPosition={scrollPosition} icon={handball} clickedIcon={handball} text='핸드볼' number={number} link='/handball' />
+        <NavButtons scrollPosition={scrollPosition} icon={ufc} clickedIcon={ufc} text='UFC' number={number} link='/ufc' />
+      </div>
+      <div className='shadow'></div>
     </div>
   );
 }
