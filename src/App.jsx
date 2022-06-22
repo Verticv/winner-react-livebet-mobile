@@ -1,6 +1,6 @@
 import './assets/sass/global.scss';
 import { Switch, Route } from 'react-router';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Cart from './pages/Cart';
 import MainLive from './pages/MainLive';
@@ -27,6 +27,23 @@ function App() {
     const newArr = cart.splice(0, cart.length - 1);
     setCart(newArr);
   };
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
+    const bodyWidth = body.offsetWidth;
+    if (bodyWidth <= 1242) {
+      const fontSize = (bodyWidth * 16) / 1242;
+      html.style.fontSize = `${fontSize}px`;
+    }
+    window.addEventListener('resize', () => {
+      const bodyWidth = body.offsetWidth
+      if (bodyWidth <= 1242) {
+        const fontSize = (bodyWidth * 16) / 1242;
+        html.style.fontSize = `${fontSize}px`;
+      }
+    });
+  }, [])
 
   return (
     <>

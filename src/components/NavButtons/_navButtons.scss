@@ -1,25 +1,25 @@
-html {
-  font-size: 14px;
-  @media(max-width:$bp-large) {
-    font-size: 14px;
-  }
-  @media(max-width:$bp-extra-medium) {
-    font-size: 13px;
-  }
-  @media(max-width:$bp-medium) {
-    font-size: 7.5px;
-  }
-  @media(max-width:$bp-special-small) {
-    font-size: 5.5px;
-  }
-  @media(max-width:$bp-small) {
-    font-size: 5px;
-  }
+// html {
+//   font-size: 14px;
+//   @media(max-width:$bp-large) {
+//     font-size: 14px;
+//   }
+//   @media(max-width:$bp-extra-medium) {
+//     font-size: 13px;
+//   }
+//   @media(max-width:$bp-medium) {
+//     font-size: 7.5px;
+//   }
+//   @media(max-width:$bp-special-small) {
+//     font-size: 5.5px;
+//   }
+//   @media(max-width:$bp-small) {
+//     font-size: 5px;
+//   }
   
-  @media(max-width:$bp-extra-small) {
-    font-size: 4.5px;
-  }
-}
+//   @media(max-width:$bp-extra-small) {
+//     font-size: 4.5px;
+//   }
+// }
 
 .btnClass {
   display: flex;

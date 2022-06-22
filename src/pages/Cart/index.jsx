@@ -50,13 +50,14 @@ const Cart = ({ cart, setCart, removeCard }) => {
         <div className='cart-right-header'>
           <div>
             <img src={cartIcon} alt='cart' className='cart-icon' />
-            <p style={{ marginLeft: '2.3rem', marginRight: '2.28rem', fontSize: '3rem', marginTop: '2rem' }}>BETSLIP</p>
+            <p style={{ marginLeft: '1.8125rem', marginRight: '1.875rem', fontSize: '3rem', marginTop: '2rem' }}>BETSLIP</p>
             <div className='cart-num'>
               2
             </div>
           </div>
         </div>
         <div className='cartBtn' onClick={goBack}>
+          <div className='line' />
           <button type='button' className='cart-arrow' onClick={goBack}>
             <img src={arrow} alt='' className='arrow' />
           </button>
@@ -73,11 +74,11 @@ const Cart = ({ cart, setCart, removeCard }) => {
         <Slide className='cart-main-slide yellow' name='보유금액' number='3,000,000' />
         <Slide className='cart-other-slide' name='최소 베팅금액' number='5,000' />
         <div className='line' />
-        <Slide name='최대 베팅금액' number='1,000,000' />
+        <Slide className='cart-other-slide' name='최대 베팅금액' number='1,000,000' />
         <div className='line' />
-        <Slide name='최대 당첨금액 ' number='2,000,000' />
+        <Slide className='cart-other-slide' name='최대 당첨금액 ' number='2,000,000' />
         <div className='line' />
-        <Slide name='최대 베팅배당' number='0.00' />
+        <Slide className='cart-other-slide' name='최대 베팅배당' number='0.00' />
         <Slide className='cart-main-slide blue' name='배당률합계' number='0.00' />
         <Slide className='cart-main-slide green' name='총적중금액' number='0' />
 
