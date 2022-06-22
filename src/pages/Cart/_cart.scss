@@ -345,6 +345,9 @@
     border-bottom: 0.1875rem solid black;
   }
 }
+.cart-name div:last-child {
+  border: none;
+}
 
 .cart-items-team {
   display: flex;
