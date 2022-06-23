@@ -15,7 +15,7 @@
 //   @media(max-width:$bp-small) {
 //     font-size: 5px;
 //   }
-  
+
 //   @media(max-width:$bp-extra-small) {
 //     font-size: 4.5px;
 //   }
@@ -30,22 +30,25 @@
   background: url('../../assets/images/imgs/navBtn.png');
   background-repeat: round;
   color: #8a8a8d;
-  width: 17%;
-  height: 10.5rem;
-  padding: 0.375rem;
+  width: 12.875rem;
+  height: 11.8125rem;
+  padding: 0.3125rem;
   border: 0;
-  border-right: 1px solid #000;
-  border-top: 1px solid #000;
+  border-right: 0.125rem solid #000;
+  border-top: 0.125rem solid #000;
   text-decoration: none;
   min-width: 17%;
   flex-shrink: 0;
+
   p,
   img {
-    margin: -3px;
+    margin: -0.1870rem;
   }
 
   img {
-    width: 3rem;
+    width: 3.375rem;
+    height: 3.3125rem;
+    margin-top: 0.3125rem;
   }
 
   .text {
@@ -57,22 +60,20 @@
   .num {
     font-family: RobotoRegular;
     font-size: 1.75rem;
-    background-color: #222226;
+    // background-color: #222226;
     padding: 0 0.6rem;
     border-radius: 0.5rem;
+    // margin-top: -9px;
   }
 
   &.clicked {
     background-image: url("../../assets/images/other/headerButtonBackground-active.png");
     background-repeat: round;
     color: #000;
+
     .num {
-      background-color: #222226;
-      color: #9c8c5e;
+      background-color: #222229;
+      color: #c8b273;
     }
   }
-}
-
-.isActiveeeeeeeeeeeee {
-  
 }
