@@ -52,7 +52,7 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img className='icon' src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
-              <img className='white-arrow' src={btnArrow} alt='' />
+              <img style={{marginRight: '0.5rem'}} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
           <SelectBox
