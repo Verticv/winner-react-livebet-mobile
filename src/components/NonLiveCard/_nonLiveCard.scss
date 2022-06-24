@@ -1,6 +1,6 @@
 .nLive-first-con {
   display: flex;
-  border-bottom: 2px solid #000;
+  border-bottom: 0.125rem solid #000;
 
   .nLive-main-live {
     display: flex;
@@ -51,10 +51,10 @@
               height: 2.125rem;
               margin-bottom: 1.69rem;
 
-              @media(max-width:$bp-special-small) {
-                height: auto;
-                margin: 0;
-              }
+              // @media(max-width:$bp-special-small) {
+              //   height: auto;
+              //   margin: 0;
+              // }
 
               p {
                 font-size: 2.625rem;
@@ -74,7 +74,7 @@
                 height: 2.1875rem;
                 justify-content: center;
                 align-items: center;
-                border-radius: 3px;
+                border-radius: 0.187rem;
                 margin: 0 1.25rem;
                 margin-right: 1.875rem;
                 font-size: 1.875rem;
@@ -86,15 +86,15 @@
             .nLive-play-video {
               display: flex;
               align-items: center;
-              height: 25px;
-              margin-top: 10px;
-              margin-left: 4px;
-              font-size: 17px;
+              height: 1.5625rem;
+              margin-top: 0.625rem;
+              margin-left: 0.25rem;
+              // font-size: 17px;
               color: #71ADD9;
 
-              @media(max-width:$bp-special-small) {
-                margin-top: 0;
-              }
+              // @media(max-width:$bp-special-small) {
+              //   margin-top: 0;
+              // }
 
               p {
                 font-family: RobotoRegular;
@@ -127,7 +127,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 0.625rem;
     color: #fff;
 
     p {
@@ -183,7 +183,7 @@
     // background-color: #9B2F30;
     color: #fff;
     border: none;
-    font-size: 17px;
+    // font-size: 17px;
     width: 7.3rem;
     background: url('../../assets/images/imgs/blue-body-bg.png');
     // background-color:#225F8B;
@@ -198,7 +198,7 @@
 
     .nLive-side-btn {
       background-color: transparent;
-      text-shadow: 0 0 10px #ffffff;
+      text-shadow: 0 0 0.625rem #ffffff;
       height: 15rem;
       background: url('../../assets/images/imgs/blue-body-active-bg.png');
       background-repeat: round;
@@ -220,7 +220,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 115px;
+  width: 7.1875rem;
 }
 
 .card-button-blue {
