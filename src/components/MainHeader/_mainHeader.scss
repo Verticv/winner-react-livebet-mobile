@@ -96,7 +96,8 @@
     border-radius: 1rem;
     margin-left: 0.625rem;
     border: 0.25rem solid #b89c5e;
-    background-color: #242424;
+    background: url('../../assets/images/imgs/bgb.png');
+    background-repeat: round;
     color: #fff;
     height: 5.5rem;
     // width: 15rem;
@@ -372,8 +373,8 @@
   // margin: 1rem 0 ;
   z-index: 28;
   margin-top: 0.5rem;
-  margin-right: -1.1rem;
-  margin-left: -1.1rem;
+  // margin-right: -1.1rem;
+  // margin-left: -1.1rem;
   // border: 2px solid #b89c5e;
   border-radius: 0.375rem;
   // background: linear-gradient(to top, #292929, #0f0f0f);
@@ -398,7 +399,9 @@
     // background: linear-gradient(to top, #282828, #1c1c1c 50%, #0f0f0f);
     // border: 2px solid #b89c5e;
     border: 0.25rem solid #b89c5e;
-    background-color: #242424;
+    // background-color: #242424;
+    background: url('../../assets/images/imgs/bgb.png');
+    background-repeat: round;
     border-radius: 0.375rem;
     // width: 13.875rem;
     height: 5.5rem;

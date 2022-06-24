@@ -18,7 +18,7 @@ const CardHeader = ({
       </div>
 
       <div className='sub2'>
-        <img src={c} alt='' />
+        <img style={{marginRight: '1rem'}} src={c} alt='' />
         <div className='square sq1' />
         <div className='square sq2' />
         <img src={p} alt='' />
