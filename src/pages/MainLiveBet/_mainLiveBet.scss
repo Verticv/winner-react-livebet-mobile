@@ -94,10 +94,10 @@
     color: #fff;
     height: 7.125rem;
 
-    @media(max-width:$bp-medium) {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+    // @media(max-width:$bp-medium) {
+    //   padding-left: 5px;
+    //   padding-right: 5px;
+    // }
 
     .bet-dropdown-para {
       display: flex;
@@ -159,10 +159,10 @@
     background: url("../../assets/images/other/skew-container.png"), rgba(255, 255, 255, 0.102);
     background-repeat: round;
 
-    @media(max-width:$bp-medium) {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+    // @media(max-width:$bp-medium) {
+    //   margin-left: 5px;
+    //   margin-right: 5px;
+    // }
 
 
     .bet-btn-container {
@@ -243,13 +243,13 @@
           width: 17rem;
           height: 6.3rem;
 
-          @media (min-width: 1280px) {
-            width: 19rem;
-          }
+          // @media (min-width: 1280px) {
+          //   width: 19rem;
+          // }
 
-          @media (min-width: 579px) and (max-width: 768px) {
-            width: 22rem;
-          }
+          // @media (min-width: 579px) and (max-width: 768px) {
+          //   width: 22rem;
+          // }
 
           .add-button {
             width: auto;
