@@ -56,7 +56,7 @@ function LiveCard({
           <div className='left'>
             <div className={`down-sec ${idSelect === id ? 'active' : 'inactive'}`}>
               <div className='row'>
-                <button style={{ background: 'transparent', border: 'none' }} type='button'
+                <button style={{ background: 'transparent', border: 'none', padding: '0' }} type='button'
                   onClick={isFavorite ? removeFromFavorite : toggleStar}
                 >
                   <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
