@@ -5,7 +5,7 @@
     background-image: url("../../assets/images/imgs/footer-bg.png");
     background-repeat: round;
     position: fixed;
-    left: calc((100% - 1242px) / 2);
+    // left: calc((100% - 1242px) / 2);
     bottom: 0;
     height: 9.1875rem;
     width: 100%;
@@ -20,40 +20,46 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      padding-left: 7.5rem;
       // margin-left: 8.1rem;
       // margin: 0 6rem;
 
       img {
-        width: 3.8rem;
+        // width: 3.8rem;
         // width: 4.125rem;
+        width: 4.1875rem;
+        height: 4.125rem;
       }
 
       .main-p {
         // margin-left: 3.5rem;
         // font-size: 3.4rem;
         // margin-left: 2rem;
-        margin-left: 1rem;
-        font-size: 2.4rem;
-        margin-left: 2rem;
+        // margin-left: 1rem;
+        font-size: 3rem;
+        margin-left: 2.625rem;
+        color: #212121;
+        font-weight: 600;
       }
     }
 
-    .vl {
-      border-left: 1px solid #9b824f;
-      // border-left: 1px solid black;
-      position: absolute;
-      height: 37%;
-      // left: 49.5%;
-      // transform: translate(-50px);
-    }
+    // .vl {
+    //   border-left: 1px solid #9b824f;
+    //   // border-left: 1px solid black;
+    //   position: absolute;
+    //   height: 37%;
+    //   // left: 49.5%;
+    //   // transform: translate(-50px);
+    // }
 
     .sub-container2 {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      font-size: 15px;
+      // font-size: 15px;
+      padding-right: 6.2rem;
       // margin: 4rem;
-      
+
 
       p {
         font-size: 2.25rem;
@@ -63,6 +69,7 @@
       span {
         color: #a33434;
         font-family: RobotoRegular;
+
         .noto-sans {
           font-family: NotoSansCJKkrRegular;
         }
@@ -77,7 +84,7 @@
     &.flex {
       display: flex;
       // justify-content: space-between;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
   }

@@ -23,7 +23,7 @@ const Footer = () => {
             >베팅카드 열기</p>
           </div>
 
-          <div className='vl' />
+          {/* <div className='vl' /> */}
 
           <div className='sub-container2'>
             <p 
@@ -31,8 +31,8 @@ const Footer = () => {
             >
               선택경기
                 <span 
-              style={{marginLeft: '1.3125rem'}}
-              >3 <span className='noto-sans'>건</span></span>
+              style={{marginLeft: '2rem', marginRight: '1rem'}}
+              >3<span className='noto-sans'>건</span></span>
             </p>
             <p className='sub-p'>
               예상배당
