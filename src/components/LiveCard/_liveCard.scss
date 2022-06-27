@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  // border-bottom: 1px solid rgb(0, 0, 0);
 
   .left {
     display: flex;
@@ -34,8 +33,6 @@
         color: #D1CECF;
 
         .star {
-          // padding-left: 0.3rem;
-          // padding-right: 0.625rem;
           width: 4.25rem;
           height: 3.8125rem;
           margin-right: 1.1rem;
@@ -53,30 +50,11 @@
             height: 2.125rem;
             margin-bottom: 1.69rem;
 
-            // @media(max-width:$bp-special-small) {
-            //   height: auto;
-
-            //   &:first-child {
-            //     margin-top: 0;
-            //     margin-bottom: 0px;
-            //   }
-
-            //   &:nth-child(2) {
-            //     margin: 0;
-            //   }
-            // }
-
             p {
               font-size: 2.625rem;
               margin: 0;
               margin-left: 0.625rem;
             }
-
-            // @media (max-width: 285px) {
-            //   p {
-            //     font-size: 1.625rem;
-            //   }
-            // }
 
             img {
               width: 2.4375rem;
@@ -86,7 +64,6 @@
             .character {
               display: flex;
               background-color: rgb(255 255 255 / 20%);
-              // opacity: 0.2;
               color: #212121;
               width: 2.1875rem;
               height: 2.1875rem;
@@ -94,7 +71,6 @@
               align-items: center;
               border-radius: 0.1870rem;
               margin: 0 0.9375rem 0 1.25rem;
-              // margin-right: 0.9375rem;
               font-size: 1.875rem;
               font-family: 'RobotoRegular';
             }
@@ -108,22 +84,12 @@
             margin-top: 0.625rem;
             margin-left: 0.5rem;
 
-            // @media(max-width:$bp-special-small) {
-            //   margin-top: 0;
-            // }
-
             p {
               font-family: RobotoRegular;
               font-size: 2.625rem;
               margin: 0 1.875rem;
               margin-right: 2rem;
             }
-
-            // @media (min-width: 280px) and (max-width: 653px) {
-            //   p {
-            //     margin: 0 0.5rem;
-            //   }
-            // }
 
             .score {
               color: #d8b948;
@@ -165,10 +131,6 @@
         flex-direction: column;
         color: rgb(255, 255, 255);
 
-        // @media(max-width:$bp-special-small) {
-        //   margin-top: 8px;
-        // }
-
         span {
           color: #fff;
         }
@@ -207,29 +169,16 @@
               width: 2.2rem;
               margin-right: 1rem;
             }
-
-            // @media(max-width:$bp-special-small) {
-            //   font-size: 2.625rem;
-            // }
           }
 
           .score {
             color: #D3A824;
             padding-left: 0.5rem;
-
-            // @media(max-width:$bp-special-small) {
-            //   padding-left: 0;
-            // }
           }
         }
 
         .num-num {
           margin-top: 2.4rem;
-
-          // @media(max-width:$bp-special-small) {
-          //   margin-top: 0;
-          //   height: 22px;
-          // }
         }
       }
 
@@ -266,15 +215,12 @@
     }
 
     .live-header-flag {
-      // padding: 0 1rem;
       width: 5.8rem;
-      // height: 4rem;
       margin: 0 0.9375rem;
     }
 
     .ball {
       width: 3.6rem;
-      // height: 4rem
     }
   }
 
@@ -325,7 +271,6 @@
   .live-btn {
     color: #fff;
     border: none;
-    // font-size: 17px;
     width: 100%;
     height: 100%;
 
@@ -342,7 +287,6 @@
 
       img {
         width: 5.43rem;
-        // margin-top: 1.4rem;
         margin-top: 2.7rem;
         margin: 2.7rem -50% 0rem;
 
@@ -355,14 +299,8 @@
     }
 
     &.inactive-button {
-      // background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-inactive.png");
       background: url('../../assets/images/imgs/red-body.png');
       background-repeat: round;
-      // padding-top: 25px;
-
-      // @media(max-width:$bp-special-small) {
-      //   padding-top: 3.125rem;
-      // }
 
       img {
         width: 2.9rem;
@@ -373,7 +311,6 @@
 
     &.active-with-plus {
       background-repeat: round;
-      // padding-top: 0.6rem;
       height: 14.6rem;
     }
 
@@ -383,20 +320,12 @@
       height: 14.9rem;
     }
 
-    // @media(mix-width: 377px) and (max-width: 477px) {
-    //   &.inactive-with-plus {
-    //     width: 7.3rem;
-    //   }
-    // }
-
     &.card-button-arrow {
       background: url('../../assets/images/imgs/arrow-active.png');
       background-repeat: round;
     }
 
     p {
-      // margin-top: -1.1rem;
-      // text-shadow: 0.125rem 0.125rem 1.25rem #f8c488;
       font-size: 2.875rem;
       margin-top: 0.5rem;
     }
@@ -414,12 +343,6 @@
 .card-button-arrow:active {
   background: url('../../assets/images/imgs/red-red-active.png');
   background-repeat: round;
-  // img {
-  //   background: url('../../assets/images/imgs/ico-red-active.png');
-  //   background-repeat: round;
-  //   width: 2.625rem;
-  //   height: 1.625rem;
-  // }
 }
 
 .card-button-arrow:active img {

@@ -38,7 +38,7 @@ const Footer = () => {
               예상배당
               {' '}
               <span 
-              style={{marginLeft: '1.3125rem'}}
+              style={{marginLeft: '1.3rem'}}
               >4.25</span>
             </p>
           </div>
