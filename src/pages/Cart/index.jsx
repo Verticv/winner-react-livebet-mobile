@@ -111,7 +111,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
             <img src={exitBtn} alt='' style={{ marginRight: '2.5rem' }} />
             <p>전체취소</p>
           </Button2>
-          <Button2 className='active'>
+          <Button2 setCart={setCart} className='active'>
             <img src={chart} alt='' style={{ marginRight: '2.5rem' }} />
             <p>베팅하기</p>
           </Button2>
