@@ -1,55 +1,65 @@
-.nLive-first-con{
+.nLive-first-con {
   display: flex;
-  border-bottom: 2px solid #000;
-  .nLive-main-live{
+  border-bottom: 0.125rem solid #000;
+
+  .nLive-main-live {
     display: flex;
     flex-direction: column;
     width: calc(100% - 7.4rem);
+
     .nLive-left {
       display: flex;
       flex-direction: column;
       width: 100%;
-      .nLive-down-sec{
-        height: 14.6375rem;
+
+      .nLive-down-sec {
+        height: 14.6rem;
         display: flex;
         justify-content: space-between;
-        width:100%;
+        width: 100%;
         background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
+        // padding-top: 1rem;
+
         &.active {
           background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-active.png");
           background-repeat: round;
+          height: 14.6rem;
         }
-        .nLive-row{
+
+        .nLive-row {
           display: flex;
           align-items: center;
           color: #D1CECF;
-          .nLive-star{
-            padding-left: 0.3rem;
-            padding-right: 0.625rem;
-            width: 4.2rem;
-            margin-right: 0.7rem;
+
+          .nLive-star {
+            width: 4.3125rem;
+            margin-right: 1.4rem;
+            margin-left: 0.7rem;
+            margin-top: 0.2rem;
           }
-          .nLive-col{
+
+          .nLive-col {
             display: flex;
             flex-direction: column;
-            .nLive-shirt{
+            margin-left: -0.3rem;
+
+            .nLive-shirt {
               display: flex;
               align-items: center;
               height: 2.125rem;
               margin-bottom: 1.69rem;
-              @media(max-width:$bp-special-small) {
-                height: auto;
-                margin: 0;
-              }
+
               p {
                 font-size: 2.625rem;
                 margin: 0;
+                margin-left: 0.625rem;
               }
 
               img {
                 width: 2.4375rem;
               }
+
               .character {
                 display: flex;
                 background-color: rgba(255, 255, 255, 0.2);
@@ -58,24 +68,23 @@
                 height: 2.1875rem;
                 justify-content: center;
                 align-items: center;
-                border-radius: 3px;
+                border-radius: 0.187rem;
                 margin: 0 1.25rem;
-                margin-right: 0.9375rem;
+                margin-right: 1.875rem;
                 font-size: 1.875rem;
                 font-family: "RobotoRegular";
+                margin: 0 0.9375rem 0 1.25rem;
               }
             }
-            .nLive-play-video{
+
+            .nLive-play-video {
               display: flex;
               align-items: center;
-              height: 25px;
-              margin-top: 10px;
-              margin-left: 4px;
-              font-size: 17px;
+              height: 1.5625rem;
+              margin-top: 0.625rem;
+              margin-left: 0.25rem;
               color: #71ADD9;
-              @media(max-width:$bp-special-small) {
-                margin-top: 0;
-              }
+
               p {
                 font-family: RobotoRegular;
                 font-size: 2.625rem;
@@ -85,49 +94,51 @@
           }
         }
       }
-      
+
     }
   }
+
   &:last-child {
     margin-bottom: 9.1875rem;
   }
 }
 
-.nLive-main-con{
-    background-color: white;
-    width: 100%;    
-    height: 7rem;
-    background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-inactive.png");
-    background-repeat: round;
+.nLive-main-con {
+  background-color: white;
+  width: 100%;
+  height: 7rem;
+  background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-inactive.png");
+  background-repeat: round;
+  display: flex;
+  justify-content: space-between;
+
+  .nLive-sub-con {
     display: flex;
-    justify-content: space-between;
-    .nLive-sub-con{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding-left: 10px;
-      color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.625rem;
+    color: #fff;
 
-      p {
-        // color: #d8b948;
-        font-size: 2.8rem;
-      }
-
-
-      .nLive-header-flag {
-        padding: 0 1rem;
-        width: 7.8rem
-      }
-
-      .ball {
-        width: 3.6rem;
-      }
-      
+    p {
+      font-size: 2.8rem;
     }
+
+
+    .nLive-header-flag {
+      width: 5.8rem;
+      margin: 0 1rem;
+    }
+
+    .ball {
+      width: 3.6rem;
+    }
+
+  }
+
   &.active {
-    // background-image: url("../../assets/images/cards/blueCardBackgrounds/headerGradient-active.png");
     background: url('../../assets/images/imgs/background.png');
     background-repeat: round;
+
     .nLive-sub-con {
       p {
         color: #fff;
@@ -135,73 +146,75 @@
       }
     }
   }
+
   &.card-button-blue {
     background: url('../../assets/images/imgs/arrow-blue-active.png');
     background-repeat: round;
   }
 }
 
-.nLive-btn{
-  // width: 7.7rem;
+.nLive-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-inactive.png");
-  // background-repeat: round;
   text-decoration: none;
 
-  .nLive-side-btn{
-    // background-color: #9B2F30;
+  .nLive-side-btn {
     color: #fff;
     border: none;
-    font-size: 17px;
-    width: 7.325rem;
+    width: 7.3rem;
     background: url('../../assets/images/imgs/blue-body-bg.png');
-    // background-color:#225F8B;
     background-repeat: round;
     font-size: 2.675rem;
     height: 15rem;
+    padding: 0;
   }
+
   &.active-button {
     background-image: url("../../assets/images/cards/blueCardBackgrounds/sideGradient-active.png");
     background-repeat: round;
+
     .nLive-side-btn {
       background-color: transparent;
-      text-shadow: 0 0 10px #ffffff;
+      text-shadow: 0 0 0.625rem #ffffff;
       height: 15rem;
       background: url('../../assets/images/imgs/blue-body-active-bg.png');
       background-repeat: round;
       outline: none;
     }
+
     &.card-button-blue {
       background: url('../../assets/images/imgs/arrow-blue-active.png');
       background-repeat: round;
     }
   }
+
   &.active-with-plus {
     background-repeat: round;
   }
 }
 
-.nLive-sub2{
+.nLive-sub2 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 115px;
+  width: 7.1875rem;
 }
+
 .card-button-blue {
   background: url('../../assets/images/imgs/arrow-blue.png');
   background-repeat: round;
-  height: 7.3rem;
+  height: 7rem;
   width: 7.3rem;
   border: 0;
-  // border-bottom: 1px solid #457f96;
 }
+
 .card-button-blue:active {
   background: url('../../assets/images/imgs/arrow-blue-active.png');
   background-repeat: round;
 }
+
 .card-button-blue-active {
   background: url('../../assets/images/imgs/arrow-blue-active.png');
   background-repeat: round;

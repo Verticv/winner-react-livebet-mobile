@@ -7,6 +7,7 @@ const Modal = ({ visible, toggle, isCheck, setIsCheck, isClick, setIsClick, temp
   return (visible ? ReactDOM.createPortal(
     <div className='modal'>
       <div className='modal-pop' role='dialog' aria-modal='true'>
+        <div className='line' />
         <div className='modal-header'>
           <div className='right-header'>
             <p>리그선택</p>

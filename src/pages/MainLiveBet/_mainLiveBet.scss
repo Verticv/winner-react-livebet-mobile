@@ -10,19 +10,21 @@
   background-image: url("../../assets/images/other/liveBitBackground.png");
   background-repeat: round;
   min-height: 65.9375rem;
+  border-bottom: 0.1875rem solid;
 }
 
 .middle-nav {
   display: flex;
   background-color: #000000;
   padding-top: 2rem;
-  margin-top: -4px;
+  margin-top: -0.25rem;
   width: 100%;
 
   button {
     color: #98989A;
     border: none;
-    border-left: 1px solid black;
+    // border-left: 1px solid black;
+    margin-left: 0.1875rem;
     height: 6rem;
     font-size: 2.625rem;
     padding: 0 1.875rem;
@@ -89,15 +91,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
     color: #fff;
     height: 7.125rem;
 
-    @media(max-width:$bp-medium) {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+    // @media(max-width:$bp-medium) {
+    //   padding-left: 5px;
+    //   padding-right: 5px;
+    // }
 
     .bet-dropdown-para {
       display: flex;
@@ -123,12 +125,13 @@
       background-color: rgba(255, 255, 255, 0.2);
       width: 4.25rem;
       height: 4.25rem;
-      border-radius: 4px;
+      border-radius: 0.25rem;
 
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-right: 0.125rem;
 
       img {
         width: 2.43rem;
@@ -145,24 +148,24 @@
 
   &:last-child {
     padding-bottom: 1rem;
-    border-bottom: 0.1875rem solid;
+    // border-bottom: 0.1875rem solid;
   }
 
   .bet-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 1.125rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     height: 6.25rem;
     background: url("../../assets/images/other/skew-container.png"), rgba(255, 255, 255, 0.102);
     background-repeat: round;
 
-    @media(max-width:$bp-medium) {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+    // @media(max-width:$bp-medium) {
+    //   margin-left: 5px;
+    //   margin-right: 5px;
+    // }
 
 
     .bet-btn-container {
@@ -192,11 +195,15 @@
           height: 9.2rem;
           font-family: RobotoRegular;
           font-size: 2.125rem;
+          // z-index: 1;
+          span {
+            font-family: RobotoRegular;
+          }
 
           &.red-button {
             background: url("../../assets/images/imgs/red-btn.png");
             background-repeat: round;
-            margin: -5px;
+            margin: -0.625rem;
             outline: none;
             position: relative;
 
@@ -243,13 +250,13 @@
           width: 17rem;
           height: 6.3rem;
 
-          @media (min-width: 1280px) {
-            width: 19rem;
-          }
+          // @media (min-width: 1280px) {
+          //   width: 19rem;
+          // }
 
-          @media (min-width: 579px) and (max-width: 768px) {
-            width: 22rem;
-          }
+          // @media (min-width: 579px) and (max-width: 768px) {
+          //   width: 22rem;
+          // }
 
           .add-button {
             width: auto;
@@ -261,7 +268,7 @@
 
           .add-button {
             color: #d1cecf;
-            margin-left: -5px;
+            margin-left: -1.0625rem;
             outline: none;
           }
         }
@@ -270,9 +277,9 @@
         &:nth-child(3) {
           width: 70%;
           margin-right: -2rem;
-          padding-right: 1rem;
+          padding-right: 1.7rem;
           margin-left: -1.4rem;
-          padding-left: 1rem;
+          padding-left: 1.5rem;
           // z-index: 1;
         }
 
@@ -304,19 +311,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 76px;
-  height: 35px;
+  width: 4.75rem;
+  height: 2.1875rem;
   padding-left: 0;
   clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
   font-family: RobotoMedium;
-  font-size: 14px;
+  // font-size: 14px;
   background-color: #9b2f30;
 }
 
 .blue-section {
   background: linear-gradient(270deg, #9b2f30, #9b2f30 25%, #9a2f30 50%, #872d2f 63%, #722a2e 75%, #5d282e);
   height: 6.3rem;
-  width: 320px;
+  width: 20rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
