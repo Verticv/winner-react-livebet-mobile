@@ -13,9 +13,9 @@ const LiveListHeader = ({ setIsChangeRedOrder }) => (
         <p className='live-header width'>
           80
         </p>
-        <div className='arrow-wrapper' onClick={() => {
-          setIsChangeRedOrder((prev) => !prev);
-        }}/>
+        <div className='arrow-wrapper'
+        // onClick={() => { setIsChangeRedOrder((prev) => !prev);}}
+        />
       </div>
 
     </div>

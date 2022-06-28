@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import cup from '../../assets/images/cup/cup-gold.png';
+// import cup from '../../assets/images/cup/cup-gold.png';
 import chronology from '../../assets/images/chronology/chronology-white.png';
+import cup from '../../assets/images/imgs/m_icon_.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
 import btnArrow from '../../assets/images/imgs/btn-arrow.png';

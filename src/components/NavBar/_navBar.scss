@@ -18,11 +18,16 @@ html {
 .div-shadow {
   position: relative;
   .shadow {
-    height: 10.5rem;
-    width: 5px;
+    height: 11.6rem;
+    width: 0px;
     position: absolute;
     top: 0;
-    right: 26px;
-    box-shadow: 19px 0 17px #19191c;
+    right: -14px;
+    // box-shadow: 19px 0 34px 28px #19191c;
+    box-shadow: 9px 0 33px 23px #19191c;
+    // 19px 0 52px 40px #19191c
+    transform: rotate(180deg);
+    margin: 0.4rem;
+
   }
 }

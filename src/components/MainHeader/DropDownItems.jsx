@@ -11,7 +11,6 @@ export default function SelectBox({ items }) {
             if ((e.path[0].className !== 'select-box--selected-item')
                 && e.path[0].tagName !== 'IMG'
                 && e.path[0].tagName !== 'P') {
-                    console.log(e.path[0].tagName);
                 setShowItems(false);
             };
         };

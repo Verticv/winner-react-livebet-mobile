@@ -26,7 +26,7 @@ const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData,
         : null
       }
       <div className={`nLive-btn ${buttonClass}`} >
-        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '21.6rem' : '14.6rem'}} onClick={() => {
+        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.85rem' : '15.1875rem'}} onClick={() => {
           setIsBlueDisplay((prev) => !prev);
           setCardId(id);
         }}>

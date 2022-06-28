@@ -13,7 +13,9 @@ const NonLiveListHeader = ({ setIsChangeBlueOrder }) => (
         <p className='nonLive-header width'>
           80
         </p>
-        <div className='arrow-wrapper' onClick={() => setIsChangeBlueOrder((prev) => !prev)}/>
+        <div className='arrow-wrapper'
+          // onClick={() => setIsChangeBlueOrder((prev) => !prev)}
+        />
 
       </div>
     </div>
