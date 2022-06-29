@@ -8,10 +8,13 @@ import AddButton from './AddButton';
 import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
 import MainNonLiveBet from '../../pages/MainNonLiveBet';
 function NonLiveCard({
-  id, name, flag, firstTeam, secondTeam, withPlus, idBlueSelected, setIdBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, cardId, setCardId
+  id, name, flag, firstTeam, secondTeam, withPlus, 
+  // idBlueSelected, setIdBlueSelected,
+  idSelect, isIdSelected, index, nonLiveData, setNonLiveData, isFavorite, cardId, setCardId,
+  isClicked, setIsClicked, type
 }) {
   const [showHeader, setShowHeader] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
   const [isStar, setIsStar] = useState(true);
   const [isBlueDisplay, setIsBlueDisplay] = useState(false);
   useEffect(() => {
@@ -26,7 +29,7 @@ function NonLiveCard({
     <>
       <div className='nLive-first-con' id={id}
         onClick={() => {
-          setIdBlueSelected(id);
+          isIdSelected(id);
           setIsClicked(true);
       }}
       >
@@ -36,11 +39,13 @@ function NonLiveCard({
             show={showHeader}
             flag={flag}
             name={name}
-            idBlueSelected={idBlueSelected}
+            idBlueSelected={idSelect}
+            isClicked={isClicked}
+            type={type}
           />
           <div className='nLive-card'>
             <div className='nLive-left'>
-              <div className={`nLive-down-sec ${idBlueSelected === id ? 'active' : 'inactive'}`}>
+              <div className={`nLive-down-sec ${(type === 'blue') && (idSelect === id) ? 'active' : 'inactive'}`}>
                 <div className='nLive-row'>
                   <div style={{ background: 'transparent', border: 'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
@@ -73,7 +78,7 @@ function NonLiveCard({
           index={index}
           flag={flag}
           isFavorite={isFavorite}
-          idBlueSelected={idBlueSelected}
+          idBlueSelected={idSelect}
           nonLiveData={nonLiveData}
           setNonLiveData={setNonLiveData}
           isActive={isClicked}
@@ -82,6 +87,8 @@ function NonLiveCard({
           setIsBlueDisplay={setIsBlueDisplay}
           setCardId={setCardId}
           cardId={cardId}
+          isClicked={isClicked}
+          type={type}
         />
       </div>
       {(cardId === id) && isBlueDisplay ? <MainNonLiveBet /> : null}

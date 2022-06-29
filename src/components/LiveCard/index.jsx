@@ -13,11 +13,12 @@ import LiveBet from '../../pages/MainLiveBet';
 
 function LiveCard({
   firstScore, secondScore, firstTeam, secondTeam, flag, name, removeCard, cardId, setCardId, cardData, setCardData,
-  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite,
+  isActive, withPlus, addToCart, handleClick, id, idSelect, isIdSelected, setData, data, index, isFavorite, isClicked, setIsClicked,
+  type
 }) {
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
-  const [isClicked, setIsClicked] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
   const [isStar, setIsStar] = useState(true);
   const [isDisplay, setIsDisplay] = useState(false);
   const { favoriteCards, mainHeaderLive } = useSelector((state) => state.cards);
@@ -54,7 +55,7 @@ function LiveCard({
         />
         <div className='card'>
           <div className='left'>
-            <div className={`down-sec ${idSelect === id ? 'active' : 'inactive'}`}>
+            <div className={`down-sec ${idSelect === id && type === 'red' ? 'active' : 'inactive'}`}>
               <div className='row'>
                 <button style={{ background: 'transparent', border: 'none', padding: '0' }} type='button'
                   onClick={isFavorite ? removeFromFavorite : toggleStar}
@@ -82,7 +83,7 @@ function LiveCard({
                       {secondScore}
                     </p>
                     <p className='glowering'>후반전35</p>
-                    <img src={idSelect === id ? playGold : playTransparent} alt='play' />
+                    <img src={(idSelect === id) && (type === 'red') ? playGold : playTransparent} alt='play' />
                   </div>
                 </div>
               </div>
@@ -129,6 +130,8 @@ function LiveCard({
         cardId={cardId}
         setIsDisplay={setIsDisplay}
         isDisplay={isDisplay}
+        isClicked={isClicked}
+        type={type}
       />
     </div>
       {(cardId == id) && isDisplay

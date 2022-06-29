@@ -9,10 +9,11 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData }) => {
+const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [dataBlue, setDataBlue] = useState([]);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
+  const [idSelect, isIdSelected] = useState(0)
   const mainHeaderNonLive = [{
     id: 0,
     isActive: true,
@@ -20,6 +21,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     name: '분데스리가',
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
+    type: 'blue',
   }, {
     id: 1,
     isActive: false,
@@ -27,6 +29,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     name: '',
     firstTeam: '맨체스터유나이티드',
     secondTeam: '리버풀',
+    type: 'blue',
   }, {
     id: 2,
     isActive: false,
@@ -34,6 +37,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     name: '라리가',
     firstTeam: '바이헤른뮌헨',
     secondTeam: '프랑크푸르트',
+    type: 'blue',
   }, {
     id: 3,
     isActive: false,
@@ -41,6 +45,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     name: '프리미어리그',
     firstTeam: '멘체스터유나이티드',
     secondTeam: '프랑크푸르트',
+    type: 'blue',
   }, {
     id: 4,
     isActive: false,
@@ -48,6 +53,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     name: '분데스리가',
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
+    type: 'blue',
   }];
 
   useEffect(() => {
@@ -65,7 +71,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
       <NavBar isActive />
       <MainHeader />
       <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
-      {dataBlue.map(({ id, flag, name, firstTeam, secondTeam, isActive }) => (
+      {dataBlue.map(({ id, flag, name, firstTeam, secondTeam, isActive, type }) => (
         <NonLiveCard
           key={id}
           id={id}
@@ -78,6 +84,11 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
           cardId={cardId}
           setCardId={setCardId}
           isActive={isActive}
+          isClicked={isClicked} 
+          setIsClicked={setIsClicked}
+          type={type}
+          idSelect={idSelect}
+          isIdSelected={isIdSelected}
         />
       ))}
       <Footer />

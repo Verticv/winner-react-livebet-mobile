@@ -6,7 +6,7 @@ import flag from '../../assets/images/flags/spain.png';
 
 const initialState = {
     favoriteCards: [{
-        id: 0,
+        id: '00',
         flag: spain,
         name: '라리가',
         isActive: true,
@@ -16,9 +16,10 @@ const initialState = {
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
         isFavorite: true,
+        type: 'red',
     },
     {
-        id:1,
+        id: '01',
         flag: england,
         name: '프리미어리그',
         isActive: false,
@@ -28,9 +29,10 @@ const initialState = {
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
         isFavorite: true,
+        type: 'red',
     },
     {
-        id:2,
+        id: '02',
         flag: germany,
         name: '분데스리가',
         isActive: false,
@@ -40,6 +42,7 @@ const initialState = {
         firstTeam: '바이헤른뮌헨',
         secondTeam: '프랑크푸르트',
         isFavorite: true,
+        type: 'red',
     }],
     nonLiveCard: [{
         id: 0,
@@ -50,6 +53,7 @@ const initialState = {
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
         isFavorite: true,
+        type: 'blue',
     },{
         id: 1,
         flag: germany,
@@ -59,9 +63,10 @@ const initialState = {
         firstTeam: '맨체스터유나이티드',
         secondTeam: '리버풀',
         isFavorite: true,
+        type: 'blue',
     }],
     mainHeaderLive: [{
-        id: 0,
+        id: '00',
         flag: flag,
         name: '라리가',
         isActive: true,
@@ -70,8 +75,9 @@ const initialState = {
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
         withPlus: true,
+        type: 'red',
     },{
-        id: 1,
+        id: '01',
         flag:'',
         name:'',
         isActive: false,
@@ -80,8 +86,9 @@ const initialState = {
         firstTeam:'맨체스터유나이티드',
         secondTeam:'리버풀',
         withPlus: false,
+        type: 'red',
     },{
-        id: 2,
+        id: '02',
         flag:flag,
         name:'분데스리가',
         isActive: false,
@@ -90,6 +97,7 @@ const initialState = {
         firstTeam:'바이헤른뮌헨',
         secondTeam:'프랑크푸르트',
         withPlus: true,
+        type: 'red',
     }],
     mainHeaderNonLive: [{
         id: 0,
@@ -97,12 +105,14 @@ const initialState = {
         name: '라리가',
         firstTeam: 'FC바르셀로나',
         secondTeam: '레알마드리드',
+        type: 'blue',
     },{
         id: 1,
         flag: '',
         name: '',
         firstTeam: '맨체스터유나이티드',
         secondTeam: '리버풀',
+        type: 'blue',
     }],
     buttonsValue: [{
         content: '5,000',

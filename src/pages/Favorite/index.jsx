@@ -8,9 +8,9 @@ import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 
-function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToCart, handleClick }) {
+function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToCart, handleClick, isClicked, setIsClicked }) {
   const { favoriteCards, nonLiveCard } = useSelector((state) => state.cards);
-  const [idSelect, isIdSelected] = useState(0);
+  const [idSelect, isIdSelected] = useState('00');
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [data, setData] = useState(favoriteCards);
   const [nonLiveData, setNonLiveData] = useState(nonLiveCard)
@@ -57,6 +57,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         firstTeam,
         secondTeam,
         isFavorite,
+        type,
       }, index) => <LiveCard
           key={id}
           cardData={cardData}
@@ -83,6 +84,10 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           isDisplay={isDisplay}
           addToCart={addToCart}
           handleClick={handleClick}
+          isClicked={isClicked}
+          setIsClicked={setIsClicked}
+          
+          type={type}
         />)}
       <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
       {nonLiveData?.map(({
@@ -93,7 +98,8 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         withPlus,
         firstTeam,
         secondTeam,
-        isFavorite
+        isFavorite,
+        type,
       }, index) => <NonLiveCard
           key={id}
           id={id}
@@ -112,6 +118,11 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           cardId={cardId}
           setCardId={setCardId}
           addToCart={addToCart}
+          isClicked={isClicked} 
+          setIsClicked={setIsClicked}
+          idSelect={idSelect}
+          isIdSelected={isIdSelected}
+          type={type}
         />)}
       <Footer />
     </div>

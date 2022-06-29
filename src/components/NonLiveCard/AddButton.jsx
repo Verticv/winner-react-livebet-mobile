@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId }) => {
+const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId, isClicked, type }) => {
   let buttonClass = 'inactive-button';
-  if (idBlueSelected === id) {
+  if (idBlueSelected === id && type === 'blue') {
     if (isActive && withPlus) {
       buttonClass = 'active-button active-with-plus card-button-blue-active';
     } else if (isActive) {

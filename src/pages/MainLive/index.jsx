@@ -7,11 +7,12 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData }) => {
-  const [idSelect, isIdSelected] = useState(0)
-  const [idBlueSelected, setIdBlueSelected] = useState(0);
+const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+  const [idSelect, isIdSelected] = useState('00')
+  // const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
   const [data, setData] = useState([]);
   const [dataBlue, setDataBlue] = useState([]);
 
@@ -42,7 +43,7 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
         <MainHeader />
         <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
         {data.map(({
-          id, flag, name, isActive, firstScore, secondScore, firstTeam, secondTeam, withPlus
+          id, flag, name, isActive, firstScore, secondScore, firstTeam, secondTeam, withPlus, type
         }) => (
           <LiveCard
             key={id}
@@ -63,10 +64,13 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
             cardData={cardData}
             setCardData={setCardData}
             cardId={cardId}
+            isClicked={isClicked} 
+            setIsClicked={setIsClicked}
+            type={type}
           />
         ))}
         <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
-        {dataBlue.map(({ id, flag, name, firstTeam, secondTeam }) => (
+        {dataBlue.map(({ id, flag, name, firstTeam, secondTeam, type }) => (
           <NonLiveCard
             key={id}
             id={id}
@@ -74,10 +78,15 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
             name={name}
             firstTeam={firstTeam}
             secondTeam={secondTeam}
-            idBlueSelected={idBlueSelected}
-            setIdBlueSelected={setIdBlueSelected}
+            // idBlueSelected={idBlueSelected}
+            // setIdBlueSelected={setIdBlueSelected}
+            idSelect={idSelect}
+            isIdSelected={isIdSelected}
             cardId={cardId}
             setCardId={setCardId}
+            isClicked={isClicked} 
+            setIsClicked={setIsClicked}
+            type={type}
           />
         ))}
       </div>
