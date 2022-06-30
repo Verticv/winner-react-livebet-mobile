@@ -1,32 +1,43 @@
 html {
   scroll-behavior: smooth;
 }
+
 .nav {
   display: flex;
   flex-direction: row;
   width: 100%;
   border-bottom: 0.4375rem solid #351a27;
   overflow-x: auto;
-  box-shadow:-1px 0px 0px #000000 inset;
+  box-shadow: -1px 0px 0px #000000 inset;
 }
 
 ::-webkit-scrollbar {
-  height: 1px;              /* height of horizontal scrollbar ← You're missing this */
-  width: 4px;               /* width of vertical scrollbar */
+  height: 1px;
+  /* height of horizontal scrollbar ← You're missing this */
+  width: 4px;
+  /* width of vertical scrollbar */
   border: 1px solid transparent;
 }
+
 .div-shadow {
   position: relative;
+  overflow: hidden;
+
   .shadow {
     height: 11.5rem;
-    width: 6px;
+    width: 0;
     position: absolute;
     top: 0;
-    right: -11px;
+    right: 0;
     background-color: #191920;
-    box-shadow: 12px 0 21px 15px #19191c;
-    transform: rotate(180deg);
-    margin: 0.4rem;
-
+    box-shadow: 12px 0 26px 21px #19191c;
+    box-shadow: 10px 0 5px -2px #19191c;
+    // transform: rotate(180deg);
+    // margin: 0.4rem;
+    box-shadow: 0.7875rem 0 2.625rem 1.7rem #19191c;
+    // box-shadow: 10px 0 20px -5px #19191c;
+    // box-shadow: -10px 0 20px -5px rgba(115,115,115,0.75);
+    // box-shadow: -3px 0 21px 13px #19191b;;
+    // box-shadow: -6px 0 21px 13px #19191b;
   }
 }

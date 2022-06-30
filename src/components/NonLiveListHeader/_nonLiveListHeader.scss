@@ -1,7 +1,9 @@
 .nonLive-header-wrapper {
   // background-image: url('../../assets/images/other/nonLiveCardBackground.png');
-  background-repeat: round;
+  width: 100%;
+  background-repeat: repeat;
   background: url('../../assets/images/imgs/img.png');
+  background-size: 77.6rem 7rem;
 
   .nonLive-head-container {
     display: flex;

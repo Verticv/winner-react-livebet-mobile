@@ -58,7 +58,7 @@ const MainHeader = () => {
           </button>
           <SelectBox
                 items={[
-                    { value: "전체", id: 1 },
+                    { value: "전체경기", id: 1 },
                     { value: "진행중", id: 2 },
                     { value: "예정중", id: 3 },
                 ]}

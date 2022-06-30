@@ -9,7 +9,7 @@
 .dropdown-wrapper {
   background-image: url("../../assets/images/other/liveBitBackground.png");
   background-repeat: round;
-  min-height: 65.9375rem;
+  max-height: 65.9375rem;
   border-bottom: 0.1875rem solid;
 }
 
@@ -30,12 +30,12 @@
     padding: 0 1.875rem;
     background-image: url("../../assets/images/other/liveBitButton-black.png");
     background-repeat: round;
-    
+
     // .active-container {
     //   background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5);
     // }
     &.active {
-      background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5) ;
+      background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5);
       // background-repeat: no-repeat;
       // background: url('../../assets/images/imgs/active-active.png');
       background: url('../../assets/images/imgs/qq.png');
@@ -57,6 +57,7 @@
       // border-left: 1px solid #faf8cb;
       // border-right: 1px solid #faf8cb;
     }
+
     //   .active-container {
     //     display: flex;
     //     width: 61%;
@@ -122,7 +123,9 @@
 
     .bet-arrow-button {
       border: none;
-      background-color: rgba(255, 255, 255, 0.2);
+      // background-color: rgba(255, 255, 255, 0.2);
+      background: url('../../assets/images/imgs/aa.png');
+      background-repeat: round;
       width: 4.25rem;
       height: 4.25rem;
       border-radius: 0.25rem;
@@ -185,6 +188,7 @@
         p {
           color: #d1cecf;
           font-size: 2.125rem;
+          margin-top: 1.8rem;
         }
 
         .add-button {
@@ -195,6 +199,7 @@
           height: 9.2rem;
           font-family: RobotoRegular;
           font-size: 2.125rem;
+
           // z-index: 1;
           span {
             font-family: RobotoRegular;
@@ -210,6 +215,7 @@
             .red-arrow {
               width: 4.6875rem;
               height: 2.0625rem;
+              margin-bottom: 1rem;
               position: absolute;
               top: 1rem;
               right: 2.5rem;
@@ -218,7 +224,15 @@
 
             @keyframes redUpAnimation {
               0% {
-                top: 0.7rem;
+                top: 0.8rem;
+              }
+
+              50% {
+                top: 1.1rem;
+              }
+
+              100% {
+                top: 0.8rem;
               }
             }
           }
@@ -232,14 +246,22 @@
               width: 4.6875rem;
               height: 2.0625rem;
               position: absolute;
-              bottom: 1rem;
+              top: 6rem;
               right: 2.5rem;
               animation: blueDownAnimation 1s infinite;
             }
 
             @keyframes blueDownAnimation {
               0% {
-                bottom: 0.7rem;
+                top: 6rem;
+              }
+
+              50% {
+                top: 6.3rem;
+              }
+
+              100% {
+                top: 6rem;
               }
             }
           }
@@ -249,14 +271,6 @@
           justify-content: center;
           width: 17rem;
           height: 6.3rem;
-
-          // @media (min-width: 1280px) {
-          //   width: 19rem;
-          // }
-
-          // @media (min-width: 579px) and (max-width: 768px) {
-          //   width: 22rem;
-          // }
 
           .add-button {
             width: auto;

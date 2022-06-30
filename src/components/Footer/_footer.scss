@@ -6,7 +6,7 @@
     bottom: 0;
     height: 9.1875rem;
     width: 77.625rem;
-    // max-width: 77.625rem;
+    box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.15);
 
     @media(max-width:$bp-extra-large) {
       left: 0;
@@ -16,7 +16,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-left: 7.5rem;
+      padding-left: 7rem;
 
       img {
         width: 4.1875rem;
@@ -35,11 +35,12 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding-right: 6.2rem;
+      padding-right: 7rem;
 
       p {
         font-size: 2.25rem;
         font-weight: 600;
+        margin-top: 2rem;
       }
 
       span {
