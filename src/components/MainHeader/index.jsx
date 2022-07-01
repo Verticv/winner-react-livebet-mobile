@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import cup from '../../assets/images/cup/cup-gold.png';
+// import cup from '../../assets/images/cup/cup-gold.png';
 import chronology from '../../assets/images/chronology/chronology-white.png';
+import cup from '../../assets/images/imgs/m_icon_.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
 import btnArrow from '../../assets/images/imgs/btn-arrow.png';
-import SelectBox from './DropDownItems.jsx';
-// import trueIco from '../../assets/images/imgs/true.png';
-// import arrow from '../../assets/images/imgs/aaa.png';
 
 const MainHeader = () => {
   const { toggle, visible } = useModal();
@@ -14,7 +12,6 @@ const MainHeader = () => {
   const [isCheck, setIsCheck] = useState([]);
   const [temp, setTemp] = useState([]);
   const [isClick, setIsClick] = useState(false);
-  // const [isRotate, setIsRotaxte] = useState(false);
   const changeName = () => {
     setIsSelected((prev) => !prev);
   };
@@ -52,21 +49,21 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img className='icon' src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
-              <img style={{marginRight: '0.5rem', marginTop: '0.4rem'}} className='white-arrow' src={btnArrow} alt='' />
+              <img style={{ marginRight: '0.5rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
-          <SelectBox
-                items={[
-                    { value: "전체", id: 1 },
-                    { value: "진행중", id: 2 },
-                    { value: "예정중", id: 3 },
-                ]}
-        />
+          <div className='select'>
+            <select className='btn'>
+              <option value='전체'>전체</option>
+              <option value='진행중'>진행중</option>
+              <option value='예정중'>예정중</option>
+            </select>
+
+          </div>
         </div>
       </div>
       <Modal visible={visible} toggle={toggle} isCheck={isCheck} setIsCheck={setIsCheck} isClick={isClick} setIsClick={setIsClick} temp={temp} setTemp={setTemp} />
     </>
-
   );
 };
 

@@ -21,7 +21,7 @@
     width: 100%;
     padding-left: 2.1875rem;
     border-right: 0.1875rem solid #000000;
-    margin-right: 0.0625rem;
+    // margin-right: 0.0625rem;
     justify-content: center;
 
     div {
@@ -99,21 +99,26 @@
     padding: 0 0.9375rem;
 
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 0;
-      width: 49%;
+      width: 35.625rem;
       height: 8.1875rem;
-      border-radius: 0.3125rem;
+      border-radius: 1rem;
       font-size: 3rem;
       border: none;
       color: #909090;
       box-shadow: 0.0625rem 0.125rem 0.3125rem -0.1875rem rgba(0, 0, 0, 0.75);
       background-image: url("../../assets/images/modal/button-gray.png");
+      background-image: url('../../assets/images/imgs/btn.png');
       background-repeat: round;
 
       &:last-child {
         color: #000;
-        margin-left: 0.4375rem;
-        background-image: url("../../assets/images/modal/button-gold.png");
+        margin-left: 1rem;
+        background: url('../../assets/images/imgs/btn1.png');
+        border-radius: 0;
         background-repeat: round;
       }
     }

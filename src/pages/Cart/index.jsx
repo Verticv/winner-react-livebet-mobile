@@ -6,7 +6,7 @@ import Slide from './Slide';
 import { Button1, Button2 } from './Button';
 import arrow from '../../assets/images/imgs/icon-3.png';
 import buttonIcon from '../../assets/images/imgs/button-icon.png';
-import repeat from '../../assets/ico_5.png';
+import repeat from '../../assets/images/imgs/repeat.png';
 import mark from '../../assets/images/imgs/mark.png';
 import exit from '../../assets/images/imgs/x.png';
 import exitBtn from '../../assets/images/imgs/exit.png'

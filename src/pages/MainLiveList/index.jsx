@@ -9,12 +9,12 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData }) => {
-  const [idSelect, isIdSelected] = useState(0)
+const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+  const [idSelect, isIdSelected] = useState('00')
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
   const [data, setData] = useState([]);
   const mainHeaderLive = [{
-    id: 0,
+    id: '00',
     isActive: true,
     flag: spain,
     name: '라리가',
@@ -23,8 +23,9 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
     isFavorite: false,
+    type: 'red',
   }, {
-    id: 1,
+    id: '01',
     isActive: false,
     flag: '',
     name: '',
@@ -33,8 +34,9 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     firstTeam: '맨체스터유나이티드',
     secondTeam: '리버풀',
     isFavorite: false,
+    type: 'red',
   }, {
-    id: 2,
+    id: '02',
     isActive: false,
     flag: germany,
     name: '분데스리가',
@@ -43,8 +45,9 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     firstTeam: '바이헤른뮌헨',
     secondTeam: '프랑크푸르트',
     isFavorite: false,
+    type: 'red',
   }, {
-    id: 3,
+    id: '03',
     isActive: false,
     flag: england,
     name: '프리미어리그',
@@ -53,8 +56,9 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
     isFavorite: false,
+    type: 'red',
   }, {
-    id: 4,
+    id: '04',
     isActive: false,
     flag: germany,
     name: '분데스리가',
@@ -63,6 +67,7 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     firstTeam: '바이헤른뮌헨',
     secondTeam: '프랑크푸르트',
     isFavorite: false,
+    type: 'red',
   }];
 
   useEffect(() => {
@@ -80,7 +85,7 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
       <NavBar isActive />
       <MainHeader />
       <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder}/>
-      {data.map(({ id, isActive, flag, name, firstScore, secondScore, firstTeam, secondTeam, isFavorite }) => (
+      {data.map(({ id, isActive, flag, name, firstScore, secondScore, firstTeam, secondTeam, isFavorite, type }) => (
         <LiveCard
           key={id}
           id={id}
@@ -100,6 +105,9 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
           cardData={cardData}
           setCardData={setCardData}
           cardId={cardId}
+          isClicked={isClicked} 
+          setIsClicked={setIsClicked}
+          type={type}
         />
       ))}
       <Footer />

@@ -18,13 +18,13 @@
       &.inactive {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
-        height: 14.6rem;
+        height: 15.1875rem;
       }
 
       &.active {
         background-image: url("../../assets/images/cards/redCardBackgrounds/contentGradient-active.png");
         background-repeat: round;
-        height: 14.6rem;
+        height: 15.1875rem;
       }
 
       .row {
@@ -70,7 +70,7 @@
               justify-content: center;
               align-items: center;
               border-radius: 0.1870rem;
-              margin: 0 0.9375rem 0 1.25rem;
+              margin: 0 0.9375rem 0 1.2rem;
               font-size: 1.875rem;
               font-family: 'RobotoRegular';
             }
@@ -97,12 +97,13 @@
 
             .glowering {
               color: white;
-              text-shadow: 0 0 0.625rem #ff242c;
+              // text-shadow: 0 0 0.625rem #ff242c;
               font-family: NotoSansCJKkrRegular;
               margin-right: 1.25rem;
               margin-left: 0;
+              text-shadow: 0.4px 0.4px 11.6px #931a24, -0.4px -0.4px 11.6px #931a24, 0.4px -0.4px 3.6px #931a24, -0.4px 0.4px 11.6px #931a24;
+            text-shadow: 0.4px 0.4px 32.6px #ff0006, -0.4px -0.4px 28.6px #ff0006, 0.4px -0.4px 69.6px #ff0006, -0.4px 0.4px 60.6px #ff0006;
             }
-
 
             .livee {
               background-color: rgb(155, 47, 48);
@@ -191,14 +192,15 @@
 .main-con {
   background-color: white;
   width: 100%;
-  height: 7rem;
+  height: 7.6875rem;
   background-image: url("../../assets/images/cards/redCardBackgrounds/headerGradient-inactive.png");
   background-repeat: round;
   display: flex;
   justify-content: space-between;
 
   &.active {
-    background-image: url("../../assets/images/cards/redCardBackgrounds/headerGradient-active.png");
+    // background-image: url("../../assets/images/cards/redCardBackgrounds/headerGradient-active.png");
+    background-image: url("../../assets/images/imgs/red-header-bg.png");
     background-repeat: round;
   }
 
@@ -232,7 +234,7 @@
 
 
     img {
-      width: 2.5rem;
+      width: 2.7rem;
       margin-right: 0.375rem;
     }
 
@@ -252,7 +254,7 @@
     }
 
     .ball {
-      width: 2.5rem;
+      // width: 2.5rem;
     }
   }
 }
@@ -282,7 +284,7 @@
       background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-active.png");
       background-repeat: round;
       height: 7.5rem;
-      width: 7.325rem;
+      width: 7.725rem;
       border: 0;
 
       img {
@@ -316,7 +318,7 @@
 
     &.inactive-with-plus {
       background-repeat: round;
-      width: 7.3rem;
+      width: 7.725rem;
       height: 14.9rem;
     }
 
@@ -335,8 +337,8 @@
 .card-button-arrow {
   background: url('../../assets/images/imgs/red-red.png');
   background-repeat: round;
-  height: 7rem;
-  width: 7.3rem;
+  height: 7.6875rem;
+  width: 7.725rem;
   border: 0;
 }
 

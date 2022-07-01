@@ -4,9 +4,9 @@ import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png';
 
-const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay }) => {
+const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
-  if (id === idSelect) {
+  if (id === idSelect && type === 'red') {
     if (isActive && withPlus) {
       buttonClass = 'active-button active-with-plus card-button-arrow-active';
     } else if (!isActive && withPlus) {
@@ -31,7 +31,7 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderL
         {isFavorite
           ? <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
             onClick={changeOrder}>
-            <img style={{ width: '2.625rem', height: '1.625rem' }} id={index} onClick={changeOrder} src={isActive && idSelect === id ? redArrowActive : redArrow} alt='' />
+            <img style={{ width: '2.625rem', height: '1.625rem' }} id={index} onClick={changeOrder} src={type === 'red' && idSelect === id ? redArrowActive : redArrow} alt='' />
           </button>
           : null}
 
@@ -39,8 +39,8 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderL
           <button type='button' id={id} onClick={() => {
             setCardId(id);
             setIsDisplay(!isDisplay);
-          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '21.6rem' : '14.6rem' }}>
-            <img id={id} src={isActive && idSelect === id ? activePlus : inactivePlus} alt='' />
+          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.85rem' : '15.1875rem' }}>
+            <img id={id} src={isClicked && idSelect === id ? activePlus : inactivePlus} alt='' />
             <p>{value}</p>
           </button>
         </div>

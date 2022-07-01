@@ -14,6 +14,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cardId, setCardId] = useState();
   const [cardData, setCardData] = useState([]);
+  const [isClicked, setIsClicked] = useState(false);
   const { mainHeaderLive, mainHeaderNonLive } = useSelector((state) => state.cards);
   const addToCart = (item) => {
     setCart([...cart, item]);
@@ -49,37 +50,37 @@ function App() {
     <>
       <Switch>
         <Route path='/' exact>
-          <MainLive key={1} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={1} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/cart' exact>
           <Cart cart={cart} setCart={setCart} removeCard={removeCard} />
         </Route>
         <Route path='/mainLiveList' exact>
-          <MainLiveList setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLiveList isClicked={isClicked} setIsClicked={setIsClicked} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/basketball' exact>
-          <MainLive key={2} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={2} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/volleyball' exact>
-          <MainLive key={3} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={3} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/mainNonLiveList' exact>
-          <MainNonLiveList setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainNonLiveList isClicked={isClicked} setIsClicked={setIsClicked} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/favorite' exact>
-          <Favorite cardId={cardId} setCardId={setCardId} cart={cart} addToCart={addToCart} cardData={cardData} setCardData={setCardData} removeCard={removeCard} handleClick={handleClick} />
+          <Favorite isClicked={isClicked} setIsClicked={setIsClicked} cardId={cardId} setCardId={setCardId} cart={cart} addToCart={addToCart} cardData={cardData} setCardData={setCardData} removeCard={removeCard} handleClick={handleClick} />
         </Route>
         <Route path='/iceHockey' exact>
-          <MainLive key={4} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={4} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/tennis' exact>
-          <MainLive key={5} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={5} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/handball' exact>
-          <MainLive key={6} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={6} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/ufc' exact>
-          <MainLive key={7} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
+          <MainLive key={7} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
       </Switch>
     </>

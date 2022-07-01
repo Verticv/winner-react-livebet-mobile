@@ -1,7 +1,9 @@
 .nonLive-header-wrapper {
   // background-image: url('../../assets/images/other/nonLiveCardBackground.png');
-  background-repeat: round;
+  width: 100%;
+  background-repeat: repeat;
   background: url('../../assets/images/imgs/img.png');
+  background-size: 77.6rem 7rem;
 
   .nonLive-head-container {
     display: flex;
@@ -24,7 +26,7 @@
 
     .arrow-wrapper {
       margin-left: 1.25rem;
-      background-image: url("../../assets/images/arrow/arrow-button.png");
+      background-image: url("../../assets/images/imgs/button.png");
       background-repeat: round;
       width: 3.5rem;
       height: 3.5rem;
@@ -45,6 +47,7 @@
       // padding-left: 10px;
       margin-left: 1.3125rem;
       margin-right: 1.125rem;
+      margin-top: 2.5rem
     }
 
 

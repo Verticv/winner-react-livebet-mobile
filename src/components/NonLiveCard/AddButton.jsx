@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId }) => {
+const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId, isClicked, type }) => {
   let buttonClass = 'inactive-button';
-  if (idBlueSelected === id) {
+  if (idBlueSelected === id && type === 'blue') {
     if (isActive && withPlus) {
       buttonClass = 'active-button active-with-plus card-button-blue-active';
     } else if (isActive) {
@@ -26,7 +26,7 @@ const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData,
         : null
       }
       <div className={`nLive-btn ${buttonClass}`} >
-        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '21.6rem' : '14.6rem'}} onClick={() => {
+        <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.85rem' : '15.1875rem'}} onClick={() => {
           setIsBlueDisplay((prev) => !prev);
           setCardId(id);
         }}>

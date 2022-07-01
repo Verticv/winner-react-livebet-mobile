@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CheckBoxesContainer from './CheckBoxesContainer';
-import exit from '../../assets/exit.png';
+import exit from '../../assets/images/imgs/close.png';
 
 const Modal = ({ visible, toggle, isCheck, setIsCheck, isClick, setIsClick, temp, setTemp }) => {
   return (visible ? ReactDOM.createPortal(
