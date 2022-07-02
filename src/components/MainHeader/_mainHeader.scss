@@ -60,7 +60,8 @@
     background-repeat: round;
     color: #fff;
     height: 5.5rem;
-    padding: 0 0.75rem 0.0625rem 0;
+    // padding: 0 0.75rem 0.0625rem 0;
+    padding: 0 0.75rem 0.0625rem 0.75rem;
 
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -238,8 +239,16 @@
 
   .btn {
     padding: 0 3rem 0 3.5rem;
-    margin-left: 0.3rem;
+    // padding: 0 2rem 0 1.2rem;
+    margin-left: 0.1rem;
+    min-width: 15rem;
+    // padding-left: 1rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
   }
+
 
   select {
     text-align: center;
@@ -254,9 +263,15 @@
     box-shadow: none;
     font-size: 2.625rem;
     padding: 0 0 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::-ms-expand {
       display: none;
+    }
+    option {
+      padding: 0;
     }
   }
 
@@ -274,8 +289,8 @@
   &::before {
     content: '';
     position: absolute;
-    left: 1.8rem;
-    top: 0.9375rem;
+    left: 1.4rem;
+    top: 1.2rem;
     width: 3.3125rem;
     height: 3.1rem;
     background: url('../../assets/images/imgs/true.png');

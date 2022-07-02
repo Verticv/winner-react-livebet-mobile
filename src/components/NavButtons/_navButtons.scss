@@ -36,9 +36,14 @@
   .num {
     font-family: RobotoRegular;
     font-size: 1.75rem;
-    padding: 0 0.5rem;
+    padding: 0 0.4375rem;
     border-radius: 0.5rem;
     background-color: #222228;
+    width: 2.8125rem;
+    height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &.clicked {

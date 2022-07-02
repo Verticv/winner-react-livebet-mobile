@@ -41,11 +41,11 @@ const MainHeader = () => {
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img className='icon' src={cup} alt='' />
+              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem'}} className='icon' src={cup} alt='' />
               <p className='text'>리그선택</p>
             </div>
-          </button>
-          <button type='submit' className='btn active' onClick={changeName}>
+          </button> 
+          <button type='submit' className='btn' onClick={changeName}>
             <div className='button-pho'>
               <img className='icon' src={isSelected ? chronology : cup} alt='' />
               {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}

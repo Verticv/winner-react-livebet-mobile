@@ -50,7 +50,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
         <div className='cart-right-header'>
           <div>
             <img src={cartIcon} alt='cart' className='cart-icon' />
-            <p style={{ marginLeft: '1.8125rem', marginRight: '1.875rem', fontSize: '3rem', marginTop: '2rem' }}>BETSLIP</p>
+            <p>BETSLIP</p>
             <div className='cart-num'>
               2
             </div>
