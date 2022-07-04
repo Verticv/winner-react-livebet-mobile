@@ -57,6 +57,9 @@
 
   .cart-slide {
     height: 7.5625rem;
+    p {
+      font-size: 3rem;
+    }
   }
 
   .blue {
@@ -264,10 +267,16 @@
   div {
     display: flex;
     align-items: center;
+    font-weight: bold;
 
     p {
       font-family: 'RobotoRegular';
-
+        margin-left: 1.8125rem;
+        margin-right: 1.875rem; 
+        font-size: 3rem;
+        margin-top: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 0.1875rem;
     }
 
     img {
@@ -315,6 +324,7 @@
   width: 3rem;
   height: 1.875rem;
   margin-bottom: 0.3rem;
+  transform: rotate(180deg);
 }
 
 .cart-num {
@@ -328,7 +338,7 @@
   align-items: center;
   font-size: 2.62rem;
   font-family: RobotoRegular;
-  margin-top: -0.1rem;
+  // margin-top: -0.1rem;
 }
 
 

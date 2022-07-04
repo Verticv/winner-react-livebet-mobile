@@ -4,7 +4,7 @@ import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png';
 
-const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type }) => {
+const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type, setIsClicked, isIdSelected }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
   if (id === idSelect && type === 'red') {
     if (isActive && withPlus) {
@@ -39,6 +39,8 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderL
           <button type='button' id={id} onClick={() => {
             setCardId(id);
             setIsDisplay(!isDisplay);
+            isIdSelected(id);
+            setIsClicked(true);
           }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.85rem' : '15.1875rem' }}>
             <img id={id} src={isClicked && idSelect === id ? activePlus : inactivePlus} alt='' />
             <p>{value}</p>

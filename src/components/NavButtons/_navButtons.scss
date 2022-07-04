@@ -20,10 +20,15 @@
     margin: -3px;
   }
 
-  img {
-    width: 3rem;
+  .new {
     -webkit-filter: invert(.4);
     filter: invert(.4);
+  }
+
+  img {
+    width: 3rem;
+    // -webkit-filter: invert(.4);
+    // filter: invert(.4);
     margin-top: 0.2rem;
   }
 
@@ -36,22 +41,39 @@
   .num {
     font-family: RobotoRegular;
     font-size: 1.75rem;
-    padding: 0 0.5rem;
+    padding: 0 0.4375rem;
     border-radius: 0.5rem;
     background-color: #222228;
+    width: 2.8125rem;
+    height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &.clicked {
     background-image: url("../../assets/images/other/headerButtonBackground-active.png");
     background-repeat: round;
     color: #000;
-    img {
-      -webkit-filter: invert(1);
-      filter: invert(1);
-    }
+    // img {
+    //   -webkit-filter: invert(1);
+    //   filter: invert(1);
+    // }
     .num {
       background-color: #222226;
       color: #9c8c5e;
     }
+    &:nth-child(n + 7) {
+      img {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
+  }
+  &:nth-child(n + 7) {
+    img {
+    -webkit-filter: invert(.4);
+    filter: invert(.4);
+  }
   }
 }

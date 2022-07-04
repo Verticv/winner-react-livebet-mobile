@@ -16,6 +16,7 @@
         height: 15.1875rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-inactive.png");
         background-repeat: round;
@@ -25,24 +26,39 @@
           background-image: url("../../assets/images/cards/blueCardBackgrounds/contentGradient-active.png");
           background-repeat: round;
           height: 15.1875rem;
+          .nLive-row {
+            .nLive-col {
+              div {
+                .nLive-shirt {
+                  .character {
+                    background-color: rgba(255, 255, 255, 0.2);
+                  }
+                }
+              }
+            }
+          }
         }
 
         .nLive-row {
           display: flex;
+          justify-content: center;
           align-items: center;
           color: #D1CECF;
 
           .nLive-star {
-            width: 4.3125rem;
-            margin-right: 1.4rem;
-            margin-left: 0.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.25rem;
+            height: 3.8125rem;
+            margin-right: 1.1rem;
+            margin-left: 0.8rem;
             margin-top: 0.2rem;
           }
 
           .nLive-col {
             display: flex;
             flex-direction: column;
-            margin-left: -0.3rem;
 
             .nLive-shirt {
               display: flex;
@@ -74,6 +90,7 @@
                 font-size: 1.875rem;
                 font-family: "RobotoRegular";
                 margin: 0 0.9375rem 0 1.25rem;
+                background-color: #606575;
               }
             }
 
@@ -116,7 +133,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 0.625rem;
+    padding-left: 0.8rem;
     color: #fff;
 
     p {
@@ -125,12 +142,12 @@
 
 
     .nLive-header-flag {
-      width: 5.8rem;
-      margin: 0 1rem;
+      width: 6.3rem;
+      margin: 0 0.7375rem;
     }
 
     .ball {
-      width: 3.6rem;
+      width: 4rem;
     }
 
   }

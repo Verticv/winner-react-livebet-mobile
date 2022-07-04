@@ -8,7 +8,7 @@ import AddButton from './AddButton';
 import nonActiveStar from '../../assets/images/imgs/non-active-star.png';
 import MainNonLiveBet from '../../pages/MainNonLiveBet';
 function NonLiveCard({
-  id, name, flag, firstTeam, secondTeam, withPlus, 
+  id, name, flag, firstTeam, secondTeam, withPlus,
   // idBlueSelected, setIdBlueSelected,
   idSelect, isIdSelected, index, nonLiveData, setNonLiveData, isFavorite, cardId, setCardId,
   isClicked, setIsClicked, type
@@ -27,13 +27,11 @@ function NonLiveCard({
   const toggleStar = () => setIsStar((prev) => !prev);
   return (
     <>
-      <div className='nLive-first-con' id={id}
-        onClick={() => {
+      <div className='nLive-first-con' id={id}>
+        <div className='nLive-main-live' onClick={() => {
           isIdSelected(id);
           setIsClicked(true);
-      }}
-      >
-        <div className='nLive-main-live'>
+        }}>
           <CardHeader
             id={id}
             show={showHeader}
@@ -47,10 +45,10 @@ function NonLiveCard({
             <div className='nLive-left'>
               <div className={`nLive-down-sec ${(type === 'blue') && (idSelect === id) ? 'active' : 'inactive'}`}>
                 <div className='nLive-row'>
-                  <div style={{ background: 'transparent', border: 'none' }}
+                  <button style={{ background: 'transparent', border: 'none', padding: '0' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
-                  </div>
+                  </button>
                   <div className='nLive-col'>
                     <div>
                       <div className='nLive-shirt'>
@@ -89,6 +87,8 @@ function NonLiveCard({
           cardId={cardId}
           isClicked={isClicked}
           type={type}
+          isIdSelected={isIdSelected}
+          setIsClicked={setIsClicked}
         />
       </div>
       {(cardId === id) && isBlueDisplay ? <MainNonLiveBet /> : null}
