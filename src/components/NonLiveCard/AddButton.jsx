@@ -1,6 +1,7 @@
 import React from 'react';
 
-const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId, isClicked, type }) => {
+const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData, setNonLiveData, isFavorite, flag, isBlueDisplay, setIsBlueDisplay, setCardId, cardId, isClicked, type, isIdSelected,
+  setIsClicked }) => {
   let buttonClass = 'inactive-button';
   if (idBlueSelected === id && type === 'blue') {
     if (isActive && withPlus) {
@@ -29,6 +30,8 @@ const AddButton = ({ id, isActive, withPlus, idBlueSelected, index, nonLiveData,
         <button type='button' className='nLive-side-btn' style={{height: !isFavorite && flag ? '22.85rem' : '15.1875rem'}} onClick={() => {
           setIsBlueDisplay((prev) => !prev);
           setCardId(id);
+          isIdSelected(id);
+          setIsClicked(true);
         }}>
           정보
         </button>

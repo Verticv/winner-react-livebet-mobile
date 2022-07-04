@@ -1,13 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavButtons from '../NavButtons';
-// import star from '../../assets/images/imgs/icoico6.png';
-// import basketBall from '../../assets/images/imgs/icoico5.png';
-// import footBall from '../../assets/images/imgs/icoico4.png';
-// import ball from '../../assets/images/imgs/icoico3.png';
-// import valBall from '../../assets/images/imgs/icoico2.png';
-// import bally from '../../assets/images/imgs/icoico.png';
-// // import ballyBlack from '../../assets/images/bally/bally-black.png';
 import iceHockey from '../../assets/images/imgs/i1co.png';
 import tennis from '../../assets/images/imgs/i2co.png';
 import handball from '../../assets/images/imgs/i3co.png';

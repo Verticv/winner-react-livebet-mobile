@@ -37,12 +37,11 @@ function LiveCard({
   }
   return (
     <>
-    <div className='first-con' id={id}
-    onClick={() => {
+    <div className='first-con' id={id}>
+      <div className='main-live' onClick={() => {
       isIdSelected(id);
       setIsClicked(true);
     }}>
-      <div className='main-live'>
         <CardHeader
           id={id}
           isActive={isClicked}
@@ -119,6 +118,7 @@ function LiveCard({
         flag={flag}
         isFavorite={isFavorite}
         idSelect={idSelect}
+        isIdSelected={isIdSelected}
         removeCard={removeCard}
         data={data}
         setData={setData}
