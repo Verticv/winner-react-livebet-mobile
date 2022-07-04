@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import cup from '../../assets/images/cup/cup-gold.png';
-import chronology from '../../assets/images/chronology/chronology-white.png';
+// import chronology from '../../assets/images/chronology/chronology-white.png';
+import chronology from '../../assets/images/imgs/btn-ico.png';
 import cup from '../../assets/images/imgs/m_icon_.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
@@ -35,13 +36,13 @@ const MainHeader = () => {
           </p>
         </div>
         <div className='button-container'>
-          <button type='submit' className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
+          <button type='submit' style={{paddingRight: '1.2rem'}} className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
             onClick={() => {
               toggle();
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem'}} className='icon' src={cup} alt='' />
+              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem', marginTop: '0.5rem'}} className='icon' src={cup} alt='' />
               <p className='text'>리그선택</p>
             </div>
           </button> 
