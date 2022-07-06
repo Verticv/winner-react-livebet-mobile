@@ -92,6 +92,8 @@ const Cart = ({ cart, setCart, removeCard }) => {
           </div>
           <input
             type="text"
+            pattern="[0-9]*"
+            inputMode="numeric"
             className="number cart-button-repeat"
             onChange={onChangeHandler}
             value={value}

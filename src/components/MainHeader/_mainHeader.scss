@@ -59,9 +59,9 @@
     background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
     background-repeat: round;
     color: #fff;
-    height: 5.5rem;
+    height: 5.3rem;
     // padding: 0 0.75rem 0.0625rem 0;
-    padding: 0 0.75rem 0.0625rem 0.75rem;
+    padding: 0 0.45rem 0.0625rem 0;
 
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -80,8 +80,8 @@
 
       .icon {
         padding: 0;
-        width: 3.3125rem;
-        height: 3.1rem;
+        width: 3.5125rem;
+        // height: 3.1rem;
         margin-left: 0.5rem;
         margin-right: 0.3rem;
       }
@@ -238,10 +238,10 @@
   color: white;
 
   .btn {
-    padding: 0.5rem 3rem 0 3.5rem;
+    // padding: 0.5rem 3rem 0 3.5rem;
     // padding: 0 2rem 0 1.2rem;
     margin-left: 0.1rem;
-    min-width: 15rem;
+    // min-width: 15rem;
     // padding-left: 1rem;
     // display: flex;
     // justify-content: center;
