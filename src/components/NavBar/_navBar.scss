@@ -34,7 +34,8 @@ html {
     top: 0;
     right: 0;
     background-color: #191920;
-    box-shadow: 0.7875rem 0 2.625rem 3rem #19191c;
-    box-shadow: 0.7875rem 0 3rem 3.6rem #19191c;
+    // box-shadow: 0.7875rem 0 2.625rem 3rem #19191c;
+    box-shadow: 0.4875rem 0 3rem 3rem #19191c;
+    transform: rotate(180deg);
   }
 }
