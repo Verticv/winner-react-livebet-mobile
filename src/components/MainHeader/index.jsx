@@ -70,7 +70,7 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img className='icon' src={isSelected ? chronology : cup2} alt='' />
               {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
-              <img style={{ marginRight: '0.5rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
+              <img style={{ marginRight: '0.3rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
           <div className="select" ref={selectContainerRef}>

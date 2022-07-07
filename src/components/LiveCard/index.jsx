@@ -37,103 +37,103 @@ function LiveCard({
   }
   return (
     <>
-    <div className='first-con' id={id}>
-      <div className='main-live' onClick={() => {
-      isIdSelected(id);
-      setIsClicked(true);
-    }}>
-        <CardHeader
-          id={id}
-          isActive={isClicked}
-          setIsClicked={setIsClicked}
-          show={showHeader}
-          flag={flag}
-          name={name}
-          idSelect={idSelect}
-          isIdSelected={isIdSelected}
-        />
-        <div className='card'>
-          <div className='left'>
-            <div className={`down-sec ${idSelect === id && type === 'red' ? 'active' : 'inactive'}`}>
-              <div className='row'>
-                <button style={{ background: 'transparent', border: 'none', padding: '0' }} type='button'
-                  onClick={isFavorite ? removeFromFavorite : toggleStar}
-                >
-                  <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
-                </button>
-                <div className='col'>
-                  <div>
-                    <div className='shirt'>
-                      <img src={redShirt} alt='shirt' />
-                      <span className='character'>H</span>
-                      <p>{firstTeam}</p>
+      <div className='first-con' id={id}>
+        <div className='main-live' onClick={() => {
+          isIdSelected(id);
+          setIsClicked(true);
+        }}>
+          <CardHeader
+            id={id}
+            isActive={isClicked}
+            setIsClicked={setIsClicked}
+            show={showHeader}
+            flag={flag}
+            name={name}
+            idSelect={idSelect}
+            isIdSelected={isIdSelected}
+          />
+          <div className='card'>
+            <div className='left'>
+              <div className={`down-sec ${idSelect === id && type === 'red' ? 'active' : 'inactive'}`}>
+                <div className='row'>
+                  <button style={{ background: 'transparent', border: 'none', padding: '0' }} type='button'
+                    onClick={isFavorite ? removeFromFavorite : toggleStar}
+                  >
+                    <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                  </button>
+                  <div className='col'>
+                    <div style={{ marginTop: '-0.9rem' }}>
+                      <div className='shirt'>
+                        <img src={redShirt} alt='shirt' />
+                        <span className='character'>H</span>
+                        <p>{firstTeam}</p>
+                      </div>
+                      <div className='shirt'>
+                        <img src={blueShirt} alt='shirt' />
+                        <span className='character'>A</span>
+                        <p>{secondTeam}</p>
+                      </div>
                     </div>
-                    <div className='shirt'>
-                      <img src={blueShirt} alt='shirt' />
-                      <span className='character'>A</span>
-                      <p>{secondTeam}</p>
+                    <div className='play-video'>
+                      <p className='livee'>live</p>
+                      <p className='score'>
+                        {firstScore}
+                        <span style={{ color: '#858585' }}>-</span>
+                        {secondScore}
+                      </p>
+                      <p className='glowering' style={{ marginTop: '-0.1rem' }}>후반전35</p>
+                      <img src={(id === '00' || id === '01') && (type === 'red') ? playGold : playTransparent} alt='play' />
                     </div>
                   </div>
-                  <div className='play-video'>
-                    <p className='livee'>live</p>
-                    <p className='score'>
-                      {firstScore}
-                      <span style={{ color: '#858585' }}>-</span>
-                      {secondScore}
-                    </p>
-                    <p className='glowering'>후반전35</p>
-                    <img src={(id === '00' || id === '01') && (type === 'red') ? playGold : playTransparent} alt='play' />
+                </div>
+                <div className='num-container'>
+                  <div className='num-num'>
+                    <span>5</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <p className='score'>{firstScore}</p>
                   </div>
-                </div>
-              </div>
-              <div className='num-container'>
-                <div className='num-num'>
-                  <span>5</span>
-                  <span>0</span>
-                  <span>0</span>
-                  <span>0</span>
-                  <p className='score'>{firstScore}</p>
-                </div>
-                <div className='num-num'>
-                  <span>5</span>
-                  <span>0</span>
-                  <span>0</span>
-                  <span>0</span>
-                  <p className='score'>{secondScore}</p>
+                  <div className='num-num'>
+                    <span>5</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <span>0</span>
+                    <p className='score'>{secondScore}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <AddButton
+          id={id}
+          addToCart={addToCart}
+          handleClick={handleClick}
+          setCardId={setCardId}
+          mainHeaderLive={mainHeaderLive}
+          cardData={cardData}
+          setCardData={setCardData}
+          index={index}
+          flag={flag}
+          isFavorite={isFavorite}
+          idSelect={idSelect}
+          isIdSelected={isIdSelected}
+          removeCard={removeCard}
+          data={data}
+          setData={setData}
+          favoriteCards={favoriteCards}
+          setIsClicked={setIsClicked}
+          isActive={isClicked}
+          withPlus={withPlus}
+          value={value}
+          cardId={cardId}
+          setIsDisplay={setIsDisplay}
+          isDisplay={isDisplay}
+          isClicked={isClicked}
+          type={type}
+        />
       </div>
-      <AddButton
-        id={id}
-        addToCart={addToCart}
-        handleClick={handleClick}
-        setCardId={setCardId}
-        mainHeaderLive={mainHeaderLive}
-        cardData={cardData}
-        setCardData={setCardData}
-        index={index}
-        flag={flag}
-        isFavorite={isFavorite}
-        idSelect={idSelect}
-        isIdSelected={isIdSelected}
-        removeCard={removeCard}
-        data={data}
-        setData={setData}
-        favoriteCards={favoriteCards}
-        setIsClicked={setIsClicked}
-        isActive={isClicked}
-        withPlus={withPlus}
-        value={value}
-        cardId={cardId}
-        setIsDisplay={setIsDisplay}
-        isDisplay={isDisplay}
-        isClicked={isClicked}
-        type={type}
-      />
-    </div>
       {(cardId == id) && isDisplay
         ? <LiveBet cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         : null

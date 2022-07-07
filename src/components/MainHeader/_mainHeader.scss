@@ -77,6 +77,8 @@
       height: 5rem;
       color: #fff;
       margin-top: -0.1875rem;
+      margin-right: 0.8rem;
+      margin-left: 0.8rem;
 
       .icon {
         padding: 0;
@@ -94,7 +96,7 @@
       }
 
       .text {
-        margin-top: 3rem;
+        margin-top: 2.6rem;
       }
     }
   }
@@ -141,7 +143,7 @@
 .white-arrow {
   width: 1.375rem;
   height: 0.6875rem;
-  margin-left: 0.2rem;
+  margin-left: 0.6rem;
 }
 
 .select-box--items {
@@ -238,14 +240,14 @@
   color: white;
 
   .btn {
-    // padding: 0.5rem 3rem 0 3.5rem;
-    // padding: 0 2rem 0 1.2rem;
+    padding: 0.5rem 3rem 0 3.5rem;
+    padding: 0 2rem 0 1.2rem;
     margin-left: 0.1rem;
-    // min-width: 15rem;
-    // padding-left: 1rem;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    min-width: 15rem;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
