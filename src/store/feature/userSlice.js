@@ -70,7 +70,7 @@ const initialState = {
     },{
         id: 1,
         flag: germany,
-        name: '',
+        name: '분데스리가',
         isActive: false,
         withPlus: false,
         firstTeam: '맨체스터유나이티드',

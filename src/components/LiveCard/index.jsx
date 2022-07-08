@@ -82,7 +82,7 @@ function LiveCard({
                       {secondScore}
                     </p>
                     <p className='glowering'>후반전35</p>
-                    <img src={(idSelect === id) && (type === 'red') ? playGold : playTransparent} alt='play' />
+                    <img className='gold-play' src={(idSelect === id) && (type === 'red') ? playGold : playTransparent} alt='play' />
                   </div>
                 </div>
               </div>

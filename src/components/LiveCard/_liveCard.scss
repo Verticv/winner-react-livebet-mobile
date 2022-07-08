@@ -109,6 +109,7 @@
 
             .score {
               color: #d8b948;
+              margin-top: 0.3rem;
             }
 
             .glowering {
@@ -117,7 +118,12 @@
               font-family: NotoSansCJKkrRegular;
               margin-right: 1.25rem;
               margin-left: 0;
+              margin-top: 0.4rem;
               text-shadow: 0.025rem 0.025rem 0.75rem #ff0006, -0.025rem -0.025rem 0.75rem #ff0006, 0.025rem -0.025rem 0.75rem #ff0006, -0.025rem 0.025rem 0.75rem #ff0006;
+            }
+
+            .gold-play {
+              cursor: pointer;
             }
 
             .livee {
@@ -290,6 +296,7 @@
     border: none;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 
     img {
       width: 5.43rem;
