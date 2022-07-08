@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar';
 import MainHeader from '../../components/MainHeader';
@@ -18,6 +18,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [isDisplay, setIsDisplay] = useState(false);
 
+  console.log(isChangeBlueOrder, isChangeRedOrder)
 
   return (
     <div className='favorite'>

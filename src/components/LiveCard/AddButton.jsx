@@ -3,7 +3,6 @@ import activePlus from '../../assets/images/plus/plus-acive.png';
 import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png';
-import { useEffect } from 'react';
 
 const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type, setIsClicked, isIdSelected }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
