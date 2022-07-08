@@ -59,7 +59,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         isFavorite,
         type,
       }, index) => <LiveCard
-          key={id + Date.now()}
+          key={id + index}
           cardData={cardData}
           setCardData={setCardData}
           removeCard={removeCard}
@@ -86,7 +86,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           handleClick={handleClick}
           isClicked={isClicked}
           setIsClicked={setIsClicked}
-          
+
           type={type}
         />)}
       <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
@@ -101,7 +101,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         isFavorite,
         type,
       }, index) => <NonLiveCard
-          key={id + Date.now()}
+          key={`${id}` + index}
           id={id}
           index={index}
           nonLiveData={nonLiveData}
@@ -118,7 +118,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           cardId={cardId}
           setCardId={setCardId}
           addToCart={addToCart}
-          isClicked={isClicked} 
+          isClicked={isClicked}
           setIsClicked={setIsClicked}
           idSelect={idSelect}
           isIdSelected={isIdSelected}
