@@ -50,7 +50,7 @@ function NonLiveCard({
                     <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
                   </button>
                   <div className='nLive-col'>
-                    <div>
+                    <div style={{ marginTop: '-0.9rem' }}>
                       <div className='nLive-shirt'>
                         <img src={redShirt} alt='nLive-shirt' />
                         <span className='character'>H</span>

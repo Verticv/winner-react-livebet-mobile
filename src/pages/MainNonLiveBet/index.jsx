@@ -1,5 +1,5 @@
 import React from 'react';
-import group from '../../assets/group2.png';
+import group from "../../assets/images/imgs/game.png";
 
 function NonLiveBet() {
   return (
