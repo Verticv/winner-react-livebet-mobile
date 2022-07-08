@@ -12,7 +12,6 @@ import Footer from '../../components/Footer';
 const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [idSelect, isIdSelected] = useState('00')
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
-  const [data, setData] = useState([]);
   const mainHeaderLive = [{
     id: '00',
     isActive: true,
@@ -69,6 +68,8 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
     isFavorite: false,
     type: 'red',
   }];
+
+  const [data, setData] = useState(mainHeaderLive);
 
   useEffect(() => {
     if (!isChangeRedOrder) {
