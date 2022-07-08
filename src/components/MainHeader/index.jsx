@@ -55,7 +55,6 @@ const MainHeader = () => {
           </p>
         </div>
         <div className='button-container'>
-          {console.log(change)}
           <button type='submit' className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
             onClick={() => {
               toggle();
@@ -81,7 +80,6 @@ const MainHeader = () => {
               <option value="진행중">진행중</option>
               <option value="예정중">예정중</option>
             </select>
-            {console.log(width)}
           </div>
         </div>
       </div>

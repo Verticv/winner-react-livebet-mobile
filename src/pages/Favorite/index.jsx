@@ -14,17 +14,16 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [data, setData] = useState(favoriteCards);
   const [nonLiveData, setNonLiveData] = useState(nonLiveCard)
-  const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
-  const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
+  // const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
+  // const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [isDisplay, setIsDisplay] = useState(false);
 
-  console.log(isChangeBlueOrder, isChangeRedOrder)
 
   return (
     <div className='favorite'>
       <NavBar />
       <MainHeader />
-      <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
+      <LiveListHeader/>
       {data?.map(({
         id,
         flag,
@@ -68,7 +67,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
 
           type={type}
         />)}
-      <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
+      <NonLiveListHeader />
       {nonLiveData?.map(({
         id,
         flag,
