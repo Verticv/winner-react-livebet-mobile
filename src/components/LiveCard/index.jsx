@@ -35,6 +35,19 @@ function LiveCard({
     const filteredData = data.filter((el) => el.id != target.id)
     setData(filteredData);
   }
+
+  const changeOrder = (e) => {
+    let temp;
+    const newCard = [...data];
+    if (+e.target.id !== 0) {
+      temp = newCard[e.target.id - 1];
+      newCard[e.target.id - 1] = newCard[e.target.id];
+      newCard[e.target.id] = temp;
+    }
+    setData(newCard);
+  }
+
+
   return (
     <>
       <div className='first-con' id={id}>
@@ -108,6 +121,7 @@ function LiveCard({
         </div>
         <AddButton
           id={id}
+          changeOrder={changeOrder}
           addToCart={addToCart}
           handleClick={handleClick}
           setCardId={setCardId}

@@ -6,6 +6,7 @@ import flag from '../../assets/images/flags/spain.png';
 
 const initialState = {
     favoriteCards: [{
+        unique: 1,
         id: '00',
         flag: spain,
         name: '라리가',
@@ -19,6 +20,7 @@ const initialState = {
         type: 'red',
     },
     {
+        unique: 2,
         id: '01',
         flag: england,
         name: '프리미어리그',
@@ -32,6 +34,7 @@ const initialState = {
         type: 'red',
     },
     {
+        unique: 3,
         id: '02',
         flag: germany,
         name: '분데스리가',
@@ -45,6 +48,7 @@ const initialState = {
         type: 'red',
     },
     {
+        unique: 4,
         id: '03',
         flag: spain,
         name: '라리가',
@@ -58,6 +62,7 @@ const initialState = {
         type: 'red',
     },],
     nonLiveCard: [{
+        unique: 5,
         id: 0,
         flag: spain,
         name: '라리가',
@@ -68,6 +73,7 @@ const initialState = {
         isFavorite: true,
         type: 'blue',
     },{
+        unique: 6,
         id: 1,
         flag: germany,
         name: '분데스리가',
@@ -79,6 +85,7 @@ const initialState = {
         type: 'blue',
     },
     {
+        unique: 7,
         id: 2,
         flag: spain,
         name: '라리가',

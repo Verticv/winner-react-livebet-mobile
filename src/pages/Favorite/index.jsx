@@ -18,29 +18,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [isDisplay, setIsDisplay] = useState(false);
 
-  useEffect(() => {
-    setIsChangeRedOrder(true);
-    if (isChangeRedOrder) {
-      const newArr = [...data];
-      const sortedArr = newArr.reverse();
-      setData(sortedArr);
-    } else {
-      setData(data)
-    }
-    setIsChangeRedOrder(false)
-  }, [isChangeRedOrder, data]);
 
-  useEffect(() => {
-    setIsChangeBlueOrder(true);
-    if (isChangeBlueOrder) {
-      const newArr = [...nonLiveData]
-      const sortedArr = newArr.reverse();
-      setNonLiveData(sortedArr);
-    } else {
-      setNonLiveData(nonLiveData);
-    }
-    setIsChangeBlueOrder(false);
-  }, [isChangeBlueOrder, nonLiveData]);
   return (
     <div className='favorite'>
       <NavBar />
@@ -59,7 +37,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         isFavorite,
         type,
       }, index) => <LiveCard
-          key={id + index}
+          key={id}
           cardData={cardData}
           setCardData={setCardData}
           removeCard={removeCard}

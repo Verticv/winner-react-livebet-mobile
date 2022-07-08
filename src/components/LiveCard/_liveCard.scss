@@ -361,16 +361,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &:active {
-    background: url('../../assets/images/imgs/red-red-active.png');
-    background-repeat: round;
-    img {
-      background: url('../../assets/images/imgs/ico-red-active.png');
-      background-repeat: round;
-      width: 2.625rem;
-      height: 1.625rem;
-    }
-  }
+  // &:active {
+  //   background: url('../../assets/images/imgs/red-red-active.png');
+  //   background-repeat: round;
+  //   img {
+  //     background: url('../../assets/images/imgs/ico-red-active.png');
+  //     background-repeat: round;
+  //     width: 2.625rem;
+  //     height: 1.625rem;
+  //   }
+  // }
 }
 
 // .card-button-arrow:active {
