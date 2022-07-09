@@ -94,7 +94,7 @@ function LiveCard({
                         <span style={{ color: '#858585' }}>-</span>
                         {secondScore}
                       </p>
-                      <p className='glowering' style={{ marginTop: '-0.1rem' }}>후반전35</p>
+                      <p className='glowering' style={{ marginTop: '0.3rem' }}>후반전35</p>
                       <img className='gold-play' src={(id === '00' || id === '01') && (type === 'red') ? playGold : playTransparent} alt='play' />
                     </div>
                   </div>
