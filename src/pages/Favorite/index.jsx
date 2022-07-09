@@ -79,7 +79,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         isFavorite,
         type,
       }, index) => <NonLiveCard
-          key={`${id}` + index}
+          key={id}
           id={id}
           index={index}
           nonLiveData={nonLiveData}
