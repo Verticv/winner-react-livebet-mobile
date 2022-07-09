@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar';
 import MainHeader from '../../components/MainHeader';
@@ -14,38 +14,16 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [data, setData] = useState(favoriteCards);
   const [nonLiveData, setNonLiveData] = useState(nonLiveCard)
-  const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
-  const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
+  // const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
+  // const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [isDisplay, setIsDisplay] = useState(false);
 
-  useEffect(() => {
-    setIsChangeRedOrder(true);
-    if (isChangeRedOrder) {
-      const newArr = [...data];
-      const sortedArr = newArr.reverse();
-      setData(sortedArr);
-    } else {
-      setData(data)
-    }
-    setIsChangeRedOrder(false)
-  }, [isChangeRedOrder, data]);
 
-  useEffect(() => {
-    setIsChangeBlueOrder(true);
-    if (isChangeBlueOrder) {
-      const newArr = [...nonLiveData]
-      const sortedArr = newArr.reverse();
-      setNonLiveData(sortedArr);
-    } else {
-      setNonLiveData(nonLiveData);
-    }
-    setIsChangeBlueOrder(false);
-  }, [isChangeBlueOrder, nonLiveData]);
   return (
     <div className='favorite'>
       <NavBar />
       <MainHeader />
-      <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
+      <LiveListHeader/>
       {data?.map(({
         id,
         flag,
@@ -86,10 +64,10 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           handleClick={handleClick}
           isClicked={isClicked}
           setIsClicked={setIsClicked}
-          
+
           type={type}
         />)}
-      <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />
+      <NonLiveListHeader />
       {nonLiveData?.map(({
         id,
         flag,
@@ -101,7 +79,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
         isFavorite,
         type,
       }, index) => <NonLiveCard
-          key={id}
+          key={`${id}` + index}
           id={id}
           index={index}
           nonLiveData={nonLiveData}
@@ -118,7 +96,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
           cardId={cardId}
           setCardId={setCardId}
           addToCart={addToCart}
-          isClicked={isClicked} 
+          isClicked={isClicked}
           setIsClicked={setIsClicked}
           idSelect={idSelect}
           isIdSelected={isIdSelected}

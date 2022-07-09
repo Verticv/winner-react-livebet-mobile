@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import cup from '../../assets/images/cup/cup-gold.png';
-// import chronology from '../../assets/images/chronology/chronology-white.png';
-import chronology from '../../assets/images/imgs/btn-ico.png';
-import cup from '../../assets/images/imgs/m_icon_.png';
+import Dropdown from './DropDownItems';
+import chronology from '../../assets/images/imgs/ee3.png';
+import cup from '../../assets/images/imgs/ee1.png';
 import Modal from '../Modal';
 import useModal from '../../hooks/useModal';
 import btnArrow from '../../assets/images/imgs/btn-arrow.png';
+import cup2 from '../../assets/images/imgs/ee2.png';
 
 const MainHeader = () => {
   const { toggle, visible } = useModal();
@@ -16,6 +16,11 @@ const MainHeader = () => {
   const changeName = () => {
     setIsSelected((prev) => !prev);
   };
+  const banksOptions = [
+    "전체",
+    "진행중",
+    "예정중",
+  ];
   return (
     <>
       <div className='container-main-header'>
@@ -36,30 +41,25 @@ const MainHeader = () => {
           </p>
         </div>
         <div className='button-container'>
-          <button type='submit' style={{paddingRight: '1.2rem'}} className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
+          <button type='submit' className={`btn ${isClick && temp.length > 0 ? 'active' : ''}`}
             onClick={() => {
               toggle();
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem', marginTop: '0.5rem'}} className='icon' src={cup} alt='' />
+              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem', marginTop: '0.5rem' }} className='icon' src={cup} alt='' />
               <p className='text'>리그선택</p>
             </div>
-          </button> 
+          </button>
           <button type='submit' className='btn' onClick={changeName}>
             <div className='button-pho'>
-              <img className='icon' src={isSelected ? chronology : cup} alt='' />
+              <img className='icon' src={isSelected ? chronology : cup2} alt='' />
               {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
-              <img style={{ marginRight: '0.5rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
+              <img style={{ marginRight: '0.3rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
-          <div className='select'>
-            <select className='btn'>
-              <option value='전체'>전체</option>
-              <option value='진행중'>진행중</option>
-              <option value='예정중'>예정중</option>
-            </select>
-
+          <div className='dropdown'>
+            <Dropdown options={banksOptions} isSignup={true} />
           </div>
         </div>
       </div>

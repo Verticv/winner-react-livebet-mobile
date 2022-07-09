@@ -13,8 +13,8 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   // const [isClicked, setIsClicked] = useState(false);
-  const [data, setData] = useState([]);
-  const [dataBlue, setDataBlue] = useState([]);
+  const [data, setData] = useState(redCardArray);
+  const [dataBlue, setDataBlue] = useState(blueCardArray);
 
   useEffect(() => {
     if (!isChangeRedOrder) {

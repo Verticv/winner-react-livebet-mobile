@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MiddleNav from './MiddleNav';
 import DropDown from './DropDown';
-import group from '../../assets/images/other/group.png';
+import group from "../../assets/images/imgs/game.png";
 
 function LiveBet({ handleClick, cardId, cardData }) {
   const [idActive, setIdActive] = useState(0);

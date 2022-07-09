@@ -74,6 +74,7 @@
             img {
               width: 2.4375rem;
               height: 2.8125rem;
+              margin-top: 0.1rem;
             }
 
             .character {
@@ -109,6 +110,7 @@
 
             .score {
               color: #d8b948;
+              margin-top: 0.3rem;
             }
 
             .glowering {
@@ -117,7 +119,12 @@
               font-family: NotoSansCJKkrRegular;
               margin-right: 1.25rem;
               margin-left: 0;
-              text-shadow: 0.025rem 0.025rem 0.75rem #ff0006, -0.025rem -0.025rem 0.75rem #ff0006, 0.025rem -0.025rem 0.75rem #ff0006, -0.025rem 0.025rem 0.75rem #ff0006;
+              margin-top: 0.4rem;
+              text-shadow: 0.025rem 0.025rem 1.75rem #ff0006, -0.025rem -0.025rem 1.75rem #ff0006, 0.025rem -0.025rem 1.75rem #ff0006, -0.025rem 0.025rem 1.75rem #ff0006;
+            }
+
+            .gold-play {
+              cursor: pointer;
             }
 
             .livee {
@@ -128,13 +135,13 @@
               margin: 1.875rem 0;
               margin-top: 2.5rem;
               font-size: 2rem;
-              padding: 0.2rem 0.8rem;
+              padding: 0.2rem 1rem;
               text-transform: uppercase;
             }
 
             img {
-              width: 3rem;
-              margin-top: 0.6rem;
+              width: 3.4rem;
+              margin-top: 0.8rem;
             }
           }
         }
@@ -253,10 +260,6 @@
       margin-right: 0.275rem;
     }
 
-    .sq1 {
-      background-color: #fff30b;
-    }
-
     .sq2 {
       background-color: #b92025
     }
@@ -264,8 +267,13 @@
     .square {
       height: 2.8rem;
       width: 2.8rem;
-      margin-right: 1rem;
+      margin-right: 0.9rem;
       border-radius: 0.25rem;
+    }
+
+    .sq1 {
+      background-color: #fff30b;
+      margin-right: 1rem;
     }
 
     .ball {
@@ -290,6 +298,7 @@
     border: none;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 
     img {
       width: 5.43rem;
@@ -322,7 +331,8 @@
       img {
         width: 2.9rem;
         margin-top: 4rem;
-        height: 2.9rem
+        height: 2.9rem;
+        cursor: pointer;
       }
     }
 
@@ -345,6 +355,7 @@
     p {
       font-size: 2.875rem;
       margin-top: 0.5rem;
+      cursor: pointer;
     }
   }
 }
@@ -355,19 +366,32 @@
   height: 7.6875rem;
   width: 7.725rem;
   border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // &:active {
+  //   background: url('../../assets/images/imgs/red-red-active.png');
+  //   background-repeat: round;
+  //   img {
+  //     background: url('../../assets/images/imgs/ico-red-active.png');
+  //     background-repeat: round;
+  //     width: 2.625rem;
+  //     height: 1.625rem;
+  //   }
+  // }
 }
 
-.card-button-arrow:active {
-  background: url('../../assets/images/imgs/red-red-active.png');
-  background-repeat: round;
-}
+// .card-button-arrow:active {
+//   background: url('../../assets/images/imgs/red-red-active.png');
+//   background-repeat: round;
+// }
 
-.card-button-arrow:active img {
-  background: url('../../assets/images/imgs/ico-red-active.png');
-  background-repeat: round;
-  width: 2.625rem;
-  height: 1.625rem;
-}
+// .card-button-arrow:active img {
+//   background: url('../../assets/images/imgs/ico-red-active.png');
+//   background-repeat: round;
+//   width: 2.625rem;
+//   height: 1.625rem;
+// }
 
 .card-button-arrow-active {
   background: url('../../assets/images/imgs/red-red-active.png');

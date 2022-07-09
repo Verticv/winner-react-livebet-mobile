@@ -4,7 +4,7 @@ import inactivePlus from '../../assets/images/plus/plus-inacive.png';
 import redArrow from '../../assets/images/imgs/red-arrow.png';
 import redArrowActive from '../../assets/images/imgs/ico-red-active.png';
 
-const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type, setIsClicked, isIdSelected }) => {
+const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder, mainHeaderLive, id, favoriteCards, setData, data, index, isFavorite, flag, cardId, setCardId, cardData, setCardData, addToCart, handleClick, setIsDisplay, isClicked, type, setIsClicked, isIdSelected }) => {
   let buttonClass = 'inactive-button inactive-with-plus';
   if (id === idSelect && type === 'red') {
     if (isActive && withPlus) {
@@ -14,16 +14,6 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, mainHeaderL
     } else if (isActive) {
       buttonClass = 'active-button';
     }
-  }
-  const changeOrder = (e) => {
-    let temp;
-    const newCard = [...data];
-    if (+e.target.id !== 0) {
-      temp = newCard[e.target.id - 1];
-      newCard[e.target.id - 1] = newCard[e.target.id];
-      newCard[e.target.id] = temp;
-    }
-    setData(newCard);
   }
   return (
     <div style={{ display: 'block' }}>

@@ -11,7 +11,6 @@ import Footer from '../../components/Footer';
 
 const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
-  const [dataBlue, setDataBlue] = useState([]);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [idSelect, isIdSelected] = useState(0)
   const mainHeaderNonLive = [{
@@ -55,7 +54,8 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
     secondTeam: '레알마드리드',
     type: 'blue',
   }];
-
+  const [dataBlue, setDataBlue] = useState(mainHeaderNonLive);
+  
   useEffect(() => {
     if (!isChangeBlueOrder) {
       setDataBlue(mainHeaderNonLive);
