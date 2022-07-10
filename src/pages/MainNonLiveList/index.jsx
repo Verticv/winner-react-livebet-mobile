@@ -12,7 +12,7 @@ import Footer from '../../components/Footer';
 const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
-  const [idSelect, isIdSelected] = useState(0)
+  const [idSelect, isIdSelected] = useState();
   const mainHeaderNonLive = [{
     id: 0,
     isActive: true,

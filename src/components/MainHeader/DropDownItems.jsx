@@ -40,7 +40,7 @@ const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelecti
                 multiple={multiple}
             >
                 <div className="flex w-full items-center justify-between">
-                    <img style={{ width: '3.3125rem' }} src={icon} alt="icon" />
+                    <img style={{ width: '3.3125rem', marginTop: '0.2rem', marginLeft: '0.4rem', marginRight: '0.2rem' }} src={icon} alt="icon" />
                     <div className={labelClasses} style={labelStyle}><p style={{ marginTop: "2.5rem" }}>{sortValue}</p></div>
                     <img className="white-arrow" style={{ width: '1.375rem', height: '0.6875rem' }} src={arrow} alt="arrow" />
                 </div>
