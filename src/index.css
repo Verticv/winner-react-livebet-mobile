@@ -24,7 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 1242px;
   margin: auto;
-  background: #352828;
+  background: #000;
 }
 
 body p, button, span, div {
