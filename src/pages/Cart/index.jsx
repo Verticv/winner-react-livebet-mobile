@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import { format } from 'date-fns'
+import { ko } from "date-fns/locale"
 import cartIcon from '../../assets/images/imgs/cart.png'
 import Slide from './Slide';
 import { Button1, Button2 } from './Button';
@@ -13,6 +15,7 @@ import exitBtn from '../../assets/images/imgs/exit.png'
 import chart from '../../assets/images/imgs/ico.png';
 import blueArrow from '../../assets/images/imgs/blue-arrow.png'
 import redArrow from '../../assets/images/imgs/arrow-red.png'
+import clock from '../../assets/images/imgs/clock.png';
 
 const Cart = ({ cart, setCart, removeCard }) => {
   let { goBack } = useHistory();
@@ -43,6 +46,18 @@ const Cart = ({ cart, setCart, removeCard }) => {
       </p>
     </div>
   ));
+  const dateFormat = "yyyy-MM-dd"
+  const dateFormat1 = "H:mm:ss"
+
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+        clearInterval(interval);
+    };
+}, []);
+
   return (
     <div>
       <div className='line' />
@@ -54,6 +69,19 @@ const Cart = ({ cart, setCart, removeCard }) => {
             <div className='cart-num'>
               2
             </div>
+          </div>
+          <div className="clock">
+            <p className="date">{format(time, dateFormat, { locale: ko })}</p>
+            <p className="time">
+              <div>
+                <img
+                  src={clock}
+                  alt=""
+                  width="11"
+                  height="11"
+                />
+              </div>
+              {format(time, dateFormat1, { locale: ko })}</p>
           </div>
         </div>
         <div className='cartBtn' onClick={goBack}>
@@ -104,8 +132,8 @@ const Cart = ({ cart, setCart, removeCard }) => {
       <div>
         <div className='cart-btns'>
           {/* <div className='padding'> */}
-            {buttonsValue.map(({ content }) => <Button1 key={content} setValue={setValue}>{content}</Button1>)}
-            <Button1 className='active'>최대</Button1>
+          {buttonsValue.map(({ content }) => <Button1 key={content} setValue={setValue}>{content}</Button1>)}
+          <Button1 className='active'>최대</Button1>
 
         </div>
         <div className='cart-two-btns'>
@@ -119,7 +147,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
           </Button2>
         </div>
       </div>
-      <div className='line'/>
+      <div className='line' />
       <div className='cart-bottom-container'>
         <div className='cart-mark'>
           <img src={mark} alt='' />
@@ -159,7 +187,7 @@ const Cart = ({ cart, setCart, removeCard }) => {
           type='button'
         >
           <img className='button-icon' src={buttonIcon} alt='' />
-          <span style={{fontSize: '3.4375rem'}}>전체보기</span>
+          <span style={{ fontSize: '3.4375rem' }}>전체보기</span>
         </button>
       </div>
     </div>
