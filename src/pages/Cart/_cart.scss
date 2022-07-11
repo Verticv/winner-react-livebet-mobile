@@ -299,7 +299,7 @@
   .clock {
     display: flex;
     flex-direction: column;
-    margin-right: 0.625rem;
+    margin-right: 1.8rem;
     // font-size: 12px;
     margin-bottom: 0.1875rem;
 
@@ -308,15 +308,16 @@
       width: 100%;
       margin: 0;
       font-size: 3rem;
+      font-family: NotoSansCJKkrRegular;
     }
 
     .time {
       display: flex;
       justify-content: flex-end;
-      margin-top: -4px;
       color: #e5b877;
       width: 100%;
       margin: 0;
+      margin-top: -0.1875rem;
       font-family: RobotoRegular;
 
       img {

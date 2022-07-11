@@ -24,6 +24,7 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder
             <img style={{ width: '2.625rem', height: '1.625rem' }} id={index} onClick={changeOrder} src={type === 'red' && idSelect === id ? redArrowActive : redArrow} alt='' />
           </button>
           : null}
+
         <div className='section-num' id={id}>
           <button type='button' id={id} onClick={() => {
             setCardId(id);
