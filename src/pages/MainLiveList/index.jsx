@@ -9,7 +9,7 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [idSelect, isIdSelected] = useState('00')
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
   const mainHeaderLive = [{
@@ -83,6 +83,7 @@ const MainLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, set
 
   return (
     <div className='main-live-list'>
+      {setIsBlue(false)}
       <NavBar isActive />
       <MainHeader />
       <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder}/>

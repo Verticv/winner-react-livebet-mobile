@@ -54,7 +54,7 @@ const MainHeader = () => {
           <button type='submit' className='btn' onClick={changeName}>
             <div className='button-pho'>
               <img className='icon' src={isSelected ? chronology : cup2} alt='' />
-              {isSelected ? <p className='text'>시간순</p> : <p className='text'>리그순보기</p>}
+              {isSelected ? <p className='text'>리그순보기</p> : <p className='text'>리그순</p>}
               <img style={{ marginRight: '-0.1rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>

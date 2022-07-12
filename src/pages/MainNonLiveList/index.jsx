@@ -9,7 +9,7 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainNonLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [idSelect, isIdSelected] = useState();
@@ -68,6 +68,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
 
   return (
     <div className='main-non-live-list'>
+      {setIsBlue(true)}
       <NavBar isActive />
       <MainHeader />
       <NonLiveListHeader setIsChangeBlueOrder={setIsChangeBlueOrder} />

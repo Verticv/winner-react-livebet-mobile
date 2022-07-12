@@ -8,7 +8,7 @@ import LiveCard from '../../components/LiveCard';
 import NonLiveCard from '../../components/NonLiveCard';
 import Footer from '../../components/Footer';
 
-function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToCart, handleClick, isClicked, setIsClicked }) {
+function Favorite({ setIsBlue, removeCard, setCardId, cardData, setCardData, cardId, addToCart, handleClick, isClicked, setIsClicked }) {
   const { favoriteCards, nonLiveCard } = useSelector((state) => state.cards);
   const [idSelect, isIdSelected] = useState('00');
   const [idBlueSelected, setIdBlueSelected] = useState(0);
@@ -21,6 +21,7 @@ function Favorite({ removeCard, setCardId, cardData, setCardData, cardId, addToC
 
   return (
     <div className='favorite'>
+      {setIsBlue(false)}
       <NavBar />
       <MainHeader />
       <LiveListHeader/>

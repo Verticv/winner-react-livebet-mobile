@@ -25,16 +25,11 @@ const Footer = () => {
           <div className='sub-container1'>
             <img src={cart} alt='cart' />
             <p className='main-p'
-            // style={{marginLeft: '3rem'}}
-            >베팅카드 열기</p>
+            >베팅카트</p>
           </div>
 
-          {/* <div className='vl' /> */}
-
-          <div className='sub-container2' style={{ paddingRight: `${isIOS ? '4.5rem' : '7rem' } ` }}>
-            <p
-            // style={{marginRight: '2rem'}}
-            >
+          <div className='sub-container2' style={{ paddingRight: `${isIOS ? '4.5rem' : '7rem'} ` }}>
+            <p>
               선택경기
               <span
                 style={{ marginLeft: '2rem', marginRight: '1rem' }}

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: url('../../assets/images/imgs/navBtn.png');
+  background: url('../../assets/images/imgs/nav-btn.png');
   background-repeat: round;
   color: #8a8a8d;
   width: 17%;
@@ -27,15 +27,13 @@
 
   img {
     width: 3.4rem;
-    // -webkit-filter: invert(.4);
-    // filter: invert(.4);
-    // margin-top: 0.2rem;
   }
 
   .text {
     font-family: NotoSansCJKkrRegular;
     font-size: 2.2rem;
     text-transform: uppercase;
+    font-weight: 600;
   }
 
   .num {
@@ -55,10 +53,7 @@
     background-image: url("../../assets/images/other/headerButtonBackground-active.png");
     background-repeat: round;
     color: #000;
-    // img {
-    //   -webkit-filter: invert(1);
-    //   filter: invert(1);
-    // }
+
     .num {
       background-color: #222226;
       color: #9c8c5e;

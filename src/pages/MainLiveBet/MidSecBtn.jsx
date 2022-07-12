@@ -40,7 +40,7 @@ function MidSecBtn({
               {number3}
             </span>
           </button>
-          <p>{leftText}</p>
+          <p style={{ textAlign: 'end' }}>{leftText}</p>
         </div>
       </div>
     </div>

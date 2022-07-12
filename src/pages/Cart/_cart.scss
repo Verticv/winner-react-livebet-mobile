@@ -10,11 +10,21 @@
   margin: 0.78125rem 0.5rem;
   width: 23.7rem;
   padding: 0;
+
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
 }
 
-.cart-btn:focus {
-  filter: brightness(130%);
-}
+// .cart-btn:focus {
+//   filter: brightness(130%);
+// }
 
 .cart-btn-photo {
   padding: 0;
@@ -32,6 +42,16 @@
   height: 8.1875rem;
   font-size: 3rem;
   margin: 0 1.0625rem;
+
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
 
   img {
     margin-right: 1rem;
@@ -212,6 +232,16 @@
   img {
     width: 4.0625rem;
   }
+
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
 }
 
 .cart-p-repeat {
@@ -361,6 +391,14 @@
   // height: 1.875rem;
   margin-bottom: -0.5rem;
   transform: rotate(180deg);
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
 }
 
 .cart-num {
@@ -429,7 +467,13 @@
     border: 0;
     padding: 0;
 
+    &:focus {
+      -webkit-filter: brightness(130%);
+      filter: brightness(130%);
+    }
+
     &:hover {
+      -webkit-filter: brightness(130%);
       filter: brightness(130%);
     }
 
@@ -460,6 +504,7 @@
     background-repeat: round;
     color: #000;
     border-radius: 0;
+    font-weight: 600;
   }
 }
 
@@ -473,6 +518,10 @@
   padding-left: 1.125rem;
   padding-right: 1.125rem;
   border-bottom: 1.9375rem solid;
+
+  p {
+    font-weight: 600;
+  }
 
   .active {
     background: url('../../assets/images/imgs/btn1.png');
@@ -503,6 +552,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
 }
 
 .cart-mark {
@@ -510,7 +569,7 @@
   font-size: 3rem;
 
   p {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   img {
@@ -599,4 +658,29 @@
     width: 3.3125rem;
     height: 3.125rem;
   }
+
+  &:focus {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+
+  &:hover {
+    -webkit-filter: brightness(130%);
+    filter: brightness(130%);
+  }
+}
+
+.cart-name2 {
+  height: 13.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../assets/images/imgs/cart-card-bg.png');
+  background-repeat: round;
+  color: #909090;
+  // min-height: 17.6875rem;
+  font-size: 3rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 0.1875rem solid #000;
 }

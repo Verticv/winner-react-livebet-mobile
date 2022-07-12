@@ -7,7 +7,7 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainLive = ({ setIsBlue, redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [idSelect, isIdSelected] = useState('00')
   // const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
@@ -38,6 +38,7 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
 
   return (
     <>
+    {setIsBlue(false)}
       <NavBar />
       <div className='back'>
         <MainHeader />
