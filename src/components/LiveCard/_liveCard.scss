@@ -392,6 +392,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:active {
+    background: url('../../assets/images/imgs/red-red-active.png');
+    background-repeat: round;
+  }
 }
 
 

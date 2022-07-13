@@ -141,14 +141,16 @@
         width: 2.43rem;
         height: 1.437rem;
       }
-      &:focus {
-        -webkit-filter: brightness(130%);
-        filter: brightness(130%);
+
+      &:active {
+        -webkit-filter: brightness(160%);
+        filter: brightness(160%);
       }
-      &:hover {
-        -webkit-filter: brightness(130%);
-        filter: brightness(130%);
-      }
+
+      // &:hover {
+      //   -webkit-filter: brightness(130%);
+      //   filter: brightness(130%);
+      // }
     }
   }
 

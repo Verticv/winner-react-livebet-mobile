@@ -11,15 +11,15 @@
   width: 23.7rem;
   padding: 0;
 
-  &:hover {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
 
-  &:focus {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:focus {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 }
 
 // .cart-btn:focus {
@@ -43,15 +43,15 @@
   font-size: 3rem;
   margin: 0 1.0625rem;
 
-  &:focus {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
 
-  &:hover {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:hover {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 
   img {
     margin-right: 1rem;
@@ -233,15 +233,15 @@
     width: 4.0625rem;
   }
 
-  &:focus {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
 
-  &:hover {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:hover {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 }
 
 .cart-p-repeat {
@@ -391,14 +391,14 @@
   // height: 1.875rem;
   margin-bottom: -0.5rem;
   transform: rotate(180deg);
-  &:focus {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
-  &:hover {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:hover {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 }
 
 .cart-num {
@@ -467,15 +467,15 @@
     border: 0;
     padding: 0;
 
-    &:focus {
+    &:active {
       -webkit-filter: brightness(130%);
       filter: brightness(130%);
     }
 
-    &:hover {
-      -webkit-filter: brightness(130%);
-      filter: brightness(130%);
-    }
+    // &:hover {
+    //   -webkit-filter: brightness(130%);
+    //   filter: brightness(130%);
+    // }
 
     img {
       width: 3rem;
@@ -553,15 +553,15 @@
   align-items: center;
   justify-content: center;
 
-  &:focus {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
 
-  &:hover {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:hover {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 }
 
 .cart-mark {
@@ -659,15 +659,15 @@
     height: 3.125rem;
   }
 
-  &:focus {
+  &:active {
     -webkit-filter: brightness(130%);
     filter: brightness(130%);
   }
 
-  &:hover {
-    -webkit-filter: brightness(130%);
-    filter: brightness(130%);
-  }
+  // &:hover {
+  //   -webkit-filter: brightness(130%);
+  //   filter: brightness(130%);
+  // }
 }
 
 .cart-name2 {

@@ -61,7 +61,7 @@
       background-repeat: round;
     }
 
-    &:hover {
+    &:active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
       background-repeat: round;
     }
@@ -291,7 +291,7 @@
   height: 5.3rem;
   padding: 0 0.45rem 0.0625rem 0;
 
-  &:hover {
+  &:active {
     background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
     background-repeat: round;
   }
