@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { isAndroid } from 'react-device-detect';
 import NavBar from '../../components/NavBar';
 import MainHeader from '../../components/MainHeader';
 import LiveListHeader from '../../components/LiveListHeader';
@@ -38,7 +39,7 @@ function Favorite({ setIsBlue, removeCard, setCardId, cardData, setCardData, car
         isFavorite,
         type,
       }, index) => <LiveCard
-          key={id}
+          key={!isAndroid ? id : `${index}`}
           cardData={cardData}
           setCardData={setCardData}
           removeCard={removeCard}
@@ -80,7 +81,7 @@ function Favorite({ setIsBlue, removeCard, setCardId, cardData, setCardData, car
         isFavorite,
         type,
       }, index) => <NonLiveCard
-          key={id}
+          key={!isAndroid ? id : `${index}`}
           id={id}
           index={index}
           nonLiveData={nonLiveData}

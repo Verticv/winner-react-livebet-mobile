@@ -230,6 +230,11 @@
   height: 7.6875rem;
   width: 7.725rem;
   border: 0;
+
+  &:active {
+    background: url('../../assets/images/imgs/arrow-blue-active.png');
+    background-repeat: round;
+  }
 }
 
 .card-button-blue-active {
