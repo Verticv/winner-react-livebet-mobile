@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
 import LiveCard from '../../components/LiveCard';
@@ -7,7 +8,7 @@ import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
 
-const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [idSelect, isIdSelected] = useState('00')
   // const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
@@ -35,6 +36,10 @@ const MainLive = ({ redCardArray, blueCardArray, addToCart, handleClick, cardId,
       setDataBlue(sortedArr)
     }
   }, [isChangeBlueOrder, blueCardArray]);
+
+  useEffect(() => {
+    setIsBlue(false);
+  }, [isBlue]);
 
   return (
     <>

@@ -12,7 +12,7 @@ const Modal = ({ visible, toggle, isCheck, setIsCheck, isClick, setIsClick, temp
           <div className='right-header'>
             <p>리그선택</p>
           </div>
-          <div className='left-header'>
+          <div className='left-header' onClick={toggle}>
             <button type='button' className='exit-header'>
               <img
                 className='exit-img'

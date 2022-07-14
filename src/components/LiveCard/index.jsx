@@ -19,12 +19,12 @@ function LiveCard({
   const [showHeader, setShowHeader] = useState(false);
   const [value, setValue] = useState('23');
   // const [isClicked, setIsClicked] = useState(false);
-  const [isStar, setIsStar] = useState(true);
+  const [isStar, setIsStar] = useState(false);
   const [isDisplay, setIsDisplay] = useState(false);
   const { favoriteCards, mainHeaderLive } = useSelector((state) => state.cards);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
-    flag ? setValue(23) : setValue('15');
+    // flag ? setValue(23) : setValue('15');
   }, []);
   const toggleStar = () => setIsStar((prev) => !prev);
   const addToCartHandler = () => {
@@ -72,26 +72,29 @@ function LiveCard({
                   <button style={{ background: 'transparent', border: 'none', padding: '0' }} type='button'
                     onClick={isFavorite ? removeFromFavorite : toggleStar}
                   >
-                    <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                    {isFavorite
+                      ? <img className='star' id={id} src={star} alt='star' />
+                      : <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                    }
                   </button>
                   <div className='col'>
                     <div style={{ marginTop: '-0.9rem' }}>
                       <div className='shirt'>
                         <img src={redShirt} alt='shirt' />
                         <span className='character'>H</span>
-                        <p>{firstTeam}</p>
+                        <p>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character'>A</span>
-                        <p>{secondTeam}</p>
+                        <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
                     <div className='play-video'>
                       <p className='livee'>live</p>
                       <p className='score'>
                         {firstScore}
-                        <span style={{ color: '#858585' }}>-</span>
+                        <span style={{ color: '#a0a0a0' }}>-</span>
                         {secondScore}
                       </p>
                       <p className='glowering' style={{ marginTop: '0.3rem' }}>후반전35</p>

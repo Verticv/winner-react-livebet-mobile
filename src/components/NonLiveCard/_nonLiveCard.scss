@@ -26,6 +26,7 @@
           background-image: url('../../assets/images/imgs/body-blue.png');
           background-repeat: round;
           height: 15.1875rem;
+
           .nLive-row {
             .nLive-col {
               div {
@@ -70,6 +71,10 @@
                 font-size: 2.625rem;
                 margin: 0;
                 margin-left: 0.625rem;
+                white-space: nowrap;
+                width: 35rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
 
               img {
@@ -225,6 +230,11 @@
   height: 7.6875rem;
   width: 7.725rem;
   border: 0;
+
+  &:active {
+    background: url('../../assets/images/imgs/arrow-blue-active.png');
+    background-repeat: round;
+  }
 }
 
 .card-button-blue-active {

@@ -17,21 +17,22 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder
   }
   return (
     <div style={{ display: 'block' }}>
-      <div>
+      <div className={`${id ===idSelect ? 'active-active' : ''}`}>
         {isFavorite
           ? <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
             onClick={changeOrder}>
             <img style={{ width: '2.625rem', height: '1.625rem' }} id={index} onClick={changeOrder} src={type === 'red' && idSelect === id ? redArrowActive : redArrow} alt='' />
           </button>
           : null}
-        <div className='section-num' id={id}>
+
+        <div className={`section-num ${id === idSelect ? 'activee' : ''}`}  id={id}>
           <button type='button' id={id} onClick={() => {
             setCardId(id);
             setIsDisplay(!isDisplay);
             isIdSelected(id);
             setIsClicked(true);
           }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.85rem' : '15.1875rem' }}>
-            <img id={id} src={isClicked && idSelect === id ? activePlus : inactivePlus} alt='' />
+            <img id={id} src={idSelect === id ? activePlus : inactivePlus} alt='' />
             <p>{value}</p>
           </button>
         </div>

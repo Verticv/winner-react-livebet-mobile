@@ -141,6 +141,17 @@
         width: 2.43rem;
         height: 1.437rem;
       }
+
+      &:active {
+        -webkit-filter: brightness(125%);
+        filter: brightness(125%);
+        background: rgb(104 77 82);
+      }
+
+      // &:hover {
+      //   -webkit-filter: brightness(130%);
+      //   filter: brightness(130%);
+      // }
     }
   }
 
@@ -188,8 +199,13 @@
 
         p {
           color: #d1cecf;
-          font-size: 2.125rem;
-          margin-top: 1.8rem;
+          font-size: 2.625rem;
+          margin-top: 2.4rem;
+          white-space: nowrap;
+          min-width: 5rem;
+          width: 21rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .add-button {
@@ -204,6 +220,8 @@
           // z-index: 1;
           span {
             font-family: RobotoRegular;
+            color: #d1cecf;
+            font-size: 2.625rem;
           }
 
           &.red-button {

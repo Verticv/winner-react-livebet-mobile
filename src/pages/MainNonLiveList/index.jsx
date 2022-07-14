@@ -9,53 +9,85 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainNonLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [idSelect, isIdSelected] = useState();
   const mainHeaderNonLive = [{
     id: 0,
     isActive: true,
-    flag: germany,
-    name: '분데스리가',
+    flag: spain,
+    name: '라리가',
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
     type: 'blue',
   }, {
     id: 1,
     isActive: false,
-    flag: '',
-    name: '',
+    flag: england,
+    name: '프리미어리그',
     firstTeam: '맨체스터유나이티드',
     secondTeam: '리버풀',
     type: 'blue',
   }, {
     id: 2,
     isActive: false,
-    flag: spain,
-    name: '라리가',
-    firstTeam: '바이헤른뮌헨',
-    secondTeam: '프랑크푸르트',
+    flag: germany,
+    name: '분데스리가',
+    firstTeam: '맨체스터유나이티드',
+    secondTeam: '리버풀',
     type: 'blue',
   }, {
     id: 3,
     isActive: false,
-    flag: england,
-    name: '프리미어리그',
+    flag: spain,
+    name: '라리가',
     firstTeam: '멘체스터유나이티드',
-    secondTeam: '프랑크푸르트',
+    secondTeam: '리버풀',
     type: 'blue',
   }, {
     id: 4,
     isActive: false,
+    flag: '',
+    name: '',
+    firstTeam: '멘체스터유나이티드',
+    secondTeam: '리버풀',
+    type: 'blue',
+  }, {
+    id: 5,
+    isActive: false,
+    flag: '',
+    name: '',
+    firstTeam: '멘체스터유나이티드',
+    secondTeam: '리버풀',
+    type: 'blue',
+  }, {
+    id: 6,
+    isActive: false,
     flag: spain,
     name: '분데스리가',
-    firstTeam: 'FC바르셀로나',
-    secondTeam: '레알마드리드',
+    firstTeam: '멘체스터유나이티드',
+    secondTeam: '리버풀',
     type: 'blue',
+  }, {
+    id: 7,
+    isActive: false,
+    flag: england,
+    name: '프리미어리그',
+    firstTeam: '맨체스터유나이티드',
+    secondTeam: '리버풀',
+    type: 'blue',
+  }, {
+    id: 8,
+    isActive: false,
+    flag: england,
+    name: '프리미어리그',
+    firstTeam: '맨체스터유나이티드',
+    secondTeam: '리버풀',
+    type: 'blue'
   }];
   const [dataBlue, setDataBlue] = useState(mainHeaderNonLive);
-  
+
   useEffect(() => {
     if (!isChangeBlueOrder) {
       setDataBlue(mainHeaderNonLive);
@@ -65,6 +97,10 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
       setDataBlue(sortedArr)
     }
   }, [isChangeBlueOrder]);
+
+  useEffect(() => {
+    setIsBlue(true);
+  }, [isBlue]);
 
   return (
     <div className='main-non-live-list'>
@@ -84,7 +120,7 @@ const MainNonLiveList = ({ addToCart, handleClick, cardId, setCardId, cardData, 
           cardId={cardId}
           setCardId={setCardId}
           isActive={isActive}
-          isClicked={isClicked} 
+          isClicked={isClicked}
           setIsClicked={setIsClicked}
           type={type}
           idSelect={idSelect}

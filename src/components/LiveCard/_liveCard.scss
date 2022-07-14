@@ -69,6 +69,10 @@
               font-size: 2.625rem;
               margin: 0;
               margin-left: 0.625rem;
+              white-space: nowrap;
+              width: 35rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
 
             img {
@@ -97,7 +101,7 @@
             display: flex;
             align-items: center;
             height: 1.5625rem;
-            justify-content: space-evenly;
+            // justify-content: space-evenly;
             margin-top: 0.625rem;
             margin-left: 0.5rem;
 
@@ -299,6 +303,7 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
+    padding: 0;
 
     img {
       width: 5.43rem;
@@ -336,10 +341,6 @@
       }
     }
 
-    &.active-with-plus {
-      background-repeat: round;
-      height: 14.6rem;
-    }
 
     &.inactive-with-plus {
       background-repeat: round;
@@ -358,6 +359,28 @@
       cursor: pointer;
     }
   }
+
+  &.activee {
+    .live-btn {
+      background-image: url("../../assets/images/cards/redCardBackgrounds/sideGradient-active.png");
+      background-repeat: round;
+
+      img {
+        width: 5.43rem;
+        height: auto;
+        margin: auto;
+        margin-top: 2.7rem;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+      }
+
+      p {
+        margin-top: -0.9rem;
+        text-shadow: 0.125rem 0.125rem 1.25rem #f8c488;
+      }
+    }
+  }
 }
 
 .card-button-arrow {
@@ -369,32 +392,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // &:active {
-  //   background: url('../../assets/images/imgs/red-red-active.png');
-  //   background-repeat: round;
-  //   img {
-  //     background: url('../../assets/images/imgs/ico-red-active.png');
-  //     background-repeat: round;
-  //     width: 2.625rem;
-  //     height: 1.625rem;
-  //   }
-  // }
+
+  &:active {
+    background: url('../../assets/images/imgs/red-red-active.png');
+    background-repeat: round;
+  }
 }
 
-// .card-button-arrow:active {
-//   background: url('../../assets/images/imgs/red-red-active.png');
-//   background-repeat: round;
-// }
-
-// .card-button-arrow:active img {
-//   background: url('../../assets/images/imgs/ico-red-active.png');
-//   background-repeat: round;
-//   width: 2.625rem;
-//   height: 1.625rem;
-// }
 
 .card-button-arrow-active {
   background: url('../../assets/images/imgs/red-red-active.png');
   background-repeat: round;
 
 }
+
+// .active-active {
+//   .card-button-arrow {
+//     background: url('../../assets/images/imgs/red-red-active.png');
+//     background-repeat: round;
+//   }
+// }

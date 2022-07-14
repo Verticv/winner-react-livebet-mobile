@@ -61,6 +61,11 @@
       background-repeat: round;
     }
 
+    &:active {
+      background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
+      background-repeat: round;
+    }
+
     .button-pho {
       display: flex;
       align-items: center;
@@ -285,6 +290,11 @@
   color: #fff;
   height: 5.3rem;
   padding: 0 0.45rem 0.0625rem 0;
+
+  &:active {
+    background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
+    background-repeat: round;
+  }
 
   .container {
     position: relative;

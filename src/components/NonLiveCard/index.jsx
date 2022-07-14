@@ -15,7 +15,7 @@ function NonLiveCard({
 }) {
   const [showHeader, setShowHeader] = useState(false);
   // const [isClicked, setIsClicked] = useState(false);
-  const [isStar, setIsStar] = useState(true);
+  const [isStar, setIsStar] = useState(false);
   const [isBlueDisplay, setIsBlueDisplay] = useState(false);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
@@ -47,19 +47,22 @@ function NonLiveCard({
                 <div className='nLive-row'>
                   <button style={{ background: 'transparent', border: 'none', padding: '0' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
-                    <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                    {isFavorite
+                      ? <img className='nLive-star' id={id} src={star} alt='star' />
+                      : <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />}
                   </button>
                   <div className='nLive-col'>
                     <div style={{ marginTop: '-0.9rem' }}>
                       <div className='nLive-shirt'>
                         <img src={redShirt} alt='nLive-shirt' />
                         <span className='character'>H</span>
-                        <p>{firstTeam}</p>
+                        <p>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='nLive-shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character'>A</span>
-                        <p>{secondTeam}</p>
+                        <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
+                        {/* <p>{secondTeam}</p> */}
                       </div>
                     </div>
                     <div className='nLive-play-video'>
