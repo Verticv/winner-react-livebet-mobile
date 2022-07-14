@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Dropdown from './DropDownItems';
 import chronology from '../../assets/images/imgs/ee3.png';
 import cup from '../../assets/images/imgs/ee1.png';
