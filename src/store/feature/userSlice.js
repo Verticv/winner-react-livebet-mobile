@@ -5,14 +5,15 @@ import england from '../../assets/images/flags/england.png';
 import flag from '../../assets/images/flags/spain.png';
 
 const initialState = {
+  values: {btn1: [], btn2: '시간순', btn3: '전체'},
   favoriteCards: [{
     unique: 1,
-    id: '00',
+    id: '000',
     flag: spain,
     name: '라리가',
     isActive: true,
     withPlus: true,
-    firstScore: 1,
+    firstScore: 2,
     secondScore: 0,
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
@@ -21,26 +22,26 @@ const initialState = {
     },
     {
       unique: 2,
-      id: '01',
+      id: '001',
       flag: england,
       name: '프리미어리그',
       isActive: false,
       withPlus: true,
-      firstScore: 1,
+      firstScore: 2,
       secondScore: 0,
-      firstTeam: 'FC바르셀로나',
-      secondTeam: '레알마드리드',
+      firstTeam: '맨체스터유나이티드',
+      secondTeam: '리버풀',
       isFavorite: true,
       type: 'red',
     },
     {
       unique: 3,
-      id: '02',
+      id: '002',
       flag: germany,
       name: '분데스리가',
       isActive: false,
       withPlus: true,
-      firstScore: 1,
+      firstScore: 2,
       secondScore: 0,
       firstTeam: '바이헤른뮌헨',
       secondTeam: '프랑크푸르트',
@@ -49,12 +50,12 @@ const initialState = {
     },
     {
       unique: 4,
-      id: '03',
+      id: '003',
       flag: spain,
       name: '라리가',
       isActive: true,
       withPlus: true,
-      firstScore: 1,
+      firstScore: 2,
       secondScore: 0,
       firstTeam: 'FC바르셀로나',
       secondTeam: '레알마드리드',
@@ -75,8 +76,8 @@ const initialState = {
     },{
       unique: 6,
       id: 1,
-      flag: germany,
-      name: '분데스리가',
+      flag: england,
+      name: '프리미어리그',
       isActive: false,
       withPlus: false,
       firstTeam: '맨체스터유나이티드',
@@ -87,12 +88,12 @@ const initialState = {
     {
       unique: 7,
       id: 2,
-      flag: spain,
-      name: '라리가',
+      flag: england,
+      name: '프리미어리그',
       isActive: true,
       withPlus: true,
-      firstTeam: 'FC바르셀로나',
-      secondTeam: '레알마드리드',
+      firstTeam: '맨체스터유나이티드',
+      secondTeam: '리버풀',
       isFavorite: true,
       type: 'blue',
     }],
@@ -101,7 +102,7 @@ const initialState = {
       flag: flag,
       name: '라리가',
       isActive: true,
-      firstScore: '1',
+      firstScore: '2',
       secondScore: '0',
       firstTeam: 'FC바르셀로나',
       secondTeam: '레알마드리드',
@@ -136,8 +137,8 @@ const initialState = {
       isActive: false,
       firstScore: '2',
       secondScore: '0',
-      firstTeam: '바이헤른뮌헨',
-      secondTeam: '프랑크푸르트',
+      firstTeam: 'FC바르셀로나',
+      secondTeam: '레알마드리드',
       withPlus: true,
       type: 'red',
     }],
@@ -177,8 +178,14 @@ const initialState = {
 };
 
 export const userSlice = createSlice({
-  name: 'cards',
+  name: 'user',
   initialState,
+  reducers: {
+    mainHeader: (state, action) => {
+      state.values = action.payload;
+    },
+  },
 });
+export const { mainHeader } = userSlice.actions;
 export default userSlice.reducer;
 export const selectUser = (state) => state.user.value;

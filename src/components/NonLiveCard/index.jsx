@@ -56,12 +56,13 @@ function NonLiveCard({
                       <div className='nLive-shirt'>
                         <img src={redShirt} alt='nLive-shirt' />
                         <span className='character'>H</span>
-                        <p>{firstTeam}</p>
+                        <p>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='nLive-shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character'>A</span>
-                        <p>{secondTeam}</p>
+                        <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
+                        {/* <p>{secondTeam}</p> */}
                       </div>
                     </div>
                     <div className='nLive-play-video'>

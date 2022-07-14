@@ -24,7 +24,7 @@ function LiveCard({
   const { favoriteCards, mainHeaderLive } = useSelector((state) => state.cards);
   useEffect(() => {
     flag ? setShowHeader(true) : setShowHeader(false);
-    flag ? setValue(23) : setValue('15');
+    // flag ? setValue(23) : setValue('15');
   }, []);
   const toggleStar = () => setIsStar((prev) => !prev);
   const addToCartHandler = () => {
@@ -82,12 +82,12 @@ function LiveCard({
                       <div className='shirt'>
                         <img src={redShirt} alt='shirt' />
                         <span className='character'>H</span>
-                        <p>{firstTeam}</p>
+                        <p>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character'>A</span>
-                        <p>{secondTeam}</p>
+                        <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
                     <div className='play-video'>

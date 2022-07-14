@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import cart from '../../assets/images/other/cart.png';
 import { isIOS } from 'react-device-detect';
 
 const Footer = () => {
-  useEffect(() => {
-    if (isIOS) {
-      console.log('isIOS', isIOS);
-    }
-  })
+
   const history = useHistory();
 
   const handleClick = () => {
@@ -25,7 +21,7 @@ const Footer = () => {
           <div className='sub-container1'>
             <img src={cart} alt='cart' />
             <p className='main-p'
-            >베팅카트</p>
+            >베팅카트 열기</p>
           </div>
 
           <div className='sub-container2' style={{ paddingRight: `${isIOS ? '4.5rem' : '7rem'} ` }}>

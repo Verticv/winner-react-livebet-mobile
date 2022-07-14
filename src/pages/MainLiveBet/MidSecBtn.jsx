@@ -16,10 +16,10 @@ function MidSecBtn({
           add();
           setRightActiveBackground((prev) => !prev);
         }}>
-          <p>{rightText}</p>
+          <p>{rightText.length > 19 ? `${rightText.slice(0, 19)}...` : rightText}</p>
           <button className={`add-button ${isFirstItemRed ? 'red-button' : ''}`} type='button' onClick={add}>
-            {isFirstItemRed ? <img className='red-arrow' src={redArrow} alt=''/> : null}
-            <span style={{paddingTop: '3rem', paddingRight: '0'}}>
+            {isFirstItemRed ? <img className='red-arrow' src={redArrow} alt='' /> : null}
+            <span style={{ paddingTop: '3rem', paddingRight: '0' }}>
               {number1}
             </span>
           </button>
@@ -28,19 +28,19 @@ function MidSecBtn({
           add();
           setMiddleActiveBackground((prev) => !prev)
         }}>
-          <button className='add-button' type='button' onClick={add}><span style={{paddingTop: '4rem', paddingBottom: '4rem'}}>{number2}</span></button>
+          <button className='add-button' type='button' onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();
           setLeftActiveBackground((prev) => !prev);
         }}>
           <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} type='button' onClick={add}>
-            {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt=''/> : null}
-            <span style={{padding: '3rem 0'}}>
+            {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt='' /> : null}
+            <span style={{ padding: '3rem 0' }}>
               {number3}
             </span>
           </button>
-          <p style={{ textAlign: 'end' }}>{leftText}</p>
+          <p style={{ textAlign: 'end' }}>{leftText.length > 19 ? `${leftText.slice(0, 19)}...` : leftText}</p>
         </div>
       </div>
     </div>

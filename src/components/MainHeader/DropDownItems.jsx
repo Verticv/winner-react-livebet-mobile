@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import { useLayoutEffect } from "react";
 import arrow from '../../assets/images/imgs/btn-arrow.png';
 import icon from '../../assets/images/imgs/true.png';
 
-const SortBy = ({ children, options, value, onChange, onClick, multiple }) => (
+const SortBy = ({ btn3, setBtn3, children, options, value, onChange, onClick, multiple }) => (
     <div className="container" style={{ padding: '0' }}>
         <select
             className="select-overlay"
             id="filter-select"
             name="filter-select[]"
-            value={value}
-            onChange={onChange}
+            value={btn3}
+            onChange={(e) => {
+                onChange(e);
+                setBtn3(e.target.value);
+            }}
             onClick={onClick}
             multiple={multiple}
         >
@@ -25,18 +29,22 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple }) => (
     </div>
 );
 
-const Dropdown = ({ options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false }) => {
-    const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : isSignup ? options[0] : "전체회차")
-
+const Dropdown = ({ btn3, setBtn3, options, children, labelStyle, labelClasses, isLeagueSelection = false, isContact = false, multiple = false, isSignup = false }) => {
+    const [sortValue, setSortValue] = useState(isContact ? "전체" : isLeagueSelection ? "진행중" : isSignup ? options[0] : "예정중")
+    useLayoutEffect(() => {
+        setSortValue(btn3)
+    }, [btn3])
+    
     const onChange = e => setSortValue(e.currentTarget.value);
 
     return (
         <form style={{ width: '100%' }}>
             <SortBy
+                btn3={btn3}
+                setBtn3={setBtn3}
                 options={options}
                 value={sortValue}
                 onChange={onChange}
-                onClick={() => console.log('on click!')}
                 multiple={multiple}
             >
                 <div className="flex w-full items-center justify-between">

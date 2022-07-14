@@ -9,7 +9,7 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
   const [idSelect, isIdSelected] = useState('00')
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
   const mainHeaderLive = [{
@@ -17,7 +17,7 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
     isActive: true,
     flag: spain,
     name: '라리가',
-    firstScore: '1',
+    firstScore: '2',
     secondScore: '0',
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
@@ -26,8 +26,8 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
   }, {
     id: '01',
     isActive: false,
-    flag: '',
-    name: '',
+    flag: england,
+    name: '프리미어리그',
     firstScore: '2',
     secondScore: '0',
     firstTeam: '맨체스터유나이티드',
@@ -48,9 +48,9 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
   }, {
     id: '03',
     isActive: false,
-    flag: england,
-    name: '프리미어리그',
-    firstScore: '1',
+    flag: spain,
+    name: '라리가',
+    firstScore: '2',
     secondScore: '0',
     firstTeam: 'FC바르셀로나',
     secondTeam: '레알마드리드',
@@ -59,12 +59,34 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
   }, {
     id: '04',
     isActive: false,
-    flag: germany,
-    name: '분데스리가',
+    flag: '',
+    name: '',
     firstScore: '2',
     secondScore: '0',
-    firstTeam: '바이헤른뮌헨',
-    secondTeam: '프랑크푸르트',
+    firstTeam: 'FC바르셀로나',
+    secondTeam: '레알마드리드',
+    isFavorite: false,
+    type: 'red',
+  }, {
+    id: '05',
+    isActive: false,
+    flag: '',
+    name: '',
+    firstScore: '2',
+    secondScore: '0',
+    firstTeam: 'FC바르셀로나',
+    secondTeam: '레알마드리드',
+    isFavorite: false,
+    type: 'red',
+  }, {
+    id: '06',
+    isActive: false,
+    flag: england,
+    name: '프리미어리그',
+    firstScore: '2',
+    secondScore: '0',
+    firstTeam: '맨체스터유나이티드',
+    secondTeam: '리버풀',
     isFavorite: false,
     type: 'red',
   }];
@@ -81,12 +103,15 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
     }
   }, [isChangeRedOrder]);
 
+  useEffect(() => {
+    setIsBlue(false);
+  }, [isBlue]);
+
   return (
     <div className='main-live-list'>
-      {setIsBlue(false)}
       <NavBar isActive />
       <MainHeader />
-      <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder}/>
+      <LiveListHeader setIsChangeRedOrder={setIsChangeRedOrder} />
       {data.map(({ id, isActive, flag, name, firstScore, secondScore, firstTeam, secondTeam, isFavorite, type }) => (
         <LiveCard
           key={id}
@@ -107,7 +132,7 @@ const MainLiveList = ({ setIsBlue, addToCart, handleClick, cardId, setCardId, ca
           cardData={cardData}
           setCardData={setCardData}
           cardId={cardId}
-          isClicked={isClicked} 
+          isClicked={isClicked}
           setIsClicked={setIsClicked}
           type={type}
         />

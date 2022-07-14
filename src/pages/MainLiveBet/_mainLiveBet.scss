@@ -143,8 +143,9 @@
       }
 
       &:active {
-        -webkit-filter: brightness(160%);
-        filter: brightness(160%);
+        -webkit-filter: brightness(125%);
+        filter: brightness(125%);
+        background: rgb(104 77 82);
       }
 
       // &:hover {
@@ -199,7 +200,7 @@
         p {
           color: #d1cecf;
           font-size: 2.625rem;
-          margin-top: 1.8rem;
+          margin-top: 2.4rem;
           white-space: nowrap;
           min-width: 5rem;
           width: 21rem;
@@ -218,7 +219,7 @@
 
           // z-index: 1;
           span {
-            font-family: RobotoRegular;
+            font-family: RobotoMedium;
             color: #d1cecf;
             font-size: 2.625rem;
           }
