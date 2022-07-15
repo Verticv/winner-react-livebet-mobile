@@ -10,6 +10,7 @@ import cup2 from '../../assets/images/imgs/ee2.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { mainHeader } from '../../store/feature/userSlice';
 import { useLayoutEffect } from 'react';
+import { isIOS } from 'react-device-detect';
 
 const MainHeader = () => {
   const dispatch = useDispatch();
@@ -67,6 +68,7 @@ const MainHeader = () => {
         </div>
         <div className='button-container'>
           <button type='submit' className={`btn ${temp.length > 0 ? 'active' : ''}`}
+          style={{marginRight: isIOS ? '-0.3rem' : '0rem'}}
             onClick={(e) => {
               toggle();
               setIsCheck(temp);
@@ -76,7 +78,7 @@ const MainHeader = () => {
               <p className='text'>리그</p>
             </div>
           </button>
-          <button type='submit' className='btn' onClick={changeName} id='changeBtn'>
+          <button type='submit' style={{marginRight: isIOS ? '-0.3rem' : '0rem'}} className='btn' onClick={changeName} id='changeBtn'>
             <div className='button-pho'>
               <img onClick={parent} className='icon' src={btn2 === '시간순' ? chronology : cup2} alt='' />
               {<p  className='text'>{btn2}</p>}

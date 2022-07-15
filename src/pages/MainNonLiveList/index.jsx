@@ -65,7 +65,7 @@ const MainNonLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, se
     id: 6,
     isActive: false,
     flag: spain,
-    name: '분데스리가',
+    name: '라리가',
     firstTeam: '멘체스터유나이티드',
     secondTeam: '리버풀',
     type: 'blue',
