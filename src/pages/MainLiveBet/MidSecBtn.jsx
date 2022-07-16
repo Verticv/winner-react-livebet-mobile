@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isIOS } from 'react-device-detect';
 import blueArrow from '../../assets/images/imgs/blue-btn-ARR.png';
 import redArrow from '../../assets/images/imgs/red-btn-ARR.png';
 
@@ -19,7 +20,7 @@ function MidSecBtn({
           <p>{rightText.length > 19 ? `${rightText.slice(0, 19)}...` : rightText}</p>
           <button className={`add-button ${isFirstItemRed ? 'red-button' : ''}`} type='button' onClick={add}>
             {isFirstItemRed ? <img className='red-arrow' src={redArrow} alt='' /> : null}
-            <span style={{ paddingTop: '3rem', paddingRight: '0' }}>
+            <span style={{ paddingTop: '3rem', paddingRight: '0', letterSpacing: isIOS ? '-0.2rem' : ''}}>
               {number1}
             </span>
           </button>
@@ -28,7 +29,7 @@ function MidSecBtn({
           add();
           setMiddleActiveBackground((prev) => !prev)
         }}>
-          <button className='add-button' type='button' onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>{number2}</span></button>
+          <button className='add-button' type='button' onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();
@@ -36,7 +37,7 @@ function MidSecBtn({
         }}>
           <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} type='button' onClick={add}>
             {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt='' /> : null}
-            <span style={{ padding: '3rem 0' }}>
+            <span style={{ padding: '3rem 0', letterSpacing: isIOS ? '-0.2rem' : '' }}>
               {number3}
             </span>
           </button>

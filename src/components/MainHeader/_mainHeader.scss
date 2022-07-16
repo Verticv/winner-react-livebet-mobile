@@ -40,18 +40,11 @@
   }
 
   .button-container {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-evenly;
-    // color: #fff;
-    // display: grid;
     align-items: center;
-    // justify-content: space-evenly;
     color: #fff;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.8rem;
-    grid-gap: 0.8rem;
   }
 
   .btn {
