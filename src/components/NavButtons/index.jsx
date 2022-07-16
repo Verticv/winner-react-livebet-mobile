@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { isIOS } from 'react-device-detect';
 import { NavLink } from 'react-router-dom';
 
 function NavButtons({
@@ -20,7 +21,7 @@ function NavButtons({
       activeClassName='clicked'
     >
       <img src={iconToggle || isActive ? clickedIcon : icon} alt='icon' />
-      <p className='text'>{text}</p>
+      <p className='text' style={{ letterSpacing: isIOS ? '-0.2rem' : ''  }}>{text}</p>
       <p className='num'>
         {number}
       </p>

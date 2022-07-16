@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #000000;
-  padding: 0 0.938rem;
+  padding: 0 0.9rem;
   color: #FFFFFF;
   height: 7.4375rem;
 
@@ -40,21 +40,22 @@
   }
 
   .button-container {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
     color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.8rem;
   }
 
   .btn {
     border-radius: 1rem;
-    margin-left: 0.625rem;
+    // margin-left: 0.625rem;
     border: 0.25rem solid #b89c5e;
     background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
     background-repeat: round;
     color: #fff;
     height: 5.3rem;
-    padding: 0 0.45rem 0.0625rem 0;
+    padding: 0 0.45rem 0 0;
 
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -132,7 +133,7 @@
 
 .select-box--items {
   z-index: 28;
-  margin-top: 0.5rem;
+  // margin-top: 0.5rem;
   border-radius: 0.375rem;
   border: 0.25rem solid #b89c5e;
   background-color: #242424;
@@ -283,13 +284,13 @@
   height: 5rem;
   color: #fff;
   border-radius: 1rem;
-  margin-left: 0.625rem;
+  // margin-left: 0.625rem;
   border: 0.25rem solid #b89c5e;
   background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
   background-repeat: round;
   color: #fff;
   height: 5.3rem;
-  padding: 0 0.45rem 0.0625rem 0;
+  padding: 0 0.45rem 0 0;
 
   &:active {
     background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -304,26 +305,30 @@
   }
 
   .select-overlay {
+    border: 0;
     position: absolute;
     top: 0;
-    left: -0.7rem;
+    left: 0.3rem;
     height: 22rem;
-    width: 13rem;
+    width: 12rem;
     opacity: 0;
     cursor: pointer;
     border-radius: 1rem;
-    margin-left: 0.625rem;
+    // margin-left: 0.625rem;
     height: 5.3rem;
+
+    option {
+      padding: 0;
+    }
   }
 
   .custom {
     font-size: 3rem;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 3rem;
-    border-radius: 6px;
     height: 5rem;
   }
 

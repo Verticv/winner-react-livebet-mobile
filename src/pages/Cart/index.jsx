@@ -190,7 +190,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue }) => {
             <div className="line"></div>
           </div>
         </>
-        : <div className='cart-name2'>베팅내역이 없습니다</div>}
+        : <div className='cart-name2'>베팅내역이 없습니다.</div>}
 
       <div className='cart-button-container'>
         <button

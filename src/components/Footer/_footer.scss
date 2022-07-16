@@ -1,14 +1,16 @@
 .footer-container {
   footer {
-    background-image: url("../../assets/images/imgs/footer-bg.png");
+    background-image: url("../../assets/images/other/footer.png");
     background-repeat: round;
     position: fixed;
+    left: calc((100% - 1242px) / 2);
     bottom: 0;
     height: 9.1875rem;
-    width: 77.625rem;
+    width: 100%;
+    max-width: 1242px;
     box-shadow: 0 -0.625rem 0.625rem 0 #00000085;
 
-    @media(max-width:$bp-extra-large) {
+    @media(max-width: 1242px) {
       left: 0;
     }
 
@@ -16,7 +18,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-left: 7rem;
+      margin-left: -3rem;
 
       img {
         width: 4.1875rem;
@@ -25,17 +27,24 @@
 
       .main-p {
         font-size: 3rem;
-        margin-left: 2.625rem;
+        margin-left: 2.5rem;
         color: #212121;
         font-weight: 600;
       }
+    }
+
+    .vl {
+      border-left: 0.1875rem solid #9b824f;
+      position: absolute;
+      height: 37%;
+      right: 50%;
     }
 
     .sub-container2 {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding-right: 7rem;
+      margin-right: -2.5rem;
 
       p {
         font-size: 2.25rem;
@@ -53,15 +62,15 @@
       }
 
       .sub-p {
-        margin-left: 1.5rem;
-        margin-right: -2.5rem;
+        margin-left: 2.3rem;
       }
     }
 
     &.flex {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
+      padding: 0 0 0 3.2rem;
 
       &:focus {
         -webkit-filter: brightness(130%);

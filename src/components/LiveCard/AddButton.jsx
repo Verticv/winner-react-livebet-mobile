@@ -17,7 +17,7 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder
   }
   return (
     <div style={{ display: 'block' }}>
-      <div className={`${id ===idSelect ? 'active-active' : ''}`}>
+      {/* <div className={`${id ===idSelect ? 'active-active' : ''}`}> */}
         {isFavorite
           ? <button type='button' id={index} className={`card-button-arrow live-btn ${buttonClass}`}
             onClick={changeOrder}>
@@ -31,12 +31,12 @@ const AddButton = ({ value, isActive, withPlus, idSelect, isDisplay, changeOrder
             setIsDisplay(!isDisplay);
             isIdSelected(id);
             setIsClicked(true);
-          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.85rem' : '15.1875rem' }}>
+          }} className={`live-btn ${buttonClass}`} style={{ height: !isFavorite && flag ? '22.875rem' : '15.1875rem' }}>
             <img id={id} src={idSelect === id ? activePlus : inactivePlus} alt='' />
             <p>{value}</p>
           </button>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
