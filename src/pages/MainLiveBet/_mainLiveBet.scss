@@ -228,7 +228,8 @@
           &.red-button {
             background: url("../../assets/images/imgs/red-btn.png");
             background-repeat: round;
-            margin: -0.625rem;
+            margin: -1rem;
+            width: 11.8rem;
             outline: none;
             position: relative;
 
@@ -238,7 +239,7 @@
               margin-bottom: 1rem;
               position: absolute;
               top: 1rem;
-              right: 2.5rem;
+              right: 3.5rem;
               animation: redUpAnimation 1s infinite;
             }
 
@@ -261,13 +262,15 @@
             background: url("../../assets/images/imgs/blue-btn.png");
             background-repeat: round;
             position: relative;
+            margin: -1rem;
+            width: 11.8rem;
 
             .blue-arrow {
               width: 4.6875rem;
               height: 2.0625rem;
               position: absolute;
               top: 6rem;
-              right: 2.5rem;
+              right: 3.5rem;
               animation: blueDownAnimation 1s infinite;
             }
 
@@ -330,6 +333,7 @@
   .bet-button-container.first-section-red {
     background: url("../../assets/images/other/skew-container-red.png"), rgba(255, 255, 255, 0.102);
     background-repeat: round;
+    flex-shrink: 0;
 
     .bet-btn-skew {
       &:first-child {
