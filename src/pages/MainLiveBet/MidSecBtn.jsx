@@ -37,7 +37,7 @@ function MidSecBtn({
         }}>
           <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} type='button' onClick={add}>
             {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt='' /> : null}
-            <span style={{ padding: '3rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>
+            <span style={{ padding: isIOS ? '3rem 0' : '3rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>
               {number3}
             </span>
           </button>
