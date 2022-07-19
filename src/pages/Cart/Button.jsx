@@ -30,7 +30,12 @@ export function Button2({ children, className, setCart }) {
   return (
     <button
       type='button'
-      onClick={() => className !== 'active' ? setCart([]) : null }
+      onClick={() => {
+        if (className !== 'active') {
+          setCart([]);
+          window.scrollTo(0, 0);
+        }
+      } }
       className={`cart-btn-photo ${className}`}
     >
       {children}

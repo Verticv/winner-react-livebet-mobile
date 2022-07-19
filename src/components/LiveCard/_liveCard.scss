@@ -49,10 +49,11 @@
           height: 3.8125rem;
           margin-right: 1.1rem;
           margin-left: 0.8rem;
-          margin-top: 0.2rem;
+          margin-top: -0.2rem;
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
         }
 
         .col {
@@ -129,6 +130,15 @@
 
             .gold-play {
               cursor: pointer;
+              &:focus {
+                -webkit-filter: brightness(130%);
+                filter: brightness(130%);
+              }
+        
+              &:hover {
+                -webkit-filter: brightness(130%);
+                filter: brightness(130%);
+              }
             }
 
             .livee {
