@@ -130,12 +130,7 @@
 
             .gold-play {
               cursor: pointer;
-              &:focus {
-                -webkit-filter: brightness(130%);
-                filter: brightness(130%);
-              }
-        
-              &:hover {
+              &:active {
                 -webkit-filter: brightness(130%);
                 filter: brightness(130%);
               }
