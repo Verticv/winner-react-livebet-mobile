@@ -26,7 +26,10 @@ function LiveCard({
     flag ? setShowHeader(true) : setShowHeader(false);
     // flag ? setValue(23) : setValue('15');
   }, []);
-  const toggleStar = () => setIsStar((prev) => !prev);
+  const toggleStar = (event) => {
+    event.stopPropagation();
+    setIsStar((prev) => !prev)
+  };
   const addToCartHandler = () => {
     addToCart();
     handleClick();
@@ -98,7 +101,8 @@ function LiveCard({
                         {secondScore}
                       </p>
                       <p className='glowering' style={{ marginTop: '0.3rem' }}>후반전35</p>
-                      <img className='gold-play' src={(id === '00' || id === '01') && (type === 'red') ? playGold : playTransparent} alt='play' />
+                      <img onClick={(event) => event.stopPropagation()}
+                        className='gold-play' src={(id === '00' || id === '01') && (type === 'red') ? playGold : playTransparent} alt='play' />
                     </div>
                   </div>
                 </div>

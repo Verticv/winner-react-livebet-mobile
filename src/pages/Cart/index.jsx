@@ -197,7 +197,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue }) => {
           type='button'
         >
           <img className='button-icon' src={buttonIcon} alt='' />
-          <span style={{ fontSize: '3.4375rem', fontWeight: '600' }}>전체보기</span>
+          <span style={{ fontSize: '3.4375rem', fontWeight: '600', color: '#212121' }}>전체보기</span>
         </button>
       </div>
     </div>

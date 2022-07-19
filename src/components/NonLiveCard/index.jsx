@@ -24,7 +24,10 @@ function NonLiveCard({
     const filteredData = nonLiveData.filter((el) => el.id !== +target.id)
     setNonLiveData(filteredData);
   }
-  const toggleStar = () => setIsStar((prev) => !prev);
+  const toggleStar = (event) => {
+    event.stopPropagation();
+    setIsStar((prev) => !prev);
+  };
   return (
     <>
       <div className='nLive-first-con' id={id}>
