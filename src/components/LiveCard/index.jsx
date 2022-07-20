@@ -72,9 +72,8 @@ function LiveCard({
             <div className='left'>
               <div className={`down-sec ${idSelect === id && type === 'red' ? 'active' : 'inactive'}`}>
                 <div className='row'>
-                  <button style={{ background: 'transparent', border: 'none', padding: '0', outline:'none' }} type='button'
-                    onClick={isFavorite ? removeFromFavorite : toggleStar}
-                  >
+                  <button style={{ background: 'transparent', border: 'none', padding: '0', outline:'none' }}
+                    onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
                       ? <img className='star' style={{outline:'none'}} id={id} src={star} alt='star' />
                       : <img className='star' style={{outline:'none'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
