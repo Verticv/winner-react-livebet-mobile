@@ -76,8 +76,8 @@ function LiveCard({
                     onClick={isFavorite ? removeFromFavorite : toggleStar}
                   >
                     {isFavorite
-                      ? <img className='star' id={id} src={star} alt='star' />
-                      : <img className='star' id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                      ? <img className='star' style={{outline:'none'}} id={id} src={star} alt='star' />
+                      : <img className='star' style={{outline:'none'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
                     }
                   </button>
                   <div className='col'>
