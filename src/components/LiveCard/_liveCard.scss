@@ -54,6 +54,7 @@
           justify-content: center;
           align-items: center;
           cursor: pointer;
+          outline: 'none';
         }
 
         .col {
@@ -130,6 +131,7 @@
 
             .gold-play {
               cursor: pointer;
+              outline: none;
               &:active {
                 -webkit-filter: brightness(130%);
                 filter: brightness(130%);

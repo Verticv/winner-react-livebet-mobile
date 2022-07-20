@@ -29,7 +29,7 @@ function MidSecBtn({
           add();
           setMiddleActiveBackground((prev) => !prev)
         }}>
-          <button className='add-button' type='button' onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
+          <button className='add-button' type='button' style={{paddingTop:'0.2rem'}} onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();
