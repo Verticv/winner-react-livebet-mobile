@@ -20,7 +20,7 @@ function MidSecBtn({
           <p>{rightText.length > 19 ? `${rightText.slice(0, 19)}...` : rightText}</p>
           <button className={`add-button ${isFirstItemRed ? 'red-button' : ''}`} type='button' onClick={add}>
             {isFirstItemRed ? <img className='red-arrow' src={redArrow} alt='' /> : null}
-            <span style={{ paddingTop: '3rem', paddingRight: '0', letterSpacing: isIOS ? '-0.2rem' : ''}}>
+            <span style={{ padding: isFirstItemRed ? '3rem 0' : '3.1rem 0 3rem 0rem', letterSpacing: isIOS ? '-0.2rem' : ''}}>
               {number1}
             </span>
           </button>
@@ -29,7 +29,12 @@ function MidSecBtn({
           add();
           setMiddleActiveBackground((prev) => !prev)
         }}>
-          <button className='add-button' type='button' style={{paddingTop:'0.2rem'}} onClick={add}><span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
+          <button 
+            className='add-button' 
+            type='button' 
+            // style={{paddingTop:'0.2rem'}} 
+            onClick={add}>
+            <span style={{ padding: '3.1rem 0', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();
@@ -37,7 +42,7 @@ function MidSecBtn({
         }}>
           <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} type='button' onClick={add}>
             {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt='' /> : null}
-            <span style={{ padding: isFirstItemRed ? '3rem 0' : '3rem 0 3rem 1.9rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>
+            <span style={{ padding: isFirstItemRed ? '3rem 0' : '3.1rem 0 3rem 1.9rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>
               {number3}
             </span>
           </button>
