@@ -48,11 +48,11 @@ function NonLiveCard({
             <div className='nLive-left'>
               <div className={`nLive-down-sec ${(type === 'blue') && (idSelect === id) ? 'active' : 'inactive'}`}>
                 <div className='nLive-row'>
-                  <button style={{ background: 'transparent', border: 'none', padding: '0' }}
+                  <button style={{ background: 'transparent', border: 'none', padding: '0', outline:'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
-                      ? <img className='nLive-star' id={id} src={star} alt='star' />
-                      : <img className='nLive-star' id={id} src={isStar ? star : nonActiveStar} alt='star' />}
+                      ? <img className='nLive-star' id={id} style={{outline:'none'}} src={star} alt='star' />
+                      : <img className='nLive-star' id={id} style={{outline:'none'}} src={isStar ? star : nonActiveStar} alt='star' />}
                   </button>
                   <div className='nLive-col'>
                     <div style={{ marginTop: '-0.9rem' }}>

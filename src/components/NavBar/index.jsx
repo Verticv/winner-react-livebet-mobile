@@ -1,10 +1,10 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavButtons from '../NavButtons';
-import iceHockey from '../../assets/images/imgs/i1co.png';
-import tennis from '../../assets/images/imgs/i2co.png';
-import handball from '../../assets/images/imgs/i3co.png';
-import ufc from '../../assets/images/imgs/i4co.png';
+import iceHockeyWhite from '../../assets/images/iceHockey/iceHockey-gray.png';
+import iceHockeyBlack from '../../assets/images/iceHockey/iceHockey-black.png';
+import tennisWhite from '../../assets/images/tennis/tennis-gray.png';
+import tennisBlack from '../../assets/images/tennis/tennis-black.png';
 import footBallBlack from '../../assets/images/football/football-black.png';
 import footBallWhite from '../../assets/images/football/football-gray.png';
 import starWhite from '../../assets/images/emptyStar/star-gray.png';
@@ -17,6 +17,10 @@ import valBallWhite from '../../assets/images/valBall/valBall-gray.png';
 import valBallBlack from '../../assets/images/valBall/valBall-black.png';
 import ballyWhite from '../../assets/images/bally/bally-gray.png';
 import ballyBlack from '../../assets/images/bally/bally-black.png';
+import handBallWhite from '../../assets/images/handball/handball-gray.png';
+import handBallBlack from '../../assets/images/handball/handball-black.png';
+import ufcWhite from '../../assets/images/ufc/ufc-gray.png';
+import ufcBlack from '../../assets/images/ufc/ufc-black.png';
 
 const number = 80;
 
@@ -44,10 +48,10 @@ function NavBar({ isActive }) {
         <NavButtons scrollPosition={scrollPosition} icon={ballWhite} clickedIcon={ballBlack} text='야구' number={number} link='/mainNonLiveList' />
         <NavButtons scrollPosition={scrollPosition} icon={valBallWhite} clickedIcon={valBallBlack} text='농구' number={number} link='/basketball' />
         <NavButtons scrollPosition={scrollPosition} icon={ballyWhite} clickedIcon={ballyBlack} text='배구' number={number} link='/volleyball' />
-        <NavButtons scrollPosition={scrollPosition} icon={iceHockey} clickedIcon={iceHockey} text='아이스하키' number={number} link='/iceHockey' />
-        <NavButtons scrollPosition={scrollPosition} icon={tennis} clickedIcon={tennis} text='테니스' number={number} link='/tennis' />
-        <NavButtons scrollPosition={scrollPosition} icon={handball} clickedIcon={handball} text='핸드볼' number={number} link='/handball' />
-        <NavButtons scrollPosition={scrollPosition} icon={ufc} clickedIcon={ufc} text='UFC' number={number} link='/ufc' />
+        <NavButtons scrollPosition={scrollPosition} icon={iceHockeyWhite} clickedIcon={iceHockeyBlack} text='아이스하키' number={number} link='/iceHockey' />
+        <NavButtons scrollPosition={scrollPosition} icon={tennisWhite} clickedIcon={tennisBlack} text='테니스' number={number} link='/tennis' />
+        <NavButtons scrollPosition={scrollPosition} icon={handBallWhite} clickedIcon={handBallBlack} text='핸드볼' number={number} link='/handball' />
+        <NavButtons scrollPosition={scrollPosition} icon={ufcWhite} clickedIcon={ufcBlack} text='UFC' number={number} link='/ufc' />
       </div>
       <div className='shadow'></div>
     </div>
