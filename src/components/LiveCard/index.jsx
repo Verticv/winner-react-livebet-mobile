@@ -114,7 +114,7 @@ function LiveCard({
                         width: "17rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        letterSpacing: '-0.3rem',
+                        // letterSpacing: '-0.3rem',
                         marginRight: '1.75rem',
                       }}
                     >
@@ -132,7 +132,7 @@ function LiveCard({
                         width: "17rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        letterSpacing: '-0.3rem',
+                        // letterSpacing: '-0.3rem',
                         marginRight: '1.75rem',
                       }}
                     >
