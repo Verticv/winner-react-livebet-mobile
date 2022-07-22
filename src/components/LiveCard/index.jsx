@@ -108,18 +108,40 @@ function LiveCard({
                 </div>
                 <div className='num-container'>
                   <div className='num-num'>
-                    <span>5</span>
-                    <span>0</span>
-                    <span>0</span>
-                    <span>0</span>
-                    <p className='score'>{firstScore}</p>
+                    <div
+                      style={{
+                        display: "flex",
+                        width: "17rem",
+                        justifyContent: "space-between",
+                        textAlign: "center",
+                        letterSpacing: '-0.3rem',
+                        marginRight: '1.75rem',
+                      }}
+                    >
+                      <span>5</span>
+                      <span>0</span>
+                      <span>0</span>
+                      <span>0</span>
+                      <span className='score'>{firstScore}</span>
+                    </div>
                   </div>
                   <div className='num-num'>
-                    <span>5</span>
-                    <span>0</span>
-                    <span>0</span>
-                    <span>0</span>
-                    <p className='score'>{secondScore}</p>
+                    <div
+                      style={{
+                        display: "flex",
+                        width: "17rem",
+                        justifyContent: "space-between",
+                        textAlign: "center",
+                        letterSpacing: '-0.3rem',
+                        marginRight: '1.75rem',
+                      }}
+                    >
+                      <span>5</span>
+                      <span>0</span>
+                      <span>0</span>
+                      <span>0</span>
+                      <span className='score'>{secondScore}</span>
+                    </div>
                   </div>
                 </div>
               </div>
