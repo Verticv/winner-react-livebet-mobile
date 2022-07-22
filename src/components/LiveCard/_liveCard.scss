@@ -177,35 +177,39 @@
 
           p {
             font-family: RobotoRegular;
-            width: 2.625rem;
-            margin-right: 1rem;
+            // width: 2.625rem;s
+            // margin-right: 1rem;
           }
 
           span {
             display: inline-block;
             text-align: center;
             font-family: RobotoRegular;
+            width: 2.5rem;
 
             &:nth-child(1) {
-              width: 2.2rem;
-              margin-right: 1rem;
+              // width: 2.2rem;
+              // margin-right: 1rem;
             }
 
             &:nth-child(2),
             &:nth-child(3) {
-              width: 2.81rem;
-              margin-right: 1rem;
+              // width: 2.81rem;
+              // margin-right: 1rem;
             }
 
             &:nth-child(4) {
-              width: 2.2rem;
-              margin-right: 1rem;
+              // width: 2.2rem;
+              // margin-right: 1rem;
             }
           }
 
           .score {
             color: #D3A824;
-            padding-left: 0.5rem;
+            // width: -0.25rem;
+            // letter-spacing: -0.4rem;
+            letter-spacing: -0.2rem;
+            // padding-left: 0.5rem;
           }
         }
 
