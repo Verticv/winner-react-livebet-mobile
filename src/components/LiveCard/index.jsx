@@ -114,14 +114,14 @@ function LiveCard({
                         width: "17rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        marginRight: '1.49rem',
-                        letterSpacing: '-0.09rem'
+                        marginRight: '1.2rem',
+                        letterSpacing: '-0.09rem',
                       }}
                     >
-                      <span>5</span>
+                      <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>
                       <span>0</span>
-                      <span>0</span>
-                      <span>0</span>
+                      <span style={{ marginLeft: '0.2rem' }}>0</span>
+                      <span style={{ marginRight: '-0.3rem' }}>0</span>
                       <span className='score'>{firstScore}</span>
                     </div>
                   </div>
@@ -132,14 +132,14 @@ function LiveCard({
                         width: "17rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        marginRight: '1.49rem',
-                        letterSpacing: '-0.09rem'
+                        marginRight: '1.2rem',
+                        letterSpacing: '-0.09rem',
                       }}
                     >
-                      <span>5</span>
+                      <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>
                       <span>0</span>
-                      <span>0</span>
-                      <span>0</span>
+                      <span style={{ marginLeft: '0.2rem' }}>0</span>
+                      <span style={{ marginRight: '-0.3rem' }}>0</span>
                       <span className='score'>{secondScore}</span>
                     </div>
                   </div>
