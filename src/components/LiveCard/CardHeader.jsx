@@ -21,7 +21,7 @@ const CardHeader = ({
         <img style={{marginRight: '1rem'}} src={c} alt='' />
         <div className='square sq1' />
         <div className='square sq2' />
-        <img style={{marginRight: '1.1rem', marginLeft: '-0.2rem'}}src={p} alt='' />
+        <img style={{marginRight: '1rem', marginLeft: '0rem'}}src={p} alt='' />
         <img className='ball' src={footBallWhite} alt='' />
       </div>
 
