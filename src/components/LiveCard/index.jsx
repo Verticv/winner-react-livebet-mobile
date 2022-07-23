@@ -110,10 +110,10 @@ function LiveCard({
                     <div
                       style={{
                         display: "flex",
-                        width: "17rem",
+                        width: "18rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        marginRight: '1.2rem',
+                        marginRight: '0.6rem',
                         letterSpacing: '-0.09rem',
                       }}
                     >
@@ -128,10 +128,10 @@ function LiveCard({
                     <div
                       style={{
                         display: "flex",
-                        width: "17rem",
+                        width: "18rem",
                         justifyContent: "space-between",
                         textAlign: "center",
-                        marginRight: '1.2rem',
+                        marginRight: '0.6rem',
                         letterSpacing: '-0.09rem',
                       }}
                     >
