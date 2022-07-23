@@ -185,7 +185,9 @@
             display: inline-block;
             text-align: center;
             font-family: RobotoRegular;
-            width: 2.5rem;
+            width: 3.7rem;
+            letter-spacing: -0.2rem;
+            // width: 4rem;
 
             &:nth-child(1) {
               // width: 2.2rem;
@@ -208,8 +210,9 @@
             color: #D3A824;
             // width: -0.25rem;
             // letter-spacing: -0.4rem;
-            letter-spacing: -0.2rem;
+            letter-spacing: -0.3rem;
             // padding-left: 0.5rem;
+            width: 3.5rem;
           }
         }
 
