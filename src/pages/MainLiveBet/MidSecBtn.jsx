@@ -18,9 +18,9 @@ function MidSecBtn({
           setRightActiveBackground((prev) => !prev);
         }}>
           <p>{rightText.length > 19 ? `${rightText.slice(0, 19)}...` : rightText}</p>
-          <button className={`add-button ${isFirstItemRed ? 'red-button' : ''}`} style={{transform: !isFirstItemRed ? 'translateY(0.25rem)' : ''}}  type='button' onClick={add}>
+          <button className={`add-button ${isFirstItemRed ? 'red-button' : ''}`} style={{transform: !isFirstItemRed ? 'translateY(0.05rem)' : ''}}  type='button' onClick={add}>
             {isFirstItemRed ? <img className='red-arrow' src={redArrow} alt='' /> : null}
-            <span style={{ paddingTop: '3rem', paddingRight: '0', letterSpacing: isIOS ? '-0.2rem' : ''}}>
+            <span style={{ paddingTop: '3rem', paddingRight: '0', letterSpacing: isIOS ? '-0.2rem' : '', fontWeight: isIOS ? '800' : '600'}}>
               {number1}
             </span>
           </button>
@@ -32,17 +32,17 @@ function MidSecBtn({
           <button 
             className='add-button' 
             type='button' 
-            style={{transform:'translateY(0.25rem)'}} 
+            style={{transform:'translateY(0.05rem)'}} 
             onClick={add}>
-            <span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>{number2}</span></button>
+            <span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '', fontWeight: isIOS ? '800' : '600' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();
           setLeftActiveBackground((prev) => !prev);
         }}>
-          <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} style={{transform:!isFirstItemRed ? 'translateY(0.25rem)' : ''}}  type='button' onClick={add}>
+          <button className={`add-button ${isFirstItemRed ? 'blue-button' : ''}`} style={{transform:!isFirstItemRed ? 'translateY(0.05rem)' : ''}}  type='button' onClick={add}>
             {isFirstItemRed ? <img className='blue-arrow' src={blueArrow} alt='' /> : null}
-            <span style={{ padding: isFirstItemRed ? '3rem 0' : '3rem 0 3rem 1.9rem', letterSpacing: isIOS ? '-0.2rem' : '' }}>
+            <span style={{ padding: isFirstItemRed ? '3rem 0' : '3rem 0 3rem 1.9rem', letterSpacing: isIOS ? '-0.2rem' : '', fontWeight: isIOS ? '800' : '600' }}>
               {number3}
             </span>
           </button>

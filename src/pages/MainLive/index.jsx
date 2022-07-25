@@ -7,8 +7,9 @@ import NonLiveCard from '../../components/NonLiveCard';
 import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
+// import Cart from '../../pages/Cart';
 
-const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked, isCartDisplayed, setIsCartDisplayed, removeCard, setCart, cart }) => {
   const [idSelect, isIdSelected] = useState('00')
   // const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [isChangeRedOrder, setIsChangeRedOrder] = useState(false);
@@ -69,7 +70,7 @@ const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, h
             cardData={cardData}
             setCardData={setCardData}
             cardId={cardId}
-            isClicked={isClicked} 
+            isClicked={isClicked}
             setIsClicked={setIsClicked}
             type={type}
           />
@@ -89,13 +90,13 @@ const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, h
             isIdSelected={isIdSelected}
             cardId={cardId}
             setCardId={setCardId}
-            isClicked={isClicked} 
+            isClicked={isClicked}
             setIsClicked={setIsClicked}
             type={type}
           />
         ))}
       </div>
-      <Footer />
+      <Footer setIsCartDisplayed={setIsCartDisplayed} isCartDisplayed={isCartDisplayed} cart={cart} isBlue={isBlue} setCart={setCart} removeCard={removeCard} />
     </>
   );
 }

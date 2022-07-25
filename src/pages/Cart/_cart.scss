@@ -1,3 +1,21 @@
+@keyframes anim {
+  0% {
+    top: 100%;
+  }
+}
+
+.cart-cart {
+  position: absolute;
+  z-index: 16;
+  top: 0%;
+  width: 77.625rem;
+  margin: auto;
+  height: auto;
+  opacity: 1;
+  overflow: unset;
+  animation: anim 2s ease-in-out 0s normal;
+}
+
 .cart-btn {
   background-image: url('../../assets/images/imgs/button-bg.png');
   background-repeat: round;
@@ -267,7 +285,9 @@
     background-repeat: round;
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
-    height: 13.0625rem;
+    min-height: 13.0625rem;
+    max-height: 26.0625rem;
+    overflow: hidden;
   }
 
   .slide-num {
@@ -435,13 +455,16 @@
   .cart-items {
     width: 100%;
     background-color: #000;
-    height: 17.5rem;
+    // height: 17.5rem;
     background: url('../../assets/images/imgs/card-cart-bg.png');
     position: relative;
     font-size: 3rem;
     background-repeat: round;
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
+    min-height: 17.5rem !important;
+    max-height: 26.0625rem;
+    overflow: hidden;
   }
 }
 
