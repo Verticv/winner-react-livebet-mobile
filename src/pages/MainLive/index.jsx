@@ -7,7 +7,6 @@ import NonLiveCard from '../../components/NonLiveCard';
 import LiveListHeader from '../../components/LiveListHeader';
 import NonLiveListHeader from '../../components/NonLiveListHeader';
 import MainHeader from '../../components/MainHeader';
-// import Cart from '../../pages/Cart';
 
 const MainLive = ({ isBlue, setIsBlue, redCardArray, blueCardArray, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked, isCartDisplayed, setIsCartDisplayed, removeCard, setCart, cart }) => {
   const [idSelect, isIdSelected] = useState('00')

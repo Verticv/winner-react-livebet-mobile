@@ -4,6 +4,30 @@
   }
 }
 
+.cart-scroll {
+  position: fixed;
+  width: 77.8875rem;
+  height: 100vh;
+  z-index: 10000;
+  top: 0;
+  overflow-y: scroll;
+  // background: #000;
+  // opacity: 0.7;
+  background: rgba(0, 0, 0, 0.600);
+
+  ::-webkit-scrollbar {
+    height: 0.0625rem;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 0.25rem;
+    /* width of vertical scrollbar */
+    border: 0.0625rem solid transparent;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    display: none;
+  }
+}
+
 .cart-cart {
   position: absolute;
   z-index: 16;
@@ -13,7 +37,7 @@
   height: auto;
   opacity: 1;
   overflow: unset;
-  animation: anim 2s ease-in-out 0s normal;
+  animation: anim 0.9s ease-in-out 0s normal;
 }
 
 .cart-btn {
@@ -288,6 +312,8 @@
     min-height: 13.0625rem;
     max-height: 26.0625rem;
     overflow: hidden;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 
   .slide-num {
@@ -465,6 +491,9 @@
     min-height: 17.5rem !important;
     max-height: 26.0625rem;
     overflow: hidden;
+    padding-right: 4rem;
+    padding-right: 5rem;
+    padding-left: 2.4rem;
   }
 }
 
@@ -476,7 +505,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2.4rem;
+  // padding-left: 2.4rem;
 
   p {
     color: white;
