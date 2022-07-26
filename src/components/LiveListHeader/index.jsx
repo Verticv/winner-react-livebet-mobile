@@ -1,4 +1,5 @@
 import React from 'react';
+import { isIOS } from 'react-device-detect';
 
 const LiveListHeader = ({ setIsChangeRedOrder }) => (
   <>
@@ -7,7 +8,7 @@ const LiveListHeader = ({ setIsChangeRedOrder }) => (
         <p className='live-header'>
           Live
         </p>
-        <p className='live-header-para'>
+        <p className='live-header-para' style={{ letterSpacing: isIOS ? '-0.2rem' : '' }}>
           실시간 라이브경기
         </p>
         <p className='live-header width'>

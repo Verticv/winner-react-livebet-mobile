@@ -1,4 +1,5 @@
 import React from 'react';
+import { isIOS } from 'react-device-detect';
 
 const NonLiveListHeader = ({ setIsChangeBlueOrder }) => (
   <>
@@ -7,7 +8,7 @@ const NonLiveListHeader = ({ setIsChangeBlueOrder }) => (
         <p className='nonLive-header'>
           NONLIVE
         </p>
-        <p className='nonLive-header-para'>
+        <p className='nonLive-header-para' style={{ letterSpacing: isIOS ? '-0.2rem' : '' }}>
           예정경기
         </p>
         <p className='nonLive-header width'>

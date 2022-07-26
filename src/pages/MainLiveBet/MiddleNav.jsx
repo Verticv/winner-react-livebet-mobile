@@ -1,4 +1,5 @@
 import React from 'react';
+import { isIOS } from 'react-device-detect';
 
 function MiddleNav({ idActive, setIdActive }) {
   const nav = [{
@@ -25,7 +26,9 @@ function MiddleNav({ idActive, setIdActive }) {
           key={id}
           type='button'
           onClick={(e) => setIdActive(e.target.id)}
-          className={+idActive === id ? 'active' : ''}>
+          className={+idActive === id ? 'active' : ''}
+          style={{ letterSpacing: isIOS ? '-0.2rem' : '' }}
+          >
           {name}
         </button>
       ))

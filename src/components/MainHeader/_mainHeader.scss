@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.5rem;
-    width: 38rem;
+    max-width: 37rem;
   }
 
   .btn {
@@ -55,8 +55,12 @@
     background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
     background-repeat: round;
     color: #fff;
-    height: 5.3rem;
+    height: 4.7rem;
     padding: 0 0.3rem 0 0;
+
+    &:first-child {
+      // width: 9.8125rem;
+    }
 
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -75,13 +79,13 @@
       align-content: center;
       height: 5rem;
       color: #fff;
-      margin-top: -0.1875rem;
+      margin-top: -0.4875rem;
       margin-right: 0.4rem;
       margin-left: 0.4rem;
 
       .icon {
         padding: 0;
-        width: 3.25rem;
+        width: 3rem;
         margin-left: 0.1rem;
         margin-right: 0.3rem;
         margin-top: 0.2rem;
@@ -290,7 +294,7 @@
   background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
   background-repeat: round;
   color: #fff;
-  height: 5.3rem;
+  height: 4.7rem;
   padding: 0 0.3rem 0 0;
 
   &:active {
@@ -342,7 +346,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0.3rem;
+    margin: 0 0.1rem;
   }
 
 }
