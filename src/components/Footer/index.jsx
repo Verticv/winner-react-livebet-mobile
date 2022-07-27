@@ -24,7 +24,7 @@ const Footer = ({ setIsCartDisplayed, isCartDisplayed, cart, isBlue, setCart, re
             <p className='main-p' style={{ letterSpacing: isIOS ? '-0.2rem' : '' }}>베팅카트 열기</p>
           </div>
           <div className='vl' />
-          <div style={{ marginRight: '-2.5rem' }}>
+          <div style={{ width: '40rem' }}>
             <div className='sub-container2'>
               <p style={{ letterSpacing: isIOS ? '-0.2rem' : '' }}>
                 선택경기

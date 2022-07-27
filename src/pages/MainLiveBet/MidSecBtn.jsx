@@ -34,7 +34,7 @@ function MidSecBtn({
             type='button' 
             style={{transform:'translateY(0.05rem)'}} 
             onClick={add}>
-            <span style={{ paddingTop: '4rem', paddingBottom: '4rem', letterSpacing: isIOS ? '-0.2rem' : '', fontWeight: isIOS ? '800' : '600' }}>{number2}</span></button>
+            <span style={{ letterSpacing: isIOS ? '-0.2rem' : '', fontWeight: isIOS ? '800' : '600' }}>{number2}</span></button>
         </div>
         <div className={`bet-btn-skew ${leftActiveBackground ? 'blue-section' : ''}`} onClick={() => {
           add();

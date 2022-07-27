@@ -45,7 +45,8 @@
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.5rem;
-    max-width: 37rem;
+    max-width: 40rem;
+    // margin-right: 0.9rem;
   }
 
   .btn {
@@ -313,7 +314,7 @@
     border: 0;
     position: absolute;
     top: 0;
-    left: 0.3rem;
+    left: -0.5rem;
     height: 22rem;
     width: 12rem;
     opacity: 0;
@@ -346,7 +347,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0.1rem;
+    margin: 0 0.3rem;
   }
 
 }

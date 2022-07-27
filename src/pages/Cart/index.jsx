@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { isIOS } from 'react-device-detect';
+import { isIOS, isChrome } from 'react-device-detect';
 import { format } from 'date-fns'
 import { ko } from "date-fns/locale"
 import cartIcon from '../../assets/images/imgs/cart.png'
@@ -194,7 +194,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
           </>
           : <div className='cart-name2'>베팅내역이 없습니다.</div>}
 
-        <div className='cart-button-container'>
+        <div className='cart-button-container' style={{ marginBottom: (isIOS && isChrome) ? '20rem' : '0'}}>
           <button
             type='button'
           >

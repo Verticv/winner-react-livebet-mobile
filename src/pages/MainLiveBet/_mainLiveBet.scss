@@ -194,6 +194,7 @@
       width: 100%;
       padding-left: 1.875rem;
       padding-right: 1.875rem;
+      height: 100%;
 
       .bet-btn-skew {
         display: flex;
@@ -202,9 +203,10 @@
         align-items: center;
 
         p {
+          margin: 0;
           color: #d1cecf;
           font-size: 2.45rem;
-          margin-top: 2.4rem;
+          margin-top: -0.1rem;
           white-space: nowrap;
           min-width: 5rem;
           width: 21rem;
@@ -272,7 +274,7 @@
             background: url("../../assets/images/imgs/blue-btn.png");
             background-repeat: round;
             position: relative;
-            margin: -1rem;
+            margin: 0 -1rem;
             width: 11.8rem;
             padding-top: 0.2rem;
 
@@ -304,7 +306,7 @@
         &:nth-child(2) {
           justify-content: center;
           width: 17rem;
-          height: 6.3rem;
+          height: 100%;
 
           .add-button {
             width: auto;
@@ -329,6 +331,7 @@
           margin-left: -1.4rem;
           padding-left: 1.5rem;
           // z-index: 1;
+          height: 100%;
         }
 
         &.bet-btn-numbers {
@@ -371,7 +374,7 @@
 
 .blue-section {
   background: linear-gradient(270deg, #9b2f30, #9b2f30 25%, #9a2f30 50%, #872d2f 63%, #722a2e 75%, #5d282e);
-  height: 6.3rem;
+  height: 6.6rem;
   width: 20rem;
   display: flex;
   justify-content: flex-end;

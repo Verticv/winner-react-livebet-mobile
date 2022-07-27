@@ -6,6 +6,7 @@
 
 .cart-scroll {
   position: fixed;
+  // width: 77.625rem;
   width: 77.8875rem;
   height: 100vh;
   z-index: 10000;
@@ -37,7 +38,7 @@
   height: auto;
   opacity: 1;
   overflow: unset;
-  animation: anim 0.9s ease-in-out 0s normal;
+  animation: anim 0.7s ease-in-out 0s normal;
 }
 
 .cart-btn {
@@ -310,7 +311,7 @@
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
     min-height: 13.0625rem;
-    max-height: 26.0625rem;
+    // max-height: 26.0625rem;
     overflow: hidden;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
@@ -489,10 +490,10 @@
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
     min-height: 17.5rem !important;
-    max-height: 26.0625rem;
+    // max-height: 26.0625rem;
     overflow: hidden;
     padding-right: 4rem;
-    padding-right: 5rem;
+    padding-right: 7rem;
     padding-left: 2.4rem;
   }
 }
