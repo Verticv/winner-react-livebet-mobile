@@ -50,7 +50,7 @@ const Dropdown = ({ btn3, setBtn3, options, children, labelStyle, labelClasses, 
                 <div className="flex w-full items-center justify-between">
                     <img style={{ width: '3rem', marginTop: '0rem', marginLeft: '0.4rem', marginRight: '0.2rem' }} src={icon} alt="icon" />
                     <div className={labelClasses} style={labelStyle}><p style={{ marginTop: "2.2rem", fontSize: '2.425rem' }}>{sortValue}</p></div>
-                    <img className="white-arrow" style={{ width: '1.375rem', height: '0.6875rem', marginTop: '0.2rem', marginLeft: '0.3rem' }} src={arrow} alt="arrow" />
+                    <img className="white-arrow" style={{ width: '1.375rem', height: '0.6875rem', marginTop: '0.2rem', marginLeft: '0.4rem' }} src={arrow} alt="arrow" />
                 </div>
             </SortBy>
         </form>
