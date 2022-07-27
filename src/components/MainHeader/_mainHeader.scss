@@ -29,7 +29,7 @@
       font-family: RobotoRegular;
       font-size: 2.8125rem;
       padding: 0.4rem 1.5rem;
-      width: 6.25rem;
+      min-width: 6.25rem;
       height: 4.1875rem;
     }
 
@@ -45,6 +45,8 @@
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0.8rem;
+    max-width: 70rem;
+    // margin-right: 0.9rem;
   }
 
   .btn {
@@ -54,8 +56,12 @@
     background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
     background-repeat: round;
     color: #fff;
-    height: 5.3rem;
-    padding: 0 0.45rem 0 0;
+    height: 4.7rem;
+    padding: 0 0.3rem 0 0;
+
+    &:first-child {
+      // width: 9.8125rem;
+    }
 
     &.active {
       background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -74,13 +80,13 @@
       align-content: center;
       height: 5rem;
       color: #fff;
-      margin-top: -0.1875rem;
-      margin-right: 1.2rem;
-      margin-left: 1.2rem;
+      margin-top: -0.4875rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
 
       .icon {
         padding: 0;
-        width: 3.5125rem;
+        width: 3rem;
         margin-left: 0.1rem;
         margin-right: 0.3rem;
         margin-top: 0.2rem;
@@ -94,7 +100,7 @@
       }
 
       .text {
-        margin-top: 2.6rem;
+        margin-top: 2.4rem;
       }
     }
   }
@@ -121,14 +127,14 @@
 }
 
 .text {
-  font-size: 2.625rem;
+  font-size: 2.425rem;
 }
 
 
 .white-arrow {
   width: 1.375rem;
   height: 0.6875rem;
-  margin-left: 0.6rem;
+  margin-left: 0.4rem;
 }
 
 .select-box--items {
@@ -289,8 +295,8 @@
   background: linear-gradient(to top, #282828, #1c1c1c 50%, #111111 100%);
   background-repeat: round;
   color: #fff;
-  height: 5.3rem;
-  padding: 0 0.45rem 0 0;
+  height: 4.7rem;
+  // padding: 0 0.3rem 0 0;
 
   &:active {
     background-image: url("../../assets/images/other/mainHeaderButton-gold.png");
@@ -308,7 +314,7 @@
     border: 0;
     position: absolute;
     top: 0;
-    left: 0.3rem;
+    left: -0.5rem;
     height: 22rem;
     width: 12rem;
     opacity: 0;

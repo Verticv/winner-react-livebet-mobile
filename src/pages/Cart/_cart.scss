@@ -1,3 +1,46 @@
+@keyframes anim {
+  0% {
+    top: 100%;
+  }
+}
+
+.cart-scroll {
+  position: fixed;
+  // width: 77.625rem;
+  width: 77.8875rem;
+  height: 100vh;
+  z-index: 10000;
+  top: 0;
+  overflow-y: scroll;
+  // background: #000;
+  // opacity: 0.7;
+  background: rgba(0, 0, 0, 0.600);
+
+  ::-webkit-scrollbar {
+    height: 0.0625rem;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 0.25rem;
+    /* width of vertical scrollbar */
+    border: 0.0625rem solid transparent;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    display: none;
+  }
+}
+
+.cart-cart {
+  position: absolute;
+  z-index: 16;
+  top: 0%;
+  width: 77.625rem;
+  margin: auto;
+  height: auto;
+  opacity: 1;
+  overflow: unset;
+  animation: anim 0.7s ease-in-out 0s normal;
+}
+
 .cart-btn {
   background-image: url('../../assets/images/imgs/button-bg.png');
   background-repeat: round;
@@ -267,7 +310,11 @@
     background-repeat: round;
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
-    height: 13.0625rem;
+    min-height: 13.0625rem;
+    // max-height: 26.0625rem;
+    overflow: hidden;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 
   .slide-num {
@@ -435,13 +482,19 @@
   .cart-items {
     width: 100%;
     background-color: #000;
-    height: 17.5rem;
+    // height: 17.5rem;
     background: url('../../assets/images/imgs/card-cart-bg.png');
     position: relative;
     font-size: 3rem;
     background-repeat: round;
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid black;
+    min-height: 17.5rem !important;
+    // max-height: 26.0625rem;
+    overflow: hidden;
+    padding-right: 4rem;
+    padding-right: 7rem;
+    padding-left: 2.4rem;
   }
 }
 
@@ -453,7 +506,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2.4rem;
+  // padding-left: 2.4rem;
 
   p {
     color: white;

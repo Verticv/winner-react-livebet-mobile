@@ -9,7 +9,7 @@ import germany from '../../assets/images/flags/germany.png';
 import england from '../../assets/images/flags/england.png';
 import Footer from '../../components/Footer';
 
-const MainNonLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked }) => {
+const MainNonLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, setCardId, cardData, setCardData, isClicked, setIsClicked, isCartDisplayed, setIsCartDisplayed, removeCard, setCart, cart }) => {
   const [isChangeBlueOrder, setIsChangeBlueOrder] = useState(false);
   const [idBlueSelected, setIdBlueSelected] = useState(0);
   const [idSelect, isIdSelected] = useState();
@@ -127,7 +127,7 @@ const MainNonLiveList = ({ isBlue, setIsBlue, addToCart, handleClick, cardId, se
           isIdSelected={isIdSelected}
         />
       ))}
-      <Footer />
+      <Footer setIsCartDisplayed={setIsCartDisplayed} isCartDisplayed={isCartDisplayed} cart={cart} isBlue={isBlue} setCart={setCart} removeCard={removeCard} />
     </div>
   );
 }

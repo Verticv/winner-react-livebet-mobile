@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 export function Button1({ children, className, setValue }) {
   return (
@@ -27,11 +27,11 @@ export function Button1({ children, className, setValue }) {
 }
 
 export function Button2({ children, className, setCart }) {
-  const [scroll, setScroll] = useState(false);
+  // const [scroll, setScroll] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [scroll]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [scroll]);
 
   return (
     <button
@@ -39,7 +39,7 @@ export function Button2({ children, className, setCart }) {
       onClick={() => {
         if (className !== 'active') {
           setCart([]);
-          setScroll((prev) => !prev);
+          // setScroll((prev) => !prev);
         }
       } }
       className={`cart-btn-photo ${className}`}
