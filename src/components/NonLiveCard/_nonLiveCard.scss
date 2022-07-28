@@ -1,6 +1,6 @@
 .nLive-first-con {
   display: flex;
-  border-bottom: 0.125rem solid #000;
+  border-bottom: 0.175rem solid #000;
 
   .nLive-main-live {
     display: flex;
@@ -73,11 +73,13 @@
                 width: 35rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                margin: 0 0 0 0.425rem;
+                margin: 0 0 0 0.525rem;
               }
 
               img {
                 width: 2.4375rem;
+                height: 2.8125rem;
+                margin-top: 0.1rem;
               }
 
               .character {
