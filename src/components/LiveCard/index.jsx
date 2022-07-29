@@ -81,9 +81,9 @@ function LiveCard({
                   </button>
                   <div className='col'>
                     <div style={{ marginTop: '-0.9rem' }}>
-                      <div className='shirt'>
+                      <div className='shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='shirt' />
-                        <span className='character'>H</span>
+                        <span className='character' style={{ marginTop: '0.28rem' }}>H</span>
                         <p>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='shirt'>
@@ -115,6 +115,7 @@ function LiveCard({
                         textAlign: "center",
                         marginRight: '1.1rem',
                         letterSpacing: '-0.09rem',
+                        marginTop: '0.5rem',
                       }}
                     >
                       <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>
@@ -133,6 +134,7 @@ function LiveCard({
                         textAlign: "center",
                         marginRight: '1.1rem',
                         letterSpacing: '-0.09rem',
+                        marginTop: '0rem',
                       }}
                     >
                       <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>
