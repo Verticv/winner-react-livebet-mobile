@@ -74,7 +74,7 @@ const MainHeader = () => {
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem', marginTop: '0.2rem' }} className='icon' src={cup} alt='' />
+              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.2rem', marginTop: '0.2rem' }} className='icon' src={cup} alt='' />
               <p className='text'>리그</p>
             </div>
           </button>
@@ -82,7 +82,7 @@ const MainHeader = () => {
             <div className='button-pho' style={{ marginLeft: '0.8rem' }}>
               <img onClick={parent} className='icon' src={btn2 === '시간순' ? chronology : cup2} alt='' />
               {<p className='text'>{btn2}</p>}
-              <img onClick={parent} style={{ marginRight: '0.45rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
+              <img onClick={parent} style={{ marginRight: '0.15rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
           <div className='dropdown'>
