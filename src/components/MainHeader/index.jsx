@@ -31,7 +31,7 @@ const MainHeader = () => {
   };
   const parent = (e) => {
     const content = e.target.closest("#changeBtn");
-    if (content?.children[0]?.children[1]?.textContent  === '시간순') {
+    if (content?.children[0]?.children[1]?.textContent === '시간순') {
       setBtn2('리그순');
     }
     else if (content?.children[0]?.children[1]?.textContent === '리그순') {
@@ -68,21 +68,21 @@ const MainHeader = () => {
         </div>
         <div className='button-container'>
           <button type='submit' className={`btn ${temp.length > 0 ? 'active' : ''}`}
-          style={{marginRight: isIOS ? '-0.3rem' : ''}}
+            style={{ marginRight: isIOS ? '-0.3rem' : '' }}
             onClick={(e) => {
               toggle();
               setIsCheck(temp);
             }}>
             <div className='button-pho'>
-              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.1rem', marginTop: '0.2rem' }} className='icon' src={cup} alt='' />
+              <img style={{ marginRight: '-0.2rem', marginLeft: '-0.2rem', marginTop: '0.2rem' }} className='icon' src={cup} alt='' />
               <p className='text'>리그</p>
             </div>
           </button>
-          <button type='submit' style={{marginRight: isIOS ? '-0rem' : ''}} className='btn' onClick={changeName} id='changeBtn'>
-            <div className='button-pho'>
+          <button type='submit' style={{ marginRight: isIOS ? '-0rem' : '' }} className='btn' onClick={changeName} id='changeBtn'>
+            <div className='button-pho' style={{ marginLeft: '0.8rem' }}>
               <img onClick={parent} className='icon' src={btn2 === '시간순' ? chronology : cup2} alt='' />
-              {<p  className='text'>{btn2}</p>}
-              <img onClick={parent} style={{ marginRight: '-0.1rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
+              {<p className='text'>{btn2}</p>}
+              <img onClick={parent} style={{ marginRight: '0.15rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
           <div className='dropdown'>
