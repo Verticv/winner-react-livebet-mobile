@@ -82,7 +82,7 @@ const MainHeader = () => {
             <div className='button-pho'>
               <img onClick={parent} className='icon' src={btn2 === '시간순' ? chronology : cup2} alt='' />
               {<p  className='text'>{btn2}</p>}
-              <img onClick={parent} style={{ marginRight: '-0.1rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
+              <img onClick={parent} style={{ marginRight: '0.45rem', marginTop: '0.4rem' }} className='white-arrow' src={btnArrow} alt='' />
             </div>
           </button>
           <div className='dropdown'>

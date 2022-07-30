@@ -88,7 +88,7 @@ function LiveCard({
                       </div>
                       <div className='shirt'>
                         <img src={blueShirt} alt='shirt' />
-                        <span className='character'>A</span>
+                        <span className='character' style={{  marginTop: '0.28rem'}}>A</span>
                         <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
@@ -115,7 +115,7 @@ function LiveCard({
                         textAlign: "center",
                         marginRight: '1.1rem',
                         letterSpacing: '-0.09rem',
-                        marginTop: '0.5rem',
+                        marginTop: '0rem',
                       }}
                     >
                       <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>
@@ -134,7 +134,7 @@ function LiveCard({
                         textAlign: "center",
                         marginRight: '1.1rem',
                         letterSpacing: '-0.09rem',
-                        marginTop: '0rem',
+                        marginTop: '-1.3rem',
                       }}
                     >
                       <span style={{ marginRight: '0rem', marginLeft: '-0.8rem' }}>5</span>

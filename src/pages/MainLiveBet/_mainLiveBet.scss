@@ -19,7 +19,7 @@
   padding-top: 2rem;
   margin-top: -0.25rem;
   width: 100%;
-  
+  overflow-x: auto;
 
   button {
     color: #98989A;
@@ -32,6 +32,7 @@
     background-image: url("../../assets/images/other/liveBitButton-black.png");
     background-repeat: round;
     font-weight: 600;
+    flex-shrink: 0;
 
     // .active-container {
     //   background: linear-gradient(0deg, #d8bc6f, #aa8f60 50%, #d6c8a5);
