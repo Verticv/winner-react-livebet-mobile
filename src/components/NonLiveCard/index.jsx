@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
+import { isIOS } from 'react-device-detect';
 import star from '../../assets/images/emptyStar/star-filled-gold.png';
 import redShirt from '../../assets/images/shirt/red.png';
 import blueShirt from '../../assets/images/shirt/blue.png';
@@ -55,7 +56,7 @@ function NonLiveCard({
                       : <img className='nLive-star' id={id} style={{ outline: 'none' }} src={isStar ? star : nonActiveStar} alt='star' />}
                   </button>
                   <div className='nLive-col'>
-                    <div style={{ marginTop: '-0.9rem' }}>
+                    <div style={{ marginTop: '-0.9rem', marginLeft: isIOS ? '-0.75rem' : '' }}>
                       <div className='nLive-shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='nLive-shirt' />
                         <span className='character' style={{ marginTop: '0.28rem' }}>H</span>

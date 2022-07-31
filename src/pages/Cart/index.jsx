@@ -77,7 +77,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
             <div className="clock">
               <p className="date" style={{ letterSpacing: isIOS ? '-0.1rem' : '' }} >{format(time, dateFormat, { locale: ko })}</p>
               <p className="time" style={{ letterSpacing: isIOS ? '-0.1rem' : '' }}>
-                <div>
+                <div style={{ marginTop: isIOS? '0.1rem' : ''}}>
                   <img
                     src={clock}
                     alt=""

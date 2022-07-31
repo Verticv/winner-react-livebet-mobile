@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { isIOS } from 'react-device-detect';
 import playGold from '../../assets/images/play/play-gold.png';
 import playTransparent from '../../assets/images/play/play-transperent.png';
 import star from '../../assets/images/emptyStar/star-filled-gold.png';
@@ -80,7 +81,7 @@ function LiveCard({
                     }
                   </button>
                   <div className='col'>
-                    <div style={{ marginTop: '-0.9rem' }}>
+                    <div style={{ marginTop: '-0.9rem', marginLeft: isIOS ? '-0.75rem' : '' }}>
                       <div className='shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='shirt' />
                         <span className='character' style={{ marginTop: '0.28rem' }}>H</span>
