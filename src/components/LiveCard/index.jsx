@@ -95,7 +95,7 @@ function LiveCard({
                     </div>
                     <div className='play-video' style={{marginLeft: isIOS ? '-0.2rem' : '0.5rem'}}>
                       <p className='livee'>live</p>
-                      <p className='score'  style={{marginLeft: isIOS ? '-0.2rem' : '0rem'}}>
+                      <p className='score'  style={{marginLeft: isIOS ? '1.8rem' : '2rem'}}>
                         {firstScore}
                         <span style={{ color: '#a0a0a0' }}>-</span>
                         {secondScore}
