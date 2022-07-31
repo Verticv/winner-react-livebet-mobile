@@ -85,12 +85,12 @@ function LiveCard({
                       <div className='shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='shirt' />
                         <span className='character' style={{ marginTop: '0.28rem' }}>H</span>
-                        <p style={{marginLeft: isIOS ? '1.775rem' : '1.875rem'}}>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
+                        <p style={{marginLeft: isIOS ? '0.425rem' : '0.525rem'}}>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character' style={{  marginTop: '0.28rem'}}>A</span>
-                        <p style={{marginLeft: isIOS ? '1.775rem' : '1.875rem'}}>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
+                        <p style={{marginLeft: isIOS ? '0.425rem' : '0.525rem'}}>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
                     <div className='play-video' style={{marginLeft: isIOS ? '-0.3rem' : '0.5rem'}}>
