@@ -76,8 +76,8 @@ function LiveCard({
                   <button style={{ background: 'transparent', border: 'none', padding: '0', outline:'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
-                      ? <img className='star' style={{outline:'none'}} id={id} src={star} alt='star' />
-                      : <img className='star' style={{outline:'none'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                      ? <img className='star' style={{outline:'none', marginLeft: isIOS ? '0rem' : '0.7rem'}} id={id} src={star} alt='star' />
+                      : <img className='star' style={{outline:'none', marginLeft: isIOS ? '0rem' : '0.7rem'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
                     }
                   </button>
                   <div className='col'>
@@ -93,7 +93,7 @@ function LiveCard({
                         <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
-                    <div className='play-video'>
+                    <div className='play-video' style={{ marginLeft: isIOS ? '-0.2rem' : '0.5rem' }}>
                       <p className='livee'>live</p>
                       <p className='score'>
                         {firstScore}
