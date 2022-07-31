@@ -76,11 +76,11 @@ function LiveCard({
                   <button style={{ background: 'transparent', border: 'none', padding: '0', outline:'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
-                      ? <img className='star' style={{outline:'none', marginLeft: isIOS ? '0.2rem' : '0.7rem'}} id={id} src={star} alt='star' />
-                      : <img className='star' style={{outline:'none', marginLeft: isIOS ? '0.2rem' : '0.7rem'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
+                      ? <img className='star' style={{outline:'none', marginLeft: isIOS ? '0.3rem' : '0.7rem'}} id={id} src={star} alt='star' />
+                      : <img className='star' style={{outline:'none', marginLeft: isIOS ? '0.3rem' : '0.7rem'}} id={id} src={isStar ? star : nonActiveStar} alt='star' />
                     }
                   </button>
-                  <div className='col' style={{marginLeft: isIOS ? '0.5rem' : '0rem'}}>
+                  <div className='col' style={{marginLeft: isIOS ? '0.4rem' : '0rem'}}>
                     <div style={{ marginTop: '-0.9rem', marginLeft: isIOS ? '-0.75rem' : '' }}>
                       <div className='shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='shirt' />
@@ -93,9 +93,9 @@ function LiveCard({
                         <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
-                    <div className='play-video' style={{marginLeft: isIOS ? '-0.1rem' : '0.5rem'}}>
+                    <div className='play-video' style={{marginLeft: isIOS ? '-0.2rem' : '0.5rem'}}>
                       <p className='livee'>live</p>
-                      <p className='score'>
+                      <p className='score'  style={{marginLeft: isIOS ? '-0.2rem' : '0rem'}}>
                         {firstScore}
                         <span style={{ color: '#a0a0a0' }}>-</span>
                         {secondScore}

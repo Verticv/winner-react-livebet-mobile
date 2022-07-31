@@ -52,10 +52,10 @@ function NonLiveCard({
                   <button style={{ background: 'transparent', border: 'none', padding: '0', outline: 'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
-                      ? <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.2rem' : '0.7rem' }} src={star} alt='star' />
-                      : <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.2rem' : '0.7rem' }} src={isStar ? star : nonActiveStar} alt='star' />}
+                      ? <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.3rem' : '0.7rem' }} src={star} alt='star' />
+                      : <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.3rem' : '0.7rem' }} src={isStar ? star : nonActiveStar} alt='star' />}
                   </button>
-                  <div className='nLive-col' style={{marginLeft: isIOS ? '0.5rem' : '0rem'}}>
+                  <div className='nLive-col' style={{marginLeft: isIOS ? '0.3rem' : '0rem'}}>
                     <div style={{ marginTop: '-0.9rem', marginLeft: isIOS ? '-0.75rem' : '' }}>
                       <div className='nLive-shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='nLive-shirt' />
