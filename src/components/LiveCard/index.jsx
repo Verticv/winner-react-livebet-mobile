@@ -93,7 +93,7 @@ function LiveCard({
                         <p>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
-                    <div className='play-video' style={{marginLeft: isIOS ? '0rem' : '0.5rem'}}>
+                    <div className='play-video' style={{marginLeft: isIOS ? '-0.1rem' : '0.5rem'}}>
                       <p className='livee'>live</p>
                       <p className='score'>
                         {firstScore}

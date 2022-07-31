@@ -69,7 +69,7 @@ function NonLiveCard({
                         {/* <p>{secondTeam}</p> */}
                       </div>
                     </div>
-                    <div className='nLive-play-video' style={{marginLeft: isIOS ? '0rem' : '0.5rem'}}>
+                    <div className='nLive-play-video' style={{marginLeft: isIOS ? '-0.1rem' : '0.5rem'}}>
                       <p>02-13 21:00</p>
                     </div>
                   </div>
