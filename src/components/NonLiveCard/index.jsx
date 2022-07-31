@@ -52,10 +52,10 @@ function NonLiveCard({
                   <button style={{ background: 'transparent', border: 'none', padding: '0', outline: 'none' }}
                     onClick={isFavorite ? removeFromFavorite : toggleStar}>
                     {isFavorite
-                      ? <img className='nLive-star' id={id} style={{ outline: 'none' }} src={star} alt='star' />
-                      : <img className='nLive-star' id={id} style={{ outline: 'none' }} src={isStar ? star : nonActiveStar} alt='star' />}
+                      ? <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.2rem' : '0.7rem' }} src={star} alt='star' />
+                      : <img className='nLive-star' id={id} style={{ outline: 'none', marginLeft: isIOS ? '0.2rem' : '0.7rem' }} src={isStar ? star : nonActiveStar} alt='star' />}
                   </button>
-                  <div className='nLive-col'>
+                  <div className='nLive-col' style={{marginLeft: isIOS ? '0.5rem' : '0rem'}}>
                     <div style={{ marginTop: '-0.9rem', marginLeft: isIOS ? '-0.75rem' : '' }}>
                       <div className='nLive-shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='nLive-shirt' />
@@ -69,7 +69,7 @@ function NonLiveCard({
                         {/* <p>{secondTeam}</p> */}
                       </div>
                     </div>
-                    <div className='nLive-play-video'>
+                    <div className='nLive-play-video' style={{marginLeft: isIOS ? '0rem' : '0.5rem'}}>
                       <p>02-13 21:00</p>
                     </div>
                   </div>
