@@ -85,17 +85,17 @@ function LiveCard({
                       <div className='shirt' style={{ marginTop: '0.25rem' }}>
                         <img src={redShirt} alt='shirt' />
                         <span className='character' style={{ marginTop: '0.28rem' }}>H</span>
-                        <p style={{marginLeft: isIOS ? '-0.1rem' : '0rem'}}>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
+                        <p style={{marginLeft: isIOS ? '-0.01rem' : '0rem'}}>{firstTeam.length > 19 ? `${firstTeam.slice(0, 19)}...` : firstTeam}</p>
                       </div>
                       <div className='shirt'>
                         <img src={blueShirt} alt='shirt' />
                         <span className='character' style={{  marginTop: '0.28rem'}}>A</span>
-                        <p style={{marginLeft: isIOS ? '-0.1rem' : '0rem'}}>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
+                        <p style={{marginLeft: isIOS ? '-0.01rem' : '0rem'}}>{secondTeam.length > 19 ? `${secondTeam.slice(0, 19)}...` : secondTeam}</p>
                       </div>
                     </div>
                     <div className='play-video' style={{marginLeft: isIOS ? '-0.3rem' : '0.5rem'}}>
-                      <p className='livee' style={{paddingRight: isIOS ? '1.17rem' : '1.19rem', paddingLeft: isIOS ? '1.17rem' : '1.19rem'}}>live</p>
-                      <p className='score' style={{marginLeft: isIOS ? '2rem' : '2rem'}}>
+                      <p className='livee' style={{paddingRight: isIOS ? '1.16rem' : '1.19rem', paddingLeft: isIOS ? '1.16rem' : '1.19rem'}}>live</p>
+                      <p className='score' style={{marginLeft: isIOS ? '1.8rem' : '2rem'}}>
                         {firstScore}
                         <span style={{ color: '#a0a0a0' }}>-</span>
                         {secondScore}
