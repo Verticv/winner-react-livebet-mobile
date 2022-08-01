@@ -6,8 +6,10 @@ import MainLive from './pages/MainLive';
 import MainLiveList from './pages/MainLiveList';
 import MainNonLiveList from './pages/MainNonLiveList';
 import Favorite from './pages/Favorite';
+import { isIOS } from 'react-device-detect';
 
 import './App.css';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -49,7 +51,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div style={{marginBottom: isIOS ? '9.4rem' : '9rem'}}>
       <Switch>
         <Route path='/' exact>
           <MainLive key={1} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
@@ -67,7 +69,7 @@ function App() {
           <MainNonLiveList key={9} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
         <Route path='/favorite' exact>
-          <Favorite key={10} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} cardId={cardId} setCardId={setCardId} addToCart={addToCart} cardData={cardData} setCardData={setCardData}  handleClick={handleClick} />
+          <Favorite key={10} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} cardId={cardId} setCardId={setCardId} addToCart={addToCart} cardData={cardData} setCardData={setCardData} handleClick={handleClick} />
         </Route>
         <Route path='/iceHockey' exact>
           <MainLive key={4} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
@@ -82,7 +84,8 @@ function App() {
           <MainLive key={7} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
       </Switch>
-    </>
+      <ScrollButton />
+    </div>
   );
 }
 

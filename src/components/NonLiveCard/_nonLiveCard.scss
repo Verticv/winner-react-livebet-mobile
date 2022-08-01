@@ -79,7 +79,7 @@
               img {
                 width: 2.4375rem;
                 height: 2.8125rem;
-                margin-top: 0.1rem;
+                margin-top: 0.2rem;
               }
 
               .character {
@@ -144,6 +144,10 @@
 
     p {
       font-size: 3rem;
+      white-space: nowrap;
+      width: 35rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
 

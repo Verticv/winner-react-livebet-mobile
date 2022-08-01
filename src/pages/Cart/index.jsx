@@ -174,13 +174,13 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
                 <div className='cart-items-team'>
                   <p>FC바로셀로나<span style={{ color: '#c49f58', margin: '1rem' }}>VS</span>레알마드리드 </p>
                 </div>
-                <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '0.5rem' }}>승무패(홈) - FC바로셀로나 <span style={{ marginLeft: '1.9375rem', color: '#4195c1' }}>5.01</span></p>
+                <p className='margin , margin-bottom' style={{ color: '#e5b877' }}>승무패(홈) - FC바로셀로나 <span style={{ marginLeft: '1.9375rem', color: '#4195c1' }}>5.01</span></p>
               </div>
               <div className='cart-items'>
                 <div className='cart-items-team'>
                   <p>맨체스터유나이티드<span style={{ color: '#c49f58', margin: '1rem' }}>VS</span>리버풀</p>
                 </div>
-                <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '0.5rem' }}>승무패(원정) - 리버풀 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>3.75</span></p>
+                <p className='margin , margin-bottom' style={{ color: '#e5b877' }}>승무패(원정) - 리버풀 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>3.75</span></p>
               </div>
             </div>
             <div className='card-content'>
