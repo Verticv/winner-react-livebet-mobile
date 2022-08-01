@@ -3,22 +3,13 @@
     top: 100%;
   }
 }
+
 @keyframes anim2 {
   0% {
-    top: 0;
-    opacity: 1;
-  }
-  100% {
-    top: -300rem;
-    opacity: 0;
+    top: 0%;
   }
 }
 
-.cart-animation {
-  opacity: 1;
-  overflow: unset;
-  animation: anim2 0.7s ease-in-out 0s normal;
-}
 .cart-scroll {
   position: fixed;
   // width: 77.625rem;
@@ -53,7 +44,19 @@
   height: auto;
   opacity: 1;
   overflow: unset;
-  animation: anim 0.7s ease-in-out 0s normal;
+  animation: anim 0.7s ease-out 0s normal;
+}
+
+.close-animation {
+  position: absolute;
+  z-index: 16;
+  top: 100%;
+  width: 77.625rem;
+  margin: auto;
+  height: auto;
+  // opacity: 1;
+  overflow: unset;
+  animation: anim2 0.7s ease-out 0s normal;
 }
 
 .cart-btn {

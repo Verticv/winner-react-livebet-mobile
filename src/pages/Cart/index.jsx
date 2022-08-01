@@ -18,6 +18,7 @@ import redArrow from '../../assets/images/imgs/arrow-red.png'
 import clock from '../../assets/images/imgs/clock.png';
 
 const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDisplayed }) => {
+  const [cartClass, setCartClass] = useState('cart-cart');
   const [value, setValue] = useState('0');
   const { buttonsValue } = useSelector((state) => state.cards);
   const onChangeHandler = (e) => {
@@ -63,7 +64,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
 
   return (
     <div className='cart-scroll'>
-      <div className='cart-cart'>
+      <div className={cartClass}>
         <div className='line' />
         <div className='cart-header'>
           <div className='cart-right-header'>
@@ -89,7 +90,13 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
             </div>
           </div>
           <div className='cartBtn'
-            onClick={() => setIsCartDisplayed(false)}
+            onClick={() => {
+              setTimeout(() => {
+                setIsCartDisplayed(false)
+              }, 500)
+              setCartClass('close-animation')
+            }
+            }
           >
             <div className='line' />
             <button type='button' className='cart-arrow'>
