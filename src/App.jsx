@@ -84,7 +84,7 @@ function App() {
           <MainLive key={7} isCartDisplayed={isCartDisplayed} setIsCartDisplayed={setIsCartDisplayed} cart={cart} setCart={setCart} removeCard={removeCard} isBlue={isBlue} setIsBlue={setIsBlue} isClicked={isClicked} setIsClicked={setIsClicked} redCardArray={mainHeaderLive} blueCardArray={mainHeaderNonLive} setCardId={setCardId} cardId={cardId} cardData={cardData} setCardData={setCardData} addToCart={addToCart} handleClick={handleClick} />
         </Route>
       </Switch>
-      <ScrollButton />
+        <ScrollButton />
     </div>
   );
 }

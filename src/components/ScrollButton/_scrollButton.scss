@@ -1,0 +1,21 @@
+.scroll-button {
+    right: 4rem;
+}
+//     display: visible ? 'inline' : 'none',
+//     cursor: 'pointer',
+//     border: '0',
+//     padding: '0',
+//     width: '8rem',
+//     height: '8rem',
+//     // background: 'red',
+//     position: 'fixed',
+//     bottom: '13rem',
+//     right: '13rem',
+//     borderRadius: '50%',
+//     background: '#333333b5',
+// }
+@media (min-width: 1300px){
+    .scroll-button{
+        right: 12%;
+    }
+}

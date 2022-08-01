@@ -27,7 +27,9 @@ const ScrollButton = () => {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <button style={{
+        <button 
+        className='scroll-button'
+        style={{
             display: visible ? 'inline' : 'none',
             cursor: 'pointer',
             border: '0',
@@ -37,7 +39,7 @@ const ScrollButton = () => {
             // background: 'red',
             position: 'fixed',
             bottom: '13rem',
-            right: '4rem',
+            // right: '4rem',
             borderRadius: '50%',
             background: '#333333b5',
         }} onClick={scrollToTop}
