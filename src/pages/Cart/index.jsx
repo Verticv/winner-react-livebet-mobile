@@ -18,6 +18,7 @@ import redArrow from '../../assets/images/imgs/arrow-red.png'
 import clock from '../../assets/images/imgs/clock.png';
 
 const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDisplayed }) => {
+  const [cartClass, setCartClass] = useState('cart-cart');
   const [value, setValue] = useState('0');
   const { buttonsValue } = useSelector((state) => state.cards);
   const onChangeHandler = (e) => {
@@ -63,7 +64,7 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
 
   return (
     <div className='cart-scroll'>
-      <div className='cart-cart'>
+      <div className={cartClass}>
         <div className='line' />
         <div className='cart-header'>
           <div className='cart-right-header'>
@@ -89,7 +90,13 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
             </div>
           </div>
           <div className='cartBtn'
-            onClick={() => setIsCartDisplayed(false)}
+            onClick={() => {
+              setTimeout(() => {
+                setIsCartDisplayed(false)
+              }, 500)
+              setCartClass('close-animation')
+            }
+            }
           >
             <div className='line' />
             <button type='button' className='cart-arrow'>
@@ -174,13 +181,13 @@ const Cart = ({ cart, setCart, removeCard, isBlue, setIsCartDisplayed, isCartDis
                 <div className='cart-items-team'>
                   <p>FC바로셀로나<span style={{ color: '#c49f58', margin: '1rem' }}>VS</span>레알마드리드 </p>
                 </div>
-                <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '0.5rem' }}>승무패(홈) - FC바로셀로나 <span style={{ marginLeft: '1.9375rem', color: '#4195c1' }}>5.01</span></p>
+                <p className='margin , margin-bottom' style={{ color: '#e5b877' }}>승무패(홈) - FC바로셀로나 <span style={{ marginLeft: '1.9375rem', color: '#4195c1' }}>5.01</span></p>
               </div>
               <div className='cart-items'>
                 <div className='cart-items-team'>
                   <p>맨체스터유나이티드<span style={{ color: '#c49f58', margin: '1rem' }}>VS</span>리버풀</p>
                 </div>
-                <p className='margin , margin-bottom' style={{ color: '#e5b877', paddingLeft: '0.5rem' }}>승무패(원정) - 리버풀 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>3.75</span></p>
+                <p className='margin , margin-bottom' style={{ color: '#e5b877' }}>승무패(원정) - 리버풀 <span style={{ marginLeft: '1rem', color: '#4195c1' }}>3.75</span></p>
               </div>
             </div>
             <div className='card-content'>
