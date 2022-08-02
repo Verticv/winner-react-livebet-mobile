@@ -27,15 +27,21 @@ const ScrollButton = () => {
     window.addEventListener('scroll', toggleVisible);
 
     return (
-        <button 
-        className='scroll-button'
-        style={{
-            display: visible ? 'inline' : 'none',
-        }} onClick={scrollToTop}
+        <div className='div-div2'
+            style={{
+                display: visible ? 'inline' : 'none',
+            }} onClick={scrollToTop}
         >
-            <img src={arrowButton} alt='' onClick={scrollToTop}
-                style={{ display: visible ? 'inline' : 'none', width: '3rem', height: 'auto', marginTop: '0.2rem', }} />
-        </button>
+            <button
+                className='scroll-button'
+                style={{
+                    display: visible ? 'inline' : 'none',
+                }} onClick={scrollToTop}
+            >
+                <img src={arrowButton} alt='' onClick={scrollToTop}
+                    style={{ display: visible ? 'inline' : 'none', width: '3rem', height: 'auto', marginTop: '0.5rem', }} />
+            </button>
+        </div>
     );
 }
 
