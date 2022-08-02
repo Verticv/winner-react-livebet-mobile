@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { FaArrowCircleUp } from 'react-icons/fa';
 // import { Button } from './Styles';
-import arrowButton from '../../assets/images/imgs/arrow-arrow.png';
+// import arrowButton from '../../assets/images/imgs/arrow-arrow.png';
 
 const ScrollButton = () => {
 
@@ -38,8 +38,8 @@ const ScrollButton = () => {
                     display: visible ? 'inline' : 'none',
                 }} onClick={scrollToTop}
             >
-                <img src={arrowButton} alt='' onClick={scrollToTop}
-                    style={{ display: visible ? 'inline' : 'none', width: '3rem', height: 'auto', marginTop: '0.5rem', }} />
+                {/* <img src={arrowButton} alt='' onClick={scrollToTop}
+                    style={{ display: visible ? 'inline' : 'none', width: '3rem', height: 'auto', marginTop: '0.5rem', }} /> */}
             </button>
         </div>
     );

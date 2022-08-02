@@ -10,8 +10,15 @@
     position: fixed;
     bottom: 13rem;
     border-radius: 50%;
-    background: #33333399;
-    filter: drop-shadow(0 0 0.75rem black);
+    // background: #33333399;
+    background: url('../../assets/images/imgs/btn_top.png');
+    background-repeat: round;
+    // filter: drop-shadow(0 0 0.75rem black);
+
+    &:active {
+        -webkit-filter: brightness(130%);
+        filter: brightness(130%);
+    }
 
 }
 
@@ -19,12 +26,4 @@
     cursor: pointer;
     border: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #33333399;
-    &:active {
-        -webkit-filter: brightness(130%);
-        filter: brightness(130%);
-    }
 }
